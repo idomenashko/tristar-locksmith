@@ -1,146 +1,105 @@
-import { notFound } from 'next/navigation'
-import { Metadata } from 'next'
-import { SERVICE_DETAILS, BUSINESS } from '@/lib/data'
+import { notFound } from "next/navigation";
+import { SERVICES, BUSINESS } from "@/lib/data";
+import { ServiceHero } from "@/components/service/ServiceHero";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
+import { buildMetadata } from "@/lib/seo";
+import { buildServiceSchema, buildFAQSchema } from "@/lib/schema";
+import { SITE } from "@/lib/seo";
 
-interface Props {
-  params: Promise<{ slug: string }>
+export function generateStaticParams() {
+  return SERVICES.map((service) => ({ slug: service.slug }));
 }
 
-export async function generateStaticParams() {
-  return SERVICE_DETAILS.map((s) => ({ slug: s.slug }))
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
+  if (!service) return {};
+  return buildMetadata({
+    title: service.title,
+    description: `${service.shortDescription} Tristar Locksmith serves Knoxville, TN and surrounding areas. Call (865) 381-3931.`,
+    path: `/services/${slug}`,
+  });
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const service = SERVICE_DETAILS.find((s) => s.slug === slug)
-  if (!service) return {}
-  return {
-    title: `${service.name} in Knoxville, TN`,
-    description: `${service.longDesc.slice(0, 155)}`,
-  }
-}
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
+  if (!service) notFound();
 
-export default async function ServicePage({ params }: Props) {
-  const { slug } = await params
-  const service = SERVICE_DETAILS.find((s) => s.slug === slug)
-  if (!service) notFound()
+  const serviceSchema = buildServiceSchema(
+    service.title,
+    service.longDescription,
+    `${SITE.url}/services/${slug}`
+  );
+  const faqSchema = buildFAQSchema(service.faqs);
 
   return (
-    <div>
-      {/* Hero */}
-      <section style={{ backgroundColor: '#1B3A5C' }} className="py-20 text-white text-center px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-6xl mb-4">{service.icon}</div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.name} in Knoxville, TN</h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">{service.shortDesc}</p>
-          <a
-            href={BUSINESS.phoneHref}
-            style={{ backgroundColor: '#D4A03C' }}
-            className="inline-block text-white font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition"
-          >
-            📞 Call {BUSINESS.phone}
-          </a>
-        </div>
-      </section>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <ServiceHero service={service} />
+      <Section className="bg-warm-white">
+        <Container>
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-bold text-navy mb-4 font-display">
+              About This Service
+            </h2>
+            <p className="text-ink leading-relaxed text-lg mb-8">
+              {service.longDescription}
+            </p>
 
-      {/* Description */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#1B3A5C' }}>About This Service</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">{service.longDesc}</p>
+            <h3 className="text-xl font-bold text-navy mb-4 font-display">
+              What&apos;s Included
+            </h3>
+            <ul className="space-y-3 mb-8">
+              {service.features.map((feature) => (
+                <li key={feature} className="flex items-start gap-3">
+                  <span className="text-forest mt-1 font-bold text-lg">✓</span>
+                  <span className="text-ink">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="bg-navy rounded-lg p-6 text-white">
+              <h3 className="text-xl font-bold mb-2 font-display">
+                Need {service.title}?
+              </h3>
+              <p className="text-white/80 mb-4">
+                Available 24/7 in Knoxville, TN and surrounding areas.
+              </p>
+              <Button href="tel:8653813931" variant="primary" size="lg">
+                📞 Call {BUSINESS.phone}
+              </Button>
             </div>
-            <div style={{ backgroundColor: '#F5F5F0' }} className="rounded-2xl p-8 text-center">
-              <div className="text-8xl mb-4">{service.icon}</div>
-              <p className="font-bold text-xl mb-2" style={{ color: '#1B3A5C' }}>Need Help Now?</p>
-              <a
-                href={BUSINESS.phoneHref}
-                style={{ backgroundColor: '#D4A03C' }}
-                className="inline-block text-white font-bold px-6 py-3 rounded-lg mt-2 hover:opacity-90 transition"
-              >
-                {BUSINESS.phone}
-              </a>
+          </div>
+        </Container>
+      </Section>
+
+      {service.faqs.length > 0 && (
+        <Section>
+          <Container>
+            <h2 className="text-2xl font-bold text-navy mb-8 font-display">
+              Frequently Asked Questions
+            </h2>
+            <div className="max-w-3xl space-y-6">
+              {service.faqs.map((faq) => (
+                <div key={faq.question} className="border-b border-gray-200 pb-6">
+                  <h3 className="font-semibold text-navy mb-2">{faq.question}</h3>
+                  <p className="text-muted">{faq.answer}</p>
+                </div>
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section style={{ backgroundColor: '#F5F5F0' }} className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#1B3A5C' }}>Why Choose TriStar for {service.name}</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {service.benefits.map((b, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm flex gap-4 items-start">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0 text-sm"
-                  style={{ backgroundColor: '#2E7D4F' }}
-                >
-                  ✓
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1" style={{ color: '#1B3A5C' }}>{b.title}</h3>
-                  <p className="text-gray-600">{b.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#1B3A5C' }}>How It Works</h2>
-          <div className="space-y-6">
-            {service.process.map((p) => (
-              <div key={p.step} className="flex gap-6 items-start">
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0"
-                  style={{ backgroundColor: '#1B3A5C' }}
-                >
-                  {p.step}
-                </div>
-                <div className="pt-2">
-                  <h3 className="font-bold text-xl mb-1">{p.title}</h3>
-                  <p className="text-gray-600">{p.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section style={{ backgroundColor: '#F5F5F0' }} className="py-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#1B3A5C' }}>Common Questions</h2>
-          <div className="space-y-4">
-            {service.faq.map((item, i) => (
-              <div key={i} className="bg-white rounded-xl p-6">
-                <h3 className="font-bold text-lg mb-2" style={{ color: '#1B3A5C' }}>{item.q}</h3>
-                <p className="text-gray-600">{item.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section style={{ backgroundColor: '#1B3A5C' }} className="py-16 px-4 text-center text-white">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Ready When You Are — 24/7</h2>
-          <p className="text-blue-100 mb-8">Professional {service.name.toLowerCase()} service in Knoxville and surrounding areas.</p>
-          <a
-            href={BUSINESS.phoneHref}
-            style={{ backgroundColor: '#D4A03C' }}
-            className="inline-block text-white font-bold px-10 py-4 rounded-lg text-xl hover:opacity-90 transition"
-          >
-            📞 Call {BUSINESS.phone}
-          </a>
-        </div>
-      </section>
-    </div>
-  )
+          </Container>
+        </Section>
+      )}
+    </>
+  );
 }

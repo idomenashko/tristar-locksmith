@@ -1,89 +1,71 @@
-import type { Metadata } from 'next'
-import { Manrope, Inter } from 'next/font/google'
-import './globals.css'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
-import StickyCallButton from '@/components/layout/StickyCallButton'
-
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-manrope',
-  display: 'swap',
-})
+import type { Metadata } from "next";
+import { Inter, Manrope } from "next/font/google";
+import "./globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { StickyCallButton } from "@/components/layout/StickyCallButton";
+import { buildLocalBusinessSchema } from "@/lib/schema";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
-    default: 'Tristar Locksmith | Knoxville, TN — (865) 381-3931',
-    template: '%s | Tristar Locksmith Knoxville',
+    default: "Tristar Locksmith | 24/7 Locksmith Knoxville, TN",
+    template: "%s | Tristar Locksmith — Knoxville, TN",
   },
   description:
-    '24/7 locksmith service in Knoxville, TN and surrounding areas. Car lockout, house lockout, rekey, lock change, car key replacement. Call (865) 381-3931.',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://tristarlocksmith.com',
-    siteName: 'Tristar Locksmith',
-    title: 'Tristar Locksmith | Knoxville, TN — (865) 381-3931',
-    description: '24/7 locksmith service in Knoxville, TN and surrounding areas. Car lockout, house lockout, rekey, lock change, car key replacement. Call (865) 381-3931.',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Tristar Locksmith | Knoxville, TN',
-    description: '24/7 locksmith service in Knoxville, TN.',
-  },
-}
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://tristarlocksmith.com',
-  name: 'Tristar Locksmith',
-  description: '24/7 locksmith service in Knoxville, TN and surrounding areas.',
-  telephone: '+18653813931',
-  url: 'https://tristarlocksmith.com',
-  openingHours: 'Mo-Su 00:00-24:00',
-  priceRange: '$$',
-  areaServed: [
-    'Knoxville, TN', 'Farragut, TN', 'Powell, TN', 'Maryville, TN',
-    'Oak Ridge, TN', 'Alcoa, TN', 'Sevierville, TN', 'Gatlinburg, TN',
+    "Tristar Locksmith — trusted 24/7 locksmith serving Knoxville, TN and surrounding areas. Car lockout, house lockout, rekey, lock change, and more. Call (865) 381-3931.",
+  metadataBase: new URL("https://tristarlocksmith.com"),
+  keywords: [
+    "locksmith Knoxville TN",
+    "24/7 locksmith",
+    "car lockout Knoxville",
+    "house lockout service",
+    "rekey locks",
+    "emergency locksmith",
   ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Locksmith Services',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Car Lockout' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'House Lockout' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Car Key Replacement' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lock Change' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Rekey Locks' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Emergency Locksmith' } },
-    ],
+  openGraph: {
+    type: "website",
+    siteName: "Tristar Locksmith",
+    locale: "en_US",
   },
-}
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
+  const schema = buildLocalBusinessSchema();
+
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
-      <body>
+    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
+      <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
+      </head>
+      <body className="flex flex-col min-h-screen">
         <Header />
-        <main>{children}</main>
+        <main className="flex-1 pb-24 md:pb-0">{children}</main>
         <Footer />
         <StickyCallButton />
       </body>
     </html>
-  )
+  );
 }

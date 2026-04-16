@@ -1,44 +1,45 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { SERVICE_DETAILS, BUSINESS } from '@/lib/data'
+import { SERVICES } from "@/lib/data";
+import { ServiceCard } from "@/components/service/ServiceCard";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: 'Locksmith Services in Knoxville, TN',
-  description: 'Professional locksmith services in Knoxville, TN: car lockout, house lockout, rekey, lock change, car key replacement, ignition repair, commercial, emergency, and safe lockout.',
-}
+export const metadata = buildMetadata({
+  title: "Locksmith Services",
+  description:
+    "Tristar Locksmith offers car lockout, house lockout, rekey, lock change, car key replacement, ignition repair, commercial locksmith, and safe opening services in Knoxville, TN.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
-    <div>
-      <section style={{ backgroundColor: '#1B3A5C' }} className="py-16 px-4 text-white text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">Our Locksmith Services</h1>
-          <p className="text-blue-100 text-lg">Professional solutions for cars, homes, and businesses across Knoxville, TN</p>
-        </div>
-      </section>
-      <section className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICE_DETAILS.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="block bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition hover:-translate-y-1"
-              >
-                <div className="text-4xl mb-3">{s.icon}</div>
-                <h2 className="text-xl font-bold mb-2" style={{ color: '#1B3A5C' }}>{s.name}</h2>
-                <p className="text-gray-600 mb-4">{s.shortDesc}</p>
-                <span style={{ color: '#D4A03C' }} className="font-semibold">Learn More →</span>
-              </Link>
+    <>
+      <div className="bg-navy text-white py-16">
+        <Container>
+          <h1 className="text-4xl lg:text-5xl font-bold text-white font-display mb-4">
+            Our Locksmith Services
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl">
+            Professional locksmith services for residential, automotive, and commercial needs. Available 24/7 in Knoxville, TN.
+          </p>
+        </Container>
+      </div>
+      <Section className="bg-warm-white">
+        <Container>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICES.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
-        </div>
-      </section>
-      <section style={{ backgroundColor: '#1B3A5C' }} className="py-12 px-4 text-center text-white">
-        <a href={BUSINESS.phoneHref} style={{ backgroundColor: '#D4A03C' }} className="inline-block text-white font-bold px-10 py-4 rounded-lg text-xl hover:opacity-90 transition">
-          📞 Call {BUSINESS.phone} — Available 24/7
-        </a>
-      </section>
-    </div>
-  )
+          <div className="mt-12 text-center">
+            <p className="text-muted mb-4">Not sure which service you need?</p>
+            <Button href="tel:8653813931" variant="primary" size="lg">
+              📞 Call (865) 381-3931
+            </Button>
+          </div>
+        </Container>
+      </Section>
+    </>
+  );
 }

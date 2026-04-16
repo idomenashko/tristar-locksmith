@@ -1,43 +1,61 @@
-import { MetadataRoute } from 'next'
-import { SERVICE_DETAILS, AREA_DETAILS } from '@/lib/data'
+import type { MetadataRoute } from "next";
+import { SERVICES, SERVICE_AREAS } from "@/lib/data";
 
-const BASE_URL = 'https://tristarlocksmith.com'
+const BASE_URL = "https://tristarlocksmith.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const serviceUrls = SERVICE_DETAILS.map((s) => ({
-    url: `${BASE_URL}/services/${s.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  const areaUrls = AREA_DETAILS.map((a) => ({
-    url: `${BASE_URL}/service-areas/${a.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/services`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/service-areas`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "weekly",
       priority: 0.9,
     },
-    ...serviceUrls,
-    ...areaUrls,
-  ]
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/reviews`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+  ];
+
+  const servicePages: MetadataRoute.Sitemap = SERVICES.map((service) => ({
+    url: `${BASE_URL}/services/${service.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  const areaPages: MetadataRoute.Sitemap = SERVICE_AREAS.map((area) => ({
+    url: `${BASE_URL}/service-areas/${area.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...servicePages, ...areaPages];
 }

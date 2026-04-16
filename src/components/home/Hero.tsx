@@ -1,0 +1,66 @@
+import { Button } from "@/components/ui/Button";
+
+export function Hero() {
+  return (
+    <section className="bg-navy text-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div className="max-w-2xl text-center mx-auto md:text-left md:mx-0">
+          {/* Trust badges */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
+            <span className="inline-flex items-center gap-1.5 bg-white/10 text-white text-sm font-medium px-3 py-1.5 rounded-full border border-white/20">
+              ⚡ 15-30 Min Response
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-white/10 text-white text-sm font-medium px-3 py-1.5 rounded-full border border-white/20">
+              🏆 Licensed &amp; Insured
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-white/10 text-white text-sm font-medium px-3 py-1.5 rounded-full border border-white/20">
+              ⭐ 5-Star Rated
+            </span>
+          </div>
+
+          {/* Headline */}
+          <h1
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+            style={{ color: "#fff", letterSpacing: "-0.02em" }}
+          >
+            Knoxville&apos;s Trusted{" "}
+            <span style={{ color: "#D4A03C" }}>24/7 Locksmith</span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-lg sm:text-xl text-white/80 mb-10 leading-relaxed">
+            Fast, professional locksmith service in Knoxville, TN and surrounding
+            areas. Car lockouts, home lockouts, rekeys, and more — we arrive in
+            15 to 30 minutes and quote you honestly before we start.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Button href="tel:8653813931" variant="primary" size="lg">
+              📞 Call (865) 381-3931
+            </Button>
+            <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-navy">
+              View Services
+            </Button>
+          </div>
+
+          {/* Quick stat row */}
+          <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-3 gap-4 text-center md:text-left">
+            <div>
+              <div className="text-2xl font-bold" style={{ color: "#D4A03C" }}>24/7</div>
+              <div className="text-sm text-white/70 mt-0.5">Always Available</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold" style={{ color: "#D4A03C" }}>27+</div>
+              <div className="text-sm text-white/70 mt-0.5">Cities Served</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold" style={{ color: "#D4A03C" }}>5★</div>
+              <div className="text-sm text-white/70 mt-0.5">Customer Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

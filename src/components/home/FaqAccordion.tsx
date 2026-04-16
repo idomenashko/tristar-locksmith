@@ -1,60 +1,69 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { FAQ } from "@/lib/data";
 
-interface FaqItem {
-  q: string
-  a: string
-}
+export function FaqAccordion() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-interface FaqAccordionProps {
-  items: FaqItem[]
-}
-
-export default function FaqAccordion({ items }: FaqAccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
-  const toggle = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index))
+  function toggle(index: number) {
+    setOpenIndex((prev) => (prev === index ? null : index));
   }
 
   return (
-    <div className="divide-y" style={{ borderColor: '#e5e7eb' }}>
-      {items.map((item, index) => {
-        const isOpen = openIndex === index
-        return (
-          <div key={index}>
-            <button
-              type="button"
-              onClick={() => toggle(index)}
-              className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors hover:opacity-80"
-              aria-expanded={isOpen}
-            >
-              <span
-                className="text-base font-semibold"
-                style={{ color: '#1B3A5C' }}
-              >
-                {item.q}
-              </span>
-              <span
-                className="flex-shrink-0 text-xl font-bold leading-none"
-                style={{ color: '#D4A03C' }}
-                aria-hidden="true"
-              >
-                {isOpen ? '−' : '+'}
-              </span>
-            </button>
-            <div
-              className="overflow-hidden transition-all duration-300"
-              style={{ maxHeight: isOpen ? '500px' : '0px' }}
-            >
-              <p className="pb-5 text-sm leading-relaxed" style={{ color: '#4b5563' }}>
-                {item.a}
-              </p>
-            </div>
-          </div>
-        )
-      })}
-    </div>
-  )
+    <Section className="bg-warm-white">
+      <Container>
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-muted max-w-xl mx-auto">
+            Have questions about our locksmith services? We have answers.
+          </p>
+        </div>
+
+        {/* Accordion */}
+        <div className="max-w-3xl mx-auto divide-y divide-warm-white-dark rounded-lg border border-warm-white-dark bg-white overflow-hidden">
+          {FAQ.map((item, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div key={index}>
+                <button
+                  type="button"
+                  onClick={() => toggle(index)}
+                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer hover:bg-warm-white transition-colors"
+                  aria-expanded={isOpen}
+                >
+                  <span
+                    className="text-base font-semibold leading-snug"
+                    style={{ color: "#1B3A5C" }}
+                  >
+                    {item.question}
+                  </span>
+                  <span
+                    className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-white text-sm font-bold transition-colors"
+                    style={{ backgroundColor: isOpen ? "#D4A03C" : "#1B3A5C" }}
+                    aria-hidden="true"
+                  >
+                    {isOpen ? "−" : "+"}
+                  </span>
+                </button>
+
+                {isOpen && (
+                  <div className="px-6 pb-5">
+                    <p className="text-sm text-muted leading-relaxed">
+                      {item.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </Container>
+    </Section>
+  );
 }

@@ -1,42 +1,68 @@
-import { Metadata } from 'next'
-import { TESTIMONIALS, BUSINESS } from '@/lib/data'
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
+import { Stars } from "@/components/ui/Stars";
+import { TESTIMONIALS, BUSINESS } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: 'Customer Reviews — Tristar Locksmith Knoxville, TN',
-  description: 'Read 5-star reviews from satisfied Tristar Locksmith customers across Knoxville, TN and surrounding areas.',
-}
+export const metadata = buildMetadata({
+  title: "Customer Reviews",
+  description:
+    "Read reviews from Tristar Locksmith customers in Knoxville, TN. 5-star rated locksmith service for car lockout, house lockout, rekey, and more.",
+  path: "/reviews",
+});
 
 export default function ReviewsPage() {
   return (
-    <div>
-      <section style={{ backgroundColor: '#1B3A5C' }} className="py-16 px-4 text-white text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">Customer Reviews</h1>
-          <p className="text-blue-100 text-lg">See what our customers say about Tristar Locksmith</p>
-        </div>
-      </section>
-      <section className="py-16 px-4" style={{ backgroundColor: '#f8f8f8' }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-yellow-400 text-xl mb-3">{'⭐'.repeat(t.rating)}</div>
-                <p className="text-gray-700 leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
-                <div>
-                  <p className="font-bold" style={{ color: '#1B3A5C' }}>{t.name}</p>
-                  <p className="text-gray-500 text-sm">{t.location}</p>
-                </div>
+    <>
+      <div className="bg-navy text-white py-16">
+        <Container>
+          <h1 className="text-4xl lg:text-5xl font-bold text-white font-display mb-4">
+            Customer Reviews
+          </h1>
+          <div className="flex items-center gap-3 mb-4">
+            <Stars rating={5} />
+            <span className="text-white/80">5.0 — 127+ reviews</span>
+          </div>
+          <p className="text-xl text-white/80 max-w-2xl">
+            Don&apos;t take our word for it — here&apos;s what our customers in the Knoxville area say about Tristar Locksmith.
+          </p>
+        </Container>
+      </div>
+
+      <Section className="bg-warm-white">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {TESTIMONIALS.map((testimonial) => (
+              <div key={testimonial.name} className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+                <Stars rating={testimonial.rating} className="mb-3" />
+                <blockquote className="text-ink leading-relaxed mb-4">
+                  &ldquo;{testimonial.text}&rdquo;
+                </blockquote>
+                <footer className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-navy text-sm">{testimonial.name}</p>
+                    <p className="text-muted text-xs">{testimonial.location}</p>
+                  </div>
+                </footer>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-      <section style={{ backgroundColor: '#1B3A5C' }} className="py-12 px-4 text-center text-white">
-        <h2 className="text-2xl font-bold mb-4">Join Our Satisfied Customers</h2>
-        <a href={BUSINESS.phoneHref} style={{ backgroundColor: '#D4A03C' }} className="inline-block text-white font-bold px-10 py-4 rounded-lg text-xl hover:opacity-90 transition">
-          📞 Call {BUSINESS.phone}
-        </a>
-      </section>
-    </div>
-  )
+
+          <div className="mt-12 text-center">
+            <div className="bg-navy rounded-lg p-8 text-white">
+              <h2 className="text-2xl font-bold mb-2 font-display">Experience the Tristar Difference</h2>
+              <p className="text-white/80 mb-6">Join hundreds of satisfied customers across the Knoxville area.</p>
+              <Button href="tel:8653813931" variant="primary" size="lg">
+                📞 Call {BUSINESS.phone}
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </Section>
+    </>
+  );
 }

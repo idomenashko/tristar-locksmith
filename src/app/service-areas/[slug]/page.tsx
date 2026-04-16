@@ -1,163 +1,119 @@
-import { notFound } from 'next/navigation'
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { AREA_DETAILS, SERVICES, BUSINESS } from '@/lib/data'
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { SERVICE_AREAS, SERVICES, BUSINESS } from "@/lib/data";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
+import { buildMetadata } from "@/lib/seo";
 
-interface Props {
-  params: Promise<{ slug: string }>
+export function generateStaticParams() {
+  return SERVICE_AREAS.map((area) => ({ slug: area.slug }));
 }
 
-export async function generateStaticParams() {
-  return AREA_DETAILS.map((a) => ({ slug: a.slug }))
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const area = SERVICE_AREAS.find((a) => a.slug === slug);
+  if (!area) return {};
+  return buildMetadata({
+    title: `Locksmith ${area.name}, TN`,
+    description: `Tristar Locksmith serves ${area.name}, TN with 24/7 locksmith services. Car lockout, house lockout, rekey, and more. Fast response. Call (865) 381-3931.`,
+    path: `/service-areas/${slug}`,
+  });
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const area = AREA_DETAILS.find((a) => a.slug === slug)
-  if (!area) return {}
-  return {
-    title: `Locksmith in ${area.name}, ${area.state} — ${BUSINESS.phone}`,
-    description: `24/7 locksmith service in ${area.name}, ${area.state}. Car lockout, house lockout, rekey, lock change, car key replacement. Call ${BUSINESS.phone}.`,
-  }
-}
-
-export default async function AreaPage({ params }: Props) {
-  const { slug } = await params
-  const area = AREA_DETAILS.find((a) => a.slug === slug)
-  if (!area) notFound()
-
-  const toSlug = (name: string) => name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+export default async function ServiceAreaPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const area = SERVICE_AREAS.find((a) => a.slug === slug);
+  if (!area) notFound();
 
   return (
-    <div>
-      {/* Hero */}
-      <section style={{ backgroundColor: '#1B3A5C' }} className="py-20 px-4 text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-sm uppercase tracking-widest mb-3 text-blue-200">{area.county} · {area.state}</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Locksmith in {area.name}, TN</h1>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Fast, 24/7 locksmith service for cars, homes, and businesses in {area.name} and surrounding areas.
+    <>
+      <div className="bg-navy text-white py-16 lg:py-24">
+        <Container>
+          <div className="text-gold text-sm font-semibold uppercase tracking-wider mb-2">
+            📍 {area.region}
+          </div>
+          <h1 className="text-4xl lg:text-5xl font-bold text-white font-display mb-4">
+            Locksmith in {area.name}, TN
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mb-8">
+            {area.description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={BUSINESS.phoneHref}
-              style={{ backgroundColor: '#D4A03C' }}
-              className="inline-block text-white font-bold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition"
-            >
-              📞 Call {BUSINESS.phone}
-            </a>
+          <div className="flex flex-wrap gap-3">
+            <Button href="tel:8653813931" variant="primary" size="lg">
+              📞 Call (865) 381-3931
+            </Button>
+            <Button href="/service-areas" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-navy">
+              ← All Areas
+            </Button>
           </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-blue-100">
-            <span>⭐ 5-Star Rated</span>
-            <span>⏱ 15-30 Min Response</span>
-            <span>🔒 Licensed &amp; Insured</span>
-            <span>24/7 Available</span>
-          </div>
-        </div>
-      </section>
+        </Container>
+      </div>
 
-      {/* About area */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6" style={{ color: '#1B3A5C' }}>
-            Locksmith Services in {area.name}, TN
-          </h2>
-          <p className="text-gray-700 text-lg leading-relaxed">{area.description}</p>
-          <p className="text-gray-700 text-lg leading-relaxed mt-4">
-            Whether you&apos;re locked out of your car, need a lock rekeyed, require emergency service, or need help with a commercial property, TriStar Locksmith is the trusted choice in {area.name}. Call us anytime at{' '}
-            <a href={BUSINESS.phoneHref} className="font-bold" style={{ color: '#D4A03C' }}>
-              {BUSINESS.phone}
-            </a>
-            .
-          </p>
-        </div>
-      </section>
-
-      {/* Services in this area */}
-      <section style={{ backgroundColor: '#F5F5F0' }} className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4" style={{ color: '#1B3A5C' }}>
-            Services Available in {area.name}
-          </h2>
-          <p className="text-center text-gray-600 mb-12">All services available 24/7 throughout {area.name} and {area.county}</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICES.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="block bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition hover:-translate-y-1 border border-gray-100"
-              >
-                <div className="text-3xl mb-2">{s.icon}</div>
-                <h3 className="font-bold text-lg mb-1" style={{ color: '#1B3A5C' }}>{s.name}</h3>
-                <p className="text-gray-600 text-sm">{s.shortDesc}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why choose us */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#1B3A5C' }}>
-            Why {area.name} Residents Choose TriStar Locksmith
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { icon: '⚡', title: 'Fast Response', desc: `We dispatch quickly to ${area.name} — typically 15–30 minute arrival times` },
-              { icon: '📞', title: '24/7 Availability', desc: 'Available nights, weekends, and holidays for any locksmith emergency' },
-              { icon: '💰', title: 'Upfront Pricing', desc: 'We provide a clear quote before starting — no hidden fees, ever' },
-              { icon: '🔒', title: 'Licensed & Insured', desc: 'All our technicians are trained, experienced, and fully insured' },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-4 items-start p-6 bg-white border border-gray-100 rounded-xl shadow-sm">
-                <span className="text-3xl">{item.icon}</span>
-                <div>
-                  <h3 className="font-bold text-lg mb-1" style={{ color: '#1B3A5C' }}>{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
-                </div>
+      <Section className="bg-warm-white">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-bold text-navy mb-6 font-display">
+                Locksmith Services in {area.name}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {SERVICES.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-gold hover:shadow-sm transition-all group"
+                  >
+                    <span className="text-2xl">{service.icon}</span>
+                    <span className="text-navy font-medium group-hover:text-gold transition-colors text-sm">
+                      {service.title}
+                    </span>
+                  </Link>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Nearby areas */}
-      {area.nearbyAreas.length > 0 && (
-        <section style={{ backgroundColor: '#F5F5F0' }} className="py-12 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-6" style={{ color: '#1B3A5C' }}>Also Serving Nearby Areas</h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              {area.nearbyAreas.map((a) => (
-                <Link
-                  key={a}
-                  href={`/service-areas/${toSlug(a)}`}
-                  className="px-4 py-2 border-2 rounded-lg font-medium hover:text-white transition"
-                  style={{ borderColor: '#1B3A5C', color: '#1B3A5C' }}
-                >
-                  {a}
-                </Link>
-              ))}
+            <div>
+              <div className="bg-navy rounded-lg p-6 text-white sticky top-24">
+                <h3 className="text-xl font-bold mb-2 font-display">
+                  Need a Locksmith in {area.name}?
+                </h3>
+                <p className="text-white/80 text-sm mb-4">
+                  Available 24/7 — fast 15-30 minute response.
+                </p>
+                <Button href="tel:8653813931" variant="primary" size="lg" className="w-full justify-center">
+                  📞 {BUSINESS.phone}
+                </Button>
+              </div>
+
+              {area.nearbyAreas.length > 0 && (
+                <div className="mt-6 p-5 bg-white rounded-lg border border-gray-200">
+                  <h3 className="font-bold text-navy mb-3 font-display">Nearby Areas We Serve</h3>
+                  <ul className="space-y-2">
+                    {area.nearbyAreas.map((nearbyName) => {
+                      const nearbyArea = SERVICE_AREAS.find((a) => a.name === nearbyName);
+                      return nearbyArea ? (
+                        <li key={nearbyName}>
+                          <Link
+                            href={`/service-areas/${nearbyArea.slug}`}
+                            className="text-gold hover:text-gold-dark text-sm font-medium"
+                          >
+                            → {nearbyName}
+                          </Link>
+                        </li>
+                      ) : (
+                        <li key={nearbyName} className="text-muted text-sm">
+                          {nearbyName}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
-        </section>
-      )}
-
-      {/* CTA */}
-      <section style={{ backgroundColor: '#1B3A5C' }} className="py-16 px-4 text-center text-white">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Need a Locksmith in {area.name}?</h2>
-          <p className="text-blue-100 mb-8">
-            Call now for fast, professional service. Available 24/7 throughout {area.name} and {area.county}.
-          </p>
-          <a
-            href={BUSINESS.phoneHref}
-            style={{ backgroundColor: '#D4A03C' }}
-            className="inline-block text-white font-bold px-10 py-4 rounded-lg text-xl hover:opacity-90 transition"
-          >
-            📞 Call {BUSINESS.phone}
-          </a>
-        </div>
-      </section>
-    </div>
-  )
+        </Container>
+      </Section>
+    </>
+  );
 }

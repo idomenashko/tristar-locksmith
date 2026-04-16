@@ -1,131 +1,101 @@
-import Link from 'next/link'
-import { SERVICES, SERVICE_AREAS } from '@/lib/data'
+import Link from "next/link";
+import { SERVICES, SERVICE_AREAS, BUSINESS } from "@/lib/data";
 
-function toSlug(city: string): string {
-  return city.toLowerCase().replace(/\s+/g, '-')
-}
-
-export default function Footer() {
-  const currentYear = new Date().getFullYear()
-  const featuredAreas = SERVICE_AREAS.slice(0, 10)
+export function Footer() {
+  const topAreas = SERVICE_AREAS.slice(0, 12);
 
   return (
-    <footer style={{ backgroundColor: '#1B3A5C' }} className="text-white">
-      {/* Main columns */}
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-
-          {/* Column 1 — Brand */}
-          <div className="flex flex-col gap-4">
-            <Link
-              href="/"
-              className="font-headline text-xl font-bold text-white"
-              style={{ fontFamily: 'var(--font-manrope), sans-serif' }}
-            >
-              <span aria-hidden="true">&#9733;</span> TriStar Locksmith
+    <footer className="bg-navy-dark text-white/80">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Brand */}
+          <div className="md:col-span-1">
+            <Link href="/" className="flex items-center gap-2 text-white font-bold text-lg font-display mb-3">
+              <span className="text-gold text-xl">⭐</span>
+              <span>Tristar Locksmith</span>
             </Link>
-            <p className="text-sm text-white/70">
-              24/7 Locksmith in Knoxville, TN
+            <p className="text-sm leading-relaxed mb-4">
+              Licensed & insured locksmith serving Knoxville, TN and surrounding areas. Available 24/7.
             </p>
             <a
-              href="tel:8653813931"
-              className="inline-flex w-fit items-center gap-2 rounded-lg px-4 py-2 text-sm font-bold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#D4A03C', color: '#1B3A5C' }}
+              href={BUSINESS.phoneHref}
+              className="text-gold font-bold text-lg hover:text-gold-light transition-colors"
             >
-              <span aria-hidden="true">📞</span>
-              (865) 381-3931
+              {BUSINESS.phone}
             </a>
           </div>
 
-          {/* Column 2 — Services */}
-          <div className="flex flex-col gap-3">
-            <h3
-              className="text-sm font-semibold uppercase tracking-wider"
-              style={{ color: '#D4A03C' }}
-            >
-              Services
-            </h3>
-            <ul className="flex flex-col gap-2">
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Services</h3>
+            <ul className="space-y-2">
               {SERVICES.map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
+                    className="text-sm hover:text-gold transition-colors"
                   >
-                    {service.name}
+                    {service.title}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 3 — Service Areas */}
-          <div className="flex flex-col gap-3">
-            <h3
-              className="text-sm font-semibold uppercase tracking-wider"
-              style={{ color: '#D4A03C' }}
-            >
-              Service Areas
-            </h3>
-            <ul className="flex flex-col gap-2">
-              {featuredAreas.map((city) => (
-                <li key={city}>
+          {/* Areas */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Service Areas</h3>
+            <ul className="space-y-2">
+              {topAreas.map((area) => (
+                <li key={area.slug}>
                   <Link
-                    href={`/service-areas/${toSlug(city)}`}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
+                    href={`/service-areas/${area.slug}`}
+                    className="text-sm hover:text-gold transition-colors"
                   >
-                    {city}
+                    {area.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/service-areas" className="text-gold text-sm hover:text-gold-light transition-colors font-medium">
+                  View all areas →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Quick Links</h3>
+            <ul className="space-y-2">
+              {[
+                { href: "/about", label: "About Us" },
+                { href: "/reviews", label: "Reviews" },
+                { href: "/contact", label: "Contact" },
+                { href: "/services", label: "All Services" },
+                { href: "/service-areas", label: "All Areas" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm hover:text-gold transition-colors">
+                    {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <Link
-              href="/service-areas"
-              className="mt-1 text-sm font-medium transition-colors hover:text-white"
-              style={{ color: '#D4A03C' }}
-            >
-              View All Areas &rarr;
-            </Link>
-          </div>
-
-          {/* Column 4 — Hours & Contact */}
-          <div className="flex flex-col gap-3">
-            <h3
-              className="text-sm font-semibold uppercase tracking-wider"
-              style={{ color: '#D4A03C' }}
-            >
-              Hours &amp; Contact
-            </h3>
-            <div className="flex flex-col gap-2 text-sm text-white/70">
-              <p className="font-semibold text-white">Open 24/7</p>
-              <p>Including nights, weekends,<br />and holidays</p>
-              <a
-                href="tel:8653813931"
-                className="mt-1 font-medium text-white transition-colors hover:underline"
-              >
+            <div className="mt-6 p-3 bg-white/10 rounded-lg">
+              <p className="text-xs text-white/70 mb-1">Available 24/7</p>
+              <a href="tel:8653813931" className="text-gold font-bold hover:text-gold-light transition-colors">
                 (865) 381-3931
               </a>
-              <p className="mt-2 text-xs text-white/50">
-                Email inquiries coming soon
-              </p>
             </div>
           </div>
-
         </div>
-      </div>
 
-      {/* Bottom bar */}
-      <div
-        className="border-t"
-        style={{ borderColor: '#2a5480' }}
-      >
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-white/50 sm:flex-row sm:px-6 lg:px-8">
-          <span>
-            &copy; {currentYear} Tristar Locksmith. All rights reserved.
-          </span>
-          <span>Knoxville, TN</span>
+        <div className="border-t border-white/20 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
+          <p>© {new Date().getFullYear()} Tristar Locksmith. All rights reserved.</p>
+          <p>Licensed & Insured | Knoxville, TN</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
