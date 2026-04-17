@@ -1,4 +1,4 @@
-import { SERVICE_AREAS } from "@/lib/data";
+import { getServiceAreas } from "@/sanity/queries";
 import { AreaCard } from "@/components/area/AreaCard";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -12,7 +12,9 @@ export const metadata = buildMetadata({
   path: "/service-areas",
 });
 
-export default function ServiceAreasPage() {
+export default async function ServiceAreasPage() {
+  const serviceAreas = await getServiceAreas();
+
   return (
     <>
       <div className="bg-navy text-white py-16">
@@ -28,7 +30,7 @@ export default function ServiceAreasPage() {
       <Section className="bg-warm-white">
         <Container>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {SERVICE_AREAS.map((area) => (
+            {serviceAreas.map((area) => (
               <AreaCard key={area.slug} area={area} />
             ))}
           </div>

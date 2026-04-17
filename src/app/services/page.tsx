@@ -1,4 +1,4 @@
-import { SERVICES } from "@/lib/data";
+import { getServices } from "@/sanity/queries";
 import { ServiceCard } from "@/components/service/ServiceCard";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -12,7 +12,9 @@ export const metadata = buildMetadata({
   path: "/services",
 });
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const services = await getServices();
+
   return (
     <>
       <div className="bg-navy text-white py-16">
@@ -28,7 +30,7 @@ export default function ServicesPage() {
       <Section className="bg-warm-white">
         <Container>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICES.map((service) => (
+            {services.map((service) => (
               <ServiceCard key={service.slug} service={service} />
             ))}
           </div>

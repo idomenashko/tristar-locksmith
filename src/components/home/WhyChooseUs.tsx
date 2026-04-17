@@ -1,8 +1,9 @@
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { ADVANTAGES } from "@/lib/data";
+import { getAdvantages } from "@/sanity/queries";
 
-export function WhyChooseUs() {
+export async function WhyChooseUs() {
+  const advantages = await getAdvantages();
   return (
     <Section className="bg-navy text-white">
       <Container>
@@ -22,7 +23,7 @@ export function WhyChooseUs() {
 
         {/* Advantages grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ADVANTAGES.map((advantage) => (
+          {advantages.map((advantage) => (
             <div
               key={advantage.title}
               className="flex gap-4 bg-white/10 rounded-lg p-6 border border-white/10 hover:bg-white/15 transition-colors"

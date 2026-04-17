@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { BUSINESS, SERVICE_AREAS } from "@/lib/data";
+import { getBusiness, getServiceAreas } from "@/sanity/queries";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -11,7 +11,8 @@ export const metadata = buildMetadata({
   path: "/contact",
 });
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const [business, serviceAreas] = await Promise.all([getBusiness(), getServiceAreas()]);
   return (
     <>
       <div className="bg-navy text-white py-16">
@@ -38,10 +39,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-navy mb-1">Phone (Preferred)</h3>
                     <a
-                      href={BUSINESS.phoneHref}
+                      href={business.phoneHref}
                       className="text-gold font-bold text-2xl hover:text-gold-dark transition-colors"
                     >
-                      {BUSINESS.phone}
+                      {business.phone}
                     </a>
                     <p className="text-muted text-sm mt-1">Call or text anytime</p>
                   </div>
@@ -86,7 +87,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold text-navy mb-6 font-display">Areas We Serve</h2>
               <div className="grid grid-cols-2 gap-2">
-                {SERVICE_AREAS.map((area) => (
+                {serviceAreas.map((area) => (
                   <div key={area.slug} className="flex items-center gap-2 text-sm text-ink py-1">
                     <span className="text-forest font-bold">✓</span>
                     {area.name}

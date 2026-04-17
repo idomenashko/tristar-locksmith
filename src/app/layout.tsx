@@ -45,12 +45,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const schema = buildLocalBusinessSchema();
+  const schema = await buildLocalBusinessSchema();
 
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>

@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { FaqAccordion } from "@/components/home/FaqAccordion";
 import { CtaSection } from "@/components/home/CtaSection";
 import { buildMetadata } from "@/lib/seo";
+import { getFaqs } from "@/sanity/queries";
 
 export const metadata = buildMetadata({
   title: "24/7 Locksmith Knoxville, TN",
@@ -15,7 +16,9 @@ export const metadata = buildMetadata({
   path: "/",
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  const faqs = await getFaqs();
+
   return (
     <>
       <EmergencyBanner />
@@ -24,7 +27,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <AreasSection />
       <Testimonials />
-      <FaqAccordion />
+      <FaqAccordion faqs={faqs} />
       <CtaSection />
     </>
   );

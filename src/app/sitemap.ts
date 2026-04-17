@@ -1,9 +1,14 @@
 import type { MetadataRoute } from "next";
-import { SERVICES, SERVICE_AREAS } from "@/lib/data";
+import { getServices, getServiceAreas } from "@/sanity/queries";
 
 const BASE_URL = "https://tristarlocksmith.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [services, serviceAreas] = await Promise.all([
+    getServices(),
+    getServiceAreas(),
+  ]);
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
@@ -43,14 +48,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const servicePages: MetadataRoute.Sitemap = SERVICES.map((service) => ({
+  const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
     url: `${BASE_URL}/services/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  const areaPages: MetadataRoute.Sitemap = SERVICE_AREAS.map((area) => ({
+  const areaPages: MetadataRoute.Sitemap = serviceAreas.map((area) => ({
     url: `${BASE_URL}/service-areas/${area.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,

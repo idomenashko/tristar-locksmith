@@ -1,9 +1,10 @@
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Stars } from "@/components/ui/Stars";
-import { TESTIMONIALS } from "@/lib/data";
+import { getTestimonials } from "@/sanity/queries";
 
-export function Testimonials() {
+export async function Testimonials() {
+  const testimonials = await getTestimonials();
   return (
     <Section className="bg-navy text-white">
       <Container>
@@ -23,7 +24,7 @@ export function Testimonials() {
 
         {/* Reviews grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TESTIMONIALS.map((testimonial) => (
+          {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
               className="bg-white rounded-lg p-6 flex flex-col gap-4"

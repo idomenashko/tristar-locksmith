@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { SERVICES, BUSINESS } from "@/lib/data";
+import { getServices, getService, getBusiness } from "@/sanity/queries";
 import { ServiceHero } from "@/components/service/ServiceHero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -8,13 +8,14 @@ import { buildMetadata } from "@/lib/seo";
 import { buildServiceSchema, buildFAQSchema } from "@/lib/schema";
 import { SITE } from "@/lib/seo";
 
-export function generateStaticParams() {
-  return SERVICES.map((service) => ({ slug: service.slug }));
+export async function generateStaticParams() {
+  const services = await getServices();
+  return services.map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = SERVICES.find((s) => s.slug === slug);
+  const service = await getService(slug);
   if (!service) return {};
   return buildMetadata({
     title: service.title,
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = SERVICES.find((s) => s.slug === slug);
+  const [service, business] = await Promise.all([getService(slug), getBusiness()]);
   if (!service) notFound();
 
   const serviceSchema = buildServiceSchema(
@@ -76,7 +77,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 Available 24/7 in Knoxville, TN and surrounding areas.
               </p>
               <Button href="tel:8653813931" variant="primary" size="lg">
-                📞 Call {BUSINESS.phone}
+                📞 Call {business.phone}
               </Button>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { BUSINESS, ADVANTAGES } from "@/lib/data";
+import { getBusiness, getAdvantages } from "@/sanity/queries";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -11,7 +11,8 @@ export const metadata = buildMetadata({
   path: "/about",
 });
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const [business, advantages] = await Promise.all([getBusiness(), getAdvantages()]);
   return (
     <>
       <div className="bg-navy text-white py-16">
@@ -41,7 +42,7 @@ export default function AboutPage() {
 
             <h2 className="text-2xl font-bold text-navy mb-6 font-display">Why Choose Tristar?</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {ADVANTAGES.map((adv) => (
+              {advantages.map((adv) => (
                 <div key={adv.title} className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
                   <span className="text-3xl">{adv.icon}</span>
                   <div>
@@ -56,7 +57,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold mb-2 font-display">Ready to Work With Us?</h3>
               <p className="text-white/80 mb-4">Call anytime — we&apos;re available 24 hours a day, 7 days a week.</p>
               <Button href="tel:8653813931" variant="primary" size="lg">
-                📞 Call {BUSINESS.phone}
+                📞 Call {business.phone}
               </Button>
             </div>
           </div>

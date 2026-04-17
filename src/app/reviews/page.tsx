@@ -2,7 +2,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Stars } from "@/components/ui/Stars";
-import { TESTIMONIALS, BUSINESS } from "@/lib/data";
+import { getTestimonials, getBusiness } from "@/sanity/queries";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -12,7 +12,8 @@ export const metadata = buildMetadata({
   path: "/reviews",
 });
 
-export default function ReviewsPage() {
+export default async function ReviewsPage() {
+  const [testimonials, business] = await Promise.all([getTestimonials(), getBusiness()]);
   return (
     <>
       <div className="bg-navy text-white py-16">
@@ -33,7 +34,7 @@ export default function ReviewsPage() {
       <Section className="bg-warm-white">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((testimonial) => (
+            {testimonials.map((testimonial) => (
               <div key={testimonial.name} className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <Stars rating={testimonial.rating} className="mb-3" />
                 <blockquote className="text-ink leading-relaxed mb-4">
@@ -57,7 +58,7 @@ export default function ReviewsPage() {
               <h2 className="text-2xl font-bold mb-2 font-display">Experience the Tristar Difference</h2>
               <p className="text-white/80 mb-6">Join hundreds of satisfied customers across the Knoxville area.</p>
               <Button href="tel:8653813931" variant="primary" size="lg">
-                📞 Call {BUSINESS.phone}
+                📞 Call {business.phone}
               </Button>
             </div>
           </div>

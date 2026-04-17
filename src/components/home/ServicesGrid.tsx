@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { SERVICES } from "@/lib/data";
+import { getServices } from "@/sanity/queries";
 
-export function ServicesGrid() {
+export async function ServicesGrid() {
+  const services = await getServices();
   return (
     <Section className="bg-warm-white">
       <Container>
@@ -20,7 +21,7 @@ export function ServicesGrid() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.map((service) => (
+          {services.map((service) => (
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}

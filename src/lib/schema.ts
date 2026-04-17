@@ -1,17 +1,22 @@
-import { SERVICE_AREAS, SERVICES } from "./data";
+import { getBusiness, getServiceAreas } from "@/sanity/queries";
 
-export function buildLocalBusinessSchema() {
+export async function buildLocalBusinessSchema() {
+  const [business, serviceAreas] = await Promise.all([
+    getBusiness(),
+    getServiceAreas(),
+  ]);
+
   return {
     "@context": "https://schema.org",
     "@type": "Locksmith",
-    name: "Tristar Locksmith",
-    telephone: "(865) 381-3931",
+    name: business.name,
+    telephone: business.phone,
     url: "https://tristarlocksmith.com",
     image: "https://tristarlocksmith.com/og-image.jpg",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Knoxville",
-      addressRegion: "TN",
+      addressLocality: business.city,
+      addressRegion: business.state,
       addressCountry: "US",
     },
     geo: {
@@ -33,7 +38,7 @@ export function buildLocalBusinessSchema() {
       opens: "00:00",
       closes: "23:59",
     },
-    areaServed: SERVICE_AREAS.map((area) => ({
+    areaServed: serviceAreas.map((area) => ({
       "@type": "City",
       name: area.name,
     })),
@@ -83,5 +88,3 @@ export function buildFAQSchema(faqs: { question: string; answer: string }[]) {
   };
 }
 
-// Re-export SERVICES to allow consumers to import from schema if needed
-export { SERVICES };

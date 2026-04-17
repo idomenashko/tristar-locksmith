@@ -2,9 +2,10 @@ import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { SERVICE_AREAS } from "@/lib/data";
+import { getServiceAreas } from "@/sanity/queries";
 
-export function AreasSection() {
+export async function AreasSection() {
+  const serviceAreas = await getServiceAreas();
   return (
     <Section className="bg-warm-white">
       <Container>
@@ -21,7 +22,7 @@ export function AreasSection() {
 
         {/* Area chips */}
         <div className="flex flex-wrap gap-2.5 justify-center mb-10">
-          {SERVICE_AREAS.map((area) => (
+          {serviceAreas.map((area) => (
             <Link
               key={area.slug}
               href={`/service-areas/${area.slug}`}

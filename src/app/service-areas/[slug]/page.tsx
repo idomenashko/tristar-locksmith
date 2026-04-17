@@ -1,18 +1,19 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { SERVICE_AREAS, SERVICES, BUSINESS } from "@/lib/data";
+import { getServiceArea, getServiceAreas, getServices, getBusiness } from "@/sanity/queries";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { buildMetadata } from "@/lib/seo";
 
-export function generateStaticParams() {
-  return SERVICE_AREAS.map((area) => ({ slug: area.slug }));
+export async function generateStaticParams() {
+  const serviceAreas = await getServiceAreas();
+  return serviceAreas.map((area) => ({ slug: area.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const area = SERVICE_AREAS.find((a) => a.slug === slug);
+  const area = await getServiceArea(slug);
   if (!area) return {};
   return buildMetadata({
     title: `Locksmith ${area.name}, TN`,
@@ -23,7 +24,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ServiceAreaPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const area = SERVICE_AREAS.find((a) => a.slug === slug);
+  const [area, allAreas, services, business] = await Promise.all([
+    getServiceArea(slug),
+    getServiceAreas(),
+    getServices(),
+    getBusiness(),
+  ]);
   if (!area) notFound();
 
   return (
@@ -58,7 +64,7 @@ export default async function ServiceAreaPage({ params }: { params: Promise<{ sl
                 Locksmith Services in {area.name}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                {SERVICES.map((service) => (
+                {services.map((service) => (
                   <Link
                     key={service.slug}
                     href={`/services/${service.slug}`}
@@ -82,7 +88,7 @@ export default async function ServiceAreaPage({ params }: { params: Promise<{ sl
                   Available 24/7 — fast 15-30 minute response.
                 </p>
                 <Button href="tel:8653813931" variant="primary" size="lg" className="w-full justify-center">
-                  📞 {BUSINESS.phone}
+                  📞 {business.phone}
                 </Button>
               </div>
 
@@ -91,7 +97,7 @@ export default async function ServiceAreaPage({ params }: { params: Promise<{ sl
                   <h3 className="font-bold text-navy mb-3 font-display">Nearby Areas We Serve</h3>
                   <ul className="space-y-2">
                     {area.nearbyAreas.map((nearbyName) => {
-                      const nearbyArea = SERVICE_AREAS.find((a) => a.name === nearbyName);
+                      const nearbyArea = allAreas.find((a) => a.name === nearbyName);
                       return nearbyArea ? (
                         <li key={nearbyName}>
                           <Link

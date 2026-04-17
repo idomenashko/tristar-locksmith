@@ -1,8 +1,13 @@
 import Link from "next/link";
-import { SERVICES, SERVICE_AREAS, BUSINESS } from "@/lib/data";
+import { getServices, getServiceAreas, getBusiness } from "@/sanity/queries";
 
-export function Footer() {
-  const topAreas = SERVICE_AREAS.slice(0, 12);
+export async function Footer() {
+  const [services, serviceAreas, business] = await Promise.all([
+    getServices(),
+    getServiceAreas(),
+    getBusiness(),
+  ]);
+  const topAreas = serviceAreas.slice(0, 12);
 
   return (
     <footer className="bg-navy-dark text-white/80">
@@ -18,10 +23,10 @@ export function Footer() {
               Licensed & insured locksmith serving Knoxville, TN and surrounding areas. Available 24/7.
             </p>
             <a
-              href={BUSINESS.phoneHref}
+              href={business.phoneHref}
               className="text-gold font-bold text-lg hover:text-gold-light transition-colors"
             >
-              {BUSINESS.phone}
+              {business.phone}
             </a>
           </div>
 
@@ -29,7 +34,7 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Services</h3>
             <ul className="space-y-2">
-              {SERVICES.map((service) => (
+              {services.map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}

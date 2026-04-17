@@ -1,11 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import type { FaqItem } from "@/lib/types";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { FAQ } from "@/lib/data";
 
-export function FaqAccordion() {
+interface Props {
+  faqs: FaqItem[];
+}
+
+export function FaqAccordion({ faqs }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   function toggle(index: number) {
@@ -27,7 +31,7 @@ export function FaqAccordion() {
 
         {/* Accordion */}
         <div className="max-w-3xl mx-auto divide-y divide-warm-white-dark rounded-lg border border-warm-white-dark bg-white overflow-hidden">
-          {FAQ.map((item, index) => {
+          {faqs.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <div key={index}>
