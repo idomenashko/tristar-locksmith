@@ -7,22 +7,19 @@ import type {
   Advantage,
 } from "@/lib/types";
 import { sanityClient } from "./client";
+import {
+  BUSINESS,
+  SERVICES,
+  SERVICE_AREAS,
+  TESTIMONIALS,
+  FAQ,
+  ADVANTAGES,
+} from "@/lib/data";
 
 const revalidate = 60;
 
-/** Fallback business data used when Sanity dataset is not yet seeded. */
-const FALLBACK_BUSINESS: Business = {
-  name: "Tristar Locksmith",
-  phone: "(865) 381-3931",
-  phoneHref: "tel:8653813931",
-  hours: "24/7",
-  city: "Knoxville",
-  state: "TN",
-  address: "Knoxville, TN",
-};
-
 export async function getBusiness(): Promise<Business> {
-  if (!sanityClient) return FALLBACK_BUSINESS;
+  if (!sanityClient) return BUSINESS;
   try {
     const result = await sanityClient.fetch<Business | null>(
       `*[_type == "business" && _id == "business"][0]{
@@ -37,16 +34,16 @@ export async function getBusiness(): Promise<Business> {
       {},
       { next: { revalidate, tags: ["business"] } }
     );
-    return result ?? FALLBACK_BUSINESS;
+    return result ?? BUSINESS;
   } catch {
-    return FALLBACK_BUSINESS;
+    return BUSINESS;
   }
 }
 
 export async function getServices(): Promise<Service[]> {
-  if (!sanityClient) return [];
+  if (!sanityClient) return SERVICES;
   try {
-    return await sanityClient.fetch<Service[]>(
+    const result = await sanityClient.fetch<Service[]>(
       `*[_type == "service"] | order(order asc) {
         "slug": slug.current,
         title,
@@ -59,15 +56,16 @@ export async function getServices(): Promise<Service[]> {
       {},
       { next: { revalidate, tags: ["service"] } }
     );
+    return result.length > 0 ? result : SERVICES;
   } catch {
-    return [];
+    return SERVICES;
   }
 }
 
 export async function getService(slug: string): Promise<Service | null> {
-  if (!sanityClient) return null;
+  if (!sanityClient) return SERVICES.find((s) => s.slug === slug) ?? null;
   try {
-    return await sanityClient.fetch<Service | null>(
+    const result = await sanityClient.fetch<Service | null>(
       `*[_type == "service" && slug.current == $slug][0]{
         "slug": slug.current,
         title,
@@ -80,15 +78,16 @@ export async function getService(slug: string): Promise<Service | null> {
       { slug },
       { next: { revalidate, tags: ["service", `service:${slug}`] } }
     );
+    return result ?? SERVICES.find((s) => s.slug === slug) ?? null;
   } catch {
-    return null;
+    return SERVICES.find((s) => s.slug === slug) ?? null;
   }
 }
 
 export async function getServiceAreas(): Promise<ServiceArea[]> {
-  if (!sanityClient) return [];
+  if (!sanityClient) return SERVICE_AREAS;
   try {
-    return await sanityClient.fetch<ServiceArea[]>(
+    const result = await sanityClient.fetch<ServiceArea[]>(
       `*[_type == "serviceArea"] | order(order asc) {
         "slug": slug.current,
         name,
@@ -99,17 +98,18 @@ export async function getServiceAreas(): Promise<ServiceArea[]> {
       {},
       { next: { revalidate, tags: ["serviceArea"] } }
     );
+    return result.length > 0 ? result : SERVICE_AREAS;
   } catch {
-    return [];
+    return SERVICE_AREAS;
   }
 }
 
 export async function getServiceArea(
   slug: string
 ): Promise<ServiceArea | null> {
-  if (!sanityClient) return null;
+  if (!sanityClient) return SERVICE_AREAS.find((a) => a.slug === slug) ?? null;
   try {
-    return await sanityClient.fetch<ServiceArea | null>(
+    const result = await sanityClient.fetch<ServiceArea | null>(
       `*[_type == "serviceArea" && slug.current == $slug][0]{
         "slug": slug.current,
         name,
@@ -120,15 +120,16 @@ export async function getServiceArea(
       { slug },
       { next: { revalidate, tags: ["serviceArea", `serviceArea:${slug}`] } }
     );
+    return result ?? SERVICE_AREAS.find((a) => a.slug === slug) ?? null;
   } catch {
-    return null;
+    return SERVICE_AREAS.find((a) => a.slug === slug) ?? null;
   }
 }
 
 export async function getTestimonials(): Promise<Testimonial[]> {
-  if (!sanityClient) return [];
+  if (!sanityClient) return TESTIMONIALS;
   try {
-    return await sanityClient.fetch<Testimonial[]>(
+    const result = await sanityClient.fetch<Testimonial[]>(
       `*[_type == "testimonial"] | order(order asc) {
         name,
         rating,
@@ -138,15 +139,16 @@ export async function getTestimonials(): Promise<Testimonial[]> {
       {},
       { next: { revalidate, tags: ["testimonial"] } }
     );
+    return result.length > 0 ? result : TESTIMONIALS;
   } catch {
-    return [];
+    return TESTIMONIALS;
   }
 }
 
 export async function getFaqs(): Promise<FaqItem[]> {
-  if (!sanityClient) return [];
+  if (!sanityClient) return FAQ;
   try {
-    return await sanityClient.fetch<FaqItem[]>(
+    const result = await sanityClient.fetch<FaqItem[]>(
       `*[_type == "faqItem"] | order(order asc) {
         question,
         answer
@@ -154,15 +156,16 @@ export async function getFaqs(): Promise<FaqItem[]> {
       {},
       { next: { revalidate, tags: ["faqItem"] } }
     );
+    return result.length > 0 ? result : FAQ;
   } catch {
-    return [];
+    return FAQ;
   }
 }
 
 export async function getAdvantages(): Promise<Advantage[]> {
-  if (!sanityClient) return [];
+  if (!sanityClient) return ADVANTAGES;
   try {
-    return await sanityClient.fetch<Advantage[]>(
+    const result = await sanityClient.fetch<Advantage[]>(
       `*[_type == "advantage"] | order(order asc) {
         icon,
         title,
@@ -171,7 +174,8 @@ export async function getAdvantages(): Promise<Advantage[]> {
       {},
       { next: { revalidate, tags: ["advantage"] } }
     );
+    return result.length > 0 ? result : ADVANTAGES;
   } catch {
-    return [];
+    return ADVANTAGES;
   }
 }
