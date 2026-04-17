@@ -20,7 +20,6 @@ const nextConfig: NextConfig = {
 
       function patchAliasInRule(rule: Record<string, unknown>) {
         if (!rule || typeof rule !== "object") return;
-        // Check for nested resolve.alias
         const resolve = rule.resolve as Record<string, unknown> | undefined;
         if (resolve?.alias && typeof resolve.alias === "object") {
           const alias = resolve.alias as Record<string, string>;
@@ -28,7 +27,6 @@ const nextConfig: NextConfig = {
             alias["react$"] = reactPath;
           }
         }
-        // Recurse into oneOf / use arrays
         const oneOf = rule.oneOf as unknown[] | undefined;
         if (Array.isArray(oneOf)) {
           oneOf.forEach((r) => patchAliasInRule(r as Record<string, unknown>));

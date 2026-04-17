@@ -22,6 +22,7 @@ const FALLBACK_BUSINESS: Business = {
 };
 
 export async function getBusiness(): Promise<Business> {
+  if (!sanityClient) return FALLBACK_BUSINESS;
   try {
     const result = await sanityClient.fetch<Business | null>(
       `*[_type == "business" && _id == "business"][0]{
@@ -43,6 +44,7 @@ export async function getBusiness(): Promise<Business> {
 }
 
 export async function getServices(): Promise<Service[]> {
+  if (!sanityClient) return [];
   try {
     return await sanityClient.fetch<Service[]>(
       `*[_type == "service"] | order(order asc) {
@@ -63,6 +65,7 @@ export async function getServices(): Promise<Service[]> {
 }
 
 export async function getService(slug: string): Promise<Service | null> {
+  if (!sanityClient) return null;
   try {
     return await sanityClient.fetch<Service | null>(
       `*[_type == "service" && slug.current == $slug][0]{
@@ -83,6 +86,7 @@ export async function getService(slug: string): Promise<Service | null> {
 }
 
 export async function getServiceAreas(): Promise<ServiceArea[]> {
+  if (!sanityClient) return [];
   try {
     return await sanityClient.fetch<ServiceArea[]>(
       `*[_type == "serviceArea"] | order(order asc) {
@@ -103,6 +107,7 @@ export async function getServiceAreas(): Promise<ServiceArea[]> {
 export async function getServiceArea(
   slug: string
 ): Promise<ServiceArea | null> {
+  if (!sanityClient) return null;
   try {
     return await sanityClient.fetch<ServiceArea | null>(
       `*[_type == "serviceArea" && slug.current == $slug][0]{
@@ -121,6 +126,7 @@ export async function getServiceArea(
 }
 
 export async function getTestimonials(): Promise<Testimonial[]> {
+  if (!sanityClient) return [];
   try {
     return await sanityClient.fetch<Testimonial[]>(
       `*[_type == "testimonial"] | order(order asc) {
@@ -138,6 +144,7 @@ export async function getTestimonials(): Promise<Testimonial[]> {
 }
 
 export async function getFaqs(): Promise<FaqItem[]> {
+  if (!sanityClient) return [];
   try {
     return await sanityClient.fetch<FaqItem[]>(
       `*[_type == "faqItem"] | order(order asc) {
@@ -153,6 +160,7 @@ export async function getFaqs(): Promise<FaqItem[]> {
 }
 
 export async function getAdvantages(): Promise<Advantage[]> {
+  if (!sanityClient) return [];
   try {
     return await sanityClient.fetch<Advantage[]>(
       `*[_type == "advantage"] | order(order asc) {
