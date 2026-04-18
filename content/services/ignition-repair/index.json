@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "Ignition Repair & Replacement"
+  },
+  "icon": "🚙",
+  "shortDescription": "Ignition won't turn or key is stuck? Tristar Locksmith repairs and replaces vehicle ignition cylinders across the Knoxville area.",
+  "longDescription": "A faulty ignition cylinder can leave you stranded just as surely as a lockout. Worn pins, a broken wafer, or a bent key can prevent the ignition from turning, or worse — cause the key to get stuck. Tristar Locksmith diagnoses ignition problems on-site and determines whether the cylinder needs to be repaired, rebuilt, or fully replaced. We work on a wide range of vehicle makes and models and carry common replacement cylinders for popular vehicles. Service is available throughout Knox County and neighboring areas so you're never far from help.",
+  "features": [
+    "On-site ignition cylinder diagnosis",
+    "Ignition cylinder repair and rebuild",
+    "Full ignition replacement when necessary",
+    "Broken or stuck key extraction from ignition",
+    "Key re-coding after ignition replacement",
+    "Covers most domestic and foreign vehicle makes"
+  ],
+  "faqs": [
+    {
+      "question": "My key turns but the car won't start — is that an ignition problem?",
+      "answer": "Not always. If the key turns freely but the engine doesn't crank, the issue could be the ignition switch (electrical) rather than the cylinder (mechanical). Tristar Locksmith technicians diagnose both and can tell you quickly whether it's a locksmith issue or something to refer to a mechanic."
+    },
+    {
+      "question": "Can you extract a broken key from an ignition?",
+      "answer": "Yes. Broken key extraction is one of our most common ignition calls. We use specialized tools to remove the fragment without damaging the cylinder, then assess whether the cylinder is still functional or needs replacement. We can also cut a new key on the spot."
+    },
+    {
+      "question": "Will I need to reprogram my transponder chip after ignition replacement?",
+      "answer": "Often, yes. When a new ignition cylinder is installed, the existing programmed key may need to be re-paired to recognize the new cylinder. Tristar Locksmith handles both the mechanical replacement and the electronic programming as part of the same service call."
+    }
+  ]
+}

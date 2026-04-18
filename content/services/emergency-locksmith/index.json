@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "Emergency Locksmith"
+  },
+  "icon": "🚨",
+  "shortDescription": "Locked out, broken lock, or security breach? Tristar Locksmith is available 24/7 for emergency locksmith service throughout Knoxville and East Tennessee.",
+  "longDescription": "Emergencies don't follow a schedule, and neither does Tristar Locksmith. Whether it's 2 AM and you're locked out of your home in Powell, you've had a break-in and need your locks changed immediately in Maryville, or a key snapped in your office lock before an important morning, we respond fast. Our emergency technicians are equipped to handle lockouts, broken locks, forced entry repairs, and lock replacements on the spot. We keep our response times honest — if we say 20 minutes, we mean 20 minutes.",
+  "features": [
+    "True 24/7 availability including holidays",
+    "15–30 minute response across Knox County",
+    "Break-in repair and emergency lock replacement",
+    "No after-hours surcharges hidden in fine print",
+    "Residential, commercial, and automotive emergencies covered",
+    "Single call connects you directly to a dispatcher — no call centers"
+  ],
+  "faqs": [
+    {
+      "question": "Is there an extra charge for middle-of-the-night calls?",
+      "answer": "Tristar Locksmith believes in transparent pricing. We will always quote you a price before any work begins, and we do not tack on surprise after-hours fees. Any applicable charges are communicated upfront when you call, regardless of the hour."
+    },
+    {
+      "question": "What counts as a locksmith emergency?",
+      "answer": "Anything that leaves you locked out, compromises your security, or requires immediate attention counts as an emergency. This includes car and home lockouts, broken keys, snapped-off locks, break-in repairs, and situations where you need a lock changed immediately for safety reasons."
+    },
+    {
+      "question": "Do you cover rural areas outside Knoxville at night?",
+      "answer": "Yes. Tristar Locksmith covers the full service area — including Maynardville, Heiskell, Corryton, Friendsville, and other outlying communities — at all hours. Response times to areas farther from Knoxville may be longer, but we will always give you an accurate ETA when you call."
+    }
+  ]
+}

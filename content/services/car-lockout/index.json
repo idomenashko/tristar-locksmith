@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "Car Lockout Service"
+  },
+  "icon": "🚗",
+  "shortDescription": "Locked out of your car in Knoxville or surrounding areas? Tristar Locksmith gets you back on the road fast — usually within 15 to 30 minutes.",
+  "longDescription": "A car lockout can happen to anyone, anywhere — a parking lot in Farragut, a trailhead near Sevierville, or right in your own driveway in Knoxville. Tristar Locksmith dispatches a trained technician quickly so you're never stranded for long. We use professional, non-destructive entry tools to unlock your vehicle without damaging paint, seals, or window trim. Whether you drive a domestic sedan, a pickup truck, or a late-model import with advanced locking systems, our team has the experience and equipment to get you back in safely.",
+  "features": [
+    "15–30 minute average response time across Knox County",
+    "Non-destructive entry — no damage to your vehicle",
+    "All vehicle makes and models including imports and luxury cars",
+    "Available 24 hours a day, 7 days a week, 365 days a year",
+    "Upfront pricing with no hidden dispatch fees",
+    "Licensed, insured, and background-checked technicians"
+  ],
+  "faqs": [
+    {
+      "question": "How long will it take to unlock my car in Knoxville?",
+      "answer": "Tristar Locksmith typically arrives within 15 to 30 minutes anywhere in the Knoxville metro area, including Farragut, Powell, and Oak Ridge. Response times to more rural areas like Maynardville or Friendsville may be slightly longer, but we always give you an accurate ETA when you call."
+    },
+    {
+      "question": "Will unlocking my car cause any damage?",
+      "answer": "No. Our technicians use industry-standard slim-jim tools and air wedge systems designed for non-destructive entry. We never force locks or pry frames. Your vehicle will be in the same condition it was before you called us."
+    },
+    {
+      "question": "What if my keys are locked in the trunk?",
+      "answer": "Keys locked in the trunk are very common and we handle them regularly. Depending on your vehicle, we can access the cabin through the door and use the interior trunk release, or in some cases work directly from the trunk lock itself. Either way, we'll get your keys out quickly."
+    }
+  ]
+}

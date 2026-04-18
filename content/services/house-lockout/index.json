@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "House Lockout Service"
+  },
+  "icon": "🏠",
+  "shortDescription": "Locked out of your home? Tristar Locksmith provides fast, professional residential lockout service throughout Knoxville and East Tennessee.",
+  "longDescription": "Getting locked out of your own home is stressful, especially at night or in bad weather. Tristar Locksmith serves homeowners across Knoxville, Maryville, Clinton, and the surrounding communities with prompt, respectful service. Our technicians can open virtually any residential lock — deadbolts, knob locks, smart locks, and high-security cylinders — without causing damage to your door or frame. We also carry a full stock of replacement hardware if a lock is broken or needs immediate upgrading after a lockout.",
+  "features": [
+    "Residential lock opening for all major brands",
+    "No damage to doors, frames, or weather stripping",
+    "24/7 emergency response including holidays",
+    "Same technician can rekey or replace the lock on the spot",
+    "Covers apartments, condos, and single-family homes",
+    "Verified, background-checked locksmiths"
+  ],
+  "faqs": [
+    {
+      "question": "Can you open my house door without breaking the lock?",
+      "answer": "In most cases, yes. Tristar Locksmith uses lock picking and bypass techniques that preserve your existing hardware. If the lock is damaged or the mechanism has failed, we'll let you know before doing anything and give you options for replacement."
+    },
+    {
+      "question": "Do I need to prove I live there?",
+      "answer": "Yes. For the safety of homeowners across Knoxville, we ask for a photo ID and will confirm the address matches. This protects you and ensures we're only opening doors for the rightful residents."
+    },
+    {
+      "question": "Can you rekey the lock after letting me in?",
+      "answer": "Absolutely. Many customers take the opportunity to rekey or replace their locks right after a lockout. Our technicians carry common lock hardware and rekey kits, so we can handle it in a single visit with no extra trip charge."
+    }
+  ]
+}
