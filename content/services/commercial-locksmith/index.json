@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "Commercial Locksmith"
+  },
+  "icon": "🏢",
+  "shortDescription": "Tristar Locksmith provides full commercial locksmith services for Knoxville businesses — from master key systems to high-security access control.",
+  "longDescription": "Securing a business requires a different approach than a residential property. Tristar Locksmith works with offices, retail stores, warehouses, restaurants, and multi-tenant buildings throughout Knoxville and East Tennessee. We install and service commercial-grade hardware including panic bars, door closers, cylindrical and mortise locks, and electronic access control systems. Our master key programs allow you to grant tiered access so managers can open all doors while staff is limited to their work areas. We also provide emergency commercial lockout service and can rekey an entire building in a single visit.",
+  "features": [
+    "Master key system design and installation",
+    "Panic bar and exit device installation",
+    "Electronic keypad and card access systems",
+    "High-security commercial lock brands",
+    "Full building rekey after staff turnover",
+    "Emergency commercial lockout response 24/7"
+  ],
+  "faqs": [
+    {
+      "question": "Can you set up a master key system for my business?",
+      "answer": "Yes. Master key systems are a core commercial service for Tristar Locksmith. We design the key hierarchy based on your access needs — grand master, master, and change keys — and install or rekey the appropriate cylinders throughout your Knoxville facility."
+    },
+    {
+      "question": "Do you install electronic access control?",
+      "answer": "We install keypads, card readers, and combination mechanical-electronic systems for businesses of all sizes. For more complex networked access systems, we partner with access control specialists and can recommend the right solution for your facility."
+    },
+    {
+      "question": "How quickly can you respond to a commercial lockout?",
+      "answer": "Tristar Locksmith treats commercial lockouts with the same urgency as residential ones. We aim to be on-site within 30 minutes anywhere in the Knoxville metro area. For businesses on Knox County's periphery, we still typically arrive in under an hour."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "Car Key Replacement"
+  },
+  "icon": "🗝️",
+  "shortDescription": "Lost your car keys? Tristar Locksmith cuts and programs replacement keys and key fobs for most makes and models — often cheaper than the dealership.",
+  "longDescription": "Losing your car keys can feel like a crisis, but Tristar Locksmith makes replacement straightforward and affordable. We cut and program transponder keys, laser-cut high-security keys, proximity fobs, and push-to-start smart keys for a wide range of domestic and foreign vehicles right from our mobile unit. No need to tow your car to a dealership and wait days — we come to you anywhere in the Knoxville area and complete the job on-site, usually in under an hour. We also retain the ability to create a spare key at the same visit so you're never in this situation again.",
+  "features": [
+    "Transponder key cutting and programming",
+    "Push-to-start and proximity fob programming",
+    "High-security laser-cut key duplication",
+    "On-site service — no towing to a dealership",
+    "Duplicate spare keys made at the same visit",
+    "Most domestic and imported vehicle makes supported"
+  ],
+  "faqs": [
+    {
+      "question": "Can you make a car key without the original?",
+      "answer": "Yes. Tristar Locksmith can create a new key from scratch using your Vehicle Identification Number (VIN) and ownership documentation. This is common when all keys are lost. We decode the key code from our databases and cut and program a new key on the spot."
+    },
+    {
+      "question": "Is it cheaper to use a locksmith than the dealership for key replacement?",
+      "answer": "In most cases, yes — often significantly so. Dealerships typically charge a premium for transponder key programming, and you may wait days for an appointment. Tristar Locksmith provides competitive pricing with same-day mobile service across Knoxville and surrounding areas."
+    },
+    {
+      "question": "Do you program key fobs and remote start remotes?",
+      "answer": "Yes. We program standard key fobs, combination key-fob units, and proximity remotes for most vehicles. We can also diagnose and reprogram existing fobs that have stopped responding due to pairing issues."
+    }
+  ]
+}

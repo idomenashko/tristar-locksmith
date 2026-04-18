@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "Rekey Locks"
+  },
+  "icon": "🔑",
+  "shortDescription": "Moving into a new home or want to invalidate old keys? Rekeying is an affordable way to secure your property without replacing your locks.",
+  "longDescription": "Rekeying changes the internal pins of your existing lock cylinder so that old keys no longer work and new ones do. It's the smart choice after buying a home in Knoxville, ending a rental agreement, losing a key, or dismissing an employee who had access to your property. Tristar Locksmith can rekey all the door locks in your home or business to work on a single master key, simplifying your keyring while improving security. The service is typically much less expensive than full lock replacement and takes only a few minutes per cylinder.",
+  "features": [
+    "Faster and more affordable than full lock replacement",
+    "All cylinders can be keyed alike on one key",
+    "Works on most major residential and commercial lock brands",
+    "Instant invalidation of all previously cut keys",
+    "Master key systems available for landlords and property managers",
+    "Same-day appointments available throughout Knox County"
+  ],
+  "faqs": [
+    {
+      "question": "How much does rekeying cost compared to replacing locks?",
+      "answer": "Rekeying is generally 50–70% less expensive than replacing locks entirely. Because we only change the internal pin tumblers rather than the whole hardware, the labor and material costs are lower. Tristar Locksmith provides upfront pricing when you call."
+    },
+    {
+      "question": "Can you rekey locks to all work on the same key?",
+      "answer": "Yes. Keying alike is one of the most popular requests we get, especially from new homeowners in Knoxville who want to carry a single key for the front door, back door, and garage entry. As long as the locks are compatible, we can match them all to one key."
+    },
+    {
+      "question": "Do you rekey commercial locks too?",
+      "answer": "Absolutely. Tristar Locksmith handles rekeying for offices, retail spaces, warehouses, and multi-unit properties throughout Knoxville and surrounding counties. We can also set up master key hierarchies so that managers and staff have different levels of access."
+    }
+  ]
+}

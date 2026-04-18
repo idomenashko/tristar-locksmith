@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "Safe Lockout & Opening"
+  },
+  "icon": "🔓",
+  "shortDescription": "Forgotten your safe combination or lost the key? Tristar Locksmith opens residential and light commercial safes without damaging the contents inside.",
+  "longDescription": "Safes are designed to be difficult to open — but that's cold comfort when you've lost the combination or the electronic keypad has malfunctioned. Tristar Locksmith has the tools and training to open a wide range of residential gun safes, floor safes, wall safes, and light commercial security containers. We use manipulation techniques and specialized tools to open your safe non-destructively whenever possible, protecting both the safe and its contents. If the lock mechanism has failed entirely, we can discuss drilling as a last resort and walk you through the options. After opening, we can also reset the combination or replace the lock mechanism.",
+  "features": [
+    "Non-destructive safe opening whenever possible",
+    "Combination recovery and reset",
+    "Electronic keypad bypass and replacement",
+    "Residential gun safes, wall safes, and floor safes",
+    "Light commercial security containers",
+    "Post-opening lock mechanism repair or replacement"
+  ],
+  "faqs": [
+    {
+      "question": "Can you open a safe without damaging it?",
+      "answer": "In most cases, yes. Tristar Locksmith prioritizes non-destructive methods — manipulation, decoding, and bypass techniques — that preserve both the safe body and the lock mechanism. If the safe requires drilling, we'll discuss it with you first and explain why it's necessary."
+    },
+    {
+      "question": "What types of safes can you open?",
+      "answer": "We handle most consumer and light commercial safes including dial combination safes, electronic keypad safes, biometric safes, and key-lock fire safes. Very high-security commercial vaults may require specialized equipment beyond what we carry, and we'll let you know if that's the case."
+    },
+    {
+      "question": "Can you reset the combination after you open it?",
+      "answer": "Yes. After opening, Tristar Locksmith can reset a dial combination to a new code of your choice, reprogram an electronic keypad with a new PIN, or replace a failed lock mechanism entirely. We leave your safe fully functional and secured before we leave."
+    }
+  ]
+}

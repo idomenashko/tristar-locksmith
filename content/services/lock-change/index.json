@@ -1,0 +1,30 @@
+{
+  "title": {
+    "value": "Lock Change & Installation"
+  },
+  "icon": "🔒",
+  "shortDescription": "Upgrade your security with new deadbolts, knob locks, or smart locks. Tristar Locksmith installs and replaces locks on doors of all types.",
+  "longDescription": "Whether your existing lock is worn out, you want to upgrade to a higher-security grade, or you're adding a smart lock for keyless entry, Tristar Locksmith handles the full installation from start to finish. We stock a wide range of hardware from trusted brands including Schlage, Kwikset, and Deadbolt by Baldwin, and we can also install the lock you purchase yourself. Our technicians properly prep the door bore, align the strike plate, and test the lock for smooth operation before leaving. Serving homes and businesses across Knoxville, Farragut, Hardin Valley, and beyond.",
+  "features": [
+    "Deadbolt, knob, lever, and smart lock installation",
+    "Grade 1 and Grade 2 ANSI-rated security locks in stock",
+    "Supply-your-own-lock installation available",
+    "Proper door prep and strike plate reinforcement",
+    "Smart lock pairing and app setup assistance",
+    "Same-day service throughout the Knoxville area"
+  ],
+  "faqs": [
+    {
+      "question": "What brands of locks do you install?",
+      "answer": "Tristar Locksmith works with all major residential and commercial lock brands including Schlage, Kwikset, Baldwin, Defiant, and Yale smart locks. If you have a specific brand in mind, let us know when you call and we'll confirm availability."
+    },
+    {
+      "question": "Can I supply my own lock and have you install it?",
+      "answer": "Yes. Many customers purchase their lock from a hardware store or online and have us install it. We charge a standard installation fee for this service and will verify the lock is properly fitted and secure before completing the job."
+    },
+    {
+      "question": "Do you reinforce the door frame when installing a new lock?",
+      "answer": "On request, yes. A deadbolt is only as strong as the strike plate and door frame behind it. We can install reinforced strike plates with 3-inch screws that anchor into the door stud, significantly increasing kick-in resistance for homes throughout Knoxville."
+    }
+  ]
+}
