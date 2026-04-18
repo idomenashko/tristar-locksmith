@@ -7,7 +7,7 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { FaqAccordion } from "@/components/home/FaqAccordion";
 import { CtaSection } from "@/components/home/CtaSection";
 import { buildMetadata } from "@/lib/seo";
-import { getFaqs } from "@/lib/queries";
+import { getFaqs, getHomepage } from "@/lib/queries";
 
 export const metadata = buildMetadata({
   title: "24/7 Locksmith Knoxville, TN",
@@ -17,12 +17,12 @@ export const metadata = buildMetadata({
 });
 
 export default async function HomePage() {
-  const faqs = await getFaqs();
+  const [faqs, homepage] = await Promise.all([getFaqs(), getHomepage()]);
 
   return (
     <>
       <EmergencyBanner />
-      <Hero />
+      <Hero {...homepage} />
       <ServicesGrid />
       <WhyChooseUs />
       <AreasSection />

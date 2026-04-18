@@ -1,10 +1,15 @@
-import type { Business, Service, ServiceArea, Testimonial, FaqItem, Advantage } from './types';
+import type { Business, Service, ServiceArea, Testimonial, FaqItem, Advantage, HomepageContent } from './types';
 import businessData from '../../content/business.json';
 import servicesData from '../../content/services.json';
 import serviceAreasData from '../../content/service-areas.json';
 import testimonialsData from '../../content/testimonials.json';
 import faqData from '../../content/faq.json';
 import advantagesData from '../../content/advantages.json';
+import homepageData from '../../content/homepage.json';
+
+export async function getHomepage(): Promise<HomepageContent> {
+  return homepageData as HomepageContent;
+}
 
 export async function getBusiness(): Promise<Business> {
   return businessData as Business;

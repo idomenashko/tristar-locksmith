@@ -34,6 +34,12 @@ export interface Advantage {
   description: string;
 }
 
+export interface HomepageContent {
+  heroHeadline: string;
+  heroSubheadline: string;
+  heroImage?: string;
+}
+
 export interface Business {
   name: string;
   phone: string;

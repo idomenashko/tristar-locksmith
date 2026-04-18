@@ -1,9 +1,25 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import type { HomepageContent } from "@/lib/types";
 
-export function Hero() {
+export function Hero({ heroHeadline, heroSubheadline, heroImage }: HomepageContent) {
   return (
-    <section className="bg-navy text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <section className="relative bg-navy text-white overflow-hidden">
+      {/* Background image with gradient overlay */}
+      {heroImage && (
+        <>
+          <Image
+            src={heroImage}
+            alt=""
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent" />
+        </>
+      )}
+
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-2xl text-center mx-auto md:text-left md:mx-0">
           {/* Trust badges */}
           <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
@@ -23,15 +39,12 @@ export function Hero() {
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             style={{ color: "#fff", letterSpacing: "-0.02em" }}
           >
-            Knoxville&apos;s Trusted{" "}
-            <span style={{ color: "#D4A03C" }}>24/7 Locksmith</span>
+            {heroHeadline}
           </h1>
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl text-white/80 mb-10 leading-relaxed">
-            Fast, professional locksmith service in Knoxville, TN and surrounding
-            areas. Car lockouts, home lockouts, rekeys, and more — we arrive in
-            15 to 30 minutes and quote you honestly before we start.
+            {heroSubheadline}
           </p>
 
           {/* CTAs */}

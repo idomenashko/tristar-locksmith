@@ -63,6 +63,23 @@
             },
 
             {
+              name: 'homepage',
+              label: 'Homepage',
+              files: [
+                {
+                  name: 'homepage',
+                  label: 'Homepage',
+                  file: 'content/homepage.json',
+                  fields: [
+                    { label: 'Hero Headline', name: 'heroHeadline', widget: 'string' },
+                    { label: 'Hero Subheadline', name: 'heroSubheadline', widget: 'text' },
+                    { label: 'Hero Background Image', name: 'heroImage', widget: 'image', required: false, hint: 'Full-bleed background photo for the hero section. Leave empty for solid navy background.' },
+                  ],
+                },
+              ],
+            },
+
+            {
               name: 'content',
               label: 'Content',
               files: [
