@@ -323,15 +323,6 @@
         "Morristown",
         "White Pine"
       ]
-    },
-    {
-      "slug": "test",
-      "name": "Test",
-      "region": "test",
-      "nearbyAreas": [
-        "farragyt"
-      ],
-      "description": "teststsdrteteterer"
     }
   ]
 }
