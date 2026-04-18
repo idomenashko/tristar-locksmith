@@ -5,189 +5,333 @@
       "name": "Knoxville",
       "region": "Knoxville Metro",
       "description": "As the largest city in East Tennessee, Knoxville is the heart of Tristar Locksmith's service territory. From downtown and the University of Tennessee area to the suburbs of West Knoxville and North Knoxville, our technicians are positioned throughout the city for fast response. Whether you need a car lockout, a home rekey, or commercial lock installation, Tristar Locksmith is Knoxville's trusted local choice.",
-      "nearbyAreas": ["Farragut", "Powell", "Hardin Valley", "Karns"]
+      "nearbyAreas": [
+        "Farragut",
+        "Powell",
+        "Hardin Valley",
+        "Karns"
+      ]
     },
     {
       "slug": "farragut",
       "name": "Farragut",
       "region": "West Knox",
       "description": "Farragut is one of the most affluent communities in Knox County, and Tristar Locksmith proudly serves its residents and businesses with prompt, professional locksmith service. From the subdivisions along Kingston Pike to commercial properties in the Turkey Creek area, we handle car lockouts, residential lock changes, and smart lock installations. Our West Knoxville location means Farragut customers typically see some of our fastest response times.",
-      "nearbyAreas": ["Knoxville", "Hardin Valley", "Lenoir City", "Loudon"]
+      "nearbyAreas": [
+        "Knoxville",
+        "Hardin Valley",
+        "Lenoir City",
+        "Loudon"
+      ]
     },
     {
       "slug": "powell",
       "name": "Powell",
       "region": "North Knox",
       "description": "Powell sits in the northern part of Knox County along the Clinton Highway corridor, and Tristar Locksmith serves its neighborhoods and commercial districts daily. From house lockouts in Powell's established subdivisions to car key replacement in busy parking lots along U.S. 25W, our technicians know the area well and respond quickly. We also handle rekeying for the many rental properties and new homeowners in the Powell community.",
-      "nearbyAreas": ["Knoxville", "Karns", "Clinton", "Maynardville"]
+      "nearbyAreas": [
+        "Knoxville",
+        "Karns",
+        "Clinton",
+        "Maynardville"
+      ]
     },
     {
       "slug": "maryville",
       "name": "Maryville",
       "region": "Blount County",
       "description": "As the county seat of Blount County, Maryville is a busy hub of commerce and residential growth just south of Knoxville. Tristar Locksmith serves Maryville homes, apartment complexes, and businesses with the full range of locksmith services — from car lockouts and house lockouts to commercial lock hardware and master key systems. Our team is familiar with the Maryville area and can reach most locations within 30 minutes.",
-      "nearbyAreas": ["Alcoa", "Louisville", "Friendsville", "Knoxville"]
+      "nearbyAreas": [
+        "Alcoa",
+        "Louisville",
+        "Friendsville",
+        "Knoxville"
+      ]
     },
     {
       "slug": "oak-ridge",
       "name": "Oak Ridge",
       "region": "Anderson County",
       "description": "Oak Ridge has a unique character shaped by its history as a planned city built during World War II, and today it's a thriving community with diverse residential neighborhoods and a growing commercial sector. Tristar Locksmith provides Oak Ridge residents and businesses with reliable locksmith service — car lockouts, home lock changes, commercial rekeying, and more. We respond throughout the city including the areas around Scarboro and the Oak Ridge Turnpike.",
-      "nearbyAreas": ["Clinton", "Knoxville", "Powell", "Karns"]
+      "nearbyAreas": [
+        "Clinton",
+        "Knoxville",
+        "Powell",
+        "Karns"
+      ]
     },
     {
       "slug": "alcoa",
       "name": "Alcoa",
       "region": "Blount County",
       "description": "Alcoa is a compact, tight-knit community in Blount County directly adjacent to the McGhee Tyson Airport and the city of Maryville. Tristar Locksmith serves Alcoa residents and local businesses with fast, dependable locksmith service. Whether you're locked out of your car in the airport parking area, need a lock changed at a business on Alcoa Highway, or want to rekey your home, we're just a call away and typically on-site within 30 minutes.",
-      "nearbyAreas": ["Maryville", "Louisville", "Knoxville", "Seymour"]
+      "nearbyAreas": [
+        "Maryville",
+        "Louisville",
+        "Knoxville",
+        "Seymour"
+      ]
     },
     {
       "slug": "clinton",
       "name": "Clinton",
       "region": "Anderson County",
       "description": "Clinton is the county seat of Anderson County, located along the Clinch River north of Knoxville. Tristar Locksmith serves Clinton's residential neighborhoods and downtown businesses with professional locksmith services — including car lockouts, residential and commercial lock changes, and 24/7 emergency response. We regularly serve customers along Main Street and throughout the surrounding Anderson County communities.",
-      "nearbyAreas": ["Oak Ridge", "Powell", "Knoxville", "Maynardville"]
+      "nearbyAreas": [
+        "Oak Ridge",
+        "Powell",
+        "Knoxville",
+        "Maynardville"
+      ]
     },
     {
       "slug": "sevierville",
       "name": "Sevierville",
       "region": "Sevier County",
       "description": "As the county seat of Sevier County and a gateway to the Smoky Mountains, Sevierville sees a constant mix of local residents and tourists — and Tristar Locksmith is here to help both. From car lockouts in the Parkway corridor to home rekeying in the surrounding residential areas, our technicians serve Sevierville with care and efficiency. We also support short-term rental property owners in the area with professional lock installation and master key services.",
-      "nearbyAreas": ["Pigeon Forge", "Kodak", "Strawberry Plains", "Knoxville"]
+      "nearbyAreas": [
+        "Pigeon Forge",
+        "Kodak",
+        "Strawberry Plains",
+        "Knoxville"
+      ]
     },
     {
       "slug": "hardin-valley",
       "name": "Hardin Valley",
       "region": "West Knox",
       "description": "Hardin Valley is one of Knox County's fastest-growing communities, with new residential subdivisions, schools, and commercial development expanding along Hardin Valley Road. Tristar Locksmith serves Hardin Valley homeowners and businesses with a full range of locksmith services, from car lockouts to smart lock installation and commercial hardware. Our proximity to West Knoxville means fast response times throughout this growing community.",
-      "nearbyAreas": ["Knoxville", "Farragut", "Powell", "Karns"]
+      "nearbyAreas": [
+        "Knoxville",
+        "Farragut",
+        "Powell",
+        "Karns"
+      ]
     },
     {
       "slug": "karns",
       "name": "Karns",
       "region": "North Knox",
       "description": "Karns is a community in northwestern Knox County with a strong local identity and a mix of suburban and rural character. Tristar Locksmith provides Karns residents with the same fast, professional locksmith service we offer across the metro area — car lockouts, house lockouts, rekeying after a move, and lock replacement. We know the Karns area well and can navigate quickly to neighborhoods off Beaver Ridge Road and beyond.",
-      "nearbyAreas": ["Knoxville", "Powell", "Hardin Valley", "Clinton"]
+      "nearbyAreas": [
+        "Knoxville",
+        "Powell",
+        "Hardin Valley",
+        "Clinton"
+      ]
     },
     {
       "slug": "lenoir-city",
       "name": "Lenoir City",
       "region": "Loudon County",
       "description": "Lenoir City sits at the crossroads of Loudon County and greater Knoxville, making it a busy commercial and residential hub. Tristar Locksmith serves Lenoir City with reliable locksmith response for homes, businesses, and vehicles — whether you're locked out on the Highway 321 strip or need a lock changed in one of the area's growing neighborhoods. We also serve the nearby Tellico Village community and regularly travel this corridor.",
-      "nearbyAreas": ["Tellico Village", "Farragut", "Loudon", "Maryville"]
+      "nearbyAreas": [
+        "Tellico Village",
+        "Farragut",
+        "Loudon",
+        "Maryville"
+      ]
     },
     {
       "slug": "tellico-village",
       "name": "Tellico Village",
       "region": "Loudon County",
       "description": "Tellico Village is a premier lakefront retirement community on the shores of Tellico Lake in Loudon County. Tristar Locksmith serves Tellico Village residents with discreet, professional locksmith service including home lockouts, lock changes, rekeying, and security upgrades. Many residents in this community have high-quality door hardware, and our technicians have the experience to work with premium lock brands without causing damage.",
-      "nearbyAreas": ["Lenoir City", "Loudon", "Farragut", "Maryville"]
+      "nearbyAreas": [
+        "Lenoir City",
+        "Loudon",
+        "Farragut",
+        "Maryville"
+      ]
     },
     {
       "slug": "corryton",
       "name": "Corryton",
       "region": "North Knox",
       "description": "Corryton is a rural community in northeastern Knox County with a close-knit feel and a mix of longtime residents and newer families. Tristar Locksmith covers Corryton with full locksmith service — car and home lockouts, lock replacement, rekeying, and 24/7 emergency response. We understand that rural customers may feel far from help, and we commit to honest ETAs and prompt response when you call from the Corryton area.",
-      "nearbyAreas": ["Mascot", "Strawberry Plains", "Knoxville", "Maynardville"]
+      "nearbyAreas": [
+        "Mascot",
+        "Strawberry Plains",
+        "Knoxville",
+        "Maynardville"
+      ]
     },
     {
       "slug": "maynardville",
       "name": "Maynardville",
       "region": "North Knox",
       "description": "Maynardville is the county seat of Union County, located north of Knoxville along U.S. Highway 33. Tristar Locksmith extends service to Maynardville for home lockouts, car key replacement, and other locksmith needs. While response times to Maynardville may be slightly longer than to areas closer to Knoxville, we always provide an accurate arrival estimate and never leave a customer waiting without communication.",
-      "nearbyAreas": ["Powell", "Corryton", "Heiskell", "Clinton"]
+      "nearbyAreas": [
+        "Powell",
+        "Corryton",
+        "Heiskell",
+        "Clinton"
+      ]
     },
     {
       "slug": "heiskell",
       "name": "Heiskell",
       "region": "North Knox",
       "description": "Heiskell is a small community in northern Knox County off Emory Road, surrounded by a quiet, rural landscape. Tristar Locksmith serves Heiskell residents who need professional locksmith assistance — whether it's a car lockout on a back road, a home rekey after buying a new house, or an emergency lock change. We pride ourselves on reaching even the more remote pockets of Knox County quickly and professionally.",
-      "nearbyAreas": ["Powell", "Karns", "Maynardville", "Clinton"]
+      "nearbyAreas": [
+        "Powell",
+        "Karns",
+        "Maynardville",
+        "Clinton"
+      ]
     },
     {
       "slug": "mascot",
       "name": "Mascot",
       "region": "North Knox",
       "description": "Mascot is a small community in northeastern Knox County, tucked between Corryton and Strawberry Plains along Strawberry Plains Pike. Tristar Locksmith serves Mascot homeowners and motorists with reliable locksmith response, including car lockouts, home lock changes, and rekey services. We are one of the few local locksmiths willing to travel to smaller Knox County communities without extra mileage fees.",
-      "nearbyAreas": ["Corryton", "Strawberry Plains", "Knoxville", "Kodak"]
+      "nearbyAreas": [
+        "Corryton",
+        "Strawberry Plains",
+        "Knoxville",
+        "Kodak"
+      ]
     },
     {
       "slug": "strawberry-plains",
       "name": "Strawberry Plains",
       "region": "North Knox",
       "description": "Strawberry Plains is a community straddling Knox and Jefferson Counties along the old Strawberry Plains Pike corridor. Tristar Locksmith serves the area's residential neighborhoods and small businesses with car lockout service, home lockouts, rekeying, and lock replacement. Our technicians regularly travel this route and can serve Strawberry Plains customers with minimal delay.",
-      "nearbyAreas": ["Mascot", "Corryton", "Kodak", "Jefferson City"]
+      "nearbyAreas": [
+        "Mascot",
+        "Corryton",
+        "Kodak",
+        "Jefferson City"
+      ]
     },
     {
       "slug": "seymour",
       "name": "Seymour",
       "region": "Blount County",
       "description": "Seymour is a growing community in Sevier County along Chapman Highway south of Knoxville. Tristar Locksmith serves Seymour residents with professional locksmith service for homes, vehicles, and small businesses. From car lockouts along the Chapman Highway corridor to home lock changes in Seymour's residential neighborhoods, our team provides prompt service with the same quality you'd expect in central Knoxville.",
-      "nearbyAreas": ["Knoxville", "Maryville", "Alcoa", "Rockford"]
+      "nearbyAreas": [
+        "Knoxville",
+        "Maryville",
+        "Alcoa",
+        "Rockford"
+      ]
     },
     {
       "slug": "rockford",
       "name": "Rockford",
       "region": "Blount County",
       "description": "Rockford is a small community in Blount County nestled along the Little River south of Knoxville. Tristar Locksmith covers Rockford for car lockouts, home rekeying, and lock installation, bringing professional service to this scenic area without making customers feel like an afterthought. We believe every community deserves responsive, honest locksmith service regardless of size.",
-      "nearbyAreas": ["Maryville", "Louisville", "Seymour", "Knoxville"]
+      "nearbyAreas": [
+        "Maryville",
+        "Louisville",
+        "Seymour",
+        "Knoxville"
+      ]
     },
     {
       "slug": "louisville",
       "name": "Louisville",
       "region": "Blount County",
       "description": "Louisville is a quiet Blount County community along the Tennessee River, known for its relaxed character and proximity to both Knoxville and Maryville. Tristar Locksmith serves Louisville residents and businesses with locksmith services including car and home lockouts, lock changes, and rekeying. We treat every call in Louisville with the same priority and professionalism as calls from larger urban areas.",
-      "nearbyAreas": ["Maryville", "Alcoa", "Rockford", "Friendsville"]
+      "nearbyAreas": [
+        "Maryville",
+        "Alcoa",
+        "Rockford",
+        "Friendsville"
+      ]
     },
     {
       "slug": "friendsville",
       "name": "Friendsville",
       "region": "Blount County",
       "description": "Friendsville is a small, historic town in Blount County with deep community roots and beautiful surroundings near Tellico Lake. Tristar Locksmith extends locksmith service to Friendsville, covering residential lockouts, car key replacement, and lock rekeying. We understand that residents here may have fewer local options, which is why we make the effort to serve this community reliably.",
-      "nearbyAreas": ["Maryville", "Greenback", "Loudon", "Louisville"]
+      "nearbyAreas": [
+        "Maryville",
+        "Greenback",
+        "Loudon",
+        "Louisville"
+      ]
     },
     {
       "slug": "greenback",
       "name": "Greenback",
       "region": "Loudon County",
       "description": "Greenback is a peaceful rural community in Loudon County, known for its small-town atmosphere and proximity to Tellico Lake. Tristar Locksmith serves Greenback and the surrounding Loudon County countryside with professional locksmith response — car lockouts, home lock changes, rekeying, and emergency service. No matter how far off the beaten path you are, we'll come to you.",
-      "nearbyAreas": ["Friendsville", "Loudon", "Lenoir City", "Maryville"]
+      "nearbyAreas": [
+        "Friendsville",
+        "Loudon",
+        "Lenoir City",
+        "Maryville"
+      ]
     },
     {
       "slug": "walland",
       "name": "Walland",
       "region": "Blount County",
       "description": "Walland is a small community at the foothills of the Smoky Mountains in Blount County, gateway to Tremont and the Townsend area. Tristar Locksmith provides locksmith service to Walland residents including car lockouts, home lock changes, and rekeying. Given the area's rural character, we encourage customers to call ahead so we can confirm availability and provide an accurate ETA.",
-      "nearbyAreas": ["Maryville", "Rockford", "Friendsville", "Townsend"]
+      "nearbyAreas": [
+        "Maryville",
+        "Rockford",
+        "Friendsville",
+        "Townsend"
+      ]
     },
     {
       "slug": "kodak",
       "name": "Kodak",
       "region": "Sevier County",
       "description": "Kodak is a community in Sevier County along Interstate 40, serving as a commercial corridor between Knoxville and the Smoky Mountains. Tristar Locksmith covers Kodak for car lockouts (a common call in this busy travel area), home lock changes, and rekeying services. The I-40 access makes it straightforward for our technicians to reach Kodak quickly from multiple directions.",
-      "nearbyAreas": ["Strawberry Plains", "Sevierville", "Mascot", "Jefferson City"]
+      "nearbyAreas": [
+        "Strawberry Plains",
+        "Sevierville",
+        "Mascot",
+        "Jefferson City"
+      ]
     },
     {
       "slug": "pigeon-forge",
       "name": "Pigeon Forge",
       "region": "Sevier County",
       "description": "Pigeon Forge is one of the most visited tourist destinations in Tennessee, known for The Parkway, Dollywood, and its gateway role to Great Smoky Mountains National Park. Tristar Locksmith serves Pigeon Forge residents, business owners, and visitors who find themselves in a locksmith bind — from car lockouts in attraction parking lots to rekeying cabins and vacation rentals. We serve the area with the same professionalism local customers expect.",
-      "nearbyAreas": ["Sevierville", "Kodak", "Seymour", "Knoxville"]
+      "nearbyAreas": [
+        "Sevierville",
+        "Kodak",
+        "Seymour",
+        "Knoxville"
+      ]
     },
     {
       "slug": "dandridge",
       "name": "Dandridge",
       "region": "Jefferson County",
       "description": "Dandridge is the county seat of Jefferson County and one of the oldest towns in Tennessee, situated on the shores of Douglas Lake. Tristar Locksmith extends service to Dandridge for car lockouts, home rekeying, lock replacement, and emergency locksmith needs. The scenic drive along the lake and the town's historic character make it a pleasure to serve, and we take pride in supporting this tight-knit community.",
-      "nearbyAreas": ["Jefferson City", "Strawberry Plains", "Kodak", "Sevierville"]
+      "nearbyAreas": [
+        "Jefferson City",
+        "Strawberry Plains",
+        "Kodak",
+        "Sevierville"
+      ]
     },
     {
       "slug": "jefferson-city",
       "name": "Jefferson City",
       "region": "Jefferson County",
       "description": "Jefferson City is a growing community in Jefferson County, home to Carson-Newman University and a lively downtown. Tristar Locksmith serves Jefferson City with locksmith services including car key replacement, residential lockouts, rekeying, and lock installation. As Jefferson City continues to grow, we're committed to being the trusted locksmith that both longtime residents and newcomers can rely on.",
-      "nearbyAreas": ["Dandridge", "Strawberry Plains", "Morristown", "White Pine"]
+      "nearbyAreas": [
+        "Dandridge",
+        "Strawberry Plains",
+        "Morristown",
+        "White Pine"
+      ]
+    },
+    {
+      "slug": "test",
+      "name": "Test",
+      "region": "test",
+      "nearbyAreas": [
+        "farragyt"
+      ],
+      "description": "teststsdrteteterer"
     }
   ]
 }
