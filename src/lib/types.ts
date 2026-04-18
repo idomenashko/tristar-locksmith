@@ -42,4 +42,5 @@ export interface Business {
   city: string;
   state: string;
   address: string;
+  logo?: string;
 }

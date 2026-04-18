@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 
 const navLinks = [
@@ -12,7 +13,11 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export function Header() {
+interface HeaderProps {
+  logo?: string;
+}
+
+export function Header({ logo }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -21,8 +26,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-white font-bold text-xl font-display">
-            <span className="text-gold text-2xl">⭐</span>
-            <span>Tristar Locksmith</span>
+            {logo ? (
+              <Image src={logo} alt="Tristar Locksmith" width={160} height={40} className="h-10 w-auto" />
+            ) : (
+              <>
+                <span className="text-gold text-2xl">⭐</span>
+                <span>Tristar Locksmith</span>
+              </>
+            )}
           </Link>
 
           {/* Desktop Nav */}
