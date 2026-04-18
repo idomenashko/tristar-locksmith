@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "icon": "⚡",
+      "title": "Fast Response",
+      "description": "Tristar Locksmith reaches most Knoxville-area locations in 15 to 30 minutes. We know East Tennessee roads and position our technicians to minimize your wait."
+    },
+    {
+      "icon": "🏆",
+      "title": "Licensed & Insured",
+      "description": "Every Tristar Locksmith technician is fully licensed under Tennessee state law and insured. We also conduct background checks on all employees for your peace of mind."
+    },
+    {
+      "icon": "💰",
+      "title": "Upfront Pricing",
+      "description": "We quote you a firm price before any work starts. No hidden fees, no surprise charges after the job — just honest, transparent pricing every time."
+    },
+    {
+      "icon": "🔧",
+      "title": "All Makes & Models",
+      "description": "From vintage domestic vehicles to modern imports with push-to-start systems, and from basic knob locks to high-security commercial hardware — we handle it all."
+    },
+    {
+      "icon": "⭐",
+      "title": "5-Star Rated",
+      "description": "Tristar Locksmith is among the top-rated locksmith services in Knoxville. Our reviews reflect the consistent, professional service we deliver on every call."
+    }
+  ]
+}

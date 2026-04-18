@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "name": "Brittany H.",
+      "rating": 5,
+      "text": "I locked my keys in my car at the Turkey Creek shopping center on a Friday evening. Tristar Locksmith showed up in under 20 minutes, had the door open in no time, and the tech was incredibly friendly. Pricing was fair and exactly what they quoted on the phone. I can't recommend them enough.",
+      "location": "Farragut, TN"
+    },
+    {
+      "name": "Marcus T.",
+      "rating": 5,
+      "text": "Called Tristar at 11 PM after realizing I'd left my house keys at work. The dispatcher was calm and helpful, and the locksmith arrived in about 25 minutes. He picked the deadbolt cleanly without any damage and even showed me how the lock mechanism worked while he was there. Outstanding service.",
+      "location": "Knoxville, TN"
+    },
+    {
+      "name": "Donna P.",
+      "rating": 5,
+      "text": "We just bought a home in Powell and wanted all the locks rekeyed before moving in. Tristar came out the same day I called, rekeyed four locks to a single key, and had us on a new set of keys within an hour. Very professional and reasonably priced. Will use them again for sure.",
+      "location": "Powell, TN"
+    },
+    {
+      "name": "Ray K.",
+      "rating": 5,
+      "text": "My ignition cylinder seized up in a parking lot in Oak Ridge and I thought I was going to need a tow. Called Tristar and they sent someone who diagnosed the problem on the spot, extracted a small burr that had broken off inside the cylinder, and got me driving again. Saved me a lot of money and hassle.",
+      "location": "Oak Ridge, TN"
+    },
+    {
+      "name": "Stephanie M.",
+      "rating": 5,
+      "text": "I manage several rental properties in Maryville and Alcoa and Tristar Locksmith is my go-to for rekeying between tenants. They're reliable, always on time, and the master key setup they did for one of my properties has made my life so much easier. Highly recommend for property managers.",
+      "location": "Maryville, TN"
+    },
+    {
+      "name": "Bobby A.",
+      "rating": 5,
+      "text": "Lost my car keys completely — no spare, no fob, nothing. Tristar came out to my home in Hardin Valley and made a brand new transponder key from scratch using my VIN. The whole thing took less than an hour and cost way less than the dealer quoted me. Absolutely will use again.",
+      "location": "Hardin Valley, TN"
+    },
+    {
+      "name": "Cynthia L.",
+      "rating": 5,
+      "text": "Had a break-in attempt at my condo in North Knoxville — the lock was damaged and the door frame was cracked. I called Tristar and they came the same evening, replaced the deadbolt, reinforced the strike plate, and made sure the door was secure before leaving. Very thorough and professional under stressful circumstances.",
+      "location": "Knoxville, TN"
+    }
+  ]
+}
