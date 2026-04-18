@@ -23,6 +23,12 @@ const REACT_ALIASES: Record<string, string> = {
 };
 
 const nextConfig: NextConfig = {
+  // Forward the server-side write token to the client bundle so the embedded
+  // Sanity Studio can authenticate without requiring manual Sanity login.
+  // This bakes the token into the JS bundle — acceptable for a public-content CMS.
+  env: {
+    NEXT_PUBLIC_SANITY_TOKEN: process.env.SANITY_API_WRITE_TOKEN || "",
+  },
   images: {
     remotePatterns: [
       {
