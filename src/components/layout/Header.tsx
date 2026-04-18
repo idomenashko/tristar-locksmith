@@ -23,15 +23,15 @@ export function Header({ logo }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-navy shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 text-white font-bold text-xl font-display">
+          <Link href="/" className="flex items-center">
             {logo ? (
-              <Image src={logo} alt="Tristar Locksmith" width={160} height={40} className="h-10 w-auto" />
+              <Image src={logo} alt="Tristar Locksmith" width={224} height={56} className="h-14 w-auto" />
             ) : (
               <>
                 <span className="text-gold text-2xl">⭐</span>
-                <span>Tristar Locksmith</span>
+                <span className="text-white font-bold text-xl font-display">Tristar Locksmith</span>
               </>
             )}
           </Link>
