@@ -1,6 +1,6 @@
 export default function StudioLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="fixed inset-0 z-50 bg-[#101112]">
+    <div style={{ position: "fixed", inset: 0, zIndex: 50, background: "#101112" }}>
       {children}
     </div>
   );
