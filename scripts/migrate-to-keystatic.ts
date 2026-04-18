@@ -32,7 +32,7 @@ write('content/business/index.json', BUSINESS);
 for (const service of SERVICES) {
   const { slug, title, icon, shortDescription, longDescription, features, faqs } = service;
   write(`content/services/${slug}/index.json`, {
-    title: { value: title },
+    title,
     icon,
     shortDescription,
     longDescription,
@@ -45,7 +45,7 @@ for (const service of SERVICES) {
 for (const area of SERVICE_AREAS) {
   const { slug, name, region, description, nearbyAreas } = area;
   write(`content/service-areas/${slug}/index.json`, {
-    name: { value: name },
+    name,
     region,
     description,
     nearbyAreas,
@@ -56,7 +56,7 @@ for (const area of SERVICE_AREAS) {
 for (const t of TESTIMONIALS) {
   const slug = toSlug(t.name);
   write(`content/testimonials/${slug}/index.json`, {
-    name: { value: t.name },
+    name: t.name,
     rating: t.rating,
     text: t.text,
     location: t.location,
@@ -67,7 +67,7 @@ for (const t of TESTIMONIALS) {
 for (const faq of FAQ) {
   const slug = toSlug(faq.question).split('-').slice(0, 6).join('-');
   write(`content/faqs/${slug}/index.json`, {
-    question: { value: faq.question },
+    question: faq.question,
     answer: faq.answer,
   });
 }
@@ -76,7 +76,7 @@ for (const faq of FAQ) {
 for (const adv of ADVANTAGES) {
   const slug = toSlug(adv.title);
   write(`content/advantages/${slug}/index.json`, {
-    title: { value: adv.title },
+    title: adv.title,
     icon: adv.icon,
     description: adv.description,
   });

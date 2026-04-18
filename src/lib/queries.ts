@@ -21,7 +21,7 @@ export async function getServices(): Promise<Service[]> {
     if (!all.length) return SERVICES;
     return all.map(({ slug, entry }) => ({
       slug,
-      title: (entry.title as unknown as { value: string }).value,
+      title: entry.title as string,
       icon: entry.icon,
       shortDescription: entry.shortDescription,
       longDescription: entry.longDescription,
@@ -39,7 +39,7 @@ export async function getService(slug: string): Promise<Service | null> {
     if (!entry) return SERVICES.find((s) => s.slug === slug) ?? null;
     return {
       slug,
-      title: (entry.title as unknown as { value: string }).value,
+      title: entry.title as string,
       icon: entry.icon,
       shortDescription: entry.shortDescription,
       longDescription: entry.longDescription,
@@ -57,7 +57,7 @@ export async function getServiceAreas(): Promise<ServiceArea[]> {
     if (!all.length) return SERVICE_AREAS;
     return all.map(({ slug, entry }) => ({
       slug,
-      name: (entry.name as unknown as { value: string }).value,
+      name: entry.name as string,
       region: entry.region,
       description: entry.description,
       nearbyAreas: entry.nearbyAreas as string[],
@@ -73,7 +73,7 @@ export async function getServiceArea(slug: string): Promise<ServiceArea | null> 
     if (!entry) return SERVICE_AREAS.find((a) => a.slug === slug) ?? null;
     return {
       slug,
-      name: (entry.name as unknown as { value: string }).value,
+      name: entry.name as string,
       region: entry.region,
       description: entry.description,
       nearbyAreas: entry.nearbyAreas as string[],
@@ -88,7 +88,7 @@ export async function getTestimonials(): Promise<Testimonial[]> {
     const all = await reader.collections.testimonials.all();
     if (!all.length) return TESTIMONIALS;
     return all.map(({ entry }) => ({
-      name: (entry.name as unknown as { value: string }).value,
+      name: entry.name as string,
       rating: entry.rating ?? 5,
       text: entry.text,
       location: entry.location,
@@ -103,7 +103,7 @@ export async function getFaqs(): Promise<FaqItem[]> {
     const all = await reader.collections.faqs.all();
     if (!all.length) return FAQ;
     return all.map(({ entry }) => ({
-      question: (entry.question as unknown as { value: string }).value,
+      question: entry.question as string,
       answer: entry.answer,
     }));
   } catch {
@@ -116,7 +116,7 @@ export async function getAdvantages(): Promise<Advantage[]> {
     const all = await reader.collections.advantages.all();
     if (!all.length) return ADVANTAGES;
     return all.map(({ entry }) => ({
-      title: (entry.title as unknown as { value: string }).value,
+      title: entry.title as string,
       icon: entry.icon,
       description: entry.description,
     }));
