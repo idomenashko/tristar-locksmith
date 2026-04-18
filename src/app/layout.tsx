@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { StickyCallButton } from "@/components/layout/StickyCallButton";
-import { buildLocalBusinessSchema } from "@/lib/schema";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -45,27 +41,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const schema = await buildLocalBusinessSchema();
-
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      </head>
-      <body className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-1 pb-24 md:pb-0">{children}</main>
-        <Footer />
-        <StickyCallButton />
-      </body>
+      <body className="flex flex-col min-h-screen">{children}</body>
     </html>
   );
 }
