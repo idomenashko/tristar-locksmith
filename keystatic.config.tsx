@@ -6,7 +6,7 @@ export default config({
       ? { kind: 'local' }
       : { kind: 'cloud' },
   cloud: {
-    project: 'tristar/tristar-locksmith', // placeholder — user will update
+    project: 'tristar/tristar-locksmith',
   },
   singletons: {
     business: singleton({
