@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getServices, getServiceAreas, getBusiness } from "@/sanity/queries";
+import { getServices, getServiceAreas, getBusiness } from "@/lib/queries";
 
 export async function Footer() {
   const [services, serviceAreas, business] = await Promise.all([

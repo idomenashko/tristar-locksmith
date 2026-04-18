@@ -2,7 +2,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Stars } from "@/components/ui/Stars";
-import { getTestimonials, getBusiness } from "@/sanity/queries";
+import { getTestimonials, getBusiness } from "@/lib/queries";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({

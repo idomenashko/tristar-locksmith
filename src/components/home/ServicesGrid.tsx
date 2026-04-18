@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { getServices } from "@/sanity/queries";
+import { getServices } from "@/lib/queries";
 
 export async function ServicesGrid() {
   const services = await getServices();

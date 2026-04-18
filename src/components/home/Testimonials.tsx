@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Stars } from "@/components/ui/Stars";
-import { getTestimonials } from "@/sanity/queries";
+import { getTestimonials } from "@/lib/queries";
 
 export async function Testimonials() {
   const testimonials = await getTestimonials();

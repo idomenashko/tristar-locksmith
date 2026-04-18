@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { getBusiness, getServiceAreas } from "@/sanity/queries";
+import { getBusiness, getServiceAreas } from "@/lib/queries";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({

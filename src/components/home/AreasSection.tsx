@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { getServiceAreas } from "@/sanity/queries";
+import { getServiceAreas } from "@/lib/queries";
 
 export async function AreasSection() {
   const serviceAreas = await getServiceAreas();

@@ -1,4 +1,4 @@
-import { getBusiness, getServiceAreas } from "@/sanity/queries";
+import { getBusiness, getServiceAreas } from "@/lib/queries";
 
 export async function buildLocalBusinessSchema() {
   const [business, serviceAreas] = await Promise.all([

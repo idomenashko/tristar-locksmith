@@ -1,6 +1,6 @@
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { getAdvantages } from "@/sanity/queries";
+import { getAdvantages } from "@/lib/queries";
 
 export async function WhyChooseUs() {
   const advantages = await getAdvantages();

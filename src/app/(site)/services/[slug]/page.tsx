@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getServices, getService, getBusiness } from "@/sanity/queries";
+import { getServices, getService, getBusiness } from "@/lib/queries";
 import { ServiceHero } from "@/components/service/ServiceHero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";

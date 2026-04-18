@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getServiceArea, getServiceAreas, getServices, getBusiness } from "@/sanity/queries";
+import { getServiceArea, getServiceAreas, getServices, getBusiness } from "@/lib/queries";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";

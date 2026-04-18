@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getServices, getServiceAreas } from "@/sanity/queries";
+import { getServices, getServiceAreas } from "@/lib/queries";
 
 const BASE_URL = "https://tristarlocksmith.com";
 

@@ -1,4 +1,4 @@
-import { getServiceAreas } from "@/sanity/queries";
+import { getServiceAreas } from "@/lib/queries";
 import { AreaCard } from "@/components/area/AreaCard";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
