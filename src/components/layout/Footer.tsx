@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getServices, getServiceAreas, getBusiness } from "@/lib/queries";
 
 export async function Footer() {
@@ -15,19 +16,33 @@ export async function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 text-white font-bold text-lg font-display mb-3">
-              <span className="text-gold text-xl">⭐</span>
-              <span>Tristar Locksmith</span>
+            <Link href="/" className="inline-block mb-3">
+              {business.logo ? (
+                <Image src={business.logo} alt="Tristar Locksmith" width={200} height={60} className="h-16 w-auto" />
+              ) : (
+                <span className="flex items-center gap-2 text-white font-bold text-lg font-display">
+                  <span className="text-gold text-xl">⭐</span>
+                  <span>Tristar Locksmith</span>
+                </span>
+              )}
             </Link>
-            <p className="text-sm leading-relaxed mb-4">
-              Licensed & insured locksmith serving Knoxville, TN and surrounding areas. Available 24/7.
-            </p>
+            {business.address && (
+              <p className="text-sm mb-2">{business.address}</p>
+            )}
             <a
               href={business.phoneHref}
-              className="text-gold font-bold text-lg hover:text-gold-light transition-colors"
+              className="text-gold font-bold text-lg hover:text-gold-light transition-colors block mb-2"
             >
               {business.phone}
             </a>
+            {business.email && (
+              <a
+                href={`mailto:${business.email}`}
+                className="text-sm hover:text-gold transition-colors"
+              >
+                {business.email}
+              </a>
+            )}
           </div>
 
           {/* Services */}

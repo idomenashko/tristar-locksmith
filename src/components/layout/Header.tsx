@@ -23,11 +23,11 @@ export function Header({ logo }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-navy shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             {logo ? (
-              <Image src={logo} alt="Tristar Locksmith" width={224} height={56} className="h-14 w-auto" />
+              <Image src={logo} alt="Tristar Locksmith" width={400} height={100} className="h-24 w-auto" />
             ) : (
               <>
                 <span className="text-gold text-2xl">⭐</span>

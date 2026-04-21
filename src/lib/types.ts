@@ -48,5 +48,6 @@ export interface Business {
   city: string;
   state: string;
   address: string;
+  email?: string;
   logo?: string;
 }
