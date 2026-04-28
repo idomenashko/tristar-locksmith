@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { getBusiness } from "@/lib/queries";
 import type { HomepageContent } from "@/lib/types";
 
-export function Hero({ heroHeadline, heroSubheadline, heroImage }: HomepageContent) {
+export async function Hero({ heroHeadline, heroSubheadline, heroImage }: HomepageContent) {
+  const business = await getBusiness();
   return (
     <section className="relative bg-navy text-white overflow-hidden">
       {/* Background image with gradient overlay */}
@@ -60,8 +62,8 @@ export function Hero({ heroHeadline, heroSubheadline, heroImage }: HomepageConte
           {/* Quick stat row */}
           <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-3 gap-4 text-center md:text-left">
             <div>
-              <div className="text-2xl font-bold" style={{ color: "#D4A03C" }}>24/7</div>
-              <div className="text-sm text-white/70 mt-0.5">Always Available</div>
+              <div className="text-2xl font-bold" style={{ color: "#D4A03C" }}>7AM–11:30PM</div>
+              <div className="text-sm text-white/70 mt-0.5">{business.emergencyHours ?? "24/7 Emergency"}</div>
             </div>
             <div>
               <div className="text-2xl font-bold" style={{ color: "#D4A03C" }}>27+</div>

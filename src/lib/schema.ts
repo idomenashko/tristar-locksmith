@@ -35,8 +35,8 @@ export async function buildLocalBusinessSchema() {
         "Saturday",
         "Sunday",
       ],
-      opens: "00:00",
-      closes: "23:59",
+      opens: "07:00",
+      closes: "23:30",
     },
     areaServed: serviceAreas.map((area) => ({
       "@type": "City",

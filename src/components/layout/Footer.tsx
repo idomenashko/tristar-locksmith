@@ -103,7 +103,8 @@ export async function Footer() {
               ))}
             </ul>
             <div className="mt-6 p-3 bg-white/10 rounded-lg">
-              <p className="text-xs text-white/70 mb-1">Available 24/7</p>
+              <p className="text-xs text-white/70 mb-0.5">{business.hours}</p>
+              <p className="text-xs text-white/70 mb-1">{business.emergencyHours ?? "24/7 Emergency Service Available"}</p>
               <a href="tel:8653813931" className="text-gold font-bold hover:text-gold-light transition-colors">
                 (865) 381-3931
               </a>

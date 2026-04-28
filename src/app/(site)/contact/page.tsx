@@ -52,8 +52,8 @@ export default async function ContactPage() {
                   <span className="text-3xl">🕐</span>
                   <div>
                     <h3 className="font-bold text-navy mb-1">Hours</h3>
-                    <p className="text-ink font-semibold text-lg">24 Hours / 7 Days a Week</p>
-                    <p className="text-muted text-sm">Including holidays</p>
+                    <p className="text-ink font-semibold text-lg">{business.hours}</p>
+                    <p className="text-muted text-sm">{business.emergencyHours ?? "24/7 Emergency Service Available"}</p>
                   </div>
                 </div>
 

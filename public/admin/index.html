@@ -53,6 +53,7 @@
                       hint: 'Format: tel:8653813931',
                     },
                     { label: 'Hours', name: 'hours', widget: 'string' },
+                    { label: 'Emergency Hours', name: 'emergencyHours', widget: 'string', hint: 'e.g. 24/7 Emergency Service Available', required: false },
                     { label: 'City', name: 'city', widget: 'string' },
                     { label: 'State', name: 'state', widget: 'string' },
                     { label: 'Address', name: 'address', widget: 'string' },
@@ -75,6 +76,34 @@
                     { label: 'Hero Headline', name: 'heroHeadline', widget: 'string' },
                     { label: 'Hero Subheadline', name: 'heroSubheadline', widget: 'text' },
                     { label: 'Hero Background Image', name: 'heroImage', widget: 'image', required: false, hint: 'Full-bleed background photo for the hero section. Leave empty for solid navy background.' },
+                  ],
+                },
+              ],
+            },
+
+            {
+              name: 'projects',
+              label: 'Recent Projects',
+              files: [
+                {
+                  name: 'projects',
+                  label: 'Recent Projects',
+                  file: 'content/projects.json',
+                  fields: [
+                    {
+                      label: 'Projects',
+                      name: 'items',
+                      widget: 'list',
+                      fields: [
+                        { label: 'Slug', name: 'slug', widget: 'string', hint: 'URL-friendly ID — e.g. ford-fiesta-key-replacement' },
+                        { label: 'Title', name: 'title', widget: 'string', hint: 'e.g. Key Replacement — 2014 Ford Fiesta' },
+                        { label: 'Photo', name: 'image', widget: 'image' },
+                        { label: 'Category', name: 'category', widget: 'select', options: ['automotive', 'residential', 'commercial', 'safes'] },
+                        { label: 'Date', name: 'date', widget: 'datetime', format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false },
+                        { label: 'Location', name: 'location', widget: 'string', default: 'Knoxville, TN' },
+                        { label: 'Short Description', name: 'description', widget: 'text' },
+                      ],
+                    },
                   ],
                 },
               ],
@@ -128,28 +157,6 @@
                       fields: [
                         { label: 'Question', name: 'question', widget: 'string' },
                         { label: 'Answer', name: 'answer', widget: 'text' },
-                      ],
-                    },
-                  ],
-                },
-
-                {
-                  name: 'projects',
-                  label: 'Recent Projects',
-                  file: 'content/projects.json',
-                  fields: [
-                    {
-                      label: 'Projects',
-                      name: 'items',
-                      widget: 'list',
-                      fields: [
-                        { label: 'Slug', name: 'slug', widget: 'string', hint: 'URL-friendly ID — e.g. ford-fiesta-key-replacement' },
-                        { label: 'Title', name: 'title', widget: 'string', hint: 'e.g. Key Replacement — 2014 Ford Fiesta' },
-                        { label: 'Photo', name: 'image', widget: 'image' },
-                        { label: 'Category', name: 'category', widget: 'select', options: ['automotive', 'residential', 'commercial', 'safes'] },
-                        { label: 'Date', name: 'date', widget: 'datetime', format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false },
-                        { label: 'Location', name: 'location', widget: 'string', default: 'Knoxville, TN' },
-                        { label: 'Short Description', name: 'description', widget: 'text' },
                       ],
                     },
                   ],

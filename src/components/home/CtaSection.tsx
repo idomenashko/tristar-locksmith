@@ -21,9 +21,9 @@ export function CtaSection() {
             className="text-lg mb-10 leading-relaxed"
             style={{ color: "rgba(255,255,255,0.8)" }}
           >
-            Tristar Locksmith is available 24 hours a day, 7 days a week across
-            Knoxville and East Tennessee. One call connects you directly with a
-            dispatcher — no call centers, no runaround.
+            Tristar Locksmith is available every day 7AM–11:30PM across Knoxville
+            and East Tennessee, with 24/7 emergency service. One call connects you
+            directly with a dispatcher — no call centers, no runaround.
           </p>
 
           {/* Primary CTA */}

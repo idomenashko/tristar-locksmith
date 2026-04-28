@@ -55,6 +55,7 @@ export interface Business {
   phone: string;
   phoneHref: string;
   hours: string;
+  emergencyHours?: string;
   city: string;
   state: string;
   address: string;

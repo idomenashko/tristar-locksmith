@@ -16,7 +16,7 @@ export async function AreasSection() {
           </h2>
           <p className="text-muted max-w-xl mx-auto">
             Tristar Locksmith covers Knox County and all surrounding communities
-            across East Tennessee — 24 hours a day, 7 days a week.
+            across East Tennessee. Available every day 7AM–11:30PM, with 24/7 emergency service.
           </p>
         </div>
 
