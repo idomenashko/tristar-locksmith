@@ -6,6 +6,7 @@ import { AreasSection } from "@/components/home/AreasSection";
 import { Testimonials } from "@/components/home/Testimonials";
 import { FaqAccordion } from "@/components/home/FaqAccordion";
 import { CtaSection } from "@/components/home/CtaSection";
+import { RecentProjects } from "@/components/home/RecentProjects";
 import { buildMetadata } from "@/lib/seo";
 import { getFaqs, getHomepage } from "@/lib/queries";
 
@@ -29,6 +30,7 @@ export default async function HomePage() {
       <Testimonials />
       <FaqAccordion faqs={faqs} />
       <CtaSection />
+      <RecentProjects />
     </>
   );
 }

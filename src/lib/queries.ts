@@ -1,4 +1,4 @@
-import type { Business, Service, ServiceArea, Testimonial, FaqItem, Advantage, HomepageContent } from './types';
+import type { Business, Service, ServiceArea, Testimonial, FaqItem, Advantage, HomepageContent, Project } from './types';
 import businessData from '../../content/business.json';
 import servicesData from '../../content/services.json';
 import serviceAreasData from '../../content/service-areas.json';
@@ -6,6 +6,7 @@ import testimonialsData from '../../content/testimonials.json';
 import faqData from '../../content/faq.json';
 import advantagesData from '../../content/advantages.json';
 import homepageData from '../../content/homepage.json';
+import projectsData from '../../content/projects.json';
 
 export async function getHomepage(): Promise<HomepageContent> {
   return homepageData as HomepageContent;
@@ -41,4 +42,11 @@ export async function getFaqs(): Promise<FaqItem[]> {
 
 export async function getAdvantages(): Promise<Advantage[]> {
   return advantagesData.items as Advantage[];
+}
+
+export async function getProjects(): Promise<Project[]> {
+  const projects = projectsData.items as Project[];
+  return projects
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
 }

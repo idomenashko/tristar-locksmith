@@ -73,6 +73,32 @@ export function buildServiceSchema(serviceName: string, description: string, url
   };
 }
 
+export function buildProjectsSchema(projects: { title: string; description: string; image: string; location: string; date: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Recent Locksmith Projects — Tristar Locksmith",
+    itemListElement: projects.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Service",
+        name: project.title,
+        description: project.description,
+        image: `https://tristarlocksmith.com${project.image}`,
+        provider: {
+          "@type": "Locksmith",
+          name: "Tristar Locksmith",
+          telephone: "(865) 381-3931",
+          url: "https://tristarlocksmith.com",
+        },
+        areaServed: project.location,
+        datePublished: project.date,
+      },
+    })),
+  };
+}
+
 export function buildFAQSchema(faqs: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

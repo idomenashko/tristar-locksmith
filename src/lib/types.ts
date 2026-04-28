@@ -40,6 +40,16 @@ export interface HomepageContent {
   heroImage?: string;
 }
 
+export interface Project {
+  slug: string;
+  title: string;
+  image: string;
+  category: 'automotive' | 'residential' | 'commercial' | 'safes';
+  date: string;
+  location: string;
+  description: string;
+}
+
 export interface Business {
   name: string;
   phone: string;
