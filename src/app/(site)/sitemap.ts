@@ -62,5 +62,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...servicePages, ...areaPages];
+  const aiPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/llms.txt`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE_URL}/llms-full.txt`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE_URL}/index.md`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.4 },
+    { url: `${BASE_URL}/services.md`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE_URL}/service-areas.md`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE_URL}/about.md`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE_URL}/contact.md`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE_URL}/reviews.md`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
+  ];
+
+  const serviceMdPages: MetadataRoute.Sitemap = services.map((service) => ({
+    url: `${BASE_URL}/services/${service.slug}.md`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.4,
+  }));
+
+  const areaMdPages: MetadataRoute.Sitemap = serviceAreas.map((area) => ({
+    url: `${BASE_URL}/service-areas/${area.slug}.md`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.4,
+  }));
+
+  return [...staticPages, ...servicePages, ...areaPages, ...aiPages, ...serviceMdPages, ...areaMdPages];
 }

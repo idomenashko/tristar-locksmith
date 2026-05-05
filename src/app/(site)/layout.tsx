@@ -16,6 +16,7 @@ export default async function SiteLayout({
 
   return (
     <>
+      <link rel="llms-txt" href="/llms.txt" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
