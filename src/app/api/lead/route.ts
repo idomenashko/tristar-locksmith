@@ -68,7 +68,10 @@ export async function POST(req: NextRequest) {
     from:
       process.env.LEAD_FROM_EMAIL ??
       "Tristar Locksmith Leads <onboarding@resend.dev>",
-    to: [process.env.LEAD_TO_EMAIL ?? "tristarlocksmith@gmail.com"],
+    to: (process.env.LEAD_TO_EMAIL ?? "tristarlocksmith@gmail.com")
+      .split(",")
+      .map((e) => e.trim())
+      .filter(Boolean),
     subject: `🔐 New Lead: ${name} — ${serviceNeeded ?? "General"}`,
     text: whatsappText,
     html: `
