@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyCallButton } from "@/components/layout/StickyCallButton";
-import { buildLocalBusinessSchema } from "@/lib/schema";
+import { buildLocalBusinessSchema, buildWebSiteSchema } from "@/lib/schema";
 import { getBusiness } from "@/lib/queries";
 
 export default async function SiteLayout({
@@ -13,6 +13,7 @@ export default async function SiteLayout({
     buildLocalBusinessSchema(),
     getBusiness(),
   ]);
+  const websiteSchema = buildWebSiteSchema();
 
   return (
     <>
@@ -20,6 +21,10 @@ export default async function SiteLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <Header logo={business.logo} />
       <main className="flex-1 pb-24 md:pb-0">{children}</main>

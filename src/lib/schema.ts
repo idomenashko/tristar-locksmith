@@ -191,3 +191,17 @@ export function buildBreadcrumbSchema(
   };
 }
 
+export function buildWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Tristar Locksmith",
+    url: "https://tristarlocksmith.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://tristarlocksmith.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
