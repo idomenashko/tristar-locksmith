@@ -99,6 +99,33 @@ export function buildProjectsSchema(projects: { title: string; description: stri
   };
 }
 
+export function buildBlogPostingSchema(post: {
+  title: string;
+  description: string;
+  slug: string;
+  date: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    url: `https://tristarlocksmith.com/blog/${post.slug}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    publisher: {
+      "@type": "Locksmith",
+      name: "Tristar Locksmith",
+      telephone: "(865) 381-3931",
+      url: "https://tristarlocksmith.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://tristarlocksmith.com/blog/${post.slug}`,
+    },
+  };
+}
+
 export function buildFAQSchema(faqs: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
@@ -110,6 +137,56 @@ export function buildFAQSchema(faqs: { question: string; answer: string }[]) {
         "@type": "Answer",
         text: faq.answer,
       },
+    })),
+  };
+}
+
+export function buildLocksmithServiceSchema(opts: {
+  serviceType: string;
+  description: string;
+  cityName: string;
+  slug: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `${opts.serviceType} — ${opts.cityName}, TN`,
+    description: opts.description,
+    serviceType: opts.serviceType,
+    provider: {
+      "@type": "Locksmith",
+      name: "Tristar Locksmith",
+      telephone: "(865) 381-3931",
+      url: "https://tristarlocksmith.com",
+    },
+    areaServed: {
+      "@type": "City",
+      name: opts.cityName,
+      containedInPlace: {
+        "@type": "State",
+        name: "Tennessee",
+      },
+    },
+    url: `https://tristarlocksmith.com/${opts.slug}`,
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      areaServed: opts.cityName,
+    },
+  };
+}
+
+export function buildBreadcrumbSchema(
+  items: { name: string; url: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
     })),
   };
 }

@@ -1,0 +1,505 @@
+{
+  "cities": {
+    "knoxville": {
+      "name": "Knoxville",
+      "state": "TN",
+      "neighborhoods": ["Downtown", "Bearden", "Fountain City", "West Hills", "South Knoxville", "North Knoxville", "Sequoyah Hills", "Fort Sanders"],
+      "zips": ["37902", "37909", "37917", "37919", "37920", "37921", "37922", "37923"],
+      "landmarks": ["University of Tennessee campus", "Market Square", "Turkey Creek"],
+      "landmark1": "University of Tennessee campus",
+      "landmark2": "Market Square",
+      "responseBand": "15–25 minutes",
+      "phase": 1,
+      "nearbyAreas": ["farragut", "powell", "hardin-valley", "karns"]
+    },
+    "farragut": {
+      "name": "Farragut",
+      "state": "TN",
+      "neighborhoods": ["Campbell Station", "Concord", "Fox Den", "Fieldstone Farms", "Wyndham Hall"],
+      "zips": ["37934", "37922"],
+      "landmarks": ["Turkey Creek", "Kingston Pike corridor"],
+      "landmark1": "Turkey Creek",
+      "landmark2": "Kingston Pike",
+      "responseBand": "20–30 minutes",
+      "phase": 2,
+      "nearbyAreas": ["knoxville", "hardin-valley", "lenoir-city"]
+    },
+    "maryville": {
+      "name": "Maryville",
+      "state": "TN",
+      "neighborhoods": ["Downtown Maryville", "Grove Park", "Montvale", "Foothills"],
+      "zips": ["37801", "37803"],
+      "landmarks": ["Bicentennial Greenbelt Park", "Foothills Mall"],
+      "landmark1": "Foothills Mall",
+      "landmark2": "Bicentennial Greenbelt Park",
+      "responseBand": "25–35 minutes",
+      "phase": 2,
+      "nearbyAreas": ["alcoa", "knoxville", "louisville"]
+    },
+    "oak-ridge": {
+      "name": "Oak Ridge",
+      "state": "TN",
+      "neighborhoods": ["Downtown Oak Ridge", "Scarboro", "Jefferson", "Woodland", "Highland View"],
+      "zips": ["37830", "37831"],
+      "landmarks": ["Oak Ridge Turnpike", "American Museum of Science and Energy"],
+      "landmark1": "Oak Ridge Turnpike",
+      "landmark2": "Bear Creek Road",
+      "responseBand": "25–35 minutes",
+      "phase": 2,
+      "nearbyAreas": ["clinton", "knoxville", "karns"]
+    },
+    "hardin-valley": {
+      "name": "Hardin Valley",
+      "state": "TN",
+      "neighborhoods": ["Hardin Valley Estates", "Fox Ridge", "Solway", "Loganview"],
+      "zips": ["37931", "37932"],
+      "landmarks": ["Pellissippi Parkway", "Hardin Valley Academy"],
+      "landmark1": "Pellissippi Parkway",
+      "landmark2": "Beaver Creek",
+      "responseBand": "20–30 minutes",
+      "phase": 2,
+      "nearbyAreas": ["knoxville", "farragut", "karns"]
+    },
+    "powell": {
+      "name": "Powell",
+      "state": "TN",
+      "neighborhoods": ["Clinton Highway corridor", "Emory Road area", "Powell Station"],
+      "zips": ["37849"],
+      "landmarks": ["Clinton Highway", "Powell High School"],
+      "landmark1": "Clinton Highway",
+      "landmark2": "Emory Road",
+      "responseBand": "20–30 minutes",
+      "phase": 3,
+      "nearbyAreas": ["knoxville", "karns", "clinton"]
+    },
+    "alcoa": {
+      "name": "Alcoa",
+      "state": "TN",
+      "neighborhoods": ["Alcoa Highway Corridor", "Airport area", "Hall Road"],
+      "zips": ["37701"],
+      "landmarks": ["McGhee Tyson Airport", "Alcoa Highway"],
+      "landmark1": "McGhee Tyson Airport",
+      "landmark2": "Alcoa Highway",
+      "responseBand": "25–35 minutes",
+      "phase": 3,
+      "nearbyAreas": ["maryville", "knoxville", "seymour"]
+    },
+    "clinton": {
+      "name": "Clinton",
+      "state": "TN",
+      "neighborhoods": ["Downtown Clinton", "Norris area", "Main Street"],
+      "zips": ["37716"],
+      "landmarks": ["Clinch River", "Anderson County Courthouse"],
+      "landmark1": "Clinch River",
+      "landmark2": "Main Street Clinton",
+      "responseBand": "25–40 minutes",
+      "phase": 3,
+      "nearbyAreas": ["oak-ridge", "powell", "maynardville"]
+    },
+    "sevierville": {
+      "name": "Sevierville",
+      "state": "TN",
+      "neighborhoods": ["Downtown Sevierville", "Teaster Lane", "Parkway area", "Glenstone"],
+      "zips": ["37862", "37876"],
+      "landmarks": ["Sevierville Parkway", "Smoky Mountains National Park"],
+      "landmark1": "Sevierville Parkway",
+      "landmark2": "Smoky Mountains",
+      "responseBand": "30–45 minutes",
+      "phase": 3,
+      "nearbyAreas": ["pigeon-forge", "kodak", "dandridge"]
+    },
+    "karns": {
+      "name": "Karns",
+      "state": "TN",
+      "neighborhoods": ["Karns community", "Beaver Ridge Road area", "Karns High School area"],
+      "zips": ["37931"],
+      "landmarks": ["Beaver Ridge Road", "Karns High School"],
+      "landmark1": "Beaver Ridge Road",
+      "landmark2": "Dutchtown Road",
+      "responseBand": "20–30 minutes",
+      "phase": 3,
+      "nearbyAreas": ["knoxville", "powell", "hardin-valley"]
+    },
+    "lenoir-city": {
+      "name": "Lenoir City",
+      "state": "TN",
+      "neighborhoods": ["Downtown Lenoir City", "Fort Loudon Lake area", "Loudon County side"],
+      "zips": ["37771", "37772"],
+      "landmarks": ["Fort Loudon Lake", "Lenoir City Park"],
+      "landmark1": "Fort Loudon Lake",
+      "landmark2": "US-11 corridor",
+      "responseBand": "30–40 minutes",
+      "phase": 3,
+      "nearbyAreas": ["farragut", "maryville", "tellico-village"]
+    },
+    "tellico-village": {
+      "name": "Tellico Village",
+      "state": "TN",
+      "neighborhoods": ["Toqua area", "Tanasi area", "Choto Road"],
+      "zips": ["37772"],
+      "landmarks": ["Tellico Lake", "Choto Road"],
+      "landmark1": "Tellico Lake",
+      "landmark2": "Choto Road",
+      "responseBand": "30–40 minutes",
+      "phase": 3,
+      "nearbyAreas": ["lenoir-city", "farragut", "greenback"]
+    },
+    "corryton": {
+      "name": "Corryton",
+      "state": "TN",
+      "neighborhoods": ["Corryton Road area", "Graveston Road area"],
+      "zips": ["37721"],
+      "landmarks": ["Corryton Road", "I-75 corridor"],
+      "landmark1": "Corryton Road",
+      "landmark2": "I-75 North",
+      "responseBand": "25–35 minutes",
+      "phase": 3,
+      "nearbyAreas": ["knoxville", "maynardville", "mascot"]
+    },
+    "maynardville": {
+      "name": "Maynardville",
+      "state": "TN",
+      "neighborhoods": ["Downtown Maynardville", "Union County area"],
+      "zips": ["37807"],
+      "landmarks": ["Union County Courthouse", "Clinch River"],
+      "landmark1": "Union County Courthouse",
+      "landmark2": "Clinch River",
+      "responseBand": "30–45 minutes",
+      "phase": 3,
+      "nearbyAreas": ["powell", "corryton", "clinton"]
+    },
+    "heiskell": {
+      "name": "Heiskell",
+      "state": "TN",
+      "neighborhoods": ["Heiskell Road area", "US-25W corridor"],
+      "zips": ["37754"],
+      "landmarks": ["Heiskell Road", "Clinton Highway area"],
+      "landmark1": "Heiskell Road",
+      "landmark2": "US-25W corridor",
+      "responseBand": "30–45 minutes",
+      "phase": 3,
+      "nearbyAreas": ["powell", "clinton", "maynardville"]
+    },
+    "mascot": {
+      "name": "Mascot",
+      "state": "TN",
+      "neighborhoods": ["Mascot Road area", "Rutledge Pike corridor"],
+      "zips": ["37806"],
+      "landmarks": ["Mascot Road", "Rutledge Pike"],
+      "landmark1": "Rutledge Pike",
+      "landmark2": "Mascot Road",
+      "responseBand": "25–35 minutes",
+      "phase": 3,
+      "nearbyAreas": ["knoxville", "corryton", "strawberry-plains"]
+    },
+    "strawberry-plains": {
+      "name": "Strawberry Plains",
+      "state": "TN",
+      "neighborhoods": ["Andrew Johnson Highway area", "New Hopewell area"],
+      "zips": ["37871"],
+      "landmarks": ["Andrew Johnson Highway", "Jefferson County line"],
+      "landmark1": "Andrew Johnson Highway",
+      "landmark2": "Strawberry Plains Pike",
+      "responseBand": "25–40 minutes",
+      "phase": 3,
+      "nearbyAreas": ["knoxville", "mascot", "dandridge"]
+    },
+    "seymour": {
+      "name": "Seymour",
+      "state": "TN",
+      "neighborhoods": ["Chapman Highway area", "Boyds Bridge Pike"],
+      "zips": ["37865"],
+      "landmarks": ["Chapman Highway", "French Broad River"],
+      "landmark1": "Chapman Highway",
+      "landmark2": "French Broad River",
+      "responseBand": "25–35 minutes",
+      "phase": 3,
+      "nearbyAreas": ["knoxville", "maryville", "rockford"]
+    },
+    "rockford": {
+      "name": "Rockford",
+      "state": "TN",
+      "neighborhoods": ["Rockford Road area", "William Blount Drive"],
+      "zips": ["37853"],
+      "landmarks": ["William Blount Drive", "Ellejoy Road"],
+      "landmark1": "William Blount Drive",
+      "landmark2": "Ellejoy Road",
+      "responseBand": "25–35 minutes",
+      "phase": 3,
+      "nearbyAreas": ["maryville", "seymour", "walland"]
+    },
+    "louisville": {
+      "name": "Louisville",
+      "state": "TN",
+      "neighborhoods": ["Louisville Road area", "Singleton Station"],
+      "zips": ["37777"],
+      "landmarks": ["Louisville Road", "Tennessee River"],
+      "landmark1": "Louisville Road",
+      "landmark2": "Tennessee River",
+      "responseBand": "30–40 minutes",
+      "phase": 3,
+      "nearbyAreas": ["maryville", "alcoa", "friendsville"]
+    },
+    "friendsville": {
+      "name": "Friendsville",
+      "state": "TN",
+      "neighborhoods": ["Downtown Friendsville", "Friendsville Pike"],
+      "zips": ["37737"],
+      "landmarks": ["Friendsville Pike", "Little River"],
+      "landmark1": "Friendsville Pike",
+      "landmark2": "Little River",
+      "responseBand": "30–45 minutes",
+      "phase": 3,
+      "nearbyAreas": ["maryville", "louisville", "greenback"]
+    },
+    "greenback": {
+      "name": "Greenback",
+      "state": "TN",
+      "neighborhoods": ["Greenback Road area", "US-411 corridor"],
+      "zips": ["37742"],
+      "landmarks": ["US-411 corridor", "Tellico River"],
+      "landmark1": "US-411 corridor",
+      "landmark2": "Tellico River",
+      "responseBand": "35–50 minutes",
+      "phase": 3,
+      "nearbyAreas": ["maryville", "lenoir-city", "friendsville"]
+    },
+    "walland": {
+      "name": "Walland",
+      "state": "TN",
+      "neighborhoods": ["Walland area", "Foothills Parkway corridor"],
+      "zips": ["37886"],
+      "landmarks": ["Foothills Parkway", "Little River"],
+      "landmark1": "Foothills Parkway",
+      "landmark2": "Little River",
+      "responseBand": "35–50 minutes",
+      "phase": 3,
+      "nearbyAreas": ["maryville", "rockford", "townsend"]
+    },
+    "kodak": {
+      "name": "Kodak",
+      "state": "TN",
+      "neighborhoods": ["Kodak Road area", "I-40 corridor", "Forks of the River"],
+      "zips": ["37764"],
+      "landmarks": ["I-40 corridor", "French Broad River"],
+      "landmark1": "I-40 corridor",
+      "landmark2": "Forks of the River",
+      "responseBand": "25–40 minutes",
+      "phase": 3,
+      "nearbyAreas": ["sevierville", "strawberry-plains", "dandridge"]
+    },
+    "pigeon-forge": {
+      "name": "Pigeon Forge",
+      "state": "TN",
+      "neighborhoods": ["The Parkway area", "Wears Valley Road", "Light 3 area"],
+      "zips": ["37863", "37868"],
+      "landmarks": ["Dollywood", "The Parkway"],
+      "landmark1": "Dollywood",
+      "landmark2": "The Parkway",
+      "responseBand": "35–50 minutes",
+      "phase": 3,
+      "nearbyAreas": ["sevierville", "gatlinburg", "kodak"]
+    },
+    "dandridge": {
+      "name": "Dandridge",
+      "state": "TN",
+      "neighborhoods": ["Downtown Dandridge", "Douglas Lake area", "Main Street"],
+      "zips": ["37725"],
+      "landmarks": ["Douglas Lake", "Jefferson County Courthouse"],
+      "landmark1": "Douglas Lake",
+      "landmark2": "Jefferson County Courthouse",
+      "responseBand": "30–45 minutes",
+      "phase": 3,
+      "nearbyAreas": ["strawberry-plains", "sevierville", "jefferson-city"]
+    },
+    "jefferson-city": {
+      "name": "Jefferson City",
+      "state": "TN",
+      "neighborhoods": ["Downtown Jefferson City", "Carson-Newman University area"],
+      "zips": ["37760"],
+      "landmarks": ["Carson-Newman University", "Mossy Creek"],
+      "landmark1": "Carson-Newman University",
+      "landmark2": "Mossy Creek",
+      "responseBand": "35–50 minutes",
+      "phase": 3,
+      "nearbyAreas": ["dandridge", "strawberry-plains", "morristown"]
+    }
+  },
+  "services": {
+    "car-lockout": {
+      "label": "Car Lockout",
+      "h1Template": "Car Lockout in {cityName}, TN — Tristar Locksmith",
+      "metaTitle": "Car Lockout {cityName} TN | {responseBand} Response | Tristar",
+      "metaDescription": "Locked out of your car in {cityName}, TN? Tristar Locksmith arrives in {responseBand}. Non-destructive entry on all vehicles. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith handles car lockouts across {cityName}, TN in {responseBand}. Our technicians use non-destructive entry tools on all vehicle makes — domestic sedans, pickups, imports, and late-model systems — and quote you upfront before touching your car. Call (865) 381-3931 for immediate dispatch.",
+      "whatWeDo": "A car lockout can happen anywhere in {cityName} — a parking lot off {landmark1}, a gas station on the way to work, or your own driveway. Tristar Locksmith dispatches a trained technician quickly so you're not stranded. We use professional slim-jim and air-wedge tools designed for non-destructive entry. Your paint, door seals, and window trim stay intact. We cover all vehicle makes and models, including imports, luxury cars, and trucks with advanced locking systems. Every visit includes upfront pricing — you'll know the cost before we begin. Our technicians are licensed, insured, and background-checked, and they carry the equipment to handle most lockout scenarios in a single stop.",
+      "scenarioTemplate": "Whether your keys slid off the seat while you were unloading at {landmark1}, or you walked away from your vehicle in a {neighborhood1} parking lot and heard the click of the automatic lock behind you — Tristar Locksmith is the call to make. We also handle keys locked in the trunk, broken fob batteries that won't disengage the system, and keyless-entry systems that stopped responding. If you're parked somewhere off the main roads in {cityName}, give us your exact location when you call and we'll navigate straight to you.",
+      "faqs": [
+        {
+          "question": "How fast can you reach a car lockout in {cityName}?",
+          "answer": "Tristar Locksmith typically arrives within {responseBand} in the {cityName} area. Response times depend on your exact location and current call volume. When you call (865) 381-3931, we give you an accurate ETA before we dispatch."
+        },
+        {
+          "question": "Will unlocking my car in {cityName} cause any damage?",
+          "answer": "No. Our technicians use industry-standard slim-jim and air-wedge systems built for non-destructive entry. We never force locks or pry door frames. Your vehicle will be in the same condition it was when you called us."
+        },
+        {
+          "question": "What if my car keys are locked in the trunk?",
+          "answer": "Keys in the trunk are common and we handle them regularly. Depending on your vehicle, we'll access the cabin through the door and use the interior trunk release, or work directly at the trunk lock. Either way, we'll get your keys out without damage."
+        },
+        {
+          "question": "Do you charge extra for late-night lockouts in {cityName}?",
+          "answer": "Our pricing is upfront and disclosed before we start — no surprise fees after the job. Emergency and after-hours calls may carry a service premium, but we'll tell you the exact amount when you call. No hidden dispatch fees."
+        }
+      ],
+      "parentService": "car-lockout",
+      "schema_serviceType": "Car Lockout Service"
+    },
+    "house-lockout": {
+      "label": "House Lockout",
+      "h1Template": "House Lockout in {cityName}, TN — Tristar Locksmith",
+      "metaTitle": "House Lockout {cityName} TN | Fast Response | Tristar Locksmith",
+      "metaDescription": "Locked out of your home in {cityName}, TN? Tristar Locksmith opens residential locks non-destructively in {responseBand}. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith handles house lockouts across {cityName}, TN in {responseBand}. Our technicians open deadbolts, knob locks, and high-security cylinders without damaging your door or frame — and can rekey or replace the lock in the same visit. Call (865) 381-3931 for immediate help.",
+      "whatWeDo": "Getting locked out of your home in {cityName} is one of the most stressful experiences you can have, especially late at night or in bad weather. Tristar Locksmith sends a trained technician to your door quickly. We use professional picking and bypass techniques designed to open residential locks without damaging the door, frame, or weather stripping. We work with all major lock brands — Schlage, Kwikset, Baldwin, Medeco, and more — across single-family homes, apartments, and condos. Once you're inside, our technician can rekey or replace the lock on the spot with no extra trip charge. We ask for a photo ID at every residential lockout for your protection — to confirm we're opening the right door for the right person.",
+      "scenarioTemplate": "A house lockout can catch you completely off guard. Maybe you stepped outside in {neighborhood1} to check the mail and the door swung shut behind you, or your keys stayed on the kitchen counter during a quick trip to {landmark1}. It happens to homeowners across {cityName} every week. Tristar Locksmith treats every call with discretion and urgency — we understand you want to be back inside quickly, and we work efficiently to make that happen without any damage to your property.",
+      "faqs": [
+        {
+          "question": "Can you open my house door without breaking the lock in {cityName}?",
+          "answer": "In most cases, yes. Tristar Locksmith uses lock picking and bypass techniques that preserve your existing hardware. If the lock is damaged or the mechanism has failed, we'll explain your options before doing anything and give you a quote for replacement."
+        },
+        {
+          "question": "Do I need to prove I live at the address?",
+          "answer": "Yes. For the safety of homeowners in {cityName} and across East Tennessee, we ask for a photo ID and verify the address matches. This protects you and ensures we're only opening doors for the rightful residents."
+        },
+        {
+          "question": "Can you rekey the lock after letting me in {cityName}?",
+          "answer": "Absolutely. Many customers take the opportunity to rekey or upgrade locks during the same visit. Our technicians carry common lock hardware and rekey kits, so we handle it in a single stop with no additional trip charge."
+        },
+        {
+          "question": "What if the lock is broken and can't be opened normally?",
+          "answer": "If the lock mechanism has failed, is frozen, or is otherwise inoperable, we can replace it on the spot. Our technicians carry standard residential hardware in common finishes. We'll quote the replacement cost before proceeding and handle the full installation in the same visit."
+        }
+      ],
+      "parentService": "house-lockout",
+      "schema_serviceType": "House Lockout Service"
+    },
+    "car-key-replacement": {
+      "label": "Car Key Replacement",
+      "h1Template": "Car Key Replacement in {cityName}, TN — Tristar Locksmith",
+      "metaTitle": "Car Key Replacement {cityName} TN | All Makes | Tristar Locksmith",
+      "metaDescription": "Lost your car keys in {cityName}, TN? Tristar Locksmith cuts and programs replacement keys for all vehicle makes. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith provides car key replacement in {cityName}, TN for all vehicle makes — including transponder keys, key fobs, and push-to-start systems. We cut and program on-site, usually within {responseBand}. No tow required. Call (865) 381-3931.",
+      "whatWeDo": "Losing your car keys in {cityName} doesn't have to mean a tow truck and a dealership wait. Tristar Locksmith provides mobile car key replacement and key programming for all major vehicle makes and models — domestic, import, luxury, and fleet vehicles. Our technicians carry cutting equipment and programming software on the road, so we come to you wherever you are in {cityName}. We handle standard cut keys, laser-cut high-security keys, transponder keys, smart key fobs, and push-to-start systems. Pricing is disclosed upfront. If you've lost every key to your vehicle, we can also rekey the ignition so your old key codes are disabled — critical for security if the keys were stolen.",
+      "scenarioTemplate": "Losing your only set of car keys is a situation that can bring your whole day to a halt. Maybe you realized they were gone after you finished shopping near {landmark1}, or they fell out of your pocket somewhere in {neighborhood1}. Tristar Locksmith carries the equipment to handle these situations on-site in {cityName} — no tow truck, no long dealer wait. We'll have you driving again faster than most people expect.",
+      "faqs": [
+        {
+          "question": "Can you make a replacement key for my car in {cityName} without the original?",
+          "answer": "Yes. Tristar Locksmith can cut and program a new key for most vehicles even if you have no existing key. We use your VIN and ownership documentation to generate the correct key code, then program it to your vehicle's system on-site."
+        },
+        {
+          "question": "Do you program transponder and push-to-start keys in {cityName}?",
+          "answer": "Yes. We carry the diagnostic programming equipment for most domestic and foreign vehicles, including transponder chips, proximity fobs, and smart key systems. Most programming takes 20–40 minutes on-site."
+        },
+        {
+          "question": "Is it cheaper to use Tristar than the dealership for a replacement key?",
+          "answer": "In most cases, yes — and significantly faster. Dealer key replacement can take days and often requires towing the vehicle in. Tristar Locksmith comes to you in {cityName}, cuts and programs the key on-site, and the total cost is typically lower than dealer pricing."
+        },
+        {
+          "question": "What if I lost every key and my car is locked in {cityName}?",
+          "answer": "We handle this frequently. Tristar Locksmith will first open the vehicle non-destructively, then cut and program a new key — all in a single visit. If the keys were stolen, we can also rekey the ignition and disable the old codes."
+        }
+      ],
+      "parentService": "car-key-replacement",
+      "schema_serviceType": "Car Key Replacement Service"
+    },
+    "safe-lockout": {
+      "label": "Safe Lockout",
+      "h1Template": "Safe Lockout in {cityName}, TN — Tristar Locksmith",
+      "metaTitle": "Safe Lockout {cityName} TN | Combination + Electronic | Tristar",
+      "metaDescription": "Locked out of your safe in {cityName}, TN? Tristar Locksmith opens combination, electronic, and key-lock safes. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith handles safe lockouts in {cityName}, TN for home safes, gun safes, and commercial vaults. We open combination-dial, electronic-keypad, and key-lock models — and can repair or replace the locking mechanism after. Call (865) 381-3931.",
+      "whatWeDo": "A safe lockout in {cityName} can happen for many reasons — a forgotten combination, a dead battery in an electronic keypad, a jammed bolt mechanism, or a key that snapped in the lock. Tristar Locksmith provides professional safe opening for residential and commercial customers throughout {cityName} and the surrounding area. We work with standard home safes, fire-rated gun safes, floor safes, wall safes, drop-safe deposit boxes, and small commercial vaults. Our technicians use non-destructive techniques whenever possible — manipulation, bypass, and lockpicking — to preserve the integrity of the safe and its contents. When non-destructive entry isn't viable, we drill at precise locations to minimize damage and restore the mechanism after. We'll quote the approach and cost before we begin.",
+      "scenarioTemplate": "A forgotten safe combination or a dead keypad battery can lock you out of important documents, firearms, or valuables at the worst time. In {cityName}, these calls come from homeowners in {neighborhood1}, from businesses near {landmark1}, and from gun owners across the county who need fast, discreet service. Tristar Locksmith treats every safe job with confidentiality — we understand the sensitive nature of what's inside and handle it accordingly.",
+      "faqs": [
+        {
+          "question": "Can you open a safe without drilling it in {cityName}?",
+          "answer": "In many cases, yes. Tristar Locksmith attempts non-destructive methods first — combination manipulation, electronic bypass, and lock picking. Drilling is a last resort and only used when the safe's design or condition doesn't allow for a softer approach. We'll explain the method and cost before we start."
+        },
+        {
+          "question": "What types of safes can you open in {cityName}?",
+          "answer": "We open home safes, fire-rated gun safes, floor and wall safes, electronic keypad models, combination-dial safes, key-lock models, and small commercial vaults. If you're unsure whether we can help with your specific safe, call (865) 381-3931 and describe the make and model."
+        },
+        {
+          "question": "My safe's battery is dead and I can't open the electronic keypad — what do I do?",
+          "answer": "Many electronic safes have an external battery terminal or a hidden key-override slot for exactly this situation. Tristar Locksmith can identify the access method for your model and get you in quickly — often without any disassembly."
+        },
+        {
+          "question": "Can you repair the lock after opening the safe in {cityName}?",
+          "answer": "Yes. After opening, we can service, repair, or replace the locking mechanism on most safe models. If you'd like a new combination set or a different lock type, we can handle that in the same visit."
+        }
+      ],
+      "parentService": "safe-lockout",
+      "schema_serviceType": "Safe Lockout Service"
+    },
+    "commercial-locksmith": {
+      "label": "Commercial Locksmith",
+      "h1Template": "Commercial Locksmith in {cityName}, TN — Tristar Locksmith",
+      "metaTitle": "Commercial Locksmith {cityName} TN | Business Locks | Tristar",
+      "metaDescription": "Commercial locksmith in {cityName}, TN — lock installation, rekey, access control, and business lockouts. Tristar Locksmith. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith provides commercial locksmith services in {cityName}, TN — including business lockouts, commercial rekeying, master key systems, and access control. We work with all commercial-grade hardware and serve businesses of every size. Call (865) 381-3931.",
+      "whatWeDo": "Tristar Locksmith serves businesses throughout {cityName} with the full range of commercial locksmith services. Whether you manage a retail location near {landmark1}, an office park in {neighborhood1}, or a warehouse complex, we provide business lockouts, commercial rekeying, lock installation and upgrades, master key and keyway systems, and basic access control integration. Our technicians are experienced with commercial-grade hardware from Schlage, Corbin Russwin, Sargent, Kaba, and other major manufacturers. We understand that commercial calls often need to happen quickly and discreetly — employee turnover, after-hours lockouts, post-break-in security upgrades, and new tenant move-ins are all common reasons businesses across {cityName} call Tristar Locksmith.",
+      "scenarioTemplate": "Commercial locksmith needs in {cityName} rarely follow a convenient schedule. A property manager might call at 7 AM because a tenant left with the only key. A retail manager near {landmark1} might need all locks rekeyed before the holiday rush. An office building in {neighborhood1} might discover overnight that an access panel is broken. Tristar Locksmith keeps technicians available for commercial calls across {cityName} from 7 AM through 11:30 PM — and for genuine emergencies, our 24/7 emergency line is always open.",
+      "faqs": [
+        {
+          "question": "Can you rekey my entire commercial building in {cityName}?",
+          "answer": "Yes. Tristar Locksmith handles commercial rekeying projects of all sizes — from a single office suite to a multi-unit building. We work with most major keyways and can establish a new master key system during the same visit."
+        },
+        {
+          "question": "Do you handle commercial lockouts after hours in {cityName}?",
+          "answer": "Yes. Business lockouts happen outside of normal hours regularly — a manager locked out after an event, keys left inside at closing time. Our technicians are available from 7 AM to 11:30 PM daily, and our 24/7 emergency line covers urgent situations at any hour."
+        },
+        {
+          "question": "Can you install a master key system for my building in {cityName}?",
+          "answer": "Absolutely. Tristar Locksmith designs and installs master key systems for commercial properties — giving management access to all areas while limiting individual tenant access to their specific units. We use commercial-grade cylinders and keyways that are difficult to duplicate without authorization."
+        },
+        {
+          "question": "What should I do after an employee leaves without returning their key?",
+          "answer": "Rekeying is the most cost-effective response. Tristar Locksmith can rekey the affected locks in {cityName} so the old key no longer works, without replacing the hardware. If the employee had access to a master key, we can rekey the entire affected keyway in a single visit."
+        }
+      ],
+      "parentService": "commercial-locksmith",
+      "schema_serviceType": "Commercial Locksmith Service"
+    },
+    "lock-change": {
+      "label": "Lock Change",
+      "h1Template": "Lock Change in {cityName}, TN — Tristar Locksmith",
+      "metaTitle": "Lock Change {cityName} TN | Residential & Commercial | Tristar",
+      "metaDescription": "Lock change service in {cityName}, TN for homes and businesses. Tristar Locksmith installs deadbolts, knob locks, and commercial hardware. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith provides lock change service in {cityName}, TN for residential and commercial properties. We install deadbolts, knob locks, levers, and commercial-grade cylinders — and advise on the right hardware for your door and security level. Call (865) 381-3931.",
+      "whatWeDo": "A lock change in {cityName} makes sense in several situations — moving into a new home, after a break-in, when a key has been lost or stolen, or when aging hardware is no longer reliable. Tristar Locksmith installs and replaces residential and commercial locks across {cityName} and the surrounding area. We carry a stock of deadbolts, knob locks, and lever hardware in common finishes, and we work with most commercial-grade cylinders and lever trim. Our technicians evaluate your existing door prep and hardware before recommending a replacement — some doors require a back plate modification or bore adjustment for a proper fit. If you're upgrading security after a break-in or moving into a new property in {neighborhood1}, we can assess your full entry and advise on the most cost-effective combination of hardware.",
+      "scenarioTemplate": "Lock change calls in {cityName} often come from new homeowners who moved in near {landmark1} and want fresh hardware before they feel truly settled, or from renters who just discovered the landlord never changed the locks between tenants. They also come from businesses on {landmark2} that experienced a break-in and need upgraded deadbolts on every exterior door before reopening. Whatever the reason, Tristar Locksmith carries the hardware and the experience to handle it in a single visit.",
+      "faqs": [
+        {
+          "question": "Should I change or just rekey the locks in {cityName}?",
+          "answer": "Rekeying is the right choice when the hardware is in good condition and you simply want old keys to stop working. Changing the lock is better when the hardware is worn, damaged, or you want to upgrade to a higher security grade. Tristar Locksmith will assess your existing hardware and recommend the most cost-effective option."
+        },
+        {
+          "question": "What lock brands do you install in {cityName}?",
+          "answer": "Tristar Locksmith installs Schlage, Kwikset, Defiant, and commercial-grade brands including Corbin Russwin and Sargent. We stock common residential hardware and can source specific commercial cylinders. If you have a preferred brand or finish, let us know when you call."
+        },
+        {
+          "question": "How long does a lock change take in {cityName}?",
+          "answer": "A single residential deadbolt replacement typically takes 15–30 minutes. A full exterior door set (knob plus deadbolt) takes 30–45 minutes. Commercial lock changes vary by hardware type but most single-door installations are complete within 45–60 minutes."
+        },
+        {
+          "question": "Do you change locks after a break-in in {cityName}?",
+          "answer": "Yes. After a break-in is one of the most common reasons customers call us. We assess the damaged entry point, replace compromised hardware with a higher-security option, and can check your other exterior doors in the same visit to identify any weak points."
+        }
+      ],
+      "parentService": "lock-change",
+      "schema_serviceType": "Lock Change Service"
+    }
+  },
+  "combos": {}
+}

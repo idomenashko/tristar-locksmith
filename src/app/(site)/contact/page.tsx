@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { getBusiness, getServiceAreas } from "@/lib/queries";
 import { buildMetadata } from "@/lib/seo";
+import { LeadFormSection } from "@/components/forms/LeadFormSection";
 
 export const metadata = buildMetadata({
   title: "Contact Tristar Locksmith",
@@ -83,20 +84,23 @@ export default async function ContactPage() {
               </div>
             </div>
 
-            {/* Areas */}
+            {/* Lead Form */}
             <div>
-              <h2 className="text-2xl font-bold text-navy mb-6 font-display">Areas We Serve</h2>
-              <div className="grid grid-cols-2 gap-2">
-                {serviceAreas.map((area) => (
-                  <div key={area.slug} className="flex items-center gap-2 text-sm text-ink py-1">
-                    <span className="text-forest font-bold">✓</span>
-                    {area.name}
-                  </div>
-                ))}
+              <LeadFormSection variant="contact" source="contact-page" />
+              <div className="mt-8">
+                <h2 className="text-xl font-bold text-navy mb-4 font-display">Areas We Serve</h2>
+                <div className="grid grid-cols-2 gap-2">
+                  {serviceAreas.map((area) => (
+                    <div key={area.slug} className="flex items-center gap-2 text-sm text-ink py-1">
+                      <span className="text-forest font-bold">✓</span>
+                      {area.name}
+                    </div>
+                  ))}
+                </div>
+                <p className="text-muted text-sm mt-4">
+                  Not seeing your area? Call us — we may still be able to help.
+                </p>
               </div>
-              <p className="text-muted text-sm mt-4">
-                Not seeing your area? Call us — we may still be able to help.
-              </p>
             </div>
           </div>
         </Container>

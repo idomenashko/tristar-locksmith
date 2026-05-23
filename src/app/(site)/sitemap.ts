@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getServices, getServiceAreas } from "@/lib/queries";
+import { getAllPosts } from "@/lib/blog";
+import { getActiveCombos } from "@/lib/service-city";
 
 const BASE_URL = "https://tristarlocksmith.com";
 
@@ -8,6 +10,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     getServices(),
     getServiceAreas(),
   ]);
+
+  const posts = getAllPosts();
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -87,5 +91,47 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.4,
   }));
 
-  return [...staticPages, ...servicePages, ...areaPages, ...aiPages, ...serviceMdPages, ...areaMdPages];
+  const blogListPage: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+  ];
+
+  const blogPostPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  const blogMdPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}.md`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.4,
+  }));
+
+  const activeCombos = getActiveCombos();
+  const comboPages: MetadataRoute.Sitemap = activeCombos.map((combo) => ({
+    url: `${BASE_URL}/${combo.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  return [
+    ...staticPages,
+    ...comboPages,
+    ...servicePages,
+    ...areaPages,
+    ...blogListPage,
+    ...blogPostPages,
+    ...aiPages,
+    ...serviceMdPages,
+    ...areaMdPages,
+    ...blogMdPages,
+  ];
 }

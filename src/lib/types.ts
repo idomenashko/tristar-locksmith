@@ -50,6 +50,16 @@ export interface Project {
   description: string;
 }
 
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  primaryKeyword: string;
+  date: string;
+  faqJsonLd: string | null;
+  content: string;
+}
+
 export interface Business {
   name: string;
   phone: string;
@@ -61,4 +71,14 @@ export interface Business {
   address: string;
   email?: string;
   logo?: string;
+}
+
+export interface LeadFormPayload {
+  name: string;
+  phone: string;
+  serviceNeeded: string;
+  address: string;
+  note: string;
+  _hp: string;
+  _source: string;
 }
