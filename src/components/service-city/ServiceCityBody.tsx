@@ -4,16 +4,15 @@ interface ServiceCityBodyProps {
   cityName: string;
   neighborhoods: string[];
   zips: string[];
-  responseBand: string;
   serviceName: string;
 }
 
 const WHY_TRISTAR = [
   "5.0 stars from 127 verified reviews",
-  "15–30 minute average response time across East Tennessee",
+  "Licensed, insured, and background-checked technicians",
   "Non-destructive techniques — no damage to your property",
   "Upfront pricing quoted before we begin — no surprises",
-  "Licensed, insured, and background-checked technicians",
+  "Serving Knoxville and 26 surrounding East Tennessee communities",
   "7 AM–11:30 PM daily · 24/7 emergency line always open",
 ];
 
@@ -23,7 +22,6 @@ export function ServiceCityBody({
   cityName,
   neighborhoods,
   zips,
-  responseBand,
   serviceName,
 }: ServiceCityBodyProps) {
   return (
@@ -59,13 +57,13 @@ export function ServiceCityBody({
         )}
       </section>
 
-      {/* Response Time */}
+      {/* Pricing */}
       <section className="bg-navy/5 rounded-xl p-6">
         <h2 className="text-2xl font-bold text-navy mb-3 font-display">
-          Response Time &amp; Pricing in {cityName}
+          Transparent Pricing in {cityName}
         </h2>
         <p className="text-ink mb-3">
-          Our average response time in {cityName} is <strong>{responseBand}</strong>. When you call, we give you an accurate ETA before we dispatch — and a firm price before we touch anything.
+          When you call Tristar Locksmith in {cityName}, we give you a firm price before we touch anything — no surprises after the job.
         </p>
         <ul className="space-y-2 text-sm text-ink">
           <li className="flex items-start gap-2"><span className="text-forest font-bold">✓</span> Upfront pricing — you approve the cost before we start</li>

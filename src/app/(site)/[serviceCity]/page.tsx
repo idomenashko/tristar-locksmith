@@ -111,7 +111,6 @@ export default async function ServiceCityPage({
                 cityName={combo.cityMeta.name}
                 neighborhoods={combo.cityMeta.neighborhoods}
                 zips={combo.cityMeta.zips}
-                responseBand={combo.cityMeta.responseBand}
                 serviceName={combo.serviceMeta.label}
               />
 

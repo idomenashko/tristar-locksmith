@@ -12,7 +12,7 @@ export function CtaSection() {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
             style={{ color: "#fff" }}
           >
-            Ready for Fast, Reliable{" "}
+            Ready for Reliable, Professional{" "}
             <span style={{ color: "#D4A03C" }}>Locksmith Service?</span>
           </h2>
 
@@ -36,7 +36,7 @@ export function CtaSection() {
             className="mt-6 text-sm"
             style={{ color: "rgba(255,255,255,0.6)" }}
           >
-            Licensed &amp; Insured · Upfront Pricing · 15-30 Min Response
+            Licensed &amp; Insured · Upfront Pricing · 24/7 Emergency Service
           </p>
         </div>
       </Container>

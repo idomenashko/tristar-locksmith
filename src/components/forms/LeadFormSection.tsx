@@ -13,11 +13,11 @@ const COPY = {
   },
   blog: {
     heading: "Need a Locksmith Now?",
-    sub: "Leave your number and we'll call you back. Or dial us directly for the fastest response.",
+    sub: "Leave your number and we'll call you back. Or dial us directly to speak with our team.",
   },
   sc: {
-    heading: "Get Help Fast",
-    sub: "Fill in your info and we'll call you back within minutes. For emergencies, call directly.",
+    heading: "Get Help Now",
+    sub: "Fill in your info and we'll call you back. For emergencies, call directly.",
   },
 };
 
@@ -34,7 +34,7 @@ export function LeadFormSection({
           href="tel:8653813931"
           className="inline-flex items-center gap-2 bg-gold text-navy font-bold px-5 py-2.5 rounded-md text-sm uppercase tracking-wide hover:bg-amber-400 transition-colors mb-5"
         >
-          📞 Call (865) 381-3931 — Fastest Response
+          📞 Call (865) 381-3931 — Available 24/7
         </a>
       </div>
       <h2 className="text-xl font-bold text-navy mb-1 font-display">

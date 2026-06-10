@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!area) return {};
   return buildMetadata({
     title: `Locksmith ${area.name}, TN`,
-    description: `Tristar Locksmith serves ${area.name}, TN with 24/7 locksmith services. Car lockout, house lockout, rekey, and more. Fast response. Call (865) 381-3931.`,
+    description: `Tristar Locksmith serves ${area.name}, TN with 24/7 locksmith services. Car lockout, house lockout, rekey, and more. Licensed &amp; insured. Call (865) 381-3931.`,
     path: `/service-areas/${slug}`,
   });
 }
@@ -85,7 +85,7 @@ export default async function ServiceAreaPage({ params }: { params: Promise<{ sl
                   Need a Locksmith in {area.name}?
                 </h3>
                 <p className="text-white/80 text-sm mb-4">
-                  Available 24/7 — fast 15-30 minute response.
+                  Available 24/7 for emergencies.
                 </p>
                 <Button href="tel:8653813931" variant="primary" size="lg" className="w-full justify-center">
                   📞 {business.phone}

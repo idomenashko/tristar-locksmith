@@ -4,7 +4,7 @@
       "slug": "knoxville",
       "name": "Knoxville",
       "region": "Knoxville Metro",
-      "description": "As the largest city in East Tennessee, Knoxville is the heart of Tristar Locksmith's service territory. From downtown and the University of Tennessee area to the suburbs of West Knoxville and North Knoxville, our technicians are positioned throughout the city for fast response. Whether you need a car lockout, a home rekey, or commercial lock installation, Tristar Locksmith is Knoxville's trusted local choice.",
+      "description": "As the largest city in East Tennessee, Knoxville is the heart of Tristar Locksmith's service territory. From downtown and the University of Tennessee area to the suburbs of West Knoxville and North Knoxville, our technicians serve the full city. Whether you need a car lockout, a home rekey, or commercial lock installation, Tristar Locksmith is Knoxville's trusted local choice.",
       "nearbyAreas": [
         "Farragut",
         "Powell",
@@ -16,7 +16,7 @@
       "slug": "farragut",
       "name": "Farragut",
       "region": "West Knox",
-      "description": "Farragut is one of the most affluent communities in Knox County, and Tristar Locksmith proudly serves its residents and businesses with prompt, professional locksmith service. From the subdivisions along Kingston Pike to commercial properties in the Turkey Creek area, we handle car lockouts, residential lock changes, and smart lock installations. Our West Knoxville location means Farragut customers typically see some of our fastest response times.",
+      "description": "Farragut is one of the most affluent communities in Knox County, and Tristar Locksmith proudly serves its residents and businesses with professional locksmith service. From the subdivisions along Kingston Pike to commercial properties in the Turkey Creek area, we handle car lockouts, residential lock changes, and smart lock installations. Our West Knoxville coverage means Farragut customers receive the same quality service as the rest of Knox County.",
       "nearbyAreas": [
         "Knoxville",
         "Hardin Valley",
@@ -40,7 +40,7 @@
       "slug": "maryville",
       "name": "Maryville",
       "region": "Blount County",
-      "description": "As the county seat of Blount County, Maryville is a busy hub of commerce and residential growth just south of Knoxville. Tristar Locksmith serves Maryville homes, apartment complexes, and businesses with the full range of locksmith services — from car lockouts and house lockouts to commercial lock hardware and master key systems. Our team is familiar with the Maryville area and can reach most locations within 30 minutes.",
+      "description": "As the county seat of Blount County, Maryville is a busy hub of commerce and residential growth just south of Knoxville. Tristar Locksmith serves Maryville homes, apartment complexes, and businesses with the full range of locksmith services — from car lockouts and house lockouts to commercial lock hardware and master key systems. Our team is familiar with the Maryville area and the surrounding Blount County communities.",
       "nearbyAreas": [
         "Alcoa",
         "Louisville",
@@ -64,7 +64,7 @@
       "slug": "alcoa",
       "name": "Alcoa",
       "region": "Blount County",
-      "description": "Alcoa is a compact, tight-knit community in Blount County directly adjacent to the McGhee Tyson Airport and the city of Maryville. Tristar Locksmith serves Alcoa residents and local businesses with fast, dependable locksmith service. Whether you're locked out of your car in the airport parking area, need a lock changed at a business on Alcoa Highway, or want to rekey your home, we're just a call away and typically on-site within 30 minutes.",
+      "description": "Alcoa is a compact, tight-knit community in Blount County directly adjacent to the McGhee Tyson Airport and the city of Maryville. Tristar Locksmith serves Alcoa residents and local businesses with dependable locksmith service. Whether you're locked out of your car in the airport parking area, need a lock changed at a business on Alcoa Highway, or want to rekey your home, we're just a call away.",
       "nearbyAreas": [
         "Maryville",
         "Louisville",
@@ -100,7 +100,7 @@
       "slug": "hardin-valley",
       "name": "Hardin Valley",
       "region": "West Knox",
-      "description": "Hardin Valley is one of Knox County's fastest-growing communities, with new residential subdivisions, schools, and commercial development expanding along Hardin Valley Road. Tristar Locksmith serves Hardin Valley homeowners and businesses with a full range of locksmith services, from car lockouts to smart lock installation and commercial hardware. Our proximity to West Knoxville means fast response times throughout this growing community.",
+      "description": "Hardin Valley is one of Knox County's fastest-growing communities, with new residential subdivisions, schools, and commercial development expanding along Hardin Valley Road. Tristar Locksmith serves Hardin Valley homeowners and businesses with a full range of locksmith services, from car lockouts to smart lock installation and commercial hardware. Our West Knoxville coverage extends throughout this growing community.",
       "nearbyAreas": [
         "Knoxville",
         "Farragut",
@@ -112,7 +112,7 @@
       "slug": "karns",
       "name": "Karns",
       "region": "North Knox",
-      "description": "Karns is a community in northwestern Knox County with a strong local identity and a mix of suburban and rural character. Tristar Locksmith provides Karns residents with the same fast, professional locksmith service we offer across the metro area — car lockouts, house lockouts, rekeying after a move, and lock replacement. We know the Karns area well and can navigate quickly to neighborhoods off Beaver Ridge Road and beyond.",
+      "description": "Karns is a community in northwestern Knox County with a strong local identity and a mix of suburban and rural character. Tristar Locksmith provides Karns residents with the same professional locksmith service we offer across the metro area — car lockouts, house lockouts, rekeying after a move, and lock replacement. We know the Karns area well and navigate directly to neighborhoods off Beaver Ridge Road and beyond.",
       "nearbyAreas": [
         "Knoxville",
         "Powell",
@@ -148,7 +148,7 @@
       "slug": "corryton",
       "name": "Corryton",
       "region": "North Knox",
-      "description": "Corryton is a rural community in northeastern Knox County with a close-knit feel and a mix of longtime residents and newer families. Tristar Locksmith covers Corryton with full locksmith service — car and home lockouts, lock replacement, rekeying, and 24/7 emergency response. We understand that rural customers may feel far from help, and we commit to honest ETAs and prompt response when you call from the Corryton area.",
+      "description": "Corryton is a rural community in northeastern Knox County with a close-knit feel and a mix of longtime residents and newer families. Tristar Locksmith covers Corryton with full locksmith service — car and home lockouts, lock replacement, rekeying, and 24/7 emergency response. We serve the Corryton area and keep communication clear from the moment you call.",
       "nearbyAreas": [
         "Mascot",
         "Strawberry Plains",
@@ -160,7 +160,7 @@
       "slug": "maynardville",
       "name": "Maynardville",
       "region": "North Knox",
-      "description": "Maynardville is the county seat of Union County, located north of Knoxville along U.S. Highway 33. Tristar Locksmith extends service to Maynardville for home lockouts, car key replacement, and other locksmith needs. While response times to Maynardville may be slightly longer than to areas closer to Knoxville, we always provide an accurate arrival estimate and never leave a customer waiting without communication.",
+      "description": "Maynardville is the county seat of Union County, located north of Knoxville along U.S. Highway 33. Tristar Locksmith extends service to Maynardville for home lockouts, car key replacement, and other locksmith needs. We serve the Maynardville area and keep communication clear from the moment you call — no one is left without an update.",
       "nearbyAreas": [
         "Powell",
         "Corryton",
@@ -268,7 +268,7 @@
       "slug": "walland",
       "name": "Walland",
       "region": "Blount County",
-      "description": "Walland is a small community at the foothills of the Smoky Mountains in Blount County, gateway to Tremont and the Townsend area. Tristar Locksmith provides locksmith service to Walland residents including car lockouts, home lock changes, and rekeying. Given the area's rural character, we encourage customers to call ahead so we can confirm availability and provide an accurate ETA.",
+      "description": "Walland is a small community at the foothills of the Smoky Mountains in Blount County, gateway to Tremont and the Townsend area. Tristar Locksmith provides locksmith service to Walland residents including car lockouts, home lock changes, and rekeying. Given the area's rural character, we encourage customers to call ahead so we can confirm availability.",
       "nearbyAreas": [
         "Maryville",
         "Rockford",

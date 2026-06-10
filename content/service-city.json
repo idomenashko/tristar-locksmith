@@ -8,7 +8,6 @@
       "landmarks": ["University of Tennessee campus", "Market Square", "Turkey Creek"],
       "landmark1": "University of Tennessee campus",
       "landmark2": "Market Square",
-      "responseBand": "15–25 minutes",
       "phase": 1,
       "nearbyAreas": ["farragut", "powell", "hardin-valley", "karns"]
     },
@@ -20,7 +19,6 @@
       "landmarks": ["Turkey Creek", "Kingston Pike corridor"],
       "landmark1": "Turkey Creek",
       "landmark2": "Kingston Pike",
-      "responseBand": "20–30 minutes",
       "phase": 2,
       "nearbyAreas": ["knoxville", "hardin-valley", "lenoir-city"]
     },
@@ -32,7 +30,6 @@
       "landmarks": ["Bicentennial Greenbelt Park", "Foothills Mall"],
       "landmark1": "Foothills Mall",
       "landmark2": "Bicentennial Greenbelt Park",
-      "responseBand": "25–35 minutes",
       "phase": 2,
       "nearbyAreas": ["alcoa", "knoxville", "louisville"]
     },
@@ -44,7 +41,6 @@
       "landmarks": ["Oak Ridge Turnpike", "American Museum of Science and Energy"],
       "landmark1": "Oak Ridge Turnpike",
       "landmark2": "Bear Creek Road",
-      "responseBand": "25–35 minutes",
       "phase": 2,
       "nearbyAreas": ["clinton", "knoxville", "karns"]
     },
@@ -56,7 +52,6 @@
       "landmarks": ["Pellissippi Parkway", "Hardin Valley Academy"],
       "landmark1": "Pellissippi Parkway",
       "landmark2": "Beaver Creek",
-      "responseBand": "20–30 minutes",
       "phase": 2,
       "nearbyAreas": ["knoxville", "farragut", "karns"]
     },
@@ -68,7 +63,6 @@
       "landmarks": ["Clinton Highway", "Powell High School"],
       "landmark1": "Clinton Highway",
       "landmark2": "Emory Road",
-      "responseBand": "20–30 minutes",
       "phase": 3,
       "nearbyAreas": ["knoxville", "karns", "clinton"]
     },
@@ -80,7 +74,6 @@
       "landmarks": ["McGhee Tyson Airport", "Alcoa Highway"],
       "landmark1": "McGhee Tyson Airport",
       "landmark2": "Alcoa Highway",
-      "responseBand": "25–35 minutes",
       "phase": 3,
       "nearbyAreas": ["maryville", "knoxville", "seymour"]
     },
@@ -92,7 +85,6 @@
       "landmarks": ["Clinch River", "Anderson County Courthouse"],
       "landmark1": "Clinch River",
       "landmark2": "Main Street Clinton",
-      "responseBand": "25–40 minutes",
       "phase": 3,
       "nearbyAreas": ["oak-ridge", "powell", "maynardville"]
     },
@@ -104,7 +96,6 @@
       "landmarks": ["Sevierville Parkway", "Smoky Mountains National Park"],
       "landmark1": "Sevierville Parkway",
       "landmark2": "Smoky Mountains",
-      "responseBand": "30–45 minutes",
       "phase": 3,
       "nearbyAreas": ["pigeon-forge", "kodak", "dandridge"]
     },
@@ -116,7 +107,6 @@
       "landmarks": ["Beaver Ridge Road", "Karns High School"],
       "landmark1": "Beaver Ridge Road",
       "landmark2": "Dutchtown Road",
-      "responseBand": "20–30 minutes",
       "phase": 3,
       "nearbyAreas": ["knoxville", "powell", "hardin-valley"]
     },
@@ -128,7 +118,6 @@
       "landmarks": ["Fort Loudon Lake", "Lenoir City Park"],
       "landmark1": "Fort Loudon Lake",
       "landmark2": "US-11 corridor",
-      "responseBand": "30–40 minutes",
       "phase": 3,
       "nearbyAreas": ["farragut", "maryville", "tellico-village"]
     },
@@ -140,7 +129,6 @@
       "landmarks": ["Tellico Lake", "Choto Road"],
       "landmark1": "Tellico Lake",
       "landmark2": "Choto Road",
-      "responseBand": "30–40 minutes",
       "phase": 3,
       "nearbyAreas": ["lenoir-city", "farragut", "greenback"]
     },
@@ -152,7 +140,6 @@
       "landmarks": ["Corryton Road", "I-75 corridor"],
       "landmark1": "Corryton Road",
       "landmark2": "I-75 North",
-      "responseBand": "25–35 minutes",
       "phase": 3,
       "nearbyAreas": ["knoxville", "maynardville", "mascot"]
     },
@@ -164,7 +151,6 @@
       "landmarks": ["Union County Courthouse", "Clinch River"],
       "landmark1": "Union County Courthouse",
       "landmark2": "Clinch River",
-      "responseBand": "30–45 minutes",
       "phase": 3,
       "nearbyAreas": ["powell", "corryton", "clinton"]
     },
@@ -176,7 +162,6 @@
       "landmarks": ["Heiskell Road", "Clinton Highway area"],
       "landmark1": "Heiskell Road",
       "landmark2": "US-25W corridor",
-      "responseBand": "30–45 minutes",
       "phase": 3,
       "nearbyAreas": ["powell", "clinton", "maynardville"]
     },
@@ -188,7 +173,6 @@
       "landmarks": ["Mascot Road", "Rutledge Pike"],
       "landmark1": "Rutledge Pike",
       "landmark2": "Mascot Road",
-      "responseBand": "25–35 minutes",
       "phase": 3,
       "nearbyAreas": ["knoxville", "corryton", "strawberry-plains"]
     },
@@ -200,7 +184,6 @@
       "landmarks": ["Andrew Johnson Highway", "Jefferson County line"],
       "landmark1": "Andrew Johnson Highway",
       "landmark2": "Strawberry Plains Pike",
-      "responseBand": "25–40 minutes",
       "phase": 3,
       "nearbyAreas": ["knoxville", "mascot", "dandridge"]
     },
@@ -212,7 +195,6 @@
       "landmarks": ["Chapman Highway", "French Broad River"],
       "landmark1": "Chapman Highway",
       "landmark2": "French Broad River",
-      "responseBand": "25–35 minutes",
       "phase": 3,
       "nearbyAreas": ["knoxville", "maryville", "rockford"]
     },
@@ -224,7 +206,6 @@
       "landmarks": ["William Blount Drive", "Ellejoy Road"],
       "landmark1": "William Blount Drive",
       "landmark2": "Ellejoy Road",
-      "responseBand": "25–35 minutes",
       "phase": 3,
       "nearbyAreas": ["maryville", "seymour", "walland"]
     },
@@ -236,7 +217,6 @@
       "landmarks": ["Louisville Road", "Tennessee River"],
       "landmark1": "Louisville Road",
       "landmark2": "Tennessee River",
-      "responseBand": "30–40 minutes",
       "phase": 3,
       "nearbyAreas": ["maryville", "alcoa", "friendsville"]
     },
@@ -248,7 +228,6 @@
       "landmarks": ["Friendsville Pike", "Little River"],
       "landmark1": "Friendsville Pike",
       "landmark2": "Little River",
-      "responseBand": "30–45 minutes",
       "phase": 3,
       "nearbyAreas": ["maryville", "louisville", "greenback"]
     },
@@ -260,7 +239,6 @@
       "landmarks": ["US-411 corridor", "Tellico River"],
       "landmark1": "US-411 corridor",
       "landmark2": "Tellico River",
-      "responseBand": "35–50 minutes",
       "phase": 3,
       "nearbyAreas": ["maryville", "lenoir-city", "friendsville"]
     },
@@ -272,7 +250,6 @@
       "landmarks": ["Foothills Parkway", "Little River"],
       "landmark1": "Foothills Parkway",
       "landmark2": "Little River",
-      "responseBand": "35–50 minutes",
       "phase": 3,
       "nearbyAreas": ["maryville", "rockford", "townsend"]
     },
@@ -284,7 +261,6 @@
       "landmarks": ["I-40 corridor", "French Broad River"],
       "landmark1": "I-40 corridor",
       "landmark2": "Forks of the River",
-      "responseBand": "25–40 minutes",
       "phase": 3,
       "nearbyAreas": ["sevierville", "strawberry-plains", "dandridge"]
     },
@@ -296,7 +272,6 @@
       "landmarks": ["Dollywood", "The Parkway"],
       "landmark1": "Dollywood",
       "landmark2": "The Parkway",
-      "responseBand": "35–50 minutes",
       "phase": 3,
       "nearbyAreas": ["sevierville", "gatlinburg", "kodak"]
     },
@@ -308,7 +283,6 @@
       "landmarks": ["Douglas Lake", "Jefferson County Courthouse"],
       "landmark1": "Douglas Lake",
       "landmark2": "Jefferson County Courthouse",
-      "responseBand": "30–45 minutes",
       "phase": 3,
       "nearbyAreas": ["strawberry-plains", "sevierville", "jefferson-city"]
     },
@@ -320,7 +294,6 @@
       "landmarks": ["Carson-Newman University", "Mossy Creek"],
       "landmark1": "Carson-Newman University",
       "landmark2": "Mossy Creek",
-      "responseBand": "35–50 minutes",
       "phase": 3,
       "nearbyAreas": ["dandridge", "strawberry-plains", "morristown"]
     }
@@ -329,15 +302,15 @@
     "car-lockout": {
       "label": "Car Lockout",
       "h1Template": "Car Lockout in {cityName}, TN — Tristar Locksmith",
-      "metaTitle": "Car Lockout {cityName} TN | {responseBand} Response | Tristar",
-      "metaDescription": "Locked out of your car in {cityName}, TN? Tristar Locksmith arrives in {responseBand}. Non-destructive entry on all vehicles. Call (865) 381-3931.",
-      "answerCapsule": "Tristar Locksmith handles car lockouts across {cityName}, TN in {responseBand}. Our technicians use non-destructive entry tools on all vehicle makes — domestic sedans, pickups, imports, and late-model systems — and quote you upfront before touching your car. Call (865) 381-3931 for immediate dispatch.",
+      "metaTitle": "Car Lockout {cityName} TN | Non-Destructive Entry | Tristar",
+      "metaDescription": "Locked out of your car in {cityName}, TN? Tristar Locksmith provides non-destructive entry on all vehicle makes. Licensed &amp; insured. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith handles car lockouts across {cityName}, TN. Our technicians use non-destructive entry tools on all vehicle makes — domestic sedans, pickups, imports, and late-model systems — and quote you upfront before touching your car. Call (865) 381-3931 for help.",
       "whatWeDo": "A car lockout can happen anywhere in {cityName} — a parking lot off {landmark1}, a gas station on the way to work, or your own driveway. Tristar Locksmith dispatches a trained technician quickly so you're not stranded. We use professional slim-jim and air-wedge tools designed for non-destructive entry. Your paint, door seals, and window trim stay intact. We cover all vehicle makes and models, including imports, luxury cars, and trucks with advanced locking systems. Every visit includes upfront pricing — you'll know the cost before we begin. Our technicians are licensed, insured, and background-checked, and they carry the equipment to handle most lockout scenarios in a single stop.",
       "scenarioTemplate": "Whether your keys slid off the seat while you were unloading at {landmark1}, or you walked away from your vehicle in a {neighborhood1} parking lot and heard the click of the automatic lock behind you — Tristar Locksmith is the call to make. We also handle keys locked in the trunk, broken fob batteries that won't disengage the system, and keyless-entry systems that stopped responding. If you're parked somewhere off the main roads in {cityName}, give us your exact location when you call and we'll navigate straight to you.",
       "faqs": [
         {
           "question": "How fast can you reach a car lockout in {cityName}?",
-          "answer": "Tristar Locksmith typically arrives within {responseBand} in the {cityName} area. Response times depend on your exact location and current call volume. When you call (865) 381-3931, we give you an accurate ETA before we dispatch."
+          "answer": "Tristar Locksmith dispatches a trained technician to your location in {cityName}. Coverage extends throughout the area — call (865) 381-3931 and we will confirm availability and get a technician to you."
         },
         {
           "question": "Will unlocking my car in {cityName} cause any damage?",
@@ -358,9 +331,9 @@
     "house-lockout": {
       "label": "House Lockout",
       "h1Template": "House Lockout in {cityName}, TN — Tristar Locksmith",
-      "metaTitle": "House Lockout {cityName} TN | Fast Response | Tristar Locksmith",
-      "metaDescription": "Locked out of your home in {cityName}, TN? Tristar Locksmith opens residential locks non-destructively in {responseBand}. Call (865) 381-3931.",
-      "answerCapsule": "Tristar Locksmith handles house lockouts across {cityName}, TN in {responseBand}. Our technicians open deadbolts, knob locks, and high-security cylinders without damaging your door or frame — and can rekey or replace the lock in the same visit. Call (865) 381-3931 for immediate help.",
+      "metaTitle": "House Lockout {cityName} TN | Non-Destructive Entry | Tristar Locksmith",
+      "metaDescription": "Locked out of your home in {cityName}, TN? Tristar Locksmith opens residential locks non-destructively. Licensed &amp; insured. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith handles house lockouts across {cityName}, TN. Our technicians open deadbolts, knob locks, and high-security cylinders without damaging your door or frame — and can rekey or replace the lock in the same visit. Call (865) 381-3931 for help.",
       "whatWeDo": "Getting locked out of your home in {cityName} is one of the most stressful experiences you can have, especially late at night or in bad weather. Tristar Locksmith sends a trained technician to your door quickly. We use professional picking and bypass techniques designed to open residential locks without damaging the door, frame, or weather stripping. We work with all major lock brands — Schlage, Kwikset, Baldwin, Medeco, and more — across single-family homes, apartments, and condos. Once you're inside, our technician can rekey or replace the lock on the spot with no extra trip charge. We ask for a photo ID at every residential lockout for your protection — to confirm we're opening the right door for the right person.",
       "scenarioTemplate": "A house lockout can catch you completely off guard. Maybe you stepped outside in {neighborhood1} to check the mail and the door swung shut behind you, or your keys stayed on the kitchen counter during a quick trip to {landmark1}. It happens to homeowners across {cityName} every week. Tristar Locksmith treats every call with discretion and urgency — we understand you want to be back inside quickly, and we work efficiently to make that happen without any damage to your property.",
       "faqs": [
@@ -389,9 +362,9 @@
       "h1Template": "Car Key Replacement in {cityName}, TN — Tristar Locksmith",
       "metaTitle": "Car Key Replacement {cityName} TN | All Makes | Tristar Locksmith",
       "metaDescription": "Lost your car keys in {cityName}, TN? Tristar Locksmith cuts and programs replacement keys for all vehicle makes. Call (865) 381-3931.",
-      "answerCapsule": "Tristar Locksmith provides car key replacement in {cityName}, TN for all vehicle makes — including transponder keys, key fobs, and push-to-start systems. We cut and program on-site, usually within {responseBand}. No tow required. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith provides car key replacement in {cityName}, TN for all vehicle makes — including transponder keys, key fobs, and push-to-start systems. We cut and program on-site. No tow required. Call (865) 381-3931.",
       "whatWeDo": "Losing your car keys in {cityName} doesn't have to mean a tow truck and a dealership wait. Tristar Locksmith provides mobile car key replacement and key programming for all major vehicle makes and models — domestic, import, luxury, and fleet vehicles. Our technicians carry cutting equipment and programming software on the road, so we come to you wherever you are in {cityName}. We handle standard cut keys, laser-cut high-security keys, transponder keys, smart key fobs, and push-to-start systems. Pricing is disclosed upfront. If you've lost every key to your vehicle, we can also rekey the ignition so your old key codes are disabled — critical for security if the keys were stolen.",
-      "scenarioTemplate": "Losing your only set of car keys is a situation that can bring your whole day to a halt. Maybe you realized they were gone after you finished shopping near {landmark1}, or they fell out of your pocket somewhere in {neighborhood1}. Tristar Locksmith carries the equipment to handle these situations on-site in {cityName} — no tow truck, no long dealer wait. We'll have you driving again faster than most people expect.",
+      "scenarioTemplate": "Losing your only set of car keys is a situation that can bring your whole day to a halt. Maybe you realized they were gone after you finished shopping near {landmark1}, or they fell out of your pocket somewhere in {neighborhood1}. Tristar Locksmith carries the equipment to handle these situations on-site in {cityName} — no tow truck, no long dealer wait.",
       "faqs": [
         {
           "question": "Can you make a replacement key for my car in {cityName} without the original?",

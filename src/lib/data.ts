@@ -16,11 +16,11 @@ export const SERVICES: Service[] = [
     title: "Car Lockout Service",
     icon: "🚗",
     shortDescription:
-      "Locked out of your car in Knoxville or surrounding areas? Tristar Locksmith gets you back on the road fast — usually within 15 to 30 minutes.",
+      "Locked out of your car in Knoxville or surrounding areas? Tristar Locksmith gets you back on the road fast ",
     longDescription:
       "A car lockout can happen to anyone, anywhere — a parking lot in Farragut, a trailhead near Sevierville, or right in your own driveway in Knoxville. Tristar Locksmith dispatches a trained technician quickly so you're never stranded for long. We use professional, non-destructive entry tools to unlock your vehicle without damaging paint, seals, or window trim. Whether you drive a domestic sedan, a pickup truck, or a late-model import with advanced locking systems, our team has the experience and equipment to get you back in safely.",
     features: [
-      "15–30 minute average response time across Knox County",
+      "Licensed, insured technicians throughout Knox County",
       "Non-destructive entry — no damage to your vehicle",
       "All vehicle makes and models including imports and luxury cars",
       "Available 24 hours a day, 7 days a week, 365 days a year",
@@ -31,7 +31,7 @@ export const SERVICES: Service[] = [
       {
         question: "How long will it take to unlock my car in Knoxville?",
         answer:
-          "Tristar Locksmith typically arrives within 15 to 30 minutes anywhere in the Knoxville metro area, including Farragut, Powell, and Oak Ridge. Response times to more rural areas like Maynardville or Friendsville may be slightly longer, but we always give you an accurate ETA when you call.",
+          "Tristar Locksmith serves the full Knoxville metro area, including Farragut, Powell, and Oak Ridge, as well as more rural communities like Maynardville and Friendsville. Call (865) 381-3931 to confirm coverage for your location.",
       },
       {
         question: "Will unlocking my car cause any damage?",
@@ -154,7 +154,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Lost your car keys? Tristar Locksmith cuts and programs replacement keys and key fobs for most makes and models — often cheaper than the dealership.",
     longDescription:
-      "Losing your car keys can feel like a crisis, but Tristar Locksmith makes replacement straightforward and affordable. We cut and program transponder keys, laser-cut high-security keys, proximity fobs, and push-to-start smart keys for a wide range of domestic and foreign vehicles right from our mobile unit. No need to tow your car to a dealership and wait days — we come to you anywhere in the Knoxville area and complete the job on-site, usually in under an hour. We also retain the ability to create a spare key at the same visit so you're never in this situation again.",
+      "Losing your car keys can feel like a crisis, but Tristar Locksmith makes replacement straightforward and affordable. We cut and program transponder keys, laser-cut high-security keys, proximity fobs, and push-to-start smart keys for a wide range of domestic and foreign vehicles right from our mobile unit. No need to tow your car to a dealership and wait days — we come to you anywhere in the Knoxville area and complete the job on-site. We also retain the ability to create a spare key at the same visit so you're never in this situation again.",
     features: [
       "Transponder key cutting and programming",
       "Push-to-start and proximity fob programming",
@@ -245,7 +245,7 @@ export const SERVICES: Service[] = [
       {
         question: "How quickly can you respond to a commercial lockout?",
         answer:
-          "Tristar Locksmith treats commercial lockouts with the same urgency as residential ones. We aim to be on-site within 30 minutes anywhere in the Knoxville metro area. For businesses on Knox County's periphery, we still typically arrive in under an hour.",
+          "Tristar Locksmith treats commercial lockouts with the same urgency as residential ones. Our technicians serve the full Knoxville metro area and Knox County periphery.",
       },
     ],
   },
@@ -256,10 +256,10 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Locked out, broken lock, or security breach? Tristar Locksmith is available 24/7 for emergency locksmith service throughout Knoxville and East Tennessee.",
     longDescription:
-      "Emergencies don't follow a schedule, and neither does Tristar Locksmith. Whether it's 2 AM and you're locked out of your home in Powell, you've had a break-in and need your locks changed immediately in Maryville, or a key snapped in your office lock before an important morning, we respond fast. Our emergency technicians are equipped to handle lockouts, broken locks, forced entry repairs, and lock replacements on the spot. We keep our response times honest — if we say 20 minutes, we mean 20 minutes.",
+      "Emergencies don't follow a schedule, and neither does Tristar Locksmith. Whether it's 2 AM and you're locked out of your home in Powell, you've had a break-in and need your locks changed immediately in Maryville, or a key snapped in your office lock before an important morning, our team is available. Our emergency technicians are equipped to handle lockouts, broken locks, forced entry repairs, and lock replacements on the spot.",
     features: [
       "True 24/7 availability including holidays",
-      "15–30 minute response across Knox County",
+      "Available 24/7 including holidays across Knox County",
       "Break-in repair and emergency lock replacement",
       "No after-hours surcharges hidden in fine print",
       "Residential, commercial, and automotive emergencies covered",
@@ -279,7 +279,7 @@ export const SERVICES: Service[] = [
       {
         question: "Do you cover rural areas outside Knoxville at night?",
         answer:
-          "Yes. Tristar Locksmith covers the full service area — including Maynardville, Heiskell, Corryton, Friendsville, and other outlying communities — at all hours. Response times to areas farther from Knoxville may be longer, but we will always give you an accurate ETA when you call.",
+          "Yes. Tristar Locksmith covers the full service area — including Maynardville, Heiskell, Corryton, Friendsville, and other outlying communities — at all hours. Call (865) 381-3931 and we will confirm availability for your location.",
       },
     ],
   },
@@ -325,7 +325,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Knoxville",
     region: "Knoxville Metro",
     description:
-      "As the largest city in East Tennessee, Knoxville is the heart of Tristar Locksmith's service territory. From downtown and the University of Tennessee area to the suburbs of West Knoxville and North Knoxville, our technicians are positioned throughout the city for fast response. Whether you need a car lockout, a home rekey, or commercial lock installation, Tristar Locksmith is Knoxville's trusted local choice.",
+      "As the largest city in East Tennessee, Knoxville is the heart of Tristar Locksmith's service territory. From downtown and the University of Tennessee area to the suburbs of West Knoxville and North Knoxville, our technicians serve the full city. Whether you need a car lockout, a home rekey, or commercial lock installation, Tristar Locksmith is Knoxville's trusted local choice.",
     nearbyAreas: ["Farragut", "Powell", "Hardin Valley", "Karns"],
   },
   {
@@ -333,7 +333,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Farragut",
     region: "West Knox",
     description:
-      "Farragut is one of the most affluent communities in Knox County, and Tristar Locksmith proudly serves its residents and businesses with prompt, professional locksmith service. From the subdivisions along Kingston Pike to commercial properties in the Turkey Creek area, we handle car lockouts, residential lock changes, and smart lock installations. Our West Knoxville location means Farragut customers typically see some of our fastest response times.",
+      "Farragut is one of the most affluent communities in Knox County, and Tristar Locksmith proudly serves its residents and businesses with prompt, professional locksmith service. From the subdivisions along Kingston Pike to commercial properties in the Turkey Creek area, we handle car lockouts, residential lock changes, and smart lock installations. Our West Knoxville coverage means Farragut customers receive the same quality service as the rest of Knox County.",
     nearbyAreas: ["Knoxville", "Hardin Valley", "Lenoir City", "Loudon"],
   },
   {
@@ -349,7 +349,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Maryville",
     region: "Blount County",
     description:
-      "As the county seat of Blount County, Maryville is a busy hub of commerce and residential growth just south of Knoxville. Tristar Locksmith serves Maryville homes, apartment complexes, and businesses with the full range of locksmith services — from car lockouts and house lockouts to commercial lock hardware and master key systems. Our team is familiar with the Maryville area and can reach most locations within 30 minutes.",
+      "As the county seat of Blount County, Maryville is a busy hub of commerce and residential growth just south of Knoxville. Tristar Locksmith serves Maryville homes, apartment complexes, and businesses with the full range of locksmith services — from car lockouts and house lockouts to commercial lock hardware and master key systems. Our team is familiar with the Maryville area and the surrounding Blount County communities.",
     nearbyAreas: ["Alcoa", "Louisville", "Friendsville", "Knoxville"],
   },
   {
@@ -365,7 +365,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Alcoa",
     region: "Blount County",
     description:
-      "Alcoa is a compact, tight-knit community in Blount County directly adjacent to the McGhee Tyson Airport and the city of Maryville. Tristar Locksmith serves Alcoa residents and local businesses with fast, dependable locksmith service. Whether you're locked out of your car in the airport parking area, need a lock changed at a business on Alcoa Highway, or want to rekey your home, we're just a call away and typically on-site within 30 minutes.",
+      "Alcoa is a compact, tight-knit community in Blount County directly adjacent to the McGhee Tyson Airport and the city of Maryville. Tristar Locksmith serves Alcoa residents and local businesses with fast, dependable locksmith service. Whether you're locked out of your car in the airport parking area, need a lock changed at a business on Alcoa Highway, or want to rekey your home, we're just a call away.",
     nearbyAreas: ["Maryville", "Louisville", "Knoxville", "Seymour"],
   },
   {
@@ -389,7 +389,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Hardin Valley",
     region: "West Knox",
     description:
-      "Hardin Valley is one of Knox County's fastest-growing communities, with new residential subdivisions, schools, and commercial development expanding along Hardin Valley Road. Tristar Locksmith serves Hardin Valley homeowners and businesses with a full range of locksmith services, from car lockouts to smart lock installation and commercial hardware. Our proximity to West Knoxville means fast response times throughout this growing community.",
+      "Hardin Valley is one of Knox County's fastest-growing communities, with new residential subdivisions, schools, and commercial development expanding along Hardin Valley Road. Tristar Locksmith serves Hardin Valley homeowners and businesses with a full range of locksmith services, from car lockouts to smart lock installation and commercial hardware. Our West Knoxville coverage extends throughout this growing community.",
     nearbyAreas: ["Knoxville", "Farragut", "Powell", "Karns"],
   },
   {
@@ -429,7 +429,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Maynardville",
     region: "North Knox",
     description:
-      "Maynardville is the county seat of Union County, located north of Knoxville along U.S. Highway 33. Tristar Locksmith extends service to Maynardville for home lockouts, car key replacement, and other locksmith needs. While response times to Maynardville may be slightly longer than to areas closer to Knoxville, we always provide an accurate arrival estimate and never leave a customer waiting without communication.",
+      "Maynardville is the county seat of Union County, located north of Knoxville along U.S. Highway 33. Tristar Locksmith extends service to Maynardville for home lockouts, car key replacement, and other locksmith needs. We serve the Maynardville area and keep communication clear from the moment you call.",
     nearbyAreas: ["Powell", "Corryton", "Heiskell", "Clinton"],
   },
   {
@@ -501,7 +501,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Walland",
     region: "Blount County",
     description:
-      "Walland is a small community at the foothills of the Smoky Mountains in Blount County, gateway to Tremont and the Townsend area. Tristar Locksmith provides locksmith service to Walland residents including car lockouts, home lock changes, and rekeying. Given the area's rural character, we encourage customers to call ahead so we can confirm availability and provide an accurate ETA.",
+      "Walland is a small community at the foothills of the Smoky Mountains in Blount County, gateway to Tremont and the Townsend area. Tristar Locksmith provides locksmith service to Walland residents including car lockouts, home lock changes, and rekeying. Given the area's rural character, we encourage customers to call ahead so we can confirm availability.",
     nearbyAreas: ["Maryville", "Rockford", "Friendsville", "Townsend"],
   },
   {
@@ -542,19 +542,19 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Brittany H.",
     rating: 5,
-    text: "I locked my keys in my car at the Turkey Creek shopping center on a Friday evening. Tristar Locksmith showed up in under 20 minutes, had the door open in no time, and the tech was incredibly friendly. Pricing was fair and exactly what they quoted on the phone. I can't recommend them enough.",
+    text: "I locked my keys in my car at the Turkey Creek shopping center on a Friday evening. Tristar Locksmith came out, had the door open in no time, and the tech was incredibly friendly. Pricing was fair and exactly what they quoted on the phone. I can't recommend them enough.",
     location: "Farragut, TN",
   },
   {
     name: "Marcus T.",
     rating: 5,
-    text: "Called Tristar at 11 PM after realizing I'd left my house keys at work. The dispatcher was calm and helpful, and the locksmith arrived in about 25 minutes. He picked the deadbolt cleanly without any damage and even showed me how the lock mechanism worked while he was there. Outstanding service.",
+    text: "Called Tristar at 11 PM after realizing I'd left my house keys at work. The dispatcher was calm and helpful, and the locksmith came out and picked the deadbolt cleanly without any damage and even showed me how the lock mechanism worked while he was there. Outstanding service.",
     location: "Knoxville, TN",
   },
   {
     name: "Donna P.",
     rating: 5,
-    text: "We just bought a home in Powell and wanted all the locks rekeyed before moving in. Tristar came out the same day I called, rekeyed four locks to a single key, and had us on a new set of keys within an hour. Very professional and reasonably priced. Will use them again for sure.",
+    text: "We just bought a home in Powell and wanted all the locks rekeyed before moving in. Tristar came out the same day I called, rekeyed four locks to a single key, and the whole job was done in one visit. Very professional and reasonably priced. Will use them again for sure.",
     location: "Powell, TN",
   },
   {
@@ -587,7 +587,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "How fast can a Tristar Locksmith technician reach me?",
     answer:
-      "For most locations in Knoxville and the immediate surrounding areas, Tristar Locksmith typically arrives within 15 to 30 minutes of your call. Response times to more outlying communities like Maynardville, Friendsville, or Walland may be somewhat longer, but we always give you an honest ETA when you call — we never overpromise.",
+      "Tristar Locksmith serves Knoxville and 26 surrounding East Tennessee communities. Call (865) 381-3931 and we will confirm coverage for your specific location.",
   },
   {
     question: "Is Tristar Locksmith available on weekends and holidays?",
@@ -631,7 +631,7 @@ export const ADVANTAGES: Advantage[] = [
     icon: "⚡",
     title: "Fast Response",
     description:
-      "Tristar Locksmith reaches most Knoxville-area locations in 15 to 30 minutes. We know East Tennessee roads and position our technicians to minimize your wait.",
+      "Tristar Locksmith is based in Knoxville. Our technicians know Knox County and the surrounding East Tennessee communities — no out-of-town dispatchers.",
   },
   {
     icon: "🏆",

@@ -8,7 +8,7 @@ import { LeadFormSection } from "@/components/forms/LeadFormSection";
 export const metadata = buildMetadata({
   title: "Contact Tristar Locksmith",
   description:
-    "Contact Tristar Locksmith — call (865) 381-3931 for 24/7 locksmith service in Knoxville, TN and surrounding areas. Fast 15-30 minute response.",
+    "Contact Tristar Locksmith — call (865) 381-3931 for 24/7 locksmith service in Knoxville, TN and surrounding areas. Licensed, insured, upfront pricing.",
   path: "/contact",
 });
 
@@ -22,7 +22,7 @@ export default async function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            The fastest way to reach us is by phone. We&apos;re available 24/7 — no hold times, no automated systems.
+            The best way to reach us is by phone. We&apos;re available 24/7 — no hold times, no automated systems.
           </p>
         </Container>
       </div>
@@ -68,11 +68,11 @@ export default async function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4 p-5 bg-white rounded-lg border border-gray-200">
-                  <span className="text-3xl">⚡</span>
+                  <span className="text-3xl">📍</span>
                   <div>
-                    <h3 className="font-bold text-navy mb-1">Response Time</h3>
-                    <p className="text-ink font-semibold">15-30 Minutes</p>
-                    <p className="text-muted text-sm mt-1">For most Knoxville area locations</p>
+                    <h3 className="font-bold text-navy mb-1">Service Area</h3>
+                    <p className="text-ink font-semibold">Knoxville + 26 Communities</p>
+                    <p className="text-muted text-sm mt-1">Knox, Blount, Anderson, Sevier &amp; Union counties</p>
                   </div>
                 </div>
               </div>

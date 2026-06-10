@@ -26,7 +26,7 @@ export async function Hero({ heroHeadline, heroSubheadline, heroImage }: Homepag
           {/* Trust badges */}
           <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white text-sm font-medium px-3 py-1.5 rounded-full border border-white/20">
-              ⚡ 15-30 Min Response
+              ⚡ 24/7 Emergency Service
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white text-sm font-medium px-3 py-1.5 rounded-full border border-white/20">
               🏆 Licensed &amp; Insured

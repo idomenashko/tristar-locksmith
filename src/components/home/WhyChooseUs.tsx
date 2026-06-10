@@ -16,7 +16,7 @@ export async function WhyChooseUs() {
             Why Knoxville Trusts Tristar
           </h2>
           <p className="max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
-            We&apos;ve built our reputation on one thing: showing up fast,
+            We&apos;ve built our reputation on one thing: showing up prepared,
             being honest, and doing the job right every time.
           </p>
         </div>

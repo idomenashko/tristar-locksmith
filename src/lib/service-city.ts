@@ -32,7 +32,6 @@ export function renderTemplate(template: string, city: CityKey): string {
   const c = matrix.cities[city] as (typeof matrix.cities)[CityKey];
   return template
     .replace(/\{cityName\}/g, c.name)
-    .replace(/\{responseBand\}/g, c.responseBand)
     .replace(/\{landmark1\}/g, c.landmark1)
     .replace(/\{landmark2\}/g, c.landmark2)
     .replace(/\{neighborhood1\}/g, c.neighborhoods[0] ?? c.name)

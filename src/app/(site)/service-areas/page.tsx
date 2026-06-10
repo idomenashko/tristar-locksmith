@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Service Areas",
   description:
-    "Tristar Locksmith serves Knoxville, Farragut, Powell, Maryville, Oak Ridge, and 22 more cities in East Tennessee. Fast 24/7 locksmith service throughout the Knoxville area.",
+    "Tristar Locksmith serves Knoxville, Farragut, Powell, Maryville, Oak Ridge, and 22 more cities in East Tennessee. Licensed, insured locksmith service throughout the Knoxville area.",
   path: "/service-areas",
 });
 
@@ -23,7 +23,7 @@ export default async function ServiceAreasPage() {
             Locksmith Service Areas
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Serving Knoxville, TN and 26 surrounding communities. Fast 15-30 minute response times.
+            Serving Knoxville, TN and 26 surrounding communities. Licensed, insured, and available 24/7 for emergencies.
           </p>
         </Container>
       </div>

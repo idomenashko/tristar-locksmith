@@ -34,7 +34,7 @@ export default async function AboutPage() {
               Tristar Locksmith has been proudly serving the Knoxville, Tennessee community and surrounding East Tennessee areas. The name &quot;Tristar&quot; is inspired by Tennessee&apos;s iconic three-star flag — a symbol of the state&apos;s three grand divisions and a reminder of our deep roots in this community.
             </p>
             <p className="text-ink leading-relaxed text-lg mb-6">
-              We started with a simple mission: provide honest, fast, and professional locksmith service to our neighbors in Knoxville and the surrounding areas. Whether you&apos;re locked out of your car at 2 AM, need to rekey your home after moving, or require commercial security upgrades, we&apos;re here to help.
+              We started with a simple mission: provide honest, reliable, and professional locksmith service to our neighbors in Knoxville and the surrounding areas. Whether you&apos;re locked out of your car at 2 AM, need to rekey your home after moving, or require commercial security upgrades, we&apos;re here to help.
             </p>
             <p className="text-ink leading-relaxed text-lg mb-8">
               Our team is fully licensed and insured, and we&apos;re committed to transparent pricing — no hidden fees, no surprises. When you call Tristar Locksmith, you get a real local expert who knows Knox County and the surrounding communities.
