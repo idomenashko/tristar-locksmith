@@ -52,7 +52,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Locked out of your home? Tristar Locksmith provides fast, professional residential lockout service throughout Knoxville and East Tennessee.",
     longDescription:
-      "Getting locked out of your own home is stressful, especially at night or in bad weather. Tristar Locksmith serves homeowners across Knoxville, Maryville, Clinton, and the surrounding communities with prompt, respectful service. Our technicians can open virtually any residential lock — deadbolts, knob locks, smart locks, and high-security cylinders — without causing damage to your door or frame. We also carry a full stock of replacement hardware if a lock is broken or needs immediate upgrading after a lockout.",
+      "Getting locked out of your own home is stressful, especially at night or in bad weather. Tristar Locksmith serves homeowners across Knoxville, Maryville, Clinton, and the surrounding communities with professional, respectful service. Our technicians can open virtually any residential lock — deadbolts, knob locks, smart locks, and high-security cylinders — without causing damage to your door or frame. We also carry a full stock of replacement hardware if a lock is broken or needs upgrading after a lockout.",
     features: [
       "Residential lock opening for all major brands",
       "No damage to doors, frames, or weather stripping",
@@ -542,7 +542,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Brittany H.",
     rating: 5,
-    text: "I locked my keys in my car at the Turkey Creek shopping center on a Friday evening. Tristar Locksmith came out, had the door open in no time, and the tech was incredibly friendly. Pricing was fair and exactly what they quoted on the phone. I can't recommend them enough.",
+    text: "I locked my keys in my car at the Turkey Creek shopping center on a Friday evening. Tristar Locksmith came out, got the door open, and the tech was incredibly friendly. Pricing was fair and exactly what they quoted on the phone. I can't recommend them enough.",
     location: "Farragut, TN",
   },
   {

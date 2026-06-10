@@ -372,7 +372,7 @@
         },
         {
           "question": "Do you program transponder and push-to-start keys in {cityName}?",
-          "answer": "Yes. We carry the diagnostic programming equipment for most domestic and foreign vehicles, including transponder chips, proximity fobs, and smart key systems. Most programming takes 20–40 minutes on-site."
+          "answer": "Yes. We carry the diagnostic programming equipment for most domestic and foreign vehicles, including transponder chips, proximity fobs, and smart key systems. Most programming is completed on-site in a single visit."
         },
         {
           "question": "Is it cheaper to use Tristar than the dealership for a replacement key?",
@@ -463,7 +463,7 @@
         },
         {
           "question": "How long does a lock change take in {cityName}?",
-          "answer": "A single residential deadbolt replacement typically takes 15–30 minutes. A full exterior door set (knob plus deadbolt) takes 30–45 minutes. Commercial lock changes vary by hardware type but most single-door installations are complete within 45–60 minutes."
+          "answer": "Most residential lock changes — whether a single deadbolt or a full door set — are completed in a single visit. Commercial lock changes vary by hardware type but most single-door installations are also handled in one stop."
         },
         {
           "question": "Do you change locks after a break-in in {cityName}?",
