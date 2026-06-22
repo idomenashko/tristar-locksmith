@@ -7,6 +7,7 @@ import {
   getFaqs,
   getAdvantages,
 } from '@/lib/queries';
+import { getAllPosts } from '@/lib/blog';
 import { SITE } from '@/lib/seo';
 
 export async function GET() {
@@ -19,6 +20,7 @@ export async function GET() {
       getFaqs(),
       getAdvantages(),
     ]);
+  const posts = getAllPosts();
 
   const servicesSection = services
     .map((service) => {
@@ -122,7 +124,14 @@ ${advantagesSection}
 ## Customer Reviews
 
 ${testimonialsSection}
-`;
+${posts.length > 0 ? `
+---
+
+## Blog Posts
+
+${posts.map((p) => `### [${p.title}](${SITE.url}/blog/${p.slug})\n\nPublished: ${p.date}\n\n${p.description}`).join('\n\n')}
+` : ''}`;
+
 
   return new NextResponse(content, {
     headers: {

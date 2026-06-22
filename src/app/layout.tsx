@@ -73,6 +73,17 @@ export default function RootLayout({
           })(window, document, "clarity", "script", "${clarityId}");
         `}</Script>
       )}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-18165468053"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads" strategy="afterInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18165468053');
+      `}</Script>
     </html>
   );
 }

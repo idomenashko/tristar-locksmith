@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getBusiness, getServices, getServiceAreas } from '@/lib/queries';
+import { getAllPosts } from '@/lib/blog';
 import { SITE } from '@/lib/seo';
 
 export async function GET() {
@@ -8,6 +9,7 @@ export async function GET() {
     getServices(),
     getServiceAreas(),
   ]);
+  const posts = getAllPosts();
 
   const base = SITE.url;
 
@@ -27,6 +29,14 @@ export async function GET() {
     .map((a) => `- [${a.name}](${base}/service-areas/${a.slug}.md)`)
     .join('\n');
 
+  const blogPages = posts
+    .map((p) => `- [${p.title}](${base}/blog/${p.slug}): ${p.description}`)
+    .join('\n');
+
+  const blogMirrors = posts
+    .map((p) => `- [${p.title}](${base}/blog/${p.slug}.md)`)
+    .join('\n');
+
   const content = `# Tristar Locksmith
 
 > Trusted 24/7 locksmith serving Knoxville, TN and 27 surrounding areas.
@@ -42,11 +52,13 @@ export async function GET() {
 - [Homepage](${base}/): Professional locksmith services in Knoxville, TN
 - [Services](${base}/services): All locksmith services we offer
 - [Service Areas](${base}/service-areas): Cities and areas we serve
+- [Blog](${base}/blog): Locksmith tips, guides, and local security advice
 - [About](${base}/about): About Tristar Locksmith
 - [Contact](${base}/contact): Contact us for locksmith help
 - [Reviews](${base}/reviews): Customer reviews and testimonials
 ${servicePages}
 ${areaPages}
+${blogPages.length ? `\n## Blog Posts\n\n${blogPages}` : ''}
 
 ## Markdown Mirrors
 
@@ -58,6 +70,7 @@ ${areaPages}
 - [Reviews](${base}/reviews.md)
 ${serviceMirrors}
 ${areaMirrors}
+${blogMirrors.length ? blogMirrors : ''}
 
 ## Full Content
 - [Full site content](${base}/llms-full.txt)
