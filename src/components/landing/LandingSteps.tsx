@@ -13,7 +13,7 @@ export function LandingSteps({ steps }: LandingStepsProps) {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step) => (
-            <div key={i} className="flex flex-col items-center text-center">
+            <div key={step.number} className="flex flex-col items-center text-center">
               <div className="w-14 h-14 rounded-full bg-navy text-white text-xl font-bold flex items-center justify-center mb-4 shrink-0">
                 {step.number}
               </div>
