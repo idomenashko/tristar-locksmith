@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { fireLeadConversion } from "@/lib/conversion";
 
 const SERVICES = [
   "Car Lockout",
@@ -47,6 +48,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
         setErrorMsg(json.error ?? "Something went wrong. Please call us directly.");
         setStatus("error");
       } else {
+        fireLeadConversion();
         setStatus("success");
       }
     } catch {
