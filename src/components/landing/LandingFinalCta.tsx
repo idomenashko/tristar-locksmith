@@ -73,7 +73,7 @@ export function LandingFinalCta({ heading, sub, formSource }: LandingFinalCtaPro
           {/* Right — second form */}
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             <h3 className="text-navy font-bold text-2xl mb-1">Request Service</h3>
-            <p className="text-muted text-sm mb-6">We&apos;ll get back to you right away.</p>
+            <p className="text-muted text-sm mb-6">We&apos;ll confirm your request and reach out.</p>
             <LeadForm source={`${formSource}-bottom`} />
           </div>
 

@@ -98,10 +98,10 @@ export function LandingHero({
           </div>
 
           {/* RIGHT — Lead form card */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8" id="quote">
+          <div className="bg-white rounded-2xl shadow-2xl p-8">
             <h2 className="text-navy font-bold text-2xl mb-1">Request Service</h2>
             <p className="text-muted text-sm mb-6">
-              Our technician will be on the way.
+              Fill in the form and we&apos;ll call you back.
             </p>
             <LeadForm source={formSource} />
           </div>
