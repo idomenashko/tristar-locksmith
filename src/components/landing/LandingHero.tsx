@@ -13,6 +13,14 @@ interface LandingHeroProps {
   formSource: string;
 }
 
+function PhoneIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+    </svg>
+  );
+}
+
 export function LandingHero({
   h1,
   sub,
@@ -22,90 +30,82 @@ export function LandingHero({
   formSource,
 }: LandingHeroProps) {
   return (
-    <section className="relative bg-navy text-white overflow-hidden" style={{ minHeight: "580px" }}>
+    <section
+      className="relative bg-navy text-white overflow-hidden"
+      style={{ minHeight: "660px" }}
+    >
       {/* Background photo */}
       <Image
         src={heroImage}
         alt={heroImageAlt}
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-top"
         sizes="100vw"
       />
-      {/* Gradient overlay — left side fully navy for copy legibility */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/85 to-navy/60" />
+      {/* Left-to-right gradient overlay — fully navy on left, photo visible on right */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(27,58,92,0.93) 0%, rgba(27,58,92,0.88) 50%, rgba(18,38,64,0.62) 100%)",
+        }}
+      />
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT — copy */}
-          <div className="max-w-xl mb-10 lg:mb-0">
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-2 mb-6">
+          <div>
+            <h1
+              className="text-white font-black leading-tight mb-5"
+              style={{ fontSize: "clamp(36px, 5vw, 56px)" }}
+            >
+              {h1}
+            </h1>
+
+            <p className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed">{sub}</p>
+
+            {/* Dual CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <a
+                href="tel:8653813931"
+                onClick={firePhoneConversion}
+                className="flex items-center justify-center gap-2 bg-emergency text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-red-700 transition-colors shadow-lg"
+              >
+                <PhoneIcon />
+                Call (865) 381-3931
+              </a>
+              <a
+                href="#quote"
+                className="flex items-center justify-center gap-2 border-2 border-gold text-gold font-bold text-lg px-8 py-4 rounded-xl hover:bg-gold hover:text-navy transition-colors"
+              >
+                Request Service ↓
+              </a>
+            </div>
+
+            {/* Trust pills */}
+            <div className="flex flex-wrap gap-3">
               {badges.map((badge) => (
                 <span
                   key={badge}
-                  className="bg-white/10 border border-white/20 text-white text-xs font-medium px-3 py-1.5 rounded-full"
+                  className="bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full border border-white/20"
                 >
                   {badge}
                 </span>
               ))}
             </div>
-
-            <h1
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5"
-              style={{ letterSpacing: "-0.02em" }}
-            >
-              {h1}
-            </h1>
-
-            <p className="text-lg text-white/80 mb-8 leading-relaxed">{sub}</p>
-
-            {/* Dual CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:8653813931"
-                onClick={firePhoneConversion}
-                className="inline-flex items-center justify-center gap-2 bg-gold text-navy font-bold px-7 py-4 rounded-md text-base uppercase tracking-wide hover:bg-amber-400 transition-colors"
-              >
-                <svg
-                  className="w-5 h-5 shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 8V5z"
-                  />
-                </svg>
-                Call (865) 381-3931
-              </a>
-              <a
-                href="#quote"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-bold px-7 py-4 rounded-md text-base uppercase tracking-wide hover:bg-white hover:text-navy transition-colors"
-              >
-                Get a Free Quote
-              </a>
-            </div>
-
-            <p className="mt-6 text-white/60 text-sm">
-              ⭐⭐⭐⭐⭐ 5.0 — 127 verified reviews · Licensed &amp; Insured in Tennessee
-            </p>
           </div>
 
-          {/* RIGHT — Lead form card (above the fold on desktop) */}
-          <div className="bg-white rounded-xl p-6 shadow-2xl" id="quote">
-            <h2 className="text-lg font-bold text-navy mb-1 font-display">
-              Get a Free Quote
-            </h2>
-            <p className="text-muted text-sm mb-5">
-              Fill in your details and we&apos;ll call you back with a price.
+          {/* RIGHT — Lead form card */}
+          <div className="bg-white rounded-2xl shadow-2xl p-8" id="quote">
+            <h2 className="text-navy font-bold text-2xl mb-1">Request Service</h2>
+            <p className="text-muted text-sm mb-6">
+              Our technician will be on the way.
             </p>
             <LeadForm source={formSource} />
           </div>
+
         </div>
       </div>
     </section>

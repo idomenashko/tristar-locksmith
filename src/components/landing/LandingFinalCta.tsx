@@ -9,80 +9,74 @@ interface LandingFinalCtaProps {
   formSource: string;
 }
 
+function PhoneIcon({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+    </svg>
+  );
+}
+
+function GreenCheck() {
+  return (
+    <svg className="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="12" fill="#2E7D4F" />
+      <path
+        d="M7 12.5l3.5 3.5 6.5-7"
+        stroke="white"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function LandingFinalCta({ heading, sub, formSource }: LandingFinalCtaProps) {
   return (
-    <section className="bg-navy text-white py-14 lg:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
+    <section className="bg-navy py-20 px-4 md:px-8" id="quote">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* Left — copy + call button */}
-          <div className="mb-10 lg:mb-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
+          <div>
+            <h2 className="text-white font-black text-3xl md:text-4xl mb-5 leading-tight">
               {heading}
             </h2>
-            <p className="text-white/70 text-base mb-8">{sub}</p>
+            <p className="text-white/80 text-lg leading-relaxed mb-8">{sub}</p>
 
             <a
               href="tel:8653813931"
               onClick={firePhoneConversion}
-              className="inline-flex items-center gap-3 bg-gold text-navy font-bold px-8 py-4 rounded-md text-base uppercase tracking-wide hover:bg-amber-400 transition-colors"
+              className="inline-flex items-center gap-3 bg-emergency text-white font-bold text-xl px-10 py-5 rounded-xl hover:bg-red-700 transition-colors shadow-lg mb-10"
             >
-              <svg
-                className="w-5 h-5 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 8V5z"
-                />
-              </svg>
+              <PhoneIcon />
               Call (865) 381-3931
             </a>
 
-            <p className="mt-5 text-white/50 text-sm">
-              Available 7 AM – 11:30 PM daily · 24/7 emergency line
-            </p>
-
-            <div className="mt-8 space-y-2">
-              {[
-                "Licensed & insured in Tennessee",
-                "Upfront pricing — we quote before we start",
-                "Serving Knoxville + 27 surrounding areas",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-white/70 text-sm">
-                  <svg
-                    className="w-4 h-4 text-gold shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  {item}
-                </div>
-              ))}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <GreenCheck />
+                <span className="text-white/90 font-medium">Non-destructive entry, no damage</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <GreenCheck />
+                <span className="text-white/90 font-medium">Licensed &amp; insured technicians</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <GreenCheck />
+                <span className="text-white/90 font-medium">Serving Knoxville + 27 surrounding areas</span>
+              </div>
             </div>
           </div>
 
           {/* Right — second form */}
-          <div className="bg-white rounded-xl p-6 shadow-2xl">
-            <h3 className="text-lg font-bold text-navy mb-1 font-display">
-              Request a Callback
-            </h3>
-            <p className="text-muted text-sm mb-5">
-              Fill in your details and we&apos;ll call you back with a price.
-            </p>
+          <div className="bg-white rounded-2xl shadow-2xl p-8">
+            <h3 className="text-navy font-bold text-2xl mb-1">Request Service</h3>
+            <p className="text-muted text-sm mb-6">We&apos;ll get back to you right away.</p>
             <LeadForm source={`${formSource}-bottom`} />
           </div>
+
         </div>
       </div>
     </section>
