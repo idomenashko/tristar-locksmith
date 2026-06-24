@@ -36,7 +36,7 @@ export interface LandingPageData {
   metaDescription: string;
   heroH1: string;
   heroSub: string;
-  /** Path relative to /public — e.g. "/images/lp/tech-keys.jpg" */
+  /** Path relative to /public — e.g. "/images/lp/tech-keys.png" */
   heroImage: string;
   heroImageAlt: string;
   /** Default selected option in the service dropdown */
@@ -65,8 +65,7 @@ const PAGES: LandingPageData[] = [
     heroH1: "Lost Your Car Key? We Make Keys and Program Fobs on the Spot.",
     heroSub:
       "Tristar Locksmith cuts and programs car keys for most makes and models right here in Knoxville — often for less than the dealer, with upfront pricing before we start.",
-    // TODO: replace with /images/lp/tech-keys.jpg once you place the photo in public/images/lp/
-    heroImage: "/images/locksmith-professional.jpg",
+    heroImage: "/images/lp/tech-keys.png",
     heroImageAlt: "Tristar Locksmith technician programming a car key in Knoxville, TN",
     formDefaultService: "Car Key Replacement",
     badges: [
@@ -186,8 +185,7 @@ const PAGES: LandingPageData[] = [
     heroH1: "Locked Out of Your Home in Knoxville? Tristar Will Get You In.",
     heroSub:
       "Our licensed locksmiths open residential doors without breaking anything. Upfront pricing — we tell you the cost before we touch anything.",
-    // TODO: replace with /images/lp/tech-door.jpg once you place the photo in public/images/lp/
-    heroImage: "/images/locksmith-door.jpg",
+    heroImage: "/images/lp/tech-door.png",
     heroImageAlt: "Tristar Locksmith technician opening a residential door in Knoxville, TN",
     formDefaultService: "House Lockout",
     badges: [
@@ -307,8 +305,7 @@ const PAGES: LandingPageData[] = [
     heroH1: "Keys Locked in Your Car? We'll Open It Without Damage.",
     heroSub:
       "Tristar Locksmith uses professional tools to unlock your vehicle — cars, trucks, SUVs, any make or model. We come to you, wherever you are in the Knoxville area.",
-    // TODO: replace with /images/lp/tech-keys.jpg once you place the photo in public/images/lp/
-    heroImage: "/images/hero-locksmith.jpg",
+    heroImage: "/images/lp/tech-keys.png",
     heroImageAlt: "Tristar Locksmith technician unlocking a car in Knoxville, TN",
     formDefaultService: "Car Lockout",
     badges: [
