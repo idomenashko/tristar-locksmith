@@ -50,7 +50,7 @@ export default async function LandingPage({ params }: PageProps) {
   return (
     <>
       <LandingHero
-        h1={page.heroH1}
+        heroVariants={page.heroVariants}
         sub={page.heroSub}
         heroImage={page.heroImage}
         heroImageAlt={page.heroImageAlt}

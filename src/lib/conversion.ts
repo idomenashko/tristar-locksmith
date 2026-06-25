@@ -9,6 +9,8 @@
  * 4. Once labels are filled, conversions fire automatically on form success + call clicks
  */
 
+import { trackConversionWithVariant } from "@/lib/experiment";
+
 // TODO: paste your Google Ads conversion labels here after creating them in your account
 const CONVERSION_LABELS = {
   /** Fires when the lead form is submitted successfully */
@@ -26,7 +28,7 @@ declare global {
   }
 }
 
-function fireConversion(label: string): void {
+function fireAdsConversion(label: string): void {
   // No-op if label hasn't been filled in yet, or if gtag isn't loaded
   if (
     !label ||
@@ -41,12 +43,24 @@ function fireConversion(label: string): void {
   });
 }
 
-/** Call this when the lead form submits successfully */
+/**
+ * Call this when the lead form submits successfully.
+ * Fires:
+ *   1. GA4 "lead_submit" event with A/B variant attribution (always, once gtag loads)
+ *   2. Google Ads "conversion" send_to (once Ads labels are filled)
+ */
 export function fireLeadConversion(): void {
-  fireConversion(CONVERSION_LABELS.leadFormSubmit);
+  trackConversionWithVariant("lead_submit", "lp_hero");
+  fireAdsConversion(CONVERSION_LABELS.leadFormSubmit);
 }
 
-/** Call this when a phone call CTA is clicked */
+/**
+ * Call this when a phone call CTA is clicked.
+ * Fires:
+ *   1. GA4 "phone_click" event with A/B variant attribution (always, once gtag loads)
+ *   2. Google Ads "conversion" send_to (once Ads labels are filled)
+ */
 export function firePhoneConversion(): void {
-  fireConversion(CONVERSION_LABELS.phoneCall);
+  trackConversionWithVariant("phone_click", "lp_hero");
+  fireAdsConversion(CONVERSION_LABELS.phoneCall);
 }
