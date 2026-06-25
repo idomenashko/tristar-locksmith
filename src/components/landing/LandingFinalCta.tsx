@@ -59,6 +59,10 @@ export function LandingFinalCta({ heading, sub, formSource }: LandingFinalCtaPro
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <GreenCheck />
+                  <span className="text-white/90 font-medium">Emergency service available around the clock</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <GreenCheck />
                   <span className="text-white/90 font-medium">Non-destructive entry, no damage</span>
                 </div>
                 <div className="flex items-center gap-3">

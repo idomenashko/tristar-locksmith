@@ -178,7 +178,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
         disabled={status === "loading"}
         className="w-full bg-navy text-white font-bold py-3 px-6 rounded-md text-sm uppercase tracking-wide hover:bg-navy/90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === "loading" ? "Sending…" : "Request a Callback"}
+        {status === "loading" ? "Sending…" : "Get Help Now"}
       </button>
 
       <p className="text-xs text-muted text-center">

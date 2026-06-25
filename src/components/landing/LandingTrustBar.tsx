@@ -24,6 +24,8 @@ export function LandingTrustBar() {
         <span className="hidden sm:inline text-white/40">·</span>
         <span>Non-Destructive Entry</span>
         <span className="hidden sm:inline text-white/40">·</span>
+        <span>Emergency Line Available</span>
+        <span className="hidden sm:inline text-white/40">·</span>
         <span>
           Serving <CountUp target={27} suffix="+" /> East TN Cities
         </span>

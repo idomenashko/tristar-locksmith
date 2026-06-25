@@ -127,7 +127,7 @@ export function LandingHero({
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             <h2 className="text-navy font-bold text-2xl mb-1">{formHeading}</h2>
             <p className="text-muted text-sm mb-6">
-              Fill in the form and we&apos;ll call you back.
+              Tell us where you are — we&apos;ll call you right back.
             </p>
             <LeadForm source={formSource} />
             <p className="text-muted text-xs mt-4 text-center">

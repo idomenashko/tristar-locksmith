@@ -11,7 +11,7 @@ export function LandingSteps({ steps }: LandingStepsProps) {
       <div className="max-w-7xl mx-auto">
         <Reveal className="text-center mb-14">
           <h2 className="text-navy font-black text-3xl md:text-4xl mb-3">How It Works</h2>
-          <p className="text-muted text-lg max-w-xl mx-auto">Three steps. No surprises.</p>
+          <p className="text-muted text-lg max-w-xl mx-auto">Three steps. We handle everything.</p>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
