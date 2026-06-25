@@ -1,3 +1,9 @@
+"use client";
+// "use client" is required: CountUp uses useState(0) for initial render.
+// Without this directive the SSR output shows "0.0 Stars (0 Reviews)" in the
+// pre-rendered HTML. The layout is noindex, so this doesn't affect Googlebot,
+// but it does cause a zero-flash for users before JS hydrates.
+
 import { CountUp } from "@/components/landing/CountUp";
 
 export function LandingTrustBar() {
