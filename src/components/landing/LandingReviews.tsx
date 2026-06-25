@@ -1,4 +1,5 @@
 import type { LandingReview } from "@/lib/landing-pages";
+import { Reveal } from "@/components/landing/Reveal";
 
 interface LandingReviewsProps {
   reviews: LandingReview[];
@@ -20,25 +21,24 @@ export function LandingReviews({ reviews }: LandingReviewsProps) {
   return (
     <section className="bg-warm-white py-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-14">
+        <Reveal className="text-center mb-14">
           <h2 className="text-navy font-black text-3xl md:text-4xl mb-3">What Knoxville Says</h2>
           <p className="text-muted text-lg">127 verified reviews · 5.0 stars</p>
-        </div>
+        </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {reviews.map((review, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow"
-            >
-              <StarRow />
-              <p className="text-gray-700 italic leading-relaxed mb-6">
-                &ldquo;{review.text}&rdquo;
-              </p>
-              <div className="border-t pt-4">
-                <p className="font-bold text-navy">{review.author}</p>
-                <p className="text-muted text-sm">{review.location}, TN</p>
+            <Reveal key={i} delay={i * 100}>
+              <div className="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow h-full flex flex-col">
+                <StarRow />
+                <p className="text-gray-700 italic leading-relaxed mb-6 flex-1">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div className="border-t pt-4">
+                  <p className="font-bold text-navy">{review.author}</p>
+                  <p className="text-muted text-sm">{review.location}, TN</p>
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

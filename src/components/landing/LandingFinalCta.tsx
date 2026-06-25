@@ -2,6 +2,7 @@
 
 import { LeadForm } from "@/components/forms/LeadForm";
 import { firePhoneConversion } from "@/lib/conversion";
+import { Reveal } from "@/components/landing/Reveal";
 
 interface LandingFinalCtaProps {
   heading: string;
@@ -39,43 +40,54 @@ export function LandingFinalCta({ heading, sub, formSource }: LandingFinalCtaPro
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* Left — copy + call button */}
-          <div>
-            <h2 className="text-white font-black text-3xl md:text-4xl mb-5 leading-tight">
-              {heading}
-            </h2>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">{sub}</p>
+          <Reveal>
+            <div>
+              <h2 className="text-white font-black text-3xl md:text-4xl mb-5 leading-tight">
+                {heading}
+              </h2>
+              <p className="text-white/80 text-lg leading-relaxed mb-8">{sub}</p>
 
-            <a
-              href="tel:8653813931"
-              onClick={firePhoneConversion}
-              className="inline-flex items-center gap-3 bg-emergency text-white font-bold text-xl px-10 py-5 rounded-xl hover:bg-red-700 transition-colors shadow-lg mb-10"
-            >
-              <PhoneIcon />
-              Call (865) 381-3931
-            </a>
+              <a
+                href="tel:8653813931"
+                onClick={firePhoneConversion}
+                className="pulse-emergency inline-flex items-center gap-3 bg-emergency text-white font-bold text-xl px-10 py-5 rounded-xl hover:bg-red-700 transition-colors shadow-lg mb-10"
+              >
+                <PhoneIcon />
+                Call (865) 381-3931
+              </a>
 
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <GreenCheck />
-                <span className="text-white/90 font-medium">Non-destructive entry, no damage</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <GreenCheck />
-                <span className="text-white/90 font-medium">Licensed &amp; insured technicians</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <GreenCheck />
-                <span className="text-white/90 font-medium">Serving Knoxville + 27 surrounding areas</span>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <GreenCheck />
+                  <span className="text-white/90 font-medium">Non-destructive entry, no damage</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <GreenCheck />
+                  <span className="text-white/90 font-medium">Licensed &amp; insured technicians</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <GreenCheck />
+                  <span className="text-white/90 font-medium">Serving Knoxville + 27 surrounding areas</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <GreenCheck />
+                  <span className="text-white/90 font-medium">Works alongside most insurance &amp; roadside plans</span>
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right — second form */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8">
-            <h3 className="text-navy font-bold text-2xl mb-1">Request Service</h3>
-            <p className="text-muted text-sm mb-6">We&apos;ll confirm your request and reach out.</p>
-            <LeadForm source={`${formSource}-bottom`} />
-          </div>
+          <Reveal delay={120}>
+            <div className="bg-white rounded-2xl shadow-2xl p-8">
+              <h3 className="text-navy font-bold text-2xl mb-1">Request Service</h3>
+              <p className="text-muted text-sm mb-6">We&apos;ll confirm your request and reach out.</p>
+              <LeadForm source={`${formSource}-bottom`} />
+              <p className="text-muted text-xs mt-4 text-center">
+                Upfront price confirmed before we start — no hidden fees.
+              </p>
+            </div>
+          </Reveal>
 
         </div>
       </div>

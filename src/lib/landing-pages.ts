@@ -29,12 +29,27 @@ export interface LandingCoveredItem {
   label: string;
 }
 
+/** A/B test variant for the hero section */
+export interface LandingHeroVariant {
+  /** Main headline */
+  h1: string;
+  /** Anchor CTA label (scrolls to #quote) */
+  ctaLabel: string;
+  /** Form card heading */
+  formHeading: string;
+}
+
 export interface LandingPageData {
   slug: string;
   serviceName: string;
   metaTitle: string;
   metaDescription: string;
-  heroH1: string;
+  /**
+   * A/B test variants for the hero headline + CTA.
+   * A = benefit-led (control), B = urgency-led (challenger).
+   * LandingHero picks the variant via useExperiment("lp_hero").
+   */
+  heroVariants: { A: LandingHeroVariant; B: LandingHeroVariant };
   heroSub: string;
   /** Path relative to /public — e.g. "/images/lp/tech-keys.png" */
   heroImage: string;
@@ -62,7 +77,18 @@ const PAGES: LandingPageData[] = [
     metaTitle: "Car Key Replacement Knoxville TN | Tristar Locksmith",
     metaDescription:
       "Need a new car key in Knoxville? Tristar Locksmith cuts and programs keys, fobs, and smart keys on-site for most makes and models. Upfront pricing, no surprises.",
-    heroH1: "Lost Your Car Key? We Make Keys and Program Fobs on the Spot.",
+    heroVariants: {
+      A: {
+        h1: "Lost Your Car Key? We Make Keys and Program Fobs on the Spot.",
+        ctaLabel: "Request Service ↓",
+        formHeading: "Request Service",
+      },
+      B: {
+        h1: "No Car Key? We Cut and Program a Replacement at Your Location.",
+        ctaLabel: "Get a Free Quote ↓",
+        formHeading: "Get Your Free Quote",
+      },
+    },
     heroSub:
       "Tristar Locksmith cuts and programs car keys for most makes and models right here in Knoxville — often for less than the dealer, with upfront pricing before we start.",
     heroImage: "/images/lp/tech-keys.png",
@@ -182,7 +208,18 @@ const PAGES: LandingPageData[] = [
     metaTitle: "Locked Out of Your House? Knoxville Locksmith | Tristar",
     metaDescription:
       "Locked out of your home in Knoxville? Tristar Locksmith opens residential doors without damage. Licensed, insured, upfront pricing. Serving Knoxville and 27 surrounding areas.",
-    heroH1: "Locked Out of Your Home in Knoxville? Tristar Will Get You In.",
+    heroVariants: {
+      A: {
+        h1: "Locked Out of Your Home in Knoxville? Tristar Will Get You In.",
+        ctaLabel: "Request Service ↓",
+        formHeading: "Request Service",
+      },
+      B: {
+        h1: "Locked Out of Your House? We'll Have You Inside Without Breaking a Thing.",
+        ctaLabel: "Get a Free Quote ↓",
+        formHeading: "Get Your Free Quote",
+      },
+    },
     heroSub:
       "Our licensed locksmiths open residential doors without breaking anything. Upfront pricing — we tell you the cost before we touch anything.",
     heroImage: "/images/lp/tech-door.png",
@@ -302,7 +339,18 @@ const PAGES: LandingPageData[] = [
     metaTitle: "Keys Locked in Car? Knoxville Car Lockout Service | Tristar",
     metaDescription:
       "Keys locked in your car in Knoxville? Tristar Locksmith opens your vehicle without damage. All makes and models. Licensed, insured, upfront pricing.",
-    heroH1: "Keys Locked in Your Car? We'll Open It Without Damage.",
+    heroVariants: {
+      A: {
+        h1: "Keys Locked in Your Car? We'll Open It Without Damage.",
+        ctaLabel: "Request Service ↓",
+        formHeading: "Request Service",
+      },
+      B: {
+        h1: "Locked Out of Your Car? Let Tristar Handle It — No Damage, Upfront Price.",
+        ctaLabel: "Get a Free Quote ↓",
+        formHeading: "Get Your Free Quote",
+      },
+    },
     heroSub:
       "Tristar Locksmith uses professional tools to unlock your vehicle — cars, trucks, SUVs, any make or model. We come to you, wherever you are in the Knoxville area.",
     heroImage: "/images/lp/tech-keys.png",
