@@ -1,0 +1,461 @@
+<!-- @dsCard group="Pages" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Lockout Knoxville — Tristar Locksmith</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- ============================================================ -->
+  <!-- 1. STICKY HEADER -->
+  <!-- ============================================================ -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-navy h-16 flex items-center px-4 md:px-8 shadow-lg">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+      <span class="text-white font-bold text-lg tracking-tight">
+        <span class="text-gold">★★★</span> TRISTAR LOCKSMITH
+      </span>
+      <a href="tel:8653813931" class="flex items-center gap-2 bg-emergency text-white font-bold px-4 py-2 rounded-lg text-sm md:text-base hover:bg-red-700 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        (865) 381-3931
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- 2. HERO SECTION -->
+  <!-- ============================================================ -->
+  <section class="relative bg-navy pt-16" style="min-height: 660px;">
+    <!-- Background photo placeholder -->
+    <div class="absolute inset-0 top-16 flex items-center justify-center pointer-events-none">
+      <span class="text-white/20 text-sm font-medium tracking-widest uppercase select-none">[Photo B: Technician handing car key, Sunsphere + branded van]</span>
+    </div>
+    <!-- Subtle overlay for legibility -->
+    <div class="absolute inset-0 top-16 bg-navy/80"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- LEFT: Copy -->
+        <div>
+          <h1 class="text-white font-black leading-tight mb-5" style="font-size: clamp(36px, 5vw, 56px);">
+            Locked Out of Your Car?
+          </h1>
+          <p class="text-white/80 text-lg md:text-xl mb-8 leading-relaxed">
+            Tristar Locksmith serves Knoxville and 27 East TN cities. We open cars, trucks, and SUVs without damage — and give you a price before we come out.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 mb-10">
+            <a href="tel:8653813931" class="flex items-center justify-center gap-2 bg-emergency text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-red-700 transition-colors shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              Call (865) 381-3931
+            </a>
+            <a href="#quote" class="flex items-center justify-center gap-2 border-2 border-gold text-gold font-bold text-lg px-8 py-4 rounded-xl hover:bg-gold hover:text-navy transition-colors">
+              Get a Free Quote ↓
+            </a>
+          </div>
+
+          <!-- Trust Pills -->
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full border border-white/20">⭐ 5.0 Stars</span>
+            <span class="bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full border border-white/20">127 Reviews</span>
+            <span class="bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full border border-white/20">Licensed &amp; Insured</span>
+            <span class="bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full border border-white/20">Upfront Pricing</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form Card -->
+        <div class="bg-white rounded-2xl shadow-2xl p-8">
+          <h2 class="text-navy font-bold text-2xl mb-1">Get a Free Quote</h2>
+          <p class="text-muted text-sm mb-6">We'll give you a firm price before we come out.</p>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
+              <input type="text" placeholder="John Smith" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number <span class="text-emergency">*</span></label>
+              <input type="tel" placeholder="(865) 555-0100" required class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Service Needed</label>
+              <select class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy">
+                <option value="">Select a service…</option>
+                <option value="car-lockout" selected>Car Lockout</option>
+                <option value="house-lockout">House Lockout</option>
+                <option value="car-key-replacement">Car Key Replacement</option>
+                <option value="safe-lockout">Safe Lockout</option>
+                <option value="commercial-locksmith">Commercial Locksmith</option>
+                <option value="lock-change">Lock Change / Rekey</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Your Location / Address</label>
+              <input type="text" placeholder="Knoxville, TN" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Additional Details</label>
+              <textarea placeholder="Year, make, model of vehicle…" rows="3" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gold text-navy font-bold text-lg py-4 rounded-xl hover:brightness-95 transition-all shadow-md">
+              Get My Free Quote →
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 3. TRUST BAR -->
+  <!-- ============================================================ -->
+  <div class="bg-navy-dark text-white py-3 px-4 text-center text-sm font-medium">
+    ⭐ 5.0 Stars (127 Reviews) · Licensed &amp; Insured · Upfront Pricing · Non-Destructive Entry · Serving 27+ East TN Cities
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 4. HOW IT WORKS -->
+  <!-- ============================================================ -->
+  <section class="bg-warm-white py-20 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-navy font-black text-3xl md:text-4xl mb-3">How It Works</h2>
+        <p class="text-muted text-lg max-w-xl mx-auto">Three steps. No surprises.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
+          <div class="w-14 h-14 bg-emergency rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-5">1</div>
+          <h3 class="text-navy font-bold text-xl mb-3">Call or Request a Quote</h3>
+          <p class="text-muted leading-relaxed">Tell us where you are and what happened. We give you a price on the phone — before we come out.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
+          <div class="w-14 h-14 bg-navy rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-5">2</div>
+          <h3 class="text-navy font-bold text-xl mb-3">Our Technician Heads to You</h3>
+          <p class="text-muted leading-relaxed">A licensed tech comes to your location with the right tools for your vehicle.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
+          <div class="w-14 h-14 bg-navy rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-5">3</div>
+          <h3 class="text-navy font-bold text-xl mb-3">You're Back on the Road</h3>
+          <p class="text-muted leading-relaxed">Non-destructive entry. Upfront flat rate. No damage to your vehicle. Done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 5. BENEFITS -->
+  <!-- ============================================================ -->
+  <section class="bg-white py-20 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-navy font-black text-3xl md:text-4xl mb-3">Why Knoxville Calls Tristar</h2>
+        <p class="text-muted text-lg max-w-xl mx-auto">We built this business on one principle: do it right the first time.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="border border-gray-100 rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-4">📍</div>
+          <h3 class="text-navy font-bold text-lg mb-2">Local Knoxville Team</h3>
+          <p class="text-muted text-sm leading-relaxed">We're based in Knoxville. We know these roads and we serve this community.</p>
+        </div>
+        <div class="border border-gray-100 rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-4">🛡️</div>
+          <h3 class="text-navy font-bold text-lg mb-2">Licensed &amp; Insured</h3>
+          <p class="text-muted text-sm leading-relaxed">Every technician is licensed, background-checked, and fully insured in Tennessee.</p>
+        </div>
+        <div class="border border-gray-100 rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-4">💲</div>
+          <h3 class="text-navy font-bold text-lg mb-2">Upfront Flat-Rate Pricing</h3>
+          <p class="text-muted text-sm leading-relaxed">You get the price on the phone. What we quote is what you pay. No hidden fees.</p>
+        </div>
+        <div class="border border-gray-100 rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-3xl mb-4">🚗</div>
+          <h3 class="text-navy font-bold text-lg mb-2">All Makes &amp; Models</h3>
+          <p class="text-muted text-sm leading-relaxed">Cars, trucks, SUVs, and vans. Domestic and import. Old and new. We handle them all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 6. WHAT WE HANDLE -->
+  <!-- ============================================================ -->
+  <section class="bg-navy py-20 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-white font-black text-3xl md:text-4xl mb-3">What We Handle</h2>
+        <p class="text-white/70 text-lg max-w-xl mx-auto">Any car lockout situation in Knoxville or East Tennessee.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <!-- Checklist Items -->
+        <div class="flex items-center gap-4 bg-white/10 rounded-xl px-6 py-4">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-white font-medium">Cars, trucks, SUVs &amp; vans</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white/10 rounded-xl px-6 py-4">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-white font-medium">Non-destructive entry</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white/10 rounded-xl px-6 py-4">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-white font-medium">No broken windows guaranteed</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white/10 rounded-xl px-6 py-4">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-white font-medium">All makes &amp; models</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white/10 rounded-xl px-6 py-4">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-white font-medium">Slim jim &amp; air wedge tools</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white/10 rounded-xl px-6 py-4">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-white font-medium">Keys locked in ignition</span>
+        </div>
+        <div class="flex items-center gap-4 bg-white/10 rounded-xl px-6 py-4">
+          <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-white font-medium">Trunk lockouts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 7. REVIEWS -->
+  <!-- ============================================================ -->
+  <section class="bg-warm-white py-20 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-navy font-black text-3xl md:text-4xl mb-3">What Knoxville Says</h2>
+        <p class="text-muted text-lg">127 verified reviews · 5.0 stars</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+          <div class="flex gap-1 mb-4">
+            <span class="text-gold text-xl">★★★★★</span>
+          </div>
+          <p class="text-gray-700 italic leading-relaxed mb-6">"Locked my keys in my car in the Walmart parking lot on Kingston Pike. The tech was professional, opened it without a scratch, price matched exactly what I was quoted on the phone."</p>
+          <div class="border-t pt-4">
+            <p class="font-bold text-navy">Michael R.</p>
+            <p class="text-muted text-sm">Knoxville, TN</p>
+          </div>
+        </div>
+        <!-- Review 2 -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+          <div class="flex gap-1 mb-4">
+            <span class="text-gold text-xl">★★★★★</span>
+          </div>
+          <p class="text-gray-700 italic leading-relaxed mb-6">"Super easy process. Called, got a price, they showed up, done. No damage to my car at all."</p>
+          <div class="border-t pt-4">
+            <p class="font-bold text-navy">Amanda L.</p>
+            <p class="text-muted text-sm">Farragut, TN</p>
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow">
+          <div class="flex gap-1 mb-4">
+            <span class="text-gold text-xl">★★★★★</span>
+          </div>
+          <p class="text-gray-700 italic leading-relaxed mb-6">"Needed a car unlocked late in the evening. Tristar answered, quoted me up front, showed up and got it done. Professional."</p>
+          <div class="border-t pt-4">
+            <p class="font-bold text-navy">David K.</p>
+            <p class="text-muted text-sm">Maryville, TN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 8. SERVICE AREA -->
+  <!-- ============================================================ -->
+  <section class="bg-white py-20 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-navy font-black text-3xl md:text-4xl mb-3">We Serve 27 East Tennessee Cities</h2>
+        <p class="text-muted text-lg">Wherever you're stuck in East TN, we can come to you.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <span class="bg-navy text-white font-semibold px-5 py-2.5 rounded-full text-sm">Knoxville</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Farragut</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Powell</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Maryville</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Oak Ridge</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Alcoa</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Clinton</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Sevierville</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Hardin Valley</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Karns</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Lenoir City</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Tellico Village</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Corryton</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Maynardville</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Heiskell</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Mascot</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Strawberry Plains</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Seymour</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Rockford</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Louisville</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Friendsville</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Greenback</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Walland</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Kodak</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Pigeon Forge</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Dandridge</span>
+        <span class="border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors">Jefferson City</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 9. FAQ -->
+  <!-- ============================================================ -->
+  <section class="bg-warm-white py-20 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-navy font-black text-3xl md:text-4xl mb-3">Common Questions</h2>
+        <p class="text-muted text-lg">Straight answers. No runaround.</p>
+      </div>
+      <div class="space-y-5">
+        <div class="bg-white rounded-2xl shadow-sm p-8">
+          <h3 class="text-navy font-bold text-lg mb-3">Will you damage my car to get in?</h3>
+          <p class="text-muted leading-relaxed">No. We use professional tools that open your vehicle without damage. We do not break windows unless it is a true emergency, and we tell you first.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm p-8">
+          <h3 class="text-navy font-bold text-lg mb-3">Can you unlock any car?</h3>
+          <p class="text-muted leading-relaxed">We can unlock most makes and models of cars, trucks, and SUVs. Call us with your vehicle info and we'll confirm before we come out.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm p-8">
+          <h3 class="text-navy font-bold text-lg mb-3">How much does a car lockout cost?</h3>
+          <p class="text-muted leading-relaxed">We give you a firm price on the phone before we come out. It depends on the vehicle. No hidden fees.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm p-8">
+          <h3 class="text-navy font-bold text-lg mb-3">What if my keys are in the ignition?</h3>
+          <p class="text-muted leading-relaxed">Keys in the ignition is one of the most common calls we get. We handle it regularly — call us.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm p-8">
+          <h3 class="text-navy font-bold text-lg mb-3">Do you serve my area?</h3>
+          <p class="text-muted leading-relaxed">We cover Knoxville and 27 surrounding cities in East Tennessee. Call us and we'll confirm your location.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 10. FINAL CTA -->
+  <!-- ============================================================ -->
+  <section id="quote" class="bg-navy py-20 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Copy -->
+        <div>
+          <h2 class="text-white font-black text-3xl md:text-4xl mb-5">Still Locked Out? Let's Fix That.</h2>
+          <p class="text-white/80 text-lg leading-relaxed mb-8">Give us a call and we'll quote you a flat rate on the phone. Our licensed technicians come to your location — wherever you are in Knoxville or East Tennessee.</p>
+          <a href="tel:8653813931" class="inline-flex items-center gap-3 bg-emergency text-white font-bold text-xl px-10 py-5 rounded-xl hover:bg-red-700 transition-colors shadow-lg mb-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Call (865) 381-3931
+          </a>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-white/90 font-medium">Price quoted before we come out</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-white/90 font-medium">Non-destructive entry — no damage</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2E7D4F"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="text-white/90 font-medium">Licensed &amp; insured technicians</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="bg-white rounded-2xl shadow-2xl p-8">
+          <h3 class="text-navy font-bold text-2xl mb-1">Get a Free Quote</h3>
+          <p class="text-muted text-sm mb-6">We'll call you back with a firm price.</p>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
+              <input type="text" placeholder="John Smith" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number <span class="text-emergency">*</span></label>
+              <input type="tel" placeholder="(865) 555-0100" required class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Your Location</label>
+              <input type="text" placeholder="Knoxville, TN" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Additional Details</label>
+              <textarea placeholder="Year, make, model…" rows="3" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-navy resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gold text-navy font-bold text-lg py-4 rounded-xl hover:brightness-95 transition-all shadow-md">
+              Get My Free Quote →
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 11. FOOTER -->
+  <!-- ============================================================ -->
+  <footer class="bg-navy-dark py-12 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto text-center space-y-4">
+      <p class="text-white font-bold text-xl"><span class="text-gold">★★★</span> TRISTAR LOCKSMITH</p>
+      <p class="text-gold font-bold text-xl">(865) 381-3931</p>
+      <p class="text-white/70 text-sm">5825 Pine Needle Ln, Knoxville TN 37921</p>
+      <p class="text-white/60 text-sm">Licensed &amp; Insured · Every day 7 AM–11:30 PM · Emergency service available around the clock</p>
+      <div class="border-t border-white/10 pt-6 mt-6">
+        <p class="text-white/40 text-xs">© 2025 Tristar Locksmith. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- 12. STICKY MOBILE CALL BAR -->
+  <!-- ============================================================ -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-emergency" style="padding-bottom: 24px;">
+    <a href="tel:8653813931" class="flex items-center justify-center gap-3 text-white font-bold text-lg h-14">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call (865) 381-3931
+    </a>
+  </div>
+
+  <!-- Bottom padding for mobile call bar -->
+  <div class="h-20 md:hidden"></div>
+
+</body>
+</html>

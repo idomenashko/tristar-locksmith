@@ -1,0 +1,118 @@
+<!-- @dsCard group="Foundations" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typography — Tristar Locksmith Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+        fontFamily: {
+          display: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-display p-8 min-h-screen">
+  <div class="max-w-4xl mx-auto space-y-8">
+
+    <div>
+      <h1 class="text-3xl font-black text-navy mb-1">Type Scale</h1>
+      <p class="text-muted">Inter, font-display. All weights 400–900. Never use decorative fonts.</p>
+    </div>
+
+    <!-- Light background type scale -->
+    <div class="bg-white rounded-2xl shadow-md p-8 space-y-8">
+      <p class="text-xs font-bold text-muted uppercase tracking-widest mb-4">On White / Light Backgrounds</p>
+
+      <!-- H1 -->
+      <div class="border-b border-gray-100 pb-6">
+        <p class="text-xs font-bold text-muted uppercase tracking-wider mb-3">H1 — 56px desktop / 36px mobile · font-black (900) · navy</p>
+        <h1 class="text-4xl sm:text-6xl font-black text-navy leading-tight">Locked Out of Your Car?</h1>
+        <p class="text-xs text-muted mt-2">Use: hero headline, page title. One per page max.</p>
+      </div>
+
+      <!-- H2 -->
+      <div class="border-b border-gray-100 pb-6">
+        <p class="text-xs font-bold text-muted uppercase tracking-wider mb-3">H2 — 40px · font-extrabold (800) · navy</p>
+        <h2 class="text-4xl font-extrabold text-navy leading-tight">Why Knoxville Calls Tristar</h2>
+        <p class="text-xs text-muted mt-2">Use: section headings, feature titles.</p>
+      </div>
+
+      <!-- H3 -->
+      <div class="border-b border-gray-100 pb-6">
+        <p class="text-xs font-bold text-muted uppercase tracking-wider mb-3">H3 — 24px · font-bold (700) · navy</p>
+        <h3 class="text-2xl font-bold text-navy">Licensed &amp; Insured</h3>
+        <p class="text-xs text-muted mt-2">Use: card titles, benefit headings, step labels.</p>
+      </div>
+
+      <!-- Body -->
+      <div class="border-b border-gray-100 pb-6">
+        <p class="text-xs font-bold text-muted uppercase tracking-wider mb-3">Body — 16px · font-normal (400) · gray-700</p>
+        <p class="text-base text-gray-700 leading-relaxed max-w-prose">Our technicians live and work in East Tennessee. We know every street, every neighborhood, and we're ready when you need us most. Fully licensed and insured in the state of Tennessee.</p>
+        <p class="text-xs text-muted mt-2">Use: all body copy, descriptions, FAQ answers.</p>
+      </div>
+
+      <!-- Small -->
+      <div>
+        <p class="text-xs font-bold text-muted uppercase tracking-wider mb-3">Small — 14px · font-normal (400) · muted (#6B7280)</p>
+        <p class="text-sm text-muted">No commitment. We quote before we come out.</p>
+        <p class="text-xs text-muted mt-2">Use: disclaimers, sub-labels, secondary helper text.</p>
+      </div>
+    </div>
+
+    <!-- White-on-navy variants -->
+    <div class="bg-navy rounded-2xl shadow-md p-8 space-y-8">
+      <p class="text-xs font-bold text-gold uppercase tracking-widest mb-4">On Navy / Dark Backgrounds (Hero Usage)</p>
+
+      <!-- H1 white on navy -->
+      <div class="border-b border-white/10 pb-6">
+        <p class="text-xs font-bold text-gold uppercase tracking-wider mb-3">H1 — white on navy</p>
+        <h1 class="text-4xl sm:text-6xl font-black text-white leading-tight">Locked Out of Your Car?</h1>
+        <p class="text-sm text-gold mt-2">★★★ Tristar Locksmith — Knoxville, TN</p>
+      </div>
+
+      <!-- H2 white on navy -->
+      <div class="border-b border-white/10 pb-6">
+        <p class="text-xs font-bold text-gold uppercase tracking-wider mb-3">H2 — white on navy</p>
+        <h2 class="text-4xl font-extrabold text-white leading-tight">What We Handle</h2>
+      </div>
+
+      <!-- Body white on navy -->
+      <div>
+        <p class="text-xs font-bold text-gold uppercase tracking-wider mb-3">Body — white/90 on navy</p>
+        <p class="text-base text-white/90 leading-relaxed max-w-prose">Tell us where you are and what happened. We'll give you an upfront price before we come out — no surprises on the invoice.</p>
+      </div>
+    </div>
+
+    <!-- Font weight showcase -->
+    <div class="bg-white rounded-2xl shadow-md p-8">
+      <p class="text-xs font-bold text-muted uppercase tracking-widest mb-5">Weight Reference — Inter</p>
+      <div class="space-y-3">
+        <p class="text-2xl font-normal text-navy">400 Regular — body copy</p>
+        <p class="text-2xl font-medium text-navy">500 Medium — labels</p>
+        <p class="text-2xl font-semibold text-navy">600 Semibold — nav items</p>
+        <p class="text-2xl font-bold text-navy">700 Bold — H3, buttons</p>
+        <p class="text-2xl font-extrabold text-navy">800 Extrabold — H2</p>
+        <p class="text-2xl font-black text-navy">900 Black — H1, hero</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

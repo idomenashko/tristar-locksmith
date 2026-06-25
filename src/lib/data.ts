@@ -18,10 +18,10 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Locked out of your car in Knoxville or surrounding areas? Tristar Locksmith gets you back on the road fast ",
     longDescription:
-      "A car lockout can happen to anyone, anywhere — a parking lot in Farragut, a trailhead near Sevierville, or right in your own driveway in Knoxville. Tristar Locksmith dispatches a trained technician quickly so you're never stranded for long. We use professional, non-destructive entry tools to unlock your vehicle without damaging paint, seals, or window trim. Whether you drive a domestic sedan, a pickup truck, or a late-model import with advanced locking systems, our team has the experience and equipment to get you back in safely.",
+      "A car lockout can happen to anyone, anywhere, a parking lot in Farragut, a trailhead near Sevierville, or right in your own driveway in Knoxville. Tristar Locksmith dispatches a trained technician quickly so you're never stranded for long. We use professional, non-destructive entry tools to unlock your vehicle without damaging paint, seals, or window trim. Whether you drive a domestic sedan, a pickup truck, or a late-model import with advanced locking systems, our team has the experience and equipment to get you back in safely.",
     features: [
       "Licensed, insured technicians throughout Knox County",
-      "Non-destructive entry — no damage to your vehicle",
+      "Non-destructive entry, no damage to your vehicle",
       "All vehicle makes and models including imports and luxury cars",
       "Available 24 hours a day, 7 days a week, 365 days a year",
       "Upfront pricing with no hidden dispatch fees",
@@ -52,7 +52,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Locked out of your home? Tristar Locksmith provides fast, professional residential lockout service throughout Knoxville and East Tennessee.",
     longDescription:
-      "Getting locked out of your own home is stressful, especially at night or in bad weather. Tristar Locksmith serves homeowners across Knoxville, Maryville, Clinton, and the surrounding communities with professional, respectful service. Our technicians can open virtually any residential lock — deadbolts, knob locks, smart locks, and high-security cylinders — without causing damage to your door or frame. We also carry a full stock of replacement hardware if a lock is broken or needs upgrading after a lockout.",
+      "Getting locked out of your own home is stressful, especially at night or in bad weather. Tristar Locksmith serves homeowners across Knoxville, Maryville, Clinton, and the surrounding communities with professional, respectful service. Our technicians can open virtually any residential lock, deadbolts, knob locks, smart locks, and high-security cylinders, without causing damage to your door or frame. We also carry a full stock of replacement hardware if a lock is broken or needs upgrading after a lockout.",
     features: [
       "Residential lock opening for all major brands",
       "No damage to doors, frames, or weather stripping",
@@ -152,14 +152,14 @@ export const SERVICES: Service[] = [
     title: "Car Key Replacement",
     icon: "🗝️",
     shortDescription:
-      "Lost your car keys? Tristar Locksmith cuts and programs replacement keys and key fobs for most makes and models — often cheaper than the dealership.",
+      "Lost your car keys? Tristar Locksmith cuts and programs replacement keys and key fobs for most makes and models, often cheaper than the dealership.",
     longDescription:
-      "Losing your car keys can feel like a crisis, but Tristar Locksmith makes replacement straightforward and affordable. We cut and program transponder keys, laser-cut high-security keys, proximity fobs, and push-to-start smart keys for a wide range of domestic and foreign vehicles right from our mobile unit. No need to tow your car to a dealership and wait days — we come to you anywhere in the Knoxville area and complete the job on-site. We also retain the ability to create a spare key at the same visit so you're never in this situation again.",
+      "Losing your car keys can feel like a crisis, but Tristar Locksmith makes replacement straightforward and affordable. We cut and program transponder keys, laser-cut high-security keys, proximity fobs, and push-to-start smart keys for a wide range of domestic and foreign vehicles right from our mobile unit. No need to tow your car to a dealership and wait days, we come to you anywhere in the Knoxville area and complete the job on-site. We also retain the ability to create a spare key at the same visit so you're never in this situation again.",
     features: [
       "Transponder key cutting and programming",
       "Push-to-start and proximity fob programming",
       "High-security laser-cut key duplication",
-      "On-site service — no towing to a dealership",
+      "On-site service, no towing to a dealership",
       "Duplicate spare keys made at the same visit",
       "Most domestic and imported vehicle makes supported",
     ],
@@ -172,7 +172,7 @@ export const SERVICES: Service[] = [
       {
         question: "Is it cheaper to use a locksmith than the dealership for key replacement?",
         answer:
-          "In most cases, yes — often significantly so. Dealerships typically charge a premium for transponder key programming, and you may wait days for an appointment. Tristar Locksmith provides competitive pricing with same-day mobile service across Knoxville and surrounding areas.",
+          "In most cases, yes, often significantly so. Dealerships typically charge a premium for transponder key programming, and you may wait days for an appointment. Tristar Locksmith provides competitive pricing with same-day mobile service across Knoxville and surrounding areas.",
       },
       {
         question: "Do you program key fobs and remote start remotes?",
@@ -188,7 +188,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Ignition won't turn or key is stuck? Tristar Locksmith repairs and replaces vehicle ignition cylinders across the Knoxville area.",
     longDescription:
-      "A faulty ignition cylinder can leave you stranded just as surely as a lockout. Worn pins, a broken wafer, or a bent key can prevent the ignition from turning, or worse — cause the key to get stuck. Tristar Locksmith diagnoses ignition problems on-site and determines whether the cylinder needs to be repaired, rebuilt, or fully replaced. We work on a wide range of vehicle makes and models and carry common replacement cylinders for popular vehicles. Service is available throughout Knox County and neighboring areas so you're never far from help.",
+      "A faulty ignition cylinder can leave you stranded just as surely as a lockout. Worn pins, a broken wafer, or a bent key can prevent the ignition from turning, or worse, cause the key to get stuck. Tristar Locksmith diagnoses ignition problems on-site and determines whether the cylinder needs to be repaired, rebuilt, or fully replaced. We work on a wide range of vehicle makes and models and carry common replacement cylinders for popular vehicles. Service is available throughout Knox County and neighboring areas so you're never far from help.",
     features: [
       "On-site ignition cylinder diagnosis",
       "Ignition cylinder repair and rebuild",
@@ -199,7 +199,7 @@ export const SERVICES: Service[] = [
     ],
     faqs: [
       {
-        question: "My key turns but the car won't start — is that an ignition problem?",
+        question: "My key turns but the car won't start, is that an ignition problem?",
         answer:
           "Not always. If the key turns freely but the engine doesn't crank, the issue could be the ignition switch (electrical) rather than the cylinder (mechanical). Tristar Locksmith technicians diagnose both and can tell you quickly whether it's a locksmith issue or something to refer to a mechanic.",
       },
@@ -220,7 +220,7 @@ export const SERVICES: Service[] = [
     title: "Commercial Locksmith",
     icon: "🏢",
     shortDescription:
-      "Tristar Locksmith provides full commercial locksmith services for Knoxville businesses — from master key systems to high-security access control.",
+      "Tristar Locksmith provides full commercial locksmith services for Knoxville businesses, from master key systems to high-security access control.",
     longDescription:
       "Securing a business requires a different approach than a residential property. Tristar Locksmith works with offices, retail stores, warehouses, restaurants, and multi-tenant buildings throughout Knoxville and East Tennessee. We install and service commercial-grade hardware including panic bars, door closers, cylindrical and mortise locks, and electronic access control systems. Our master key programs allow you to grant tiered access so managers can open all doors while staff is limited to their work areas. We also provide emergency commercial lockout service and can rekey an entire building in a single visit.",
     features: [
@@ -235,7 +235,7 @@ export const SERVICES: Service[] = [
       {
         question: "Can you set up a master key system for my business?",
         answer:
-          "Yes. Master key systems are a core commercial service for Tristar Locksmith. We design the key hierarchy based on your access needs — grand master, master, and change keys — and install or rekey the appropriate cylinders throughout your Knoxville facility.",
+          "Yes. Master key systems are a core commercial service for Tristar Locksmith. We design the key hierarchy based on your access needs, grand master, master, and change keys, and install or rekey the appropriate cylinders throughout your Knoxville facility.",
       },
       {
         question: "Do you install electronic access control?",
@@ -263,7 +263,7 @@ export const SERVICES: Service[] = [
       "Break-in repair and emergency lock replacement",
       "No after-hours surcharges hidden in fine print",
       "Residential, commercial, and automotive emergencies covered",
-      "Single call connects you directly to a dispatcher — no call centers",
+      "Single call connects you directly to a dispatcher, no call centers",
     ],
     faqs: [
       {
@@ -279,7 +279,7 @@ export const SERVICES: Service[] = [
       {
         question: "Do you cover rural areas outside Knoxville at night?",
         answer:
-          "Yes. Tristar Locksmith covers the full service area — including Maynardville, Heiskell, Corryton, Friendsville, and other outlying communities — at all hours. Call (865) 381-3931 and we will confirm availability for your location.",
+          "Yes. Tristar Locksmith covers the full service area, including Maynardville, Heiskell, Corryton, Friendsville, and other outlying communities, at all hours. Call (865) 381-3931 and we will confirm availability for your location.",
       },
     ],
   },
@@ -290,7 +290,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Forgotten your safe combination or lost the key? Tristar Locksmith opens residential and light commercial safes without damaging the contents inside.",
     longDescription:
-      "Safes are designed to be difficult to open — but that's cold comfort when you've lost the combination or the electronic keypad has malfunctioned. Tristar Locksmith has the tools and training to open a wide range of residential gun safes, floor safes, wall safes, and light commercial security containers. We use manipulation techniques and specialized tools to open your safe non-destructively whenever possible, protecting both the safe and its contents. If the lock mechanism has failed entirely, we can discuss drilling as a last resort and walk you through the options. After opening, we can also reset the combination or replace the lock mechanism.",
+      "Safes are designed to be difficult to open, but that's cold comfort when you've lost the combination or the electronic keypad has malfunctioned. Tristar Locksmith has the tools and training to open a wide range of residential gun safes, floor safes, wall safes, and light commercial security containers. We use manipulation techniques and specialized tools to open your safe non-destructively whenever possible, protecting both the safe and its contents. If the lock mechanism has failed entirely, we can discuss drilling as a last resort and walk you through the options. After opening, we can also reset the combination or replace the lock mechanism.",
     features: [
       "Non-destructive safe opening whenever possible",
       "Combination recovery and reset",
@@ -303,7 +303,7 @@ export const SERVICES: Service[] = [
       {
         question: "Can you open a safe without damaging it?",
         answer:
-          "In most cases, yes. Tristar Locksmith prioritizes non-destructive methods — manipulation, decoding, and bypass techniques — that preserve both the safe body and the lock mechanism. If the safe requires drilling, we'll discuss it with you first and explain why it's necessary.",
+          "In most cases, yes. Tristar Locksmith prioritizes non-destructive methods, manipulation, decoding, and bypass techniques, that preserve both the safe body and the lock mechanism. If the safe requires drilling, we'll discuss it with you first and explain why it's necessary.",
       },
       {
         question: "What types of safes can you open?",
@@ -349,7 +349,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Maryville",
     region: "Blount County",
     description:
-      "As the county seat of Blount County, Maryville is a busy hub of commerce and residential growth just south of Knoxville. Tristar Locksmith serves Maryville homes, apartment complexes, and businesses with the full range of locksmith services — from car lockouts and house lockouts to commercial lock hardware and master key systems. Our team is familiar with the Maryville area and the surrounding Blount County communities.",
+      "As the county seat of Blount County, Maryville is a busy hub of commerce and residential growth just south of Knoxville. Tristar Locksmith serves Maryville homes, apartment complexes, and businesses with the full range of locksmith services, from car lockouts and house lockouts to commercial lock hardware and master key systems. Our team is familiar with the Maryville area and the surrounding Blount County communities.",
     nearbyAreas: ["Alcoa", "Louisville", "Friendsville", "Knoxville"],
   },
   {
@@ -357,7 +357,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Oak Ridge",
     region: "Anderson County",
     description:
-      "Oak Ridge has a unique character shaped by its history as a planned city built during World War II, and today it's a thriving community with diverse residential neighborhoods and a growing commercial sector. Tristar Locksmith provides Oak Ridge residents and businesses with reliable locksmith service — car lockouts, home lock changes, commercial rekeying, and more. We respond throughout the city including the areas around Scarboro and the Oak Ridge Turnpike.",
+      "Oak Ridge has a unique character shaped by its history as a planned city built during World War II, and today it's a thriving community with diverse residential neighborhoods and a growing commercial sector. Tristar Locksmith provides Oak Ridge residents and businesses with reliable locksmith service, car lockouts, home lock changes, commercial rekeying, and more. We respond throughout the city including the areas around Scarboro and the Oak Ridge Turnpike.",
     nearbyAreas: ["Clinton", "Knoxville", "Powell", "Karns"],
   },
   {
@@ -373,7 +373,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Clinton",
     region: "Anderson County",
     description:
-      "Clinton is the county seat of Anderson County, located along the Clinch River north of Knoxville. Tristar Locksmith serves Clinton's residential neighborhoods and downtown businesses with professional locksmith services — including car lockouts, residential and commercial lock changes, and 24/7 emergency response. We regularly serve customers along Main Street and throughout the surrounding Anderson County communities.",
+      "Clinton is the county seat of Anderson County, located along the Clinch River north of Knoxville. Tristar Locksmith serves Clinton's residential neighborhoods and downtown businesses with professional locksmith services, including car lockouts, residential and commercial lock changes, and 24/7 emergency response. We regularly serve customers along Main Street and throughout the surrounding Anderson County communities.",
     nearbyAreas: ["Oak Ridge", "Powell", "Knoxville", "Maynardville"],
   },
   {
@@ -381,7 +381,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Sevierville",
     region: "Sevier County",
     description:
-      "As the county seat of Sevier County and a gateway to the Smoky Mountains, Sevierville sees a constant mix of local residents and tourists — and Tristar Locksmith is here to help both. From car lockouts in the Parkway corridor to home rekeying in the surrounding residential areas, our technicians serve Sevierville with care and efficiency. We also support short-term rental property owners in the area with professional lock installation and master key services.",
+      "As the county seat of Sevier County and a gateway to the Smoky Mountains, Sevierville sees a constant mix of local residents and tourists, and Tristar Locksmith is here to help both. From car lockouts in the Parkway corridor to home rekeying in the surrounding residential areas, our technicians serve Sevierville with care and efficiency. We also support short-term rental property owners in the area with professional lock installation and master key services.",
     nearbyAreas: ["Pigeon Forge", "Kodak", "Strawberry Plains", "Knoxville"],
   },
   {
@@ -397,7 +397,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Karns",
     region: "North Knox",
     description:
-      "Karns is a community in northwestern Knox County with a strong local identity and a mix of suburban and rural character. Tristar Locksmith provides Karns residents with the same fast, professional locksmith service we offer across the metro area — car lockouts, house lockouts, rekeying after a move, and lock replacement. We know the Karns area well and can navigate quickly to neighborhoods off Beaver Ridge Road and beyond.",
+      "Karns is a community in northwestern Knox County with a strong local identity and a mix of suburban and rural character. Tristar Locksmith provides Karns residents with the same fast, professional locksmith service we offer across the metro area, car lockouts, house lockouts, rekeying after a move, and lock replacement. We know the Karns area well and can navigate quickly to neighborhoods off Beaver Ridge Road and beyond.",
     nearbyAreas: ["Knoxville", "Powell", "Hardin Valley", "Clinton"],
   },
   {
@@ -405,7 +405,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Lenoir City",
     region: "Loudon County",
     description:
-      "Lenoir City sits at the crossroads of Loudon County and greater Knoxville, making it a busy commercial and residential hub. Tristar Locksmith serves Lenoir City with reliable locksmith response for homes, businesses, and vehicles — whether you're locked out on the Highway 321 strip or need a lock changed in one of the area's growing neighborhoods. We also serve the nearby Tellico Village community and regularly travel this corridor.",
+      "Lenoir City sits at the crossroads of Loudon County and greater Knoxville, making it a busy commercial and residential hub. Tristar Locksmith serves Lenoir City with reliable locksmith response for homes, businesses, and vehicles, whether you're locked out on the Highway 321 strip or need a lock changed in one of the area's growing neighborhoods. We also serve the nearby Tellico Village community and regularly travel this corridor.",
     nearbyAreas: ["Tellico Village", "Farragut", "Loudon", "Maryville"],
   },
   {
@@ -421,7 +421,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Corryton",
     region: "North Knox",
     description:
-      "Corryton is a rural community in northeastern Knox County with a close-knit feel and a mix of longtime residents and newer families. Tristar Locksmith covers Corryton with full locksmith service — car and home lockouts, lock replacement, rekeying, and 24/7 emergency response. We understand that rural customers may feel far from help, and we commit to honest ETAs and prompt response when you call from the Corryton area.",
+      "Corryton is a rural community in northeastern Knox County with a close-knit feel and a mix of longtime residents and newer families. Tristar Locksmith covers Corryton with full locksmith service, car and home lockouts, lock replacement, rekeying, and 24/7 emergency response. We understand that rural customers may feel far from help, and we commit to honest ETAs and prompt response when you call from the Corryton area.",
     nearbyAreas: ["Mascot", "Strawberry Plains", "Knoxville", "Maynardville"],
   },
   {
@@ -437,7 +437,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Heiskell",
     region: "North Knox",
     description:
-      "Heiskell is a small community in northern Knox County off Emory Road, surrounded by a quiet, rural landscape. Tristar Locksmith serves Heiskell residents who need professional locksmith assistance — whether it's a car lockout on a back road, a home rekey after buying a new house, or an emergency lock change. We pride ourselves on reaching even the more remote pockets of Knox County quickly and professionally.",
+      "Heiskell is a small community in northern Knox County off Emory Road, surrounded by a quiet, rural landscape. Tristar Locksmith serves Heiskell residents who need professional locksmith assistance, whether it's a car lockout on a back road, a home rekey after buying a new house, or an emergency lock change. We pride ourselves on reaching even the more remote pockets of Knox County quickly and professionally.",
     nearbyAreas: ["Powell", "Karns", "Maynardville", "Clinton"],
   },
   {
@@ -493,7 +493,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Greenback",
     region: "Loudon County",
     description:
-      "Greenback is a peaceful rural community in Loudon County, known for its small-town atmosphere and proximity to Tellico Lake. Tristar Locksmith serves Greenback and the surrounding Loudon County countryside with professional locksmith response — car lockouts, home lock changes, rekeying, and emergency service. No matter how far off the beaten path you are, we'll come to you.",
+      "Greenback is a peaceful rural community in Loudon County, known for its small-town atmosphere and proximity to Tellico Lake. Tristar Locksmith serves Greenback and the surrounding Loudon County countryside with professional locksmith response, car lockouts, home lock changes, rekeying, and emergency service. No matter how far off the beaten path you are, we'll come to you.",
     nearbyAreas: ["Friendsville", "Loudon", "Lenoir City", "Maryville"],
   },
   {
@@ -517,7 +517,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: "Pigeon Forge",
     region: "Sevier County",
     description:
-      "Pigeon Forge is one of the most visited tourist destinations in Tennessee, known for The Parkway, Dollywood, and its gateway role to Great Smoky Mountains National Park. Tristar Locksmith serves Pigeon Forge residents, business owners, and visitors who find themselves in a locksmith bind — from car lockouts in attraction parking lots to rekeying cabins and vacation rentals. We serve the area with the same professionalism local customers expect.",
+      "Pigeon Forge is one of the most visited tourist destinations in Tennessee, known for The Parkway, Dollywood, and its gateway role to Great Smoky Mountains National Park. Tristar Locksmith serves Pigeon Forge residents, business owners, and visitors who find themselves in a locksmith bind, from car lockouts in attraction parking lots to rekeying cabins and vacation rentals. We serve the area with the same professionalism local customers expect.",
     nearbyAreas: ["Sevierville", "Kodak", "Seymour", "Knoxville"],
   },
   {
@@ -572,13 +572,13 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Bobby A.",
     rating: 5,
-    text: "Lost my car keys completely — no spare, no fob, nothing. Tristar came out to my home in Hardin Valley and made a brand new transponder key from scratch using my VIN. The whole thing took less than an hour and cost way less than the dealer quoted me. Absolutely will use again.",
+    text: "Lost my car keys completely, no spare, no fob, nothing. Tristar came out to my home in Hardin Valley and made a brand new transponder key from scratch using my VIN. The whole thing took less than an hour and cost way less than the dealer quoted me. Absolutely will use again.",
     location: "Hardin Valley, TN",
   },
   {
     name: "Cynthia L.",
     rating: 5,
-    text: "Had a break-in attempt at my condo in North Knoxville — the lock was damaged and the door frame was cracked. I called Tristar and they came the same evening, replaced the deadbolt, reinforced the strike plate, and made sure the door was secure before leaving. Very thorough and professional under stressful circumstances.",
+    text: "Had a break-in attempt at my condo in North Knoxville, the lock was damaged and the door frame was cracked. I called Tristar and they came the same evening, replaced the deadbolt, reinforced the strike plate, and made sure the door was secure before leaving. Very thorough and professional under stressful circumstances.",
     location: "Knoxville, TN",
   },
 ];
@@ -592,7 +592,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "Is Tristar Locksmith available on weekends and holidays?",
     answer:
-      "Yes. Tristar Locksmith operates 24 hours a day, 7 days a week, 365 days a year — including all major holidays. Locksmith emergencies don't wait for business hours, and neither do we. You'll reach a live dispatcher when you call, not a voicemail.",
+      "Yes. Tristar Locksmith operates 24 hours a day, 7 days a week, 365 days a year, including all major holidays. Locksmith emergencies don't wait for business hours, and neither do we. You'll reach a live dispatcher when you call, not a voicemail.",
   },
   {
     question: "Are your locksmiths licensed and insured in Tennessee?",
@@ -617,7 +617,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "Do you offer any warranty on lock installation work?",
     answer:
-      "Yes. Tristar Locksmith stands behind the work we perform. If you experience a problem with a lock we installed or rekeyed, contact us and we'll make it right. Specific warranty terms depend on the service performed and the hardware involved — ask your technician for details at the time of service.",
+      "Yes. Tristar Locksmith stands behind the work we perform. If you experience a problem with a lock we installed or rekeyed, contact us and we'll make it right. Specific warranty terms depend on the service performed and the hardware involved, ask your technician for details at the time of service.",
   },
   {
     question: "Can you help with a safe I've been locked out of?",
@@ -631,7 +631,7 @@ export const ADVANTAGES: Advantage[] = [
     icon: "⚡",
     title: "Fast Response",
     description:
-      "Tristar Locksmith is based in Knoxville. Our technicians know Knox County and the surrounding East Tennessee communities — no out-of-town dispatchers.",
+      "Tristar Locksmith is based in Knoxville. Our technicians know Knox County and the surrounding East Tennessee communities, no out-of-town dispatchers.",
   },
   {
     icon: "🏆",
@@ -643,13 +643,13 @@ export const ADVANTAGES: Advantage[] = [
     icon: "💰",
     title: "Upfront Pricing",
     description:
-      "We quote you a firm price before any work starts. No hidden fees, no surprise charges after the job — just honest, transparent pricing every time.",
+      "We quote you a firm price before any work starts. No hidden fees, no surprise charges after the job, just honest, transparent pricing every time.",
   },
   {
     icon: "🔧",
     title: "All Makes & Models",
     description:
-      "From vintage domestic vehicles to modern imports with push-to-start systems, and from basic knob locks to high-security commercial hardware — we handle it all.",
+      "From vintage domestic vehicles to modern imports with push-to-start systems, and from basic knob locks to high-security commercial hardware, we handle it all.",
   },
   {
     icon: "⭐",

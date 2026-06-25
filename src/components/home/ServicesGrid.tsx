@@ -14,8 +14,8 @@ export async function ServicesGrid() {
             Our Locksmith Services
           </h2>
           <p className="text-muted max-w-xl mx-auto">
-            From car lockouts to commercial lock systems — Tristar Locksmith
-            handles it all with speed, care, and upfront pricing.
+            From car lockouts to commercial lock systems. Tristar Locksmith
+            handles it all with care and upfront pricing.
           </p>
         </div>
 

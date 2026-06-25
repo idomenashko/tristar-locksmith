@@ -1,0 +1,86 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Tristar Locksmith Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+        fontFamily: {
+          display: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-display min-h-screen">
+
+  <section class="bg-warm-white py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy text-center mb-3">Common Questions</h2>
+      <p class="text-center text-muted mb-10 max-w-lg mx-auto">Straight answers before we come out — that's how we operate.</p>
+
+      <div class="space-y-4">
+
+        <!-- Q1 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <h3 class="font-bold text-navy text-base leading-snug mb-2">How much does car key replacement cost?</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">It depends on the year, make, and model of your vehicle. We give you a firm price on the phone before we come out — no surprises.</p>
+        </div>
+
+        <!-- Q2 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <h3 class="font-bold text-navy text-base leading-snug mb-2">Will you damage my car or door to get in?</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">No. We use professional non-destructive tools. We do not break windows or drill locks unless there is absolutely no other way, and we tell you before we do anything.</p>
+        </div>
+
+        <!-- Q3 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <h3 class="font-bold text-navy text-base leading-snug mb-2">Do you serve my city?</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We serve Knoxville and 27 surrounding East Tennessee cities, including Farragut, Maryville, Oak Ridge, Powell, Sevierville, and more. Call us and we'll confirm.</p>
+        </div>
+
+        <!-- Q4 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <h3 class="font-bold text-navy text-base leading-snug mb-2">Are you licensed and insured?</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Yes. Tristar Locksmith is licensed and insured in the state of Tennessee.</p>
+        </div>
+
+        <!-- Q5 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm">
+          <h3 class="font-bold text-navy text-base leading-snug mb-2">What's the difference between rekeying and replacing a lock?</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Rekeying changes the internal pins so old keys no longer work — it's less expensive. Replacing the lock is a new lock entirely. We can do both and recommend the right option for your situation.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA below FAQ -->
+      <div class="mt-10 text-center">
+        <p class="text-muted text-sm mb-4">Have a question we didn't cover?</p>
+        <a href="tel:+18653813931" class="inline-flex items-center gap-2 bg-emergency text-white font-bold text-base min-h-12 rounded-xl px-7 shadow-md hover:bg-red-700 transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          Call (865) 381-3931
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

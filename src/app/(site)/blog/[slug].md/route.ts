@@ -23,7 +23,7 @@ export async function GET(
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
-  const content = `# ${post.title} — Tristar Locksmith, Knoxville TN
+  const content = `# ${post.title}, Tristar Locksmith, Knoxville TN
 
 > [View HTML version](${SITE.url}/blog/${post.slug})
 > Published: ${post.date}

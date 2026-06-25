@@ -1,0 +1,131 @@
+<!-- @dsCard group="Foundations" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colors — Tristar Locksmith Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+        fontFamily: {
+          display: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-display p-8 min-h-screen">
+
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-black text-navy mb-2">Brand Color System</h1>
+    <p class="text-muted mb-8">Six colors, specific jobs. Never improvise — every use case is defined.</p>
+
+    <!-- Swatch Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-5 mb-10">
+
+      <!-- Navy -->
+      <div class="rounded-2xl overflow-hidden shadow-md">
+        <div class="h-36 bg-navy"></div>
+        <div class="bg-white p-4">
+          <p class="font-black text-navy text-sm">#1B3A5C</p>
+          <p class="font-bold text-gray-800 mt-0.5">Navy</p>
+          <p class="text-xs text-muted mt-1 leading-snug">Primary backgrounds, headers, nav bar, section backgrounds</p>
+        </div>
+      </div>
+
+      <!-- Navy Dark -->
+      <div class="rounded-2xl overflow-hidden shadow-md">
+        <div class="h-36 bg-navy-dark"></div>
+        <div class="bg-white p-4">
+          <p class="font-black text-navy text-sm">#122a44</p>
+          <p class="font-bold text-gray-800 mt-0.5">Navy Dark</p>
+          <p class="text-xs text-muted mt-1 leading-snug">Footer, deep sections, overlay tints</p>
+        </div>
+      </div>
+
+      <!-- Gold -->
+      <div class="rounded-2xl overflow-hidden shadow-md">
+        <div class="h-36 bg-gold"></div>
+        <div class="bg-white p-4">
+          <p class="font-black text-navy text-sm">#D4A03C</p>
+          <p class="font-bold text-gray-800 mt-0.5">Gold</p>
+          <p class="text-xs text-muted mt-1 leading-snug">Form submit CTAs only. Always navy text on gold. Never use for call buttons.</p>
+        </div>
+      </div>
+
+      <!-- Emergency -->
+      <div class="rounded-2xl overflow-hidden shadow-md">
+        <div class="h-36 bg-emergency"></div>
+        <div class="bg-white p-4">
+          <p class="font-black text-navy text-sm">#DC2626</p>
+          <p class="font-bold text-gray-800 mt-0.5">Emergency</p>
+          <p class="text-xs text-muted mt-1 leading-snug">CALL button only. Always white text on red. Never use for quote/form CTAs.</p>
+        </div>
+      </div>
+
+      <!-- Forest -->
+      <div class="rounded-2xl overflow-hidden shadow-md">
+        <div class="h-36 bg-forest"></div>
+        <div class="bg-white p-4">
+          <p class="font-black text-navy text-sm">#2E7D4F</p>
+          <p class="font-bold text-gray-800 mt-0.5">Forest</p>
+          <p class="text-xs text-muted mt-1 leading-snug">Checkmarks, success icons, confirmation states</p>
+        </div>
+      </div>
+
+      <!-- Warm White -->
+      <div class="rounded-2xl overflow-hidden shadow-md">
+        <div class="h-36 bg-warm-white border border-gray-200"></div>
+        <div class="bg-white p-4">
+          <p class="font-black text-navy text-sm">#F5F5F0</p>
+          <p class="font-bold text-gray-800 mt-0.5">Warm White</p>
+          <p class="text-xs text-muted mt-1 leading-snug">Light section alternates (steps, FAQ, testimonials backgrounds)</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Combos -->
+    <div class="bg-white rounded-2xl shadow-md p-6">
+      <h2 class="text-xl font-extrabold text-navy mb-1">Valid CTA Combinations</h2>
+      <p class="text-sm text-muted mb-5">These are the <strong>only two</strong> button styles allowed. Never mix colors or add a third CTA color.</p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <!-- Call -->
+        <div class="flex-1">
+          <p class="text-xs font-bold text-muted uppercase tracking-wider mb-2">Emergency / Call</p>
+          <button class="w-full flex items-center justify-center gap-3 bg-emergency text-white font-bold text-lg min-h-14 rounded-xl px-6 shadow-md hover:bg-red-700 transition-colors">
+            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            (865) 381-3931
+          </button>
+          <p class="text-xs text-muted mt-2">bg-emergency · text-white · phone icon left</p>
+        </div>
+
+        <!-- Quote -->
+        <div class="flex-1">
+          <p class="text-xs font-bold text-muted uppercase tracking-wider mb-2">Form / Quote</p>
+          <button class="w-full flex items-center justify-center gap-2 bg-gold text-navy font-bold text-lg min-h-14 rounded-xl px-6 shadow-md hover:bg-yellow-500 transition-colors">
+            Get a Free Quote
+          </button>
+          <p class="text-xs text-muted mt-2">bg-gold · text-navy · no icon required</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

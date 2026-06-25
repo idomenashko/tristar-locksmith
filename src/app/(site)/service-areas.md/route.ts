@@ -17,7 +17,7 @@ ${area.description}
     )
     .join('\n\n');
 
-  const content = `# Service Areas — Tristar Locksmith, Knoxville TN
+  const content = `# Service Areas, Tristar Locksmith, Knoxville TN
 
 > [View HTML version](${SITE.url}/service-areas)
 

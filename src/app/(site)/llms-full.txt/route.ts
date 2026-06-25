@@ -77,13 +77,13 @@ ${advantage.description}`
   const testimonialsSection = testimonials
     .map(
       (testimonial) =>
-        `**${testimonial.name}** (${testimonial.location}) — ${testimonial.rating}/5 stars
+        `**${testimonial.name}** (${testimonial.location}), ${testimonial.rating}/5 stars
 
 "${testimonial.text}"`
     )
     .join('\n\n');
 
-  const content = `# Tristar Locksmith — Complete Site Content
+  const content = `# Tristar Locksmith, Complete Site Content
 
 > This file contains all content from the Tristar Locksmith website for AI indexing.
 > Website: ${SITE.url}

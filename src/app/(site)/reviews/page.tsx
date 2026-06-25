@@ -23,10 +23,10 @@ export default async function ReviewsPage() {
           </h1>
           <div className="flex items-center gap-3 mb-4">
             <Stars rating={5} />
-            <span className="text-white/80">5.0 — 127+ reviews</span>
+            <span className="text-white/80">5.0 · 127+ reviews</span>
           </div>
           <p className="text-xl text-white/80 max-w-2xl">
-            Don&apos;t take our word for it — here&apos;s what our customers in the Knoxville area say about Tristar Locksmith.
+            Don&apos;t take our word for it. Here&apos;s what our customers in the Knoxville area say about Tristar Locksmith.
           </p>
         </Container>
       </div>

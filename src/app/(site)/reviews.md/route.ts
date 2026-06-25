@@ -7,7 +7,7 @@ export async function GET() {
 
   const testimonialBlocks = testimonials
     .map(
-      (t) => `### ${t.name} — ${t.location}
+      (t) => `### ${t.name}, ${t.location}
 
 ⭐ **Rating:** ${t.rating}/5 stars
 
@@ -15,7 +15,7 @@ export async function GET() {
     )
     .join('\n\n');
 
-  const content = `# Customer Reviews — Tristar Locksmith, Knoxville TN
+  const content = `# Customer Reviews, Tristar Locksmith, Knoxville TN
 
 > [View HTML version](${SITE.url}/reviews)
 

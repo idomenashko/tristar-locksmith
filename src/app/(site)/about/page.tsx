@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "About Tristar Locksmith",
   description:
-    "Learn about Tristar Locksmith — Knoxville's trusted local locksmith. Licensed, insured, and available 24/7 for all your locksmith needs in East Tennessee.",
+    "Learn about Tristar Locksmith, Knoxville's trusted local locksmith. Licensed, insured, and available 24/7 for all your locksmith needs in East Tennessee.",
   path: "/about",
 });
 
@@ -21,7 +21,7 @@ export default async function AboutPage() {
             About Tristar Locksmith
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Knoxville&apos;s trusted local locksmith — licensed, insured, and available 24/7.
+            Knoxville&apos;s trusted local locksmith. Licensed, insured, and available 24/7.
           </p>
         </Container>
       </div>
@@ -31,13 +31,13 @@ export default async function AboutPage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-navy mb-4 font-display">Our Story</h2>
             <p className="text-ink leading-relaxed text-lg mb-6">
-              Tristar Locksmith has been proudly serving the Knoxville, Tennessee community and surrounding East Tennessee areas. The name &quot;Tristar&quot; is inspired by Tennessee&apos;s iconic three-star flag — a symbol of the state&apos;s three grand divisions and a reminder of our deep roots in this community.
+              Tristar Locksmith has been proudly serving the Knoxville, Tennessee community and surrounding East Tennessee areas. The name &quot;Tristar&quot; is inspired by Tennessee&apos;s iconic three-star flag, a symbol of the state&apos;s three grand divisions and a reminder of our deep roots in this community.
             </p>
             <p className="text-ink leading-relaxed text-lg mb-6">
               We started with a simple mission: provide honest, reliable, and professional locksmith service to our neighbors in Knoxville and the surrounding areas. Whether you&apos;re locked out of your car at 2 AM, need to rekey your home after moving, or require commercial security upgrades, we&apos;re here to help.
             </p>
             <p className="text-ink leading-relaxed text-lg mb-8">
-              Our team is fully licensed and insured, and we&apos;re committed to transparent pricing — no hidden fees, no surprises. When you call Tristar Locksmith, you get a real local expert who knows Knox County and the surrounding communities.
+              Our team is fully licensed and insured, and we&apos;re committed to transparent pricing. No hidden fees, no surprises. When you call Tristar Locksmith, you get a real local expert who knows Knox County and the surrounding communities.
             </p>
 
             <h2 className="text-2xl font-bold text-navy mb-6 font-display">Why Choose Tristar?</h2>
@@ -55,7 +55,7 @@ export default async function AboutPage() {
 
             <div className="bg-navy rounded-lg p-6 text-white text-center">
               <h3 className="text-xl font-bold mb-2 font-display">Ready to Work With Us?</h3>
-              <p className="text-white/80 mb-4">Call anytime — we&apos;re available 24 hours a day, 7 days a week.</p>
+              <p className="text-white/80 mb-4">Call anytime. We&apos;re available 24 hours a day, 7 days a week.</p>
               <Button href="tel:8653813931" variant="primary" size="lg">
                 📞 Call {business.phone}
               </Button>

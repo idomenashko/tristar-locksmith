@@ -12,7 +12,7 @@ export async function GET() {
   ]);
 
   const serviceLines = services
-    .map((s) => `- **[${s.title}](${SITE.url}/services/${s.slug})** — ${s.shortDescription}`)
+    .map((s) => `- **[${s.title}](${SITE.url}/services/${s.slug})**, ${s.shortDescription}`)
     .join('\n');
 
   const areaLines = areas
@@ -25,7 +25,7 @@ export async function GET() {
 
   const phoneDigits = business.phone.replace(/\D/g, '');
 
-  const content = `# Tristar Locksmith — Knoxville, TN Locksmith
+  const content = `# Tristar Locksmith, Knoxville, TN Locksmith
 
 > [View HTML version](${SITE.url}/)
 

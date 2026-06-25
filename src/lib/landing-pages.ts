@@ -79,18 +79,18 @@ const PAGES: LandingPageData[] = [
       "Need a new car key in Knoxville? Tristar Locksmith cuts and programs keys, fobs, and smart keys on-site for most makes and models. Upfront pricing, no surprises.",
     heroVariants: {
       A: {
-        h1: "Lost Your Car Key? We Come to You and Make a Replacement On-Site.",
+        h1: "Lost Your Car Key? We Make Replacements On-Site.",
         ctaLabel: "Get a Quote Now ↓",
         formHeading: "Get a Quote Now",
       },
       B: {
-        h1: "No Car Key? Don't Call the Dealer — Call Tristar. We Cut and Program On-Site.",
+        h1: "No Car Key? We Cut and Program a New One On-Site.",
         ctaLabel: "Get Help Now ↓",
         formHeading: "Get Help Now",
       },
     },
     heroSub:
-      "Tristar Locksmith cuts and programs car keys for most makes and models — at your location anywhere in the Knoxville area. Often less than the dealer, with an upfront price before we start. Call now — emergency service available around the clock.",
+      "Tristar Locksmith cuts and programs car keys for most makes and models at your location anywhere in the Knoxville area. Often less than the dealer, with an upfront price before we start. Call now. Emergency service available around the clock.",
     heroImage: "/images/lp/tech-car-lockout.png",
     heroImageAlt: "Tristar Locksmith technician programming a car key in Knoxville, TN",
     formDefaultService: "Car Key Replacement",
@@ -109,7 +109,7 @@ const PAGES: LandingPageData[] = [
       {
         number: "2",
         title: "We come to your location",
-        body: "We bring the cutting and programming equipment to you — no tow truck, no trip to the dealer.",
+        body: "We bring the cutting and programming equipment to you. No tow truck, no trip to the dealer.",
       },
       {
         number: "3",
@@ -126,12 +126,12 @@ const PAGES: LandingPageData[] = [
       {
         icon: "🚗",
         title: "Most makes and models",
-        body: "Toyota, Honda, Ford, GM, Kia, Hyundai, and more — cars, trucks, and SUVs.",
+        body: "Toyota, Honda, Ford, GM, Kia, Hyundai and more. Cars, trucks, and SUVs.",
       },
       {
         icon: "📍",
         title: "We come to you",
-        body: "Home, office, parking lot — we come to wherever the car is.",
+        body: "Home, office, parking lot. We come to wherever the car is.",
       },
       {
         icon: "🏅",
@@ -171,12 +171,12 @@ const PAGES: LandingPageData[] = [
       {
         question: "Can you make a car key if I have no key at all?",
         answer:
-          "Yes. We can create a key from scratch using your VIN and proof of ownership. You don't need an existing key — just your ID and registration.",
+          "Yes. We can create a key from scratch using your VIN and proof of ownership. You don't need an existing key, just your ID and registration.",
       },
       {
         question: "How much does a replacement car key cost?",
         answer:
-          "It depends on the year, make, and model — basic transponder keys cost less than smart/proximity keys. We give you an exact quote on the phone before you commit.",
+          "It depends on the year, make, and model. Basic transponder keys cost less than smart/proximity keys. We give you an exact quote on the phone before you commit.",
       },
       {
         question: "Do you work on all car brands?",
@@ -196,7 +196,7 @@ const PAGES: LandingPageData[] = [
     ],
     finalCtaHeading: "Ready to get back on the road?",
     finalCtaSub:
-      "Call now and we'll give you a price on the phone — then come straight to your location.",
+      "Call now and we'll give you a price on the phone, then come straight to your location.",
   },
 
   // ─────────────────────────────────────────────
@@ -210,18 +210,18 @@ const PAGES: LandingPageData[] = [
       "Locked out of your home in Knoxville? Tristar Locksmith opens residential doors without damage. Licensed, insured, upfront pricing. Serving Knoxville and 27 surrounding areas.",
     heroVariants: {
       A: {
-        h1: "Locked Out of Your Home in Knoxville? We Get You In — No Damage, Upfront Price.",
+        h1: "Locked Out of Your Home? We Get You In, No Damage.",
         ctaLabel: "Get a Quote Now ↓",
         formHeading: "Get a Quote Now",
       },
       B: {
-        h1: "Locked Out of Your House Right Now? Call Tristar — We'll Have You Inside Without Breaking a Thing.",
+        h1: "Locked Out Right Now? We'll Get You Inside, No Damage.",
         ctaLabel: "Get Help Now ↓",
         formHeading: "Get Help Now",
       },
     },
     heroSub:
-      "Our licensed locksmiths open residential doors without breaking anything — verified, insured, and on-site throughout the Knoxville area. We tell you the cost before we touch anything. Call now — lines are open around the clock.",
+      "Our licensed locksmiths open residential doors without breaking anything. Licensed, insured, and on-site throughout the Knoxville area. We tell you the cost before we touch anything. Call now. Lines are open around the clock.",
     heroImage: "/images/lp/tech-house-lockout.png",
     heroImageAlt: "Tristar Locksmith technician helping a homeowner get back inside in Knoxville, TN",
     formDefaultService: "House Lockout",
@@ -244,7 +244,7 @@ const PAGES: LandingPageData[] = [
       },
       {
         number: "3",
-        title: "Back inside — and we can rekey if you want",
+        title: "Back inside, and we can rekey if you want",
         body: "Once you're in, we can rekey or replace the lock right then if you need extra peace of mind.",
       },
     ],
@@ -288,7 +288,7 @@ const PAGES: LandingPageData[] = [
         location: "Knoxville",
       },
       {
-        text: "Great experience. Called them when I was locked out of my apartment, they came out and verified my identity, then unlocked the door cleanly. They also rekeyed the lock since I'd lost my key — done in one visit.",
+        text: "Great experience. Called them when I was locked out of my apartment, they came out and verified my identity, then unlocked the door cleanly. They also rekeyed the lock since I'd lost my key. Done in one visit.",
         author: "Carlos M.",
         location: "Powell",
       },
@@ -302,7 +302,7 @@ const PAGES: LandingPageData[] = [
       {
         question: "How do you verify it's my home?",
         answer:
-          "We ask for a photo ID matching the address. If it's a rental, a piece of mail or lease agreement works. We do this on every job — it protects you and us.",
+          "We ask for a photo ID matching the address. If it's a rental, a piece of mail or lease agreement works. We do this on every job. It protects you and us.",
       },
       {
         question: "Will my lock be damaged?",
@@ -317,7 +317,7 @@ const PAGES: LandingPageData[] = [
       {
         question: "Can you rekey my lock while you're there?",
         answer:
-          "Absolutely. If you want to change who has a key — after a breakup, a new roommate situation, or just for peace of mind — we carry the tools to rekey most residential locks on the spot.",
+          "Absolutely. If you want to change who has a key (after a breakup, a new roommate situation, or just for peace of mind), we carry the tools to rekey most residential locks on the spot.",
       },
       {
         question: "Do you serve the areas around Knoxville?",
@@ -325,7 +325,7 @@ const PAGES: LandingPageData[] = [
           "Yes. We cover Farragut, Powell, Maryville, Oak Ridge, Alcoa, Clinton, Hardin Valley, Karns, and 20+ more East TN cities. Call and tell us where you are.",
       },
     ],
-    finalCtaHeading: "Let's get you back inside — call now.",
+    finalCtaHeading: "Let's get you back inside. Call now.",
     finalCtaSub:
       "Call us now or fill out the form. We'll give you a firm price on the phone and send someone out to you.",
   },
@@ -341,18 +341,18 @@ const PAGES: LandingPageData[] = [
       "Keys locked in your car in Knoxville? Tristar Locksmith opens your vehicle without damage. All makes and models. Licensed, insured, upfront pricing.",
     heroVariants: {
       A: {
-        h1: "Keys Locked in Your Car? We Open It Without Damage and Without Drama.",
+        h1: "Keys Locked in Your Car? We Open It Without Damage.",
         ctaLabel: "Get a Quote Now ↓",
         formHeading: "Get a Quote Now",
       },
       B: {
-        h1: "Locked Out of Your Car Right Now? Call Tristar — No Damage, Upfront Price, We Come to You.",
+        h1: "Locked Out of Your Car? We Come to You, No Damage.",
         ctaLabel: "Get Help Now ↓",
         formHeading: "Get Help Now",
       },
     },
     heroSub:
-      "Tristar Locksmith uses professional tools to open your vehicle without breaking windows or damaging locks — cars, trucks, SUVs, any make or model. We come to you anywhere in the Knoxville area. Call now — emergency service available around the clock.",
+      "Tristar Locksmith uses professional tools to open your vehicle without breaking windows or damaging locks. Cars, trucks, SUVs, any make or model. We come to you anywhere in the Knoxville area. Call now. Emergency service available around the clock.",
     heroImage: "/images/lp/tech-car-lockout.png",
     heroImageAlt: "Tristar Locksmith technician unlocking a car in Knoxville, TN",
     formDefaultService: "Car Lockout",
@@ -371,7 +371,7 @@ const PAGES: LandingPageData[] = [
       {
         number: "2",
         title: "We come to you",
-        body: "Parking lot, roadside, your driveway — we come to wherever your car is in the Knoxville area.",
+        body: "Parking lot, roadside, your driveway. We come to wherever your car is in the Knoxville area.",
       },
       {
         number: "3",
@@ -393,7 +393,7 @@ const PAGES: LandingPageData[] = [
       {
         icon: "🚐",
         title: "We come to your location",
-        body: "Wherever your car is — parking lot, side of the road, your home — we come to you.",
+        body: "Wherever your car is. Parking lot, side of the road, your home. We come to you.",
       },
       {
         icon: "🚗",
@@ -407,7 +407,7 @@ const PAGES: LandingPageData[] = [
       { label: "Keys locked in the trunk" },
       { label: "Broken key in the door lock" },
       { label: "Keys in the ignition (locked)" },
-      { label: "All car brands — domestic and foreign" },
+      { label: "All car brands, domestic and foreign" },
       { label: "Cars, trucks, SUVs, and vans" },
       { label: "Older vehicles (non-electronic locks)" },
       { label: "Push-to-start vehicles" },
@@ -448,7 +448,7 @@ const PAGES: LandingPageData[] = [
       {
         question: "Is it cheaper to call you or use my roadside assistance?",
         answer:
-          "Roadside assistance (AAA, insurance-based) often works well for basic lockouts. If you don't have coverage or they're unavailable, we offer transparent flat-rate pricing — give us a call and compare.",
+          "Roadside assistance (AAA, insurance-based) often works well for basic lockouts. If you don't have coverage or they're unavailable, we offer transparent flat-rate pricing. Give us a call and compare.",
       },
       {
         question: "Can you make a spare key for my car while you're there?",

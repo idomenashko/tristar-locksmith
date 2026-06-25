@@ -15,7 +15,7 @@ ${a.description}`
     )
     .join('\n\n');
 
-  const content = `# About Tristar Locksmith — Knoxville, TN
+  const content = `# About Tristar Locksmith, Knoxville, TN
 
 > [View HTML version](${SITE.url}/about)
 

@@ -1,0 +1,81 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header — Tristar Locksmith Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+        fontFamily: {
+          display: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-warm-white font-display min-h-screen">
+
+  <!-- Sticky header sits at top -->
+  <header class="sticky top-0 z-50 bg-navy shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <!-- Wordmark -->
+      <div class="flex items-center gap-2">
+        <span class="text-gold font-black text-lg leading-none tracking-tight">★★★</span>
+        <span class="text-white font-bold text-lg tracking-wide">TRISTAR LOCKSMITH</span>
+      </div>
+
+      <!-- Call CTA -->
+      <a href="tel:+18653813931" class="flex items-center gap-2 bg-emergency text-white font-bold text-sm sm:text-base min-h-10 rounded-lg px-4 sm:px-5 hover:bg-red-700 active:bg-red-800 transition-colors shadow-md">
+        <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        <span class="hidden sm:inline">(865) 381-3931</span>
+        <span class="sm:hidden">Call Now</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page content below to show header in context -->
+  <div class="max-w-6xl mx-auto px-4 py-16 space-y-8">
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-extrabold text-navy mb-2">Component Notes</h2>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> <span><strong>Position:</strong> <code class="bg-gray-100 px-1 rounded">sticky top-0 z-50</code> — stays visible on scroll</span></li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> <span><strong>Height:</strong> h-16 (64px) — enough tap target, not imposing</span></li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> <span><strong>Shadow:</strong> <code class="bg-gray-100 px-1 rounded">shadow-lg</code> — gives depth over page content on scroll</span></li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> <span><strong>Wordmark:</strong> Gold stars (★★★) + white text. No tagline, no nav links — this is a landing page.</span></li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> <span><strong>CTA:</strong> Red call button always visible. On mobile shows "Call Now"; on sm+ shows the full number.</span></li>
+        <li class="flex gap-2"><span class="text-emergency font-bold">✗</span> <span>Never add nav menu links, dropdown, or hamburger — this is a conversion-only LP header.</span></li>
+      </ul>
+    </div>
+
+    <!-- Simulated page content to scroll past -->
+    <div class="bg-white rounded-2xl shadow p-8">
+      <h1 class="text-4xl font-black text-navy mb-4">Locked Out of Your Car?</h1>
+      <p class="text-gray-700 text-lg leading-relaxed">Scroll up to see the sticky header in action. The nav bar stays fixed at the top while this content scrolls beneath it.</p>
+    </div>
+
+    <div class="h-64 bg-navy rounded-2xl flex items-center justify-center">
+      <p class="text-white/50 text-sm">Page content continues…</p>
+    </div>
+    <div class="h-64 bg-warm-white rounded-2xl border border-gray-200 flex items-center justify-center">
+      <p class="text-muted text-sm">Page content continues…</p>
+    </div>
+  </div>
+
+</body>
+</html>

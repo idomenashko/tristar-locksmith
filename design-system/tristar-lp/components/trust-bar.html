@@ -1,0 +1,130 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trust Bar — Tristar Locksmith Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+        fontFamily: {
+          display: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-display min-h-screen py-8">
+  <div class="max-w-4xl mx-auto space-y-10 px-4">
+
+    <div class="px-2">
+      <h1 class="text-3xl font-black text-navy mb-1">Trust Bar</h1>
+      <p class="text-muted">Full-width credibility strip. Sits directly below the header. No links, no CTAs — just signal.</p>
+    </div>
+
+    <!-- DESKTOP VIEW -->
+    <div>
+      <p class="text-xs font-bold text-muted uppercase tracking-widest mb-3 px-2">Desktop — single row</p>
+      <div class="bg-navy-dark text-white py-3 px-4 w-full">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm font-medium">
+          <span class="flex items-center gap-1.5">
+            <span class="text-gold">⭐</span>
+            <span>5.0 (127 reviews)</span>
+          </span>
+          <span class="text-white/30 hidden sm:inline">·</span>
+          <span>Licensed &amp; Insured</span>
+          <span class="text-white/30 hidden sm:inline">·</span>
+          <span>Upfront Pricing</span>
+          <span class="text-white/30 hidden sm:inline">·</span>
+          <span>Non-Destructive Entry</span>
+          <span class="text-white/30 hidden sm:inline">·</span>
+          <span>Serving 27+ Cities</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE VIEW -->
+    <div>
+      <p class="text-xs font-bold text-muted uppercase tracking-widest mb-3 px-2">Mobile — wraps naturally at small widths</p>
+      <div class="max-w-sm mx-auto bg-navy-dark text-white py-3 px-4 rounded-lg overflow-hidden">
+        <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-xs font-medium text-center">
+          <span class="flex items-center gap-1">
+            <span class="text-gold text-sm">⭐</span>
+            <span>5.0 (127 reviews)</span>
+          </span>
+          <span class="text-white/30">·</span>
+          <span>Licensed &amp; Insured</span>
+          <span class="text-white/30">·</span>
+          <span>Upfront Pricing</span>
+          <span class="text-white/30">·</span>
+          <span>Non-Destructive Entry</span>
+          <span class="text-white/30">·</span>
+          <span>Serving 27+ Cities</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- In-context preview: header + trust bar together -->
+    <div>
+      <p class="text-xs font-bold text-muted uppercase tracking-widest mb-3 px-2">In-context — header + trust bar stacked</p>
+      <div class="rounded-2xl overflow-hidden shadow-xl">
+        <!-- Header -->
+        <div class="bg-navy h-16 flex items-center justify-between px-5">
+          <div class="flex items-center gap-2">
+            <span class="text-gold font-black text-lg">★★★</span>
+            <span class="text-white font-bold text-lg tracking-wide">TRISTAR LOCKSMITH</span>
+          </div>
+          <button class="flex items-center gap-2 bg-emergency text-white font-bold text-sm min-h-9 rounded-lg px-4">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            (865) 381-3931
+          </button>
+        </div>
+        <!-- Trust bar -->
+        <div class="bg-navy-dark text-white py-2.5 px-4">
+          <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs font-medium">
+            <span class="flex items-center gap-1"><span class="text-gold">⭐</span> 5.0 (127 reviews)</span>
+            <span class="text-white/30">·</span>
+            <span>Licensed &amp; Insured</span>
+            <span class="text-white/30">·</span>
+            <span>Upfront Pricing</span>
+            <span class="text-white/30">·</span>
+            <span>Non-Destructive Entry</span>
+            <span class="text-white/30">·</span>
+            <span>Serving 27+ Cities</span>
+          </div>
+        </div>
+        <!-- Hero placeholder -->
+        <div class="bg-navy h-32 flex items-center justify-center">
+          <p class="text-white/40 text-sm">Hero section below ↓</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="bg-white rounded-2xl shadow p-6 mx-2">
+      <h2 class="text-lg font-extrabold text-navy mb-3">Component Notes</h2>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> Always placed immediately below the sticky nav.</li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> bg-navy-dark distinguishes it visually from the nav (bg-navy).</li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> py-2.5 on desktop, py-3 when wrapping to 2 rows on mobile.</li>
+        <li class="flex gap-2"><span class="text-emergency font-bold">✗</span> No links, no buttons, no icons other than the star emoji.</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>

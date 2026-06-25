@@ -100,7 +100,7 @@ export function Header({ logo }: HeaderProps) {
                 href="tel:8653813931"
                 className="mt-2 bg-gold text-navy font-bold text-sm px-4 py-3 rounded-md uppercase tracking-wide text-center"
               >
-                📞 (865) 381-3931 — Call Now
+                📞 (865) 381-3931 · Call Now
               </a>
             </div>
           </nav>

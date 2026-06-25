@@ -9,7 +9,7 @@ export async function GET() {
 
   const areaList = areas.map((area) => `- ${area.name}, TN`).join('\n');
 
-  const content = `# Contact Tristar Locksmith — Knoxville, TN
+  const content = `# Contact Tristar Locksmith, Knoxville, TN
 
 > [View HTML version](${SITE.url}/contact)
 
@@ -20,7 +20,7 @@ export async function GET() {
 🚨 **Emergency:** ${business.emergencyHours ?? '24/7 Emergency Service'}
 📍 **Address:** ${business.address}, ${business.city}, ${business.state}
 
-Call us anytime — no online booking form needed.
+Call us anytime, no online booking form needed.
 
 ---
 

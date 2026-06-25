@@ -26,12 +26,12 @@ export async function GET(
   const services = await getServices();
 
   const serviceLines = services
-    .map((s) => `- [${s.title}](${SITE.url}/services/${s.slug}) — ${s.shortDescription}`)
+    .map((s) => `- [${s.title}](${SITE.url}/services/${s.slug}), ${s.shortDescription}`)
     .join('\n');
 
   const nearbyLines = area.nearbyAreas.map((a) => `- ${a}`).join('\n');
 
-  const content = `# Locksmith Services in ${area.name}, TN — Tristar Locksmith
+  const content = `# Locksmith Services in ${area.name}, TN, Tristar Locksmith
 
 > [View HTML version](${SITE.url}/service-areas/${area.slug})
 

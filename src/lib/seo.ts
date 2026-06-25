@@ -6,7 +6,7 @@ export const SITE = {
   phone: "(865) 381-3931",
   phoneHref: "tel:8653813931",
   description:
-    "Tristar Locksmith — trusted 24/7 locksmith serving Knoxville, TN and surrounding areas. Car lockout, house lockout, rekey, lock change, and more.",
+    "Tristar Locksmith, trusted 24/7 locksmith serving Knoxville, TN and surrounding areas. Car lockout, house lockout, rekey, lock change, and more.",
   ogImage: "/og-image.jpg",
   twitterHandle: "@tristarlocksmith",
 } as const;
@@ -26,7 +26,7 @@ export function buildMetadata({
 }: BuildMetadataOptions): Metadata {
   const url = `${SITE.url}${path}`;
   return {
-    title: `${title} | ${SITE.name} — Knoxville, TN`,
+    title: `${title} | ${SITE.name}, Knoxville, TN`,
     description,
     metadataBase: new URL(SITE.url),
     alternates: {

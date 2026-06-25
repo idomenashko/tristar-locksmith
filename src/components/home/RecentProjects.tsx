@@ -42,7 +42,7 @@ export async function RecentProjects() {
             Recent Projects
           </h2>
           <p className="text-muted max-w-xl mx-auto">
-            Real jobs, real results — a look at recent work completed by our
+            Real jobs, real results. A look at recent work completed by our
             Knoxville locksmith team.
           </p>
         </div>
@@ -60,7 +60,7 @@ export async function RecentProjects() {
                 <div className="relative aspect-[3/4] w-full overflow-hidden">
                   <Image
                     src={project.image}
-                    alt={`${project.title} — ${project.description}`}
+                    alt={`${project.title}: ${project.description}`}
                     width={400}
                     height={533}
                     className="object-cover w-full h-full"

@@ -61,7 +61,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
         <div className="text-3xl mb-3">✅</div>
-        <h3 className="font-bold text-navy text-lg mb-2">Got it — we&apos;ll call you back shortly.</h3>
+        <h3 className="font-bold text-navy text-lg mb-2">Got it. We&apos;ll call you back shortly.</h3>
         <p className="text-muted text-sm mb-4">
           For urgent help, reach us directly right now:
         </p>
@@ -137,7 +137,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
           name="serviceNeeded"
           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent bg-white"
         >
-          <option value="">— Select a service —</option>
+          <option value="">Select a service</option>
           {SERVICES.map((s) => (
             <option key={s} value={s}>
               {s}
@@ -168,7 +168,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
           id="lead-note"
           name="note"
           rows={2}
-          placeholder="Optional details — vehicle type, lock brand, etc."
+          placeholder="Optional details: vehicle type, lock brand, etc."
           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent resize-none"
         />
       </div>
@@ -186,7 +186,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
         <a href="tel:8653813931" className="font-semibold text-gold hover:underline">
           (865) 381-3931
         </a>{" "}
-        — available 7 AM–11:30 PM, 24/7 emergency line
+        · available 7 AM–11:30 PM, 24/7 emergency line
       </p>
     </form>
   );

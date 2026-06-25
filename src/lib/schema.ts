@@ -77,7 +77,7 @@ export function buildProjectsSchema(projects: { title: string; description: stri
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Recent Locksmith Projects — Tristar Locksmith",
+    name: "Recent Locksmith Projects, Tristar Locksmith",
     itemListElement: projects.map((project, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -150,7 +150,7 @@ export function buildLocksmithServiceSchema(opts: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `${opts.serviceType} — ${opts.cityName}, TN`,
+    name: `${opts.serviceType}, ${opts.cityName}, TN`,
     description: opts.description,
     serviceType: opts.serviceType,
     provider: {

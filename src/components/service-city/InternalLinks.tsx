@@ -31,7 +31,7 @@ export function InternalLinks({
                 href={`/services/${parentServiceSlug}`}
                 className="text-gold hover:underline"
               >
-                {parentServiceName} — All Areas
+                {parentServiceName}: All Areas
               </a>
             </li>
             <li>
@@ -71,7 +71,7 @@ export function InternalLinks({
               {nearbyLinks.map((n) => (
                 <li key={n.slug}>
                   <a href={`/${n.slug}`} className="text-gold hover:underline">
-                    {currentServiceName} — {n.cityName}
+                    {currentServiceName} in {n.cityName}
                   </a>
                 </li>
               ))}

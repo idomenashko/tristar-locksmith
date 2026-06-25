@@ -14,7 +14,7 @@ export function LandingBenefits({ benefits }: LandingBenefitsProps) {
             Why Knoxville Calls Tristar
           </h2>
           <p className="text-muted text-lg max-w-xl mx-auto">
-            Knoxville trusts Tristar — here&apos;s what sets us apart.
+            Knoxville trusts Tristar. Here&apos;s what sets us apart.
           </p>
         </Reveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

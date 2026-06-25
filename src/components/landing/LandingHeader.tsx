@@ -90,7 +90,7 @@ export function LandingHeader() {
     <header className="sticky top-0 z-50 bg-navy h-16 flex items-center px-4 md:px-8 shadow-lg">
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
         {/* Logo — links back to main site */}
-        <a href="https://tristarlocksmith.com" aria-label="Tristar Locksmith — Home">
+        <a href="https://tristarlocksmith.com" aria-label="Tristar Locksmith Home">
           <TristarLogo height={44} />
         </a>
 

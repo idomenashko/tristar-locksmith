@@ -9,7 +9,7 @@ export function ServiceCityFaq({ faqs, serviceName, cityName }: ServiceCityFaqPr
   return (
     <section>
       <h2 className="text-2xl font-bold text-navy mb-6 font-display">
-        Frequently Asked Questions — {serviceName} in {cityName}
+        Frequently Asked Questions: {serviceName} in {cityName}
       </h2>
       <div className="space-y-6">
         {faqs.map((faq) => (

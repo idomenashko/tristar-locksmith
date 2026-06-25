@@ -29,7 +29,7 @@ export async function GET(
     .map((faq) => `**Q: ${faq.question}**\n\nA: ${faq.answer}`)
     .join('\n\n');
 
-  const content = `# ${service.title} — Tristar Locksmith, Knoxville TN
+  const content = `# ${service.title}, Tristar Locksmith, Knoxville TN
 
 > [View HTML version](${SITE.url}/services/${service.slug})
 

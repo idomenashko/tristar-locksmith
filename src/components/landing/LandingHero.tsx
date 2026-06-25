@@ -85,7 +85,7 @@ export function LandingHero({
           <div className="hero-entrance">
             <h1
               className="text-white font-black leading-tight mb-5"
-              style={{ fontSize: "clamp(36px, 5vw, 56px)" }}
+              style={{ fontSize: "clamp(28px, 3.6vw, 44px)" }}
             >
               {h1}
             </h1>
@@ -127,11 +127,11 @@ export function LandingHero({
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             <h2 className="text-navy font-bold text-2xl mb-1">{formHeading}</h2>
             <p className="text-muted text-sm mb-6">
-              Tell us where you are — we&apos;ll call you right back.
+              Tell us where you are. We&apos;ll call you right back.
             </p>
             <LeadForm source={formSource} />
             <p className="text-muted text-xs mt-4 text-center">
-              Upfront price confirmed before we start — no hidden fees.
+              Upfront price confirmed before we start. No hidden fees.
             </p>
           </div>
 

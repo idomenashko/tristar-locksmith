@@ -88,7 +88,7 @@ export function LandingFinalCta({ heading, sub, formSource }: LandingFinalCtaPro
               <p className="text-muted text-sm mb-6">We&apos;ll confirm your request and reach out.</p>
               <LeadForm source={`${formSource}-bottom`} />
               <p className="text-muted text-xs mt-4 text-center">
-                Upfront price confirmed before we start — no hidden fees.
+                Upfront price confirmed before we start. No hidden fees.
               </p>
             </div>
           </Reveal>

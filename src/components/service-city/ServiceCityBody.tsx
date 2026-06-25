@@ -10,8 +10,8 @@ interface ServiceCityBodyProps {
 const WHY_TRISTAR = [
   "5.0 stars from 127 verified reviews",
   "Licensed, insured, and background-checked technicians",
-  "Non-destructive techniques — no damage to your property",
-  "Upfront pricing quoted before we begin — no surprises",
+  "Non-destructive techniques. No damage to your property.",
+  "Upfront pricing quoted before we begin. No surprises.",
   "Serving Knoxville and 26 surrounding East Tennessee communities",
   "7 AM–11:30 PM daily · 24/7 emergency line always open",
 ];
@@ -40,7 +40,7 @@ export function ServiceCityBody({
           Locksmith Coverage in {cityName}, TN
         </h2>
         <p className="text-ink mb-4">
-          Tristar Locksmith serves the full {cityName} area — including these neighborhoods and nearby areas:
+          Tristar Locksmith serves the full {cityName} area, including these neighborhoods and nearby areas:
         </p>
         <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
           {neighborhoods.map((n) => (
@@ -63,10 +63,10 @@ export function ServiceCityBody({
           Transparent Pricing in {cityName}
         </h2>
         <p className="text-ink mb-3">
-          When you call Tristar Locksmith in {cityName}, we give you a firm price before we touch anything — no surprises after the job.
+          When you call Tristar Locksmith in {cityName}, we give you a firm price before we touch anything. No surprises after the job.
         </p>
         <ul className="space-y-2 text-sm text-ink">
-          <li className="flex items-start gap-2"><span className="text-forest font-bold">✓</span> Upfront pricing — you approve the cost before we start</li>
+          <li className="flex items-start gap-2"><span className="text-forest font-bold">✓</span> Upfront pricing: you approve the cost before we start</li>
           <li className="flex items-start gap-2"><span className="text-forest font-bold">✓</span> No hidden dispatch or service-call fees</li>
           <li className="flex items-start gap-2"><span className="text-forest font-bold">✓</span> Emergency rates disclosed on the call, not after the job</li>
         </ul>

@@ -8,7 +8,7 @@ import { LeadFormSection } from "@/components/forms/LeadFormSection";
 export const metadata = buildMetadata({
   title: "Contact Tristar Locksmith",
   description:
-    "Contact Tristar Locksmith — call (865) 381-3931 for 24/7 locksmith service in Knoxville, TN and surrounding areas. Licensed, insured, upfront pricing.",
+    "Contact Tristar Locksmith. Call (865) 381-3931 for 24/7 locksmith service in Knoxville, TN and surrounding areas. Licensed, insured, upfront pricing.",
   path: "/contact",
 });
 
@@ -22,7 +22,7 @@ export default async function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            The best way to reach us is by phone. We&apos;re available 24/7 — no hold times, no automated systems.
+            The best way to reach us is by phone. We&apos;re available 24/7. No hold times, no automated systems.
           </p>
         </Container>
       </div>
@@ -63,7 +63,7 @@ export default async function ContactPage() {
                   <div>
                     <h3 className="font-bold text-navy mb-1">Service Location</h3>
                     <p className="text-ink">Knoxville, TN and surrounding East Tennessee areas</p>
-                    <p className="text-muted text-sm mt-1">We come to you — no storefront visits needed</p>
+                    <p className="text-muted text-sm mt-1">We come to you. No storefront visits needed.</p>
                   </div>
                 </div>
 
@@ -79,7 +79,7 @@ export default async function ContactPage() {
 
               <div className="mt-8">
                 <Button href="tel:8653813931" variant="emergency" size="lg" className="w-full justify-center">
-                  🚨 Call Now — Available 24/7
+                  🚨 Call Now · Available 24/7
                 </Button>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default async function ContactPage() {
                   ))}
                 </div>
                 <p className="text-muted text-sm mt-4">
-                  Not seeing your area? Call us — we may still be able to help.
+                  Not seeing your area? Call us. We may still be able to help.
                 </p>
               </div>
             </div>

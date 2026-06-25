@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
       .split(",")
       .map((e) => e.trim())
       .filter(Boolean),
-    subject: `🔐 New Lead: ${name} — ${serviceNeeded ?? "General"}`,
+    subject: `🔐 New Lead: ${name} | ${serviceNeeded ?? "General"}`,
     text: whatsappText,
     html: `
 <!DOCTYPE html>
@@ -159,7 +159,7 @@ export async function POST(req: NextRequest) {
 
   if (error) {
     console.error("Resend error:", error);
-    return NextResponse.json({ error: "Failed to send — please call us directly." }, { status: 500 });
+    return NextResponse.json({ error: "Failed to send. Please call us directly." }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true });

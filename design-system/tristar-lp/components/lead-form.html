@@ -1,0 +1,144 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Form — Tristar Locksmith Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+        fontFamily: {
+          display: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-warm-white font-display min-h-screen py-12 px-4">
+  <div class="max-w-2xl mx-auto space-y-8">
+
+    <div>
+      <h1 class="text-3xl font-black text-navy mb-1">Lead Form</h1>
+      <p class="text-muted">White card with gold submit CTA. The form is the conversion goal on every landing page.</p>
+    </div>
+
+    <!-- The form card -->
+    <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+      <h2 class="text-2xl font-bold text-navy mb-1">Get a Free Quote</h2>
+      <p class="text-muted text-sm mb-6">Fill in what you need — we'll reach out with an upfront price.</p>
+
+      <form class="space-y-4" onsubmit="return false;">
+
+        <!-- Honeypot (hidden) -->
+        <input type="text" name="_hp" class="hidden" tabindex="-1" autocomplete="off" />
+
+        <!-- Name -->
+        <div>
+          <label for="name" class="block text-sm font-semibold text-navy mb-1">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-base text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-navy transition"
+          />
+        </div>
+
+        <!-- Phone (required) -->
+        <div>
+          <label for="phone" class="block text-sm font-semibold text-navy mb-1">
+            Phone <span class="text-emergency font-bold">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(865) 000-0000"
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-base text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-navy transition"
+          />
+        </div>
+
+        <!-- Service Needed -->
+        <div>
+          <label for="service" class="block text-sm font-semibold text-navy mb-1">Service Needed</label>
+          <select
+            id="service"
+            name="serviceNeeded"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-navy focus:border-navy transition bg-white"
+          >
+            <option value="">Select a service…</option>
+            <option value="car-lockout">Car Lockout</option>
+            <option value="house-lockout">House Lockout</option>
+            <option value="car-key-replacement">Car Key Replacement</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <label for="address" class="block text-sm font-semibold text-navy mb-1">Address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Where do you need help?"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-base text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-navy transition"
+          />
+        </div>
+
+        <!-- Note -->
+        <div>
+          <label for="note" class="block text-sm font-semibold text-navy mb-1">Note <span class="text-muted font-normal">(optional)</span></label>
+          <textarea
+            id="note"
+            name="note"
+            rows="3"
+            placeholder="Anything else we should know?"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-base text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-navy focus:border-navy transition resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="w-full bg-gold text-navy font-bold text-lg min-h-14 rounded-xl hover:bg-yellow-500 active:bg-yellow-600 transition-colors shadow-md mt-2"
+        >
+          Get My Free Quote →
+        </button>
+
+        <p class="text-center text-sm text-muted pt-1">No commitment. We quote before we come out.</p>
+
+      </form>
+    </div>
+
+    <!-- Notes -->
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-lg font-extrabold text-navy mb-3">Component Notes</h2>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> Phone is the only required field — marked with red asterisk.</li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> Honeypot field <code class="bg-gray-100 px-1 rounded">_hp</code> hidden via CSS, not <code>type="hidden"</code>.</li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> Submit: bg-gold text-navy — gold CTA only, never red.</li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> Focus state: navy ring — consistent with brand.</li>
+        <li class="flex gap-2"><span class="text-forest font-bold">✓</span> Card: rounded-2xl shadow-xl — prominent, floating above bg.</li>
+        <li class="flex gap-2"><span class="text-emergency font-bold">✗</span> Never use red on the submit button — that's reserved for call only.</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>

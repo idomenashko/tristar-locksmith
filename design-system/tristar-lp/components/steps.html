@@ -1,0 +1,130 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steps — Tristar Locksmith Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+        fontFamily: {
+          display: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-display min-h-screen py-8">
+
+  <!-- The component -->
+  <section class="bg-warm-white py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy text-center mb-4">How It Works</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-lg mx-auto">Three steps from locked out to back in business.</p>
+
+      <div class="grid sm:grid-cols-3 gap-8">
+
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center text-center">
+          <!-- Circle: emergency red for step 1 -->
+          <div class="w-20 h-20 rounded-full bg-emergency flex items-center justify-center mb-5 shadow-lg">
+            <span class="text-white font-black text-3xl">1</span>
+          </div>
+          <!-- Connector line (desktop only) -->
+          <h3 class="text-xl font-bold text-navy mb-3">Call or Request a Quote</h3>
+          <p class="text-gray-600 leading-relaxed">Tell us where you are and what happened. We give you an upfront price right on the call — no surprises.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center text-center relative">
+          <div class="w-20 h-20 rounded-full bg-navy flex items-center justify-center mb-5 shadow-lg">
+            <span class="text-white font-black text-3xl">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-navy mb-3">Our Technician Heads Your Way</h3>
+          <p class="text-gray-600 leading-relaxed">We send a licensed, insured technician to your location. They carry professional tools for every common lock and key situation.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-navy flex items-center justify-center mb-5 shadow-lg">
+            <span class="text-white font-black text-3xl">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-navy mb-3">Back in Business</h3>
+          <p class="text-gray-600 leading-relaxed">Non-destructive entry. Upfront price. Done. You pay exactly what we quoted — nothing more.</p>
+        </div>
+
+      </div>
+
+      <!-- Connecting arrows (desktop) -->
+    </div>
+  </section>
+
+  <!-- Desktop connector line version -->
+  <section class="bg-warm-white py-16 px-4 border-t border-gray-200 mt-4">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-xs font-bold text-muted uppercase tracking-widest text-center mb-10">With connectors (desktop variant)</p>
+
+      <div class="relative">
+        <!-- Connector line -->
+        <div class="hidden sm:block absolute top-10 left-1/6 right-1/6 h-0.5 bg-navy/20"></div>
+
+        <div class="grid sm:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-full bg-emergency flex items-center justify-center mb-5 shadow-lg ring-4 ring-warm-white z-10 relative">
+              <span class="text-white font-black text-3xl">1</span>
+            </div>
+            <h3 class="text-xl font-bold text-navy mb-3">Call or Request a Quote</h3>
+            <p class="text-gray-600 leading-relaxed">Tell us where you are and what happened. We give you an upfront price right on the call — no surprises.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-full bg-navy flex items-center justify-center mb-5 shadow-lg ring-4 ring-warm-white z-10 relative">
+              <span class="text-white font-black text-3xl">2</span>
+            </div>
+            <h3 class="text-xl font-bold text-navy mb-3">Our Technician Heads Your Way</h3>
+            <p class="text-gray-600 leading-relaxed">We send a licensed, insured technician to your location with professional tools for every situation.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-full bg-navy flex items-center justify-center mb-5 shadow-lg ring-4 ring-warm-white z-10 relative">
+              <span class="text-white font-black text-3xl">3</span>
+            </div>
+            <h3 class="text-xl font-bold text-navy mb-3">Back in Business</h3>
+            <p class="text-gray-600 leading-relaxed">Non-destructive entry. Upfront price. Done. You pay exactly what we quoted — nothing more.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA below steps -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+        <a href="tel:+18653813931" class="flex items-center justify-center gap-3 bg-emergency text-white font-bold text-lg min-h-14 rounded-xl px-8 shadow-md hover:bg-red-700 transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          (865) 381-3931
+        </a>
+        <button class="flex items-center justify-center gap-2 bg-gold text-navy font-bold text-lg min-h-14 rounded-xl px-8 shadow-md hover:bg-yellow-500 transition-colors">
+          Get a Free Quote
+        </button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

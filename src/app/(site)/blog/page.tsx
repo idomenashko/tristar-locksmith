@@ -26,7 +26,7 @@ export default function BlogPage() {
           </p>
 
           {posts.length === 0 ? (
-            <p className="text-muted">No posts yet — check back soon.</p>
+            <p className="text-muted">No posts yet. Check back soon.</p>
           ) : (
             <div className="grid gap-6 md:grid-cols-2">
               {posts.map((post) => (

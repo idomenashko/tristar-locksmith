@@ -1,0 +1,122 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews — Tristar Locksmith Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#1B3A5C',
+          'navy-dark': '#122a44',
+          gold: '#D4A03C',
+          emergency: '#DC2626',
+          forest: '#2E7D4F',
+          'warm-white': '#F5F5F0',
+          muted: '#6B7280',
+        },
+        fontFamily: {
+          display: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-display min-h-screen">
+
+  <section class="bg-warm-white py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Header -->
+      <div class="text-center mb-4">
+        <div class="flex items-center justify-center gap-1.5 mb-3">
+          <span class="text-gold text-2xl">★★★★★</span>
+          <span class="text-navy font-extrabold text-xl">5.0</span>
+          <span class="text-muted text-sm">(127 reviews)</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy">What Knoxville Says</h2>
+        <p class="text-muted mt-2 max-w-md mx-auto">Real reviews from real East Tennessee customers.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6 mt-10">
+
+        <!-- Review 1 -->
+        <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col">
+          <!-- Stars -->
+          <div class="flex gap-0.5 mb-4">
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+          </div>
+          <!-- Quote -->
+          <p class="text-gray-700 italic leading-relaxed flex-1 text-sm">
+            "Called Tristar when I locked my keys in my car at the Walmart on Kingston Pike. The tech was professional, had it open without a scratch. Quoted me a flat rate on the phone — that's exactly what I paid."
+          </p>
+          <!-- Reviewer -->
+          <div class="mt-5 pt-4 border-t border-gray-100">
+            <p class="font-bold text-navy text-sm">Michael R.</p>
+            <p class="text-muted text-xs">Knoxville, TN</p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col">
+          <div class="flex gap-0.5 mb-4">
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+          </div>
+          <p class="text-gray-700 italic leading-relaxed flex-1 text-sm">
+            "Lost the only key to my truck. Dealer wanted an arm and a leg plus a week wait. Tristar came to my driveway and cut and programmed a new key on the spot. Cheaper than the dealer."
+          </p>
+          <div class="mt-5 pt-4 border-t border-gray-100">
+            <p class="font-bold text-navy text-sm">Sarah T.</p>
+            <p class="text-muted text-xs">Farragut, TN</p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col">
+          <div class="flex gap-0.5 mb-4">
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+            <span class="text-gold text-lg">★</span>
+          </div>
+          <p class="text-gray-700 italic leading-relaxed flex-1 text-sm">
+            "Locked out of my house at 10pm. Called Tristar, they sent someone. No drama, upfront price, door opened without damage. 5 stars."
+          </p>
+          <div class="mt-5 pt-4 border-t border-gray-100">
+            <p class="font-bold text-navy text-sm">James W.</p>
+            <p class="text-muted text-xs">Powell, TN</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom aggregate badge -->
+      <div class="mt-10 flex justify-center">
+        <div class="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-md border border-gray-100">
+          <span class="text-gold text-xl">⭐</span>
+          <span class="text-navy font-bold">5.0 average</span>
+          <span class="text-muted text-sm">·</span>
+          <span class="text-muted text-sm">127 verified reviews</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

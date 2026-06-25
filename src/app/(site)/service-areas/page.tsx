@@ -35,7 +35,7 @@ export default async function ServiceAreasPage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <p className="text-muted mb-4">Not in the list? Give us a call — we may still serve your area.</p>
+            <p className="text-muted mb-4">Not in the list? Give us a call. We may still serve your area.</p>
             <Button href="tel:8653813931" variant="primary" size="lg">
               📞 Call (865) 381-3931
             </Button>

@@ -9,7 +9,7 @@ interface LeadFormSectionProps {
 const COPY = {
   contact: {
     heading: "Request a Callback",
-    sub: "Fill in your details and we'll call you back — usually within minutes.",
+    sub: "Fill in your details and we'll call you back shortly.",
   },
   blog: {
     heading: "Need a Locksmith Now?",
@@ -34,7 +34,7 @@ export function LeadFormSection({
           href="tel:8653813931"
           className="inline-flex items-center gap-2 bg-gold text-navy font-bold px-5 py-2.5 rounded-md text-sm uppercase tracking-wide hover:bg-amber-400 transition-colors mb-5"
         >
-          📞 Call (865) 381-3931 — Available 24/7
+          📞 Call (865) 381-3931
         </a>
       </div>
       <h2 className="text-xl font-bold text-navy mb-1 font-display">

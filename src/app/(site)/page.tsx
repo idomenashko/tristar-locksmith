@@ -13,7 +13,7 @@ import { getFaqs, getHomepage } from "@/lib/queries";
 export const metadata = buildMetadata({
   title: "24/7 Locksmith Knoxville, TN",
   description:
-    "Tristar Locksmith — trusted 24/7 locksmith in Knoxville, TN. Car lockout, house lockout, rekey, lock change, and emergency services. Licensed, insured, upfront pricing. Call (865) 381-3931.",
+    "Tristar Locksmith: trusted 24/7 locksmith in Knoxville, TN. Car lockout, house lockout, rekey, lock change, and emergency services. Licensed, insured, upfront pricing. Call (865) 381-3931.",
   path: "/",
 });
 
