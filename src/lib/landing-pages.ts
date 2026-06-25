@@ -91,7 +91,7 @@ const PAGES: LandingPageData[] = [
     },
     heroSub:
       "Tristar Locksmith cuts and programs car keys for most makes and models right here in Knoxville — often for less than the dealer, with upfront pricing before we start.",
-    heroImage: "/images/lp/tech-keys.png",
+    heroImage: "/images/lp/tech-car-lockout.png",
     heroImageAlt: "Tristar Locksmith technician programming a car key in Knoxville, TN",
     formDefaultService: "Car Key Replacement",
     badges: [
@@ -222,8 +222,8 @@ const PAGES: LandingPageData[] = [
     },
     heroSub:
       "Our licensed locksmiths open residential doors without breaking anything. Upfront pricing — we tell you the cost before we touch anything.",
-    heroImage: "/images/lp/tech-door.png",
-    heroImageAlt: "Tristar Locksmith technician opening a residential door in Knoxville, TN",
+    heroImage: "/images/lp/tech-house-lockout.png",
+    heroImageAlt: "Tristar Locksmith technician helping a homeowner get back inside in Knoxville, TN",
     formDefaultService: "House Lockout",
     badges: [
       "Licensed & Insured",
@@ -353,7 +353,7 @@ const PAGES: LandingPageData[] = [
     },
     heroSub:
       "Tristar Locksmith uses professional tools to unlock your vehicle — cars, trucks, SUVs, any make or model. We come to you, wherever you are in the Knoxville area.",
-    heroImage: "/images/lp/tech-keys.png",
+    heroImage: "/images/lp/tech-car-lockout.png",
     heroImageAlt: "Tristar Locksmith technician unlocking a car in Knoxville, TN",
     formDefaultService: "Car Lockout",
     badges: [
