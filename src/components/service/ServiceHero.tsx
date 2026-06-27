@@ -11,7 +11,7 @@ export function ServiceHero({ service }: ServiceHeroProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-5xl mb-4">{service.icon}</div>
         <h1 className="text-4xl lg:text-5xl font-bold text-white font-display mb-4">
-          {service.title}
+          {service.title} in Knoxville, TN
         </h1>
         <p className="text-xl text-white/80 max-w-2xl mb-8">
           {service.shortDescription}

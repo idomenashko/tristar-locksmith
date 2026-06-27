@@ -8,6 +8,7 @@ import { FaqAccordion } from "@/components/home/FaqAccordion";
 import { CtaSection } from "@/components/home/CtaSection";
 import { RecentProjects } from "@/components/home/RecentProjects";
 import { buildMetadata } from "@/lib/seo";
+import { buildFAQSchema } from "@/lib/schema";
 import { getFaqs, getHomepage } from "@/lib/queries";
 
 export const metadata = buildMetadata({
@@ -19,9 +20,14 @@ export const metadata = buildMetadata({
 
 export default async function HomePage() {
   const [faqs, homepage] = await Promise.all([getFaqs(), getHomepage()]);
+  const faqSchema = buildFAQSchema(faqs);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <EmergencyBanner />
       <Hero {...homepage} />
       <ServicesGrid />
