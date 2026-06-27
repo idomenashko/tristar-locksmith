@@ -13,6 +13,7 @@ import {
 } from "@/lib/service-city";
 import { buildLocksmithServiceSchema, buildFAQSchema, buildBreadcrumbSchema } from "@/lib/schema";
 import { ServiceCityHero } from "@/components/service-city/ServiceCityHero";
+import { getServiceImage, getServiceImageAlt } from "@/lib/service-images";
 import { ServiceCityBody } from "@/components/service-city/ServiceCityBody";
 import { ServiceCityFaq } from "@/components/service-city/ServiceCityFaq";
 import { InternalLinks } from "@/components/service-city/InternalLinks";
@@ -98,6 +99,8 @@ export default async function ServiceCityPage({
         h1={combo.h1}
         answerCapsule={combo.answerCapsule}
         serviceName={combo.serviceMeta.label}
+        image={getServiceImage(combo.serviceMeta.parentService)}
+        imageAlt={getServiceImageAlt(combo.serviceMeta.label, combo.cityMeta.name)}
       />
 
       <Section className="bg-warm-white">

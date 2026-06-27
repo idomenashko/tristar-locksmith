@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -17,12 +18,26 @@ export default async function AboutPage() {
     <>
       <div className="bg-navy text-white py-16">
         <Container>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white font-display mb-4">
-            About Tristar Locksmith
-          </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            Serving Knoxville and East Tennessee for over 15 years. Insured, background-checked, and built on honest pricing.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            <div>
+              <h1 className="text-4xl lg:text-5xl font-bold text-white font-display mb-4">
+                About Tristar Locksmith
+              </h1>
+              <p className="text-xl text-white/80 max-w-2xl">
+                Serving Knoxville and East Tennessee for over 15 years. Insured, background-checked, and built on honest pricing.
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+              <Image
+                src="/images/lp/tech-house-lockout.png"
+                alt="A Tristar Locksmith technician helping a customer at their front door in Knoxville, TN"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
+          </div>
         </Container>
       </div>
 
