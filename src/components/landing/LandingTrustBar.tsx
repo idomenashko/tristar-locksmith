@@ -18,7 +18,7 @@ export function LandingTrustBar() {
           {" "}Reviews)
         </span>
         <span className="hidden sm:inline text-white/40">·</span>
-        <span>Licensed &amp; Insured</span>
+        <span>Insured &amp; Background-Checked</span>
         <span className="hidden sm:inline text-white/40">·</span>
         <span>Upfront Pricing</span>
         <span className="hidden sm:inline text-white/40">·</span>

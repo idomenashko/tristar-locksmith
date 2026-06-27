@@ -12,61 +12,54 @@ interface CountUpProps {
 }
 
 /**
- * Animates a number from 0 to `target` when it enters the viewport.
- * Respects prefers-reduced-motion by showing the final value instantly.
+ * Displays `target`, with an optional count-up animation as progressive
+ * enhancement. The value is initialized to `target` so SSR, no-JS, and the
+ * first paint all show the real number — no "0.0 Stars / 0 Reviews" flash on
+ * a paid landing page. The animation only runs once, on viewport entry, and
+ * only when motion is allowed.
  */
 export function CountUp({
   target,
   decimals = 0,
   suffix = "",
   prefix = "",
-  duration = 1400,
+  duration = 1200,
   className = "",
 }: CountUpProps) {
-  const [value, setValue] = useState(0);
-  const [triggered, setTriggered] = useState(false);
+  const [value, setValue] = useState(target);
+  const triggered = useRef(false);
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || triggered.current) return;
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) {
-      setValue(target);
-      return;
-    }
+    if (prefersReduced) return; // already showing target — nothing to do
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !triggered) {
-          setTriggered(true);
-          observer.disconnect();
-        }
+        if (!entry.isIntersecting || triggered.current) return;
+        triggered.current = true;
+        observer.disconnect();
+
+        const startTime = performance.now();
+        const tick = (now: number) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+          setValue(eased * target);
+          if (progress < 1) requestAnimationFrame(tick);
+          else setValue(target);
+        };
+        setValue(0);
+        requestAnimationFrame(tick);
       },
       { threshold: 0.3 }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [target, triggered]);
-
-  useEffect(() => {
-    if (!triggered) return;
-
-    const startTime = performance.now();
-
-    function tick(now: number) {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      // Ease-out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setValue(eased * target);
-      if (progress < 1) requestAnimationFrame(tick);
-    }
-
-    requestAnimationFrame(tick);
-  }, [triggered, target, duration]);
+  }, [target, duration]);
 
   const display =
     decimals > 0 ? value.toFixed(decimals) : Math.floor(value).toString();

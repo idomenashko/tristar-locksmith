@@ -95,7 +95,7 @@ const PAGES: LandingPageData[] = [
     heroImageAlt: "Tristar Locksmith technician programming a car key in Knoxville, TN",
     formDefaultService: "Car Key Replacement",
     badges: [
-      "Licensed & Insured",
+      "Insured & Background-Checked",
       "Upfront Pricing",
       "All Makes & Models",
       "Emergency Line Available",
@@ -135,8 +135,8 @@ const PAGES: LandingPageData[] = [
       },
       {
         icon: "🏅",
-        title: "Licensed and insured",
-        body: "All our technicians are trained, licensed, and fully insured.",
+        title: "Insured and background-checked",
+        body: "All our technicians are trained, fully insured, and background-checked.",
       },
     ],
     coveredHeading: "What we handle",
@@ -207,7 +207,7 @@ const PAGES: LandingPageData[] = [
     serviceName: "House Lockout",
     metaTitle: "Locked Out of Your House? Knoxville Locksmith | Tristar",
     metaDescription:
-      "Locked out of your home in Knoxville? Tristar Locksmith opens residential doors without damage. Licensed, insured, upfront pricing. Serving Knoxville and 27 surrounding areas.",
+      "Locked out of your home in Knoxville? Tristar Locksmith opens residential doors without damage. Insured, background-checked, upfront pricing. Serving Knoxville and 27 surrounding areas.",
     heroVariants: {
       A: {
         h1: "Locked Out of Your Home? We Get You In, No Damage.",
@@ -221,12 +221,12 @@ const PAGES: LandingPageData[] = [
       },
     },
     heroSub:
-      "Our licensed locksmiths open residential doors without breaking anything. Licensed, insured, and on-site throughout the Knoxville area. We tell you the cost before we touch anything. Call now. Lines are open around the clock.",
+      "Our insured locksmiths open residential doors without breaking anything. Insured, background-checked, and on-site throughout the Knoxville area. We tell you the cost before we touch anything. Call now. Lines are open around the clock.",
     heroImage: "/images/lp/tech-house-lockout.png",
     heroImageAlt: "Tristar Locksmith technician helping a homeowner get back inside in Knoxville, TN",
     formDefaultService: "House Lockout",
     badges: [
-      "Licensed & Insured",
+      "Insured & Background-Checked",
       "Non-Destructive Entry",
       "Upfront Pricing",
       "Emergency Line Available",
@@ -338,7 +338,7 @@ const PAGES: LandingPageData[] = [
     serviceName: "Car Lockout",
     metaTitle: "Keys Locked in Car? Knoxville Car Lockout Service | Tristar",
     metaDescription:
-      "Keys locked in your car in Knoxville? Tristar Locksmith opens your vehicle without damage. All makes and models. Licensed, insured, upfront pricing.",
+      "Keys locked in your car in Knoxville? Tristar Locksmith opens your vehicle without damage. All makes and models. Insured, background-checked, upfront pricing.",
     heroVariants: {
       A: {
         h1: "Keys Locked in Your Car? We Open It Without Damage.",
@@ -357,7 +357,7 @@ const PAGES: LandingPageData[] = [
     heroImageAlt: "Tristar Locksmith technician unlocking a car in Knoxville, TN",
     formDefaultService: "Car Lockout",
     badges: [
-      "Licensed & Insured",
+      "Insured & Background-Checked",
       "Non-Destructive Entry",
       "Upfront Pricing",
       "Emergency Line Available",

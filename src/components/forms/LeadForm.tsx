@@ -194,7 +194,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
         <a href="tel:8653813931" className="font-semibold text-gold hover:underline">
           (865) 381-3931
         </a>{" "}
-        · available 7 AM–11:30 PM, 24/7 emergency line
+        · available 7 AM–11:30 PM · emergency service around the clock
       </p>
     </form>
   );

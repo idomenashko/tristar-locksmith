@@ -23,7 +23,7 @@ function LandingFooter() {
         </p>
         <p className="text-white/70 text-sm">5825 Pine Needle Ln, Knoxville TN 37921</p>
         <p className="text-white/60 text-sm">
-          Licensed &amp; Insured · Every day 7 AM–11:30 PM · Emergency service available around the clock
+          Insured &amp; Background-Checked · Every day 7 AM–11:30 PM · Emergency service available around the clock
         </p>
         <div className="border-t border-white/10 pt-6 mt-6">
           <p className="text-white/40 text-xs">
