@@ -26,7 +26,10 @@ export function buildMetadata({
 }: BuildMetadataOptions): Metadata {
   const url = `${SITE.url}${path}`;
   return {
-    title: `${title} | ${SITE.name}, Knoxville, TN`,
+    // `absolute` bypasses the root layout's title.template so the brand
+    // suffix is applied exactly once (avoids "... | Tristar Locksmith ..."
+    // appearing twice on every page).
+    title: { absolute: `${title} | ${SITE.name}` },
     description,
     metadataBase: new URL(SITE.url),
     alternates: {
