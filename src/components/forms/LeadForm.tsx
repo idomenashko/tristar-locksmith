@@ -116,7 +116,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
             required
             autoComplete="name"
             placeholder="Your name"
-            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
           />
         </div>
 
@@ -131,7 +131,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
             required
             autoComplete="tel"
             placeholder="(865) 555-0100"
-            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
           />
         </div>
       </div>
@@ -143,7 +143,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
         <select
           id="lead-service"
           name="serviceNeeded"
-          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent bg-white"
+          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
         >
           <option value="">Select a service</option>
           {SERVICES.map((s) => (
@@ -164,7 +164,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
           type="text"
           autoComplete="street-address"
           placeholder="Street address or neighborhood"
-          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
         />
       </div>
 
@@ -177,7 +177,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
           name="note"
           rows={2}
           placeholder="Optional details: vehicle type, lock brand, etc."
-          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent resize-none"
+          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent resize-none"
         />
       </div>
 
