@@ -260,6 +260,35 @@
           "answer": "Yes. After opening, Tristar Locksmith can reset a dial combination to a new code of your choice, reprogram an electronic keypad with a new PIN, or replace a failed lock mechanism entirely. We leave your safe fully functional and secured before we leave."
         }
       ]
+    },
+    {
+      "slug": "key-fob-programming",
+      "title": "Key Fob Programming",
+      "icon": "📡",
+      "shortDescription": "Key fob not working or need a replacement programmed? Tristar Locksmith programs proximity fobs and smart keys for most vehicle makes on-site in the Knoxville area.",
+      "longDescription": "A key fob that stops communicating with your vehicle, a replacement fob that needs to be paired, or a push-to-start smart key that the car no longer recognizes — Tristar Locksmith handles all of it on-site at your location. We carry programming equipment for most domestic and foreign vehicle makes, including proximity fobs, remote start-equipped keys, and push-to-start smart key systems. We come to you across Knox County and surrounding communities, program the key or fob at your vehicle, test it fully, and leave. No tow to the dealer, no appointment required. We also handle situations where all programmed keys have been lost, clearing the vehicle's key registry and programming new keys from scratch.",
+      "features": [
+        "On-site key fob programming at your location",
+        "Covers most domestic and foreign vehicle makes",
+        "Proximity fob, smart key, and push-to-start systems",
+        "Aftermarket fob programming when compatible",
+        "Lost-all-keys system resets and reprogramming",
+        "Battery replacement and fob shell replacement"
+      ],
+      "faqs": [
+        {
+          "question": "Can you program a key fob on-site without going to the dealer?",
+          "answer": "Yes. Tristar Locksmith carries the programming equipment for most major vehicle makes and comes to your location. We program fobs, proximity keys, and smart keys on-site in Knox County and surrounding areas, no appointment or tow required."
+        },
+        {
+          "question": "Can you program an aftermarket fob I bought online?",
+          "answer": "In many cases, yes. Aftermarket fobs can often be programmed with the same equipment we use for OEM keys. Compatibility depends on your vehicle's system. Call with your vehicle year, make, and model and we will confirm before dispatching."
+        },
+        {
+          "question": "What if I've lost all my programmed keys?",
+          "answer": "Tristar Locksmith can clear your vehicle's key registry and program new keys from scratch even when you have no existing working keys. We verify ownership documentation first, then complete the full programming on-site."
+        }
+      ]
     }
   ]
 }

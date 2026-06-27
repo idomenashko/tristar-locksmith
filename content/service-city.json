@@ -472,6 +472,93 @@
       ],
       "parentService": "lock-change",
       "schema_serviceType": "Lock Change Service"
+    },
+    "ignition-repair": {
+      "label": "Ignition Repair",
+      "h1Template": "Ignition Repair in {cityName}, TN, Tristar Locksmith",
+      "metaTitle": "Ignition Repair {cityName}, TN",
+      "metaDescription": "Car ignition won't turn or key stuck in {cityName}, TN? Tristar Locksmith repairs and replaces ignition cylinders on-site. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith handles ignition repair and replacement in {cityName}, TN for most vehicle makes. We diagnose stuck keys, worn cylinders, and failed ignition switches on-site and carry common replacement cylinders. No tow required. Call (865) 381-3931.",
+      "whatWeDo": "An ignition that won't turn, a key that won't come out, or a cylinder that spins freely with no resistance are all signs of a failing ignition system and can leave you stranded in {cityName}. Tristar Locksmith diagnoses ignition problems on-site and determines whether the cylinder needs to be repaired, rebuilt, or fully replaced. We carry common replacement cylinders for popular domestic and foreign makes and complete most jobs in a single visit wherever your vehicle is located. After replacement, we re-code the new cylinder to your existing key so you don't need a new cut. We also handle stuck and broken key extractions, a broken key tip in the ignition is a frequent call and one we resolve quickly with the right tools.",
+      "scenarioTemplate": "Ignition problems in {cityName} tend to happen at the worst moments. A worn cylinder that binds on a cold morning near {landmark1}, a key that suddenly won't turn in a parking lot off {landmark2}, or a broken key tip that shears off and jams the switch entirely. Tristar Locksmith handles all of these scenarios on-site wherever your vehicle is stopped in {cityName}.",
+      "faqs": [
+        {
+          "question": "Can you repair my car ignition on-site in {cityName}?",
+          "answer": "Yes. Tristar Locksmith carries the tools and replacement cylinders for most common vehicle makes and can diagnose and repair ignition problems wherever your car is located in {cityName}. We handle stuck keys, worn cylinders, and broken pins on-site without needing to tow your vehicle."
+        },
+        {
+          "question": "My key won't turn in the ignition in {cityName} — what's wrong?",
+          "answer": "The most common causes are a worn ignition cylinder with damaged wafers or pins, a bent key that no longer aligns properly, or a steering column lock engaged by accident. Tristar Locksmith diagnoses the issue on-site and tells you whether it needs a cylinder repair, a replacement, or a new key."
+        },
+        {
+          "question": "Can you extract a broken key from my ignition in {cityName}?",
+          "answer": "Yes. Broken key extraction from ignitions is a routine service call. Tristar Locksmith uses professional extraction tools to remove the broken piece without damaging the ignition cylinder. After extraction, we can cut a replacement key on-site if needed."
+        },
+        {
+          "question": "Do I need a new key after an ignition cylinder replacement in {cityName}?",
+          "answer": "Not necessarily. In most cases, Tristar Locksmith re-codes the replacement cylinder to match your existing key so you can keep using the same key. We will confirm this is possible for your specific vehicle when we diagnose the problem."
+        }
+      ],
+      "parentService": "ignition-repair",
+      "schema_serviceType": "Ignition Repair Service"
+    },
+    "emergency-locksmith": {
+      "label": "Emergency Locksmith",
+      "h1Template": "Emergency Locksmith in {cityName}, TN, Tristar Locksmith",
+      "metaTitle": "Emergency Locksmith {cityName}, TN",
+      "metaDescription": "Emergency locksmith in {cityName}, TN. Lockouts, broken locks, and break-in repair with emergency service available around the clock. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith provides emergency locksmith service in {cityName}, TN for residential and commercial lockouts, broken locks, forced entry repairs, and security emergencies. Emergency service is available around the clock. Call (865) 381-3931.",
+      "whatWeDo": "Emergencies don't follow a schedule, and Tristar Locksmith makes emergency service available around the clock throughout {cityName}. Our technicians handle residential and commercial lockouts, broken lock mechanisms, post-break-in security repairs, snapped keys, and any situation where security needs to be restored immediately. A break-in at a property near {landmark1} or a failed door lock in {neighborhood1} both require immediate, professional attention. We dispatch quickly, work with all common residential and commercial hardware, and won't leave until the property is secure. Pricing is disclosed before we begin, even on emergency calls.",
+      "scenarioTemplate": "Emergency calls in {cityName} come in all forms. A homeowner in {neighborhood1} who returned to find a forced entry. A tenant locked out at 1 AM with nowhere to go. A manager near {landmark2} who can't secure the building at closing because the door lock failed. Whatever the situation, Tristar Locksmith's emergency line connects you directly to a live dispatcher, not a call center, not a voicemail.",
+      "faqs": [
+        {
+          "question": "Is emergency locksmith service available around the clock in {cityName}?",
+          "answer": "Yes. Tristar Locksmith maintains emergency service availability around the clock throughout {cityName} and the surrounding East Tennessee area. Call (865) 381-3931 at any hour and you will reach a live dispatcher who can confirm availability and send a technician."
+        },
+        {
+          "question": "How fast can you reach me in {cityName} for an emergency?",
+          "answer": "Response times vary by time of day, distance, and call volume, but Tristar Locksmith prioritizes emergency calls and dispatches the nearest available technician. When you call, we will give you an honest estimated arrival window based on current availability in {cityName}."
+        },
+        {
+          "question": "Do you charge extra for after-hours emergency calls in {cityName}?",
+          "answer": "Emergency and after-hours calls may carry a service premium. Tristar Locksmith discloses all pricing before any work begins so there are no surprises. The amount we quote when you call is the amount you pay, no fees added after the fact."
+        },
+        {
+          "question": "Can you repair a lock damaged in a break-in in {cityName}?",
+          "answer": "Yes. Post-break-in lock repair and replacement is one of the most common emergency calls we handle. Tristar Locksmith assesses the damaged entry point, replaces compromised hardware with a higher-security option, and checks your other exterior doors before leaving."
+        }
+      ],
+      "parentService": "emergency-locksmith",
+      "schema_serviceType": "Emergency Locksmith Service"
+    },
+    "key-fob-programming": {
+      "label": "Key Fob Programming",
+      "h1Template": "Key Fob Programming in {cityName}, TN, Tristar Locksmith",
+      "metaTitle": "Key Fob Programming {cityName}, TN",
+      "metaDescription": "Key fob not working in {cityName}, TN? Tristar Locksmith programs replacement fobs and smart keys for all major vehicle makes on-site. Call (865) 381-3931.",
+      "answerCapsule": "Tristar Locksmith programs key fobs and smart keys in {cityName}, TN for most domestic and foreign vehicle makes. We handle proximity fobs, remote start keys, and push-to-start systems at your location. Call (865) 381-3931.",
+      "whatWeDo": "A key fob that won't lock or unlock your car, a smart key the vehicle no longer recognizes, or a broken fob that needs replacing can all be handled by Tristar Locksmith on-site in {cityName}. We carry programming equipment for most domestic and foreign vehicles, including push-to-start smart key systems, proximity fobs, and remote start keys. We come to your location in {cityName}, whether you're in {neighborhood1} or near {landmark1}, program the fob on-site, test it thoroughly, and leave. No tow to the dealer, no waiting for parts. We also handle cases where all programmed keys have been lost and the vehicle's system needs to be cleared and reconfigured from scratch.",
+      "scenarioTemplate": "A fob that stops working in {cityName} can cause real disruption, especially on a push-to-start vehicle where the fob is the key. A cracked fob case that no longer communicates with the receiver, a replacement fob purchased online that needs to be paired, or a lost smart key that requires the vehicle system to be reset — all of these are situations Tristar Locksmith handles on-site across {cityName} without a tow or a dealer appointment.",
+      "faqs": [
+        {
+          "question": "Can you program a key fob for my vehicle in {cityName}?",
+          "answer": "Yes. Tristar Locksmith carries programming equipment for most major domestic and foreign vehicle makes. We program replacement fobs, proximity keys, and smart push-to-start keys on-site at your location in {cityName}. Call (865) 381-3931 with your vehicle make, model, and year and we will confirm compatibility before dispatching."
+        },
+        {
+          "question": "Can you program a fob I bought online in {cityName}?",
+          "answer": "In many cases, yes. Aftermarket fobs can often be programmed to your vehicle using the same equipment we use for OEM keys. Compatibility depends on your vehicle's system. Call with your vehicle details and we will let you know if the fob you purchased is programmable."
+        },
+        {
+          "question": "My push-to-start key stopped working in {cityName} — can you fix it?",
+          "answer": "Yes. Smart key and push-to-start failures are commonly caused by a dead key battery, a damaged fob case, or a pairing issue. Tristar Locksmith diagnoses the issue on-site and handles battery replacement, fob reprogramming, or full system reconfiguration as needed."
+        },
+        {
+          "question": "Can you program a key fob if I've lost all my keys in {cityName}?",
+          "answer": "Yes. Even without any working keys, Tristar Locksmith can clear your vehicle's key registry and program one or more new fobs from scratch. We will need ownership documentation to verify you are the registered owner before proceeding."
+        }
+      ],
+      "parentService": "key-fob-programming",
+      "schema_serviceType": "Key Fob Programming Service"
     }
   },
   "combos": {}

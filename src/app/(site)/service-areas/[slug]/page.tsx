@@ -15,6 +15,9 @@ const MONEY_PAGE_SERVICES = new Set([
   "safe-lockout",
   "commercial-locksmith",
   "lock-change",
+  "ignition-repair",
+  "emergency-locksmith",
+  "key-fob-programming",
 ]);
 
 export async function generateStaticParams() {
