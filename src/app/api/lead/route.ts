@@ -21,13 +21,24 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true });
   }
 
-  const { name, phone, serviceNeeded, address, note, _source } = body as {
+  const { name, phone, serviceNeeded, address, note, _source, _attr } = body as {
     name?: string;
     phone?: string;
     serviceNeeded?: string;
     address?: string;
     note?: string;
     _source?: string;
+    _attr?: {
+      gclid?: string;
+      gbraid?: string;
+      wbraid?: string;
+      utm_source?: string;
+      utm_medium?: string;
+      utm_campaign?: string;
+      utm_term?: string;
+      utm_content?: string;
+      landing?: string;
+    };
   };
 
   if (!name || !phone || String(phone).replace(/\D/g, "").length < 10) {
@@ -50,6 +61,14 @@ export async function POST(req: NextRequest) {
     hour12: true,
   });
 
+  // Ad attribution — which campaign / keyword produced this lead (paid clicks only)
+  const isPaid = Boolean(_attr && (_attr.gclid || _attr.gbraid || _attr.wbraid || _attr.utm_source));
+  const campaign = _attr?.utm_campaign;
+  const keyword = _attr?.utm_term;
+  const attrSummary = isPaid
+    ? `Google Ads${campaign ? ` · ${campaign}` : ""}${keyword ? ` · "${keyword}"` : ""}`
+    : "Organic / direct";
+
   // Plain-text WhatsApp block — easy to copy from email and paste into WhatsApp
   const whatsappText = [
     `🔐 *New Lead — Tristar Locksmith*`,
@@ -62,6 +81,8 @@ export async function POST(req: NextRequest) {
     ``,
     `🕐 ${timeStr}`,
     `🌐 Source: ${_source ?? "site"}`,
+    `📣 Campaign: ${attrSummary}`,
+    ...(isPaid && _attr?.gclid ? [`🔗 GCLID: ${_attr.gclid}`] : []),
   ].join("\n");
 
   const { error } = await resend.emails.send({
@@ -129,9 +150,15 @@ export async function POST(req: NextRequest) {
           </td>
         </tr>
         <tr>
-          <td style="padding:10px 0;">
+          <td style="padding:10px 0;border-bottom:1px solid #f0f0f0;">
             <span style="color:#888;font-size:12px;display:block;margin-bottom:2px;">Note</span>
             <span style="color:#0a1628;font-size:15px;">${escapeHtml(note || "—")}</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0;">
+            <span style="color:#888;font-size:12px;display:block;margin-bottom:2px;">Campaign / Keyword</span>
+            <span style="color:${isPaid ? "#16a34a" : "#0a1628"};font-size:15px;font-weight:${isPaid ? "bold" : "normal"};">${escapeHtml(attrSummary)}</span>
           </td>
         </tr>
       </table>
@@ -145,7 +172,7 @@ export async function POST(req: NextRequest) {
         </tr>
       </table>
 
-      <p style="margin:20px 0 0;color:#aaa;font-size:11px;text-align:center;">Source: ${escapeHtml(_source ?? "site")} &middot; tristarlocksmith.com</p>
+      <p style="margin:20px 0 0;color:#aaa;font-size:11px;text-align:center;">Source: ${escapeHtml(_source ?? "site")} &middot; ${escapeHtml(attrSummary)} &middot; tristarlocksmith.com</p>
     </td>
   </tr>
 

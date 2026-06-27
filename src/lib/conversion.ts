@@ -11,12 +11,16 @@
 
 import { trackConversionWithVariant, peekVariant } from "@/lib/experiment";
 
-// TODO: paste your Google Ads conversion labels here after creating them in your account
+// Conversion labels come from Google Ads (Goals → Conversions → New conversion action).
+// Paste each label into Vercel env vars — no code change or redeploy of source needed:
+//   NEXT_PUBLIC_GADS_LEAD_LABEL = <Lead Form Submit label, e.g. "abc123XYZ">
+//   NEXT_PUBLIC_GADS_CALL_LABEL = <Phone Call Click label, e.g. "def456ABC">
+// Until both are set they remain placeholders and the Ads conversion is a safe no-op.
 const CONVERSION_LABELS = {
   /** Fires when the lead form is submitted successfully */
-  leadFormSubmit: "REPLACE_WITH_LABEL", // e.g. "abc123XYZ"
+  leadFormSubmit: process.env.NEXT_PUBLIC_GADS_LEAD_LABEL || "REPLACE_WITH_LABEL",
   /** Fires when the click-to-call phone link is clicked */
-  phoneCall: "REPLACE_WITH_LABEL", // e.g. "def456ABC"
+  phoneCall: process.env.NEXT_PUBLIC_GADS_CALL_LABEL || "REPLACE_WITH_LABEL",
 } as const;
 
 const ADS_ID = "AW-18165468053";

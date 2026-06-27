@@ -460,6 +460,137 @@ const PAGES: LandingPageData[] = [
     finalCtaSub:
       "Call us or fill out the form. We'll quote you on the phone and come to wherever your car is in the Knoxville area.",
   },
+
+  // ─────────────────────────────────────────────
+  // 4. EMERGENCY LOCKSMITH
+  // ─────────────────────────────────────────────
+  {
+    slug: "emergency-locksmith",
+    serviceName: "Emergency Locksmith",
+    metaTitle: "Emergency Locksmith Knoxville TN | Tristar Locksmith",
+    metaDescription:
+      "Need an emergency locksmith in Knoxville? Tristar Locksmith comes to you for car, home, and business lockouts. Insured local technicians, upfront pricing, no damage.",
+    heroVariants: {
+      A: {
+        h1: "Need an Emergency Locksmith in Knoxville?",
+        ctaLabel: "Get a Quote Now ↓",
+        formHeading: "Get a Quote Now",
+      },
+      B: {
+        h1: "Locked Out Right Now? A Local Locksmith Comes to You.",
+        ctaLabel: "Get Help Now ↓",
+        formHeading: "Get Help Now",
+      },
+    },
+    heroSub:
+      "Tristar Locksmith is a local, insured locksmith for car, home, and business lockouts across the Knoxville area. We come to your location, tell you the price before we start, and open locks without damage. Call now. Emergency service available around the clock.",
+    heroImage: "/images/lp/tech-door.png",
+    heroImageAlt: "Tristar Locksmith technician on an emergency call in Knoxville, TN",
+    formDefaultService: "Other",
+    badges: [
+      "Insured & Background-Checked",
+      "We Come to You",
+      "Upfront Pricing",
+      "Emergency Line Available",
+    ],
+    steps: [
+      {
+        number: "1",
+        title: "Call and tell us what's locked",
+        body: "Car, house, or business. Tell us where you are and what happened. We confirm the price on the phone.",
+      },
+      {
+        number: "2",
+        title: "A local technician comes to you",
+        body: "We dispatch from the Knoxville area to your location. No national call center, no runaround.",
+      },
+      {
+        number: "3",
+        title: "We get you back in, no damage",
+        body: "We open the lock with professional tools and can rekey or repair on the spot if you need it.",
+      },
+    ],
+    benefits: [
+      {
+        icon: "📍",
+        title: "Local, not a call center",
+        body: "You reach our Knoxville dispatcher and a local technician, not a national routing service.",
+      },
+      {
+        icon: "🛡️",
+        title: "No-damage entry",
+        body: "We open locks the right way. No drilling unless absolutely necessary, and we'll tell you first.",
+      },
+      {
+        icon: "💰",
+        title: "Price quoted before we start",
+        body: "You hear the cost on the phone. The price we say is the price you pay.",
+      },
+      {
+        icon: "🕐",
+        title: "Emergency line available",
+        body: "Emergency service is available around the clock for genuine lockouts and security situations.",
+      },
+    ],
+    coveredHeading: "What we handle",
+    covered: [
+      { label: "Car, home, and business lockouts" },
+      { label: "Broken keys in locks" },
+      { label: "Failed or jammed locks" },
+      { label: "Break-in damage repair" },
+      { label: "Rekey after a lost key" },
+      { label: "Lock replacement on-site" },
+      { label: "Apartment and rental units" },
+      { label: "Commercial entry doors" },
+    ],
+    reviews: [
+      {
+        text: "Locked out of my house late on a Sunday and couldn't find anyone. Tristar answered, gave me a price, and a local tech showed up and got me in without any damage. Lifesaver.",
+        author: "Renee D.",
+        location: "Knoxville",
+      },
+      {
+        text: "Our shop's lock failed at closing and we couldn't secure the building. Called Tristar, they came out, fixed it, and rekeyed it the same night. Professional and fair.",
+        author: "Tony G.",
+        location: "Maryville",
+      },
+      {
+        text: "Snapped my key off in the front door. They extracted it cleanly and made me a new one on the spot. Exactly the price they quoted on the phone. Highly recommend.",
+        author: "Allison P.",
+        location: "Oak Ridge",
+      },
+    ],
+    faqs: [
+      {
+        question: "What counts as a locksmith emergency?",
+        answer:
+          "Being locked out of your car, home, or business; a key broken off in a lock; a lock that won't secure your property; or break-in damage that leaves a door unsecured. Call and we'll tell you how we can help.",
+      },
+      {
+        question: "Are you available after hours?",
+        answer:
+          "Our regular hours are 7 AM to 11:30 PM daily, with an emergency line available around the clock for genuine lockouts and security situations. Call and we'll give you an honest arrival window.",
+      },
+      {
+        question: "Will you tell me the price before you start?",
+        answer:
+          "Yes. We quote the cost on the phone or before any work begins. The price we say is the price you pay. No fees added after the job.",
+      },
+      {
+        question: "Do you handle car, home, and business?",
+        answer:
+          "Yes. We cover automotive lockouts, residential lockouts and rekeys, and commercial locksmith work across the Knoxville area.",
+      },
+      {
+        question: "Do you serve the areas around Knoxville?",
+        answer:
+          "Yes. We cover Farragut, Powell, Maryville, Oak Ridge, Alcoa, Clinton, Sevierville, Hardin Valley, Karns, and 18+ more East TN cities. Tell us where you are when you call.",
+      },
+    ],
+    finalCtaHeading: "Need help right now? Call us.",
+    finalCtaSub:
+      "Call now or fill out the form. We'll give you a price on the phone and send a local technician to your location.",
+  },
 ];
 
 export const LANDING_PAGES: Record<string, LandingPageData> = Object.fromEntries(

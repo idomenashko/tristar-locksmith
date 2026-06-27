@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { fireLeadConversion } from "@/lib/conversion";
+import { captureAttribution, getAttribution } from "@/lib/attribution";
 
 const SERVICES = [
   "Car Lockout",
@@ -21,6 +22,12 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  // Capture ad-click attribution (gclid/utm) on mount, in case this form page is
+  // the direct ad landing. On /lp pages the landing layout also captures it.
+  useEffect(() => {
+    captureAttribution();
+  }, []);
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
@@ -35,6 +42,7 @@ export function LeadForm({ source = "unknown" }: LeadFormProps) {
       note: (form.elements.namedItem("note") as HTMLTextAreaElement).value.trim(),
       _hp: (form.elements.namedItem("_hp") as HTMLInputElement).value,
       _source: source,
+      _attr: getAttribution() ?? undefined,
     };
 
     try {
