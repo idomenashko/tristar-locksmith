@@ -21,6 +21,7 @@ export interface Testimonial {
   rating: number;
   text: string;
   location: string;
+  date?: string;
 }
 
 export interface FaqItem {

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Stars } from "@/components/ui/Stars";
 import { getTestimonials, getBusiness } from "@/lib/queries";
 import { buildMetadata } from "@/lib/seo";
+import { buildReviewsPageSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Customer Reviews",
@@ -14,8 +15,13 @@ export const metadata = buildMetadata({
 
 export default async function ReviewsPage() {
   const [testimonials, business] = await Promise.all([getTestimonials(), getBusiness()]);
+  const reviewsSchema = buildReviewsPageSchema(testimonials);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
+      />
       <div className="bg-navy text-white py-16">
         <Container>
           <h1 className="text-4xl lg:text-5xl font-bold text-white font-display mb-4">

@@ -9,14 +9,19 @@ export async function buildLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Locksmith",
+    "@id": "https://tristarlocksmith.com/#business",
     name: business.name,
     telephone: business.phone,
     url: "https://tristarlocksmith.com",
     image: "https://tristarlocksmith.com/og-image.jpg",
+    foundingDate: "2011",
+    description: "Tristar Locksmith has served Knoxville, TN and 26 surrounding East Tennessee communities for over 15 years. Car lockout, house lockout, car key replacement, safe opening, commercial locksmith, and lock change services. Insured technicians, upfront pricing, emergency service available.",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "5825 Pine Needle Ln",
       addressLocality: business.city,
       addressRegion: business.state,
+      postalCode: "37921",
       addressCountry: "US",
     },
     geo: {
@@ -50,6 +55,32 @@ export async function buildLocalBusinessSchema() {
       worstRating: "1",
     },
     priceRange: "$$",
+    // Add the Google Business Profile Maps URL here once you have the direct
+    // google.com/maps/place/... URL (not the search URL).
+    // sameAs: ["https://maps.google.com/?cid=YOUR_CID"],
+  };
+}
+
+export function buildReviewsPageSchema(testimonials: { name: string; rating: number; text: string; location: string; date?: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Locksmith",
+    "@id": "https://tristarlocksmith.com/#business",
+    name: "Tristar Locksmith",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "127",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: testimonials.map((t) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: t.name },
+      reviewRating: { "@type": "Rating", ratingValue: String(t.rating), bestRating: "5" },
+      reviewBody: t.text,
+      ...(t.date ? { datePublished: t.date } : {}),
+    })),
   };
 }
 
