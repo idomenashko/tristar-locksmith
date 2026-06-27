@@ -302,8 +302,8 @@
     "car-lockout": {
       "label": "Car Lockout",
       "h1Template": "Car Lockout in {cityName}, TN, Tristar Locksmith",
-      "metaTitle": "Car Lockout {cityName} TN | Non-Destructive Entry | Tristar",
-      "metaDescription": "Locked out of your car in {cityName}, TN? Tristar Locksmith provides non-destructive entry on all vehicle makes. Licensed &amp; insured. Call (865) 381-3931.",
+      "metaTitle": "Car Lockout {cityName}, TN",
+      "metaDescription": "Locked out of your car in {cityName}, TN? Tristar Locksmith provides non-destructive entry on all vehicle makes. Licensed & insured. Call (865) 381-3931.",
       "answerCapsule": "Tristar Locksmith handles car lockouts across {cityName}, TN. Our technicians use non-destructive entry tools on all vehicle makes, domestic sedans, pickups, imports, and late-model systems, and quote you upfront before touching your car. Call (865) 381-3931 for help.",
       "whatWeDo": "A car lockout can happen anywhere in {cityName}, a parking lot off {landmark1}, a gas station on the way to work, or your own driveway. Tristar Locksmith dispatches a trained technician quickly so you're not stranded. We use professional slim-jim and air-wedge tools designed for non-destructive entry. Your paint, door seals, and window trim stay intact. We cover all vehicle makes and models, including imports, luxury cars, and trucks with advanced locking systems. Every visit includes upfront pricing, you'll know the cost before we begin. Our technicians are licensed, insured, and background-checked, and they carry the equipment to handle most lockout scenarios in a single stop.",
       "scenarioTemplate": "Whether your keys slid off the seat while you were unloading at {landmark1}, or you walked away from your vehicle in a {neighborhood1} parking lot and heard the click of the automatic lock behind you, Tristar Locksmith is the call to make. We also handle keys locked in the trunk, broken fob batteries that won't disengage the system, and keyless-entry systems that stopped responding. If you're parked somewhere off the main roads in {cityName}, give us your exact location when you call and we'll navigate straight to you.",
@@ -331,8 +331,8 @@
     "house-lockout": {
       "label": "House Lockout",
       "h1Template": "House Lockout in {cityName}, TN, Tristar Locksmith",
-      "metaTitle": "House Lockout {cityName} TN | Non-Destructive Entry | Tristar Locksmith",
-      "metaDescription": "Locked out of your home in {cityName}, TN? Tristar Locksmith opens residential locks non-destructively. Licensed &amp; insured. Call (865) 381-3931.",
+      "metaTitle": "House Lockout {cityName}, TN",
+      "metaDescription": "Locked out of your home in {cityName}, TN? Tristar Locksmith opens residential locks non-destructively. Licensed & insured. Call (865) 381-3931.",
       "answerCapsule": "Tristar Locksmith handles house lockouts across {cityName}, TN. Our technicians open deadbolts, knob locks, and high-security cylinders without damaging your door or frame, and can rekey or replace the lock in the same visit. Call (865) 381-3931 for help.",
       "whatWeDo": "Getting locked out of your home in {cityName} is one of the most stressful experiences you can have, especially late at night or in bad weather. Tristar Locksmith sends a trained technician to your door quickly. We use professional picking and bypass techniques designed to open residential locks without damaging the door, frame, or weather stripping. We work with all major lock brands, Schlage, Kwikset, Baldwin, Medeco, and more, across single-family homes, apartments, and condos. Once you're inside, our technician can rekey or replace the lock on the spot with no extra trip charge. We ask for a photo ID at every residential lockout for your protection, to confirm we're opening the right door for the right person.",
       "scenarioTemplate": "A house lockout can catch you completely off guard. Maybe you stepped outside in {neighborhood1} to check the mail and the door swung shut behind you, or your keys stayed on the kitchen counter during a quick trip to {landmark1}. It happens to homeowners across {cityName} every week. Tristar Locksmith treats every call with discretion and urgency, we understand you want to be back inside quickly, and we work efficiently to make that happen without any damage to your property.",
@@ -360,7 +360,7 @@
     "car-key-replacement": {
       "label": "Car Key Replacement",
       "h1Template": "Car Key Replacement in {cityName}, TN, Tristar Locksmith",
-      "metaTitle": "Car Key Replacement {cityName} TN | All Makes | Tristar Locksmith",
+      "metaTitle": "Car Key Replacement {cityName}, TN",
       "metaDescription": "Lost your car keys in {cityName}, TN? Tristar Locksmith cuts and programs replacement keys for all vehicle makes. Call (865) 381-3931.",
       "answerCapsule": "Tristar Locksmith provides car key replacement in {cityName}, TN for all vehicle makes, including transponder keys, key fobs, and push-to-start systems. We cut and program on-site. No tow required. Call (865) 381-3931.",
       "whatWeDo": "Losing your car keys in {cityName} doesn't have to mean a tow truck and a dealership wait. Tristar Locksmith provides mobile car key replacement and key programming for all major vehicle makes and models, domestic, import, luxury, and fleet vehicles. Our technicians carry cutting equipment and programming software on the road, so we come to you wherever you are in {cityName}. We handle standard cut keys, laser-cut high-security keys, transponder keys, smart key fobs, and push-to-start systems. Pricing is disclosed upfront. If you've lost every key to your vehicle, we can also rekey the ignition so your old key codes are disabled, critical for security if the keys were stolen.",
@@ -389,7 +389,7 @@
     "safe-lockout": {
       "label": "Safe Lockout",
       "h1Template": "Safe Lockout in {cityName}, TN, Tristar Locksmith",
-      "metaTitle": "Safe Lockout {cityName} TN | Combination + Electronic | Tristar",
+      "metaTitle": "Safe Lockout & Opening {cityName}, TN",
       "metaDescription": "Locked out of your safe in {cityName}, TN? Tristar Locksmith opens combination, electronic, and key-lock safes. Call (865) 381-3931.",
       "answerCapsule": "Tristar Locksmith handles safe lockouts in {cityName}, TN for home safes, gun safes, and commercial vaults. We open combination-dial, electronic-keypad, and key-lock models, and can repair or replace the locking mechanism after. Call (865) 381-3931.",
       "whatWeDo": "A safe lockout in {cityName} can happen for many reasons, a forgotten combination, a dead battery in an electronic keypad, a jammed bolt mechanism, or a key that snapped in the lock. Tristar Locksmith provides professional safe opening for residential and commercial customers throughout {cityName} and the surrounding area. We work with standard home safes, fire-rated gun safes, floor safes, wall safes, drop-safe deposit boxes, and small commercial vaults. Our technicians use non-destructive techniques whenever possible, manipulation, bypass, and lockpicking, to preserve the integrity of the safe and its contents. When non-destructive entry isn't viable, we drill at precise locations to minimize damage and restore the mechanism after. We'll quote the approach and cost before we begin.",
@@ -418,7 +418,7 @@
     "commercial-locksmith": {
       "label": "Commercial Locksmith",
       "h1Template": "Commercial Locksmith in {cityName}, TN, Tristar Locksmith",
-      "metaTitle": "Commercial Locksmith {cityName} TN | Business Locks | Tristar",
+      "metaTitle": "Commercial Locksmith {cityName}, TN",
       "metaDescription": "Commercial locksmith in {cityName}, TN, lock installation, rekey, access control, and business lockouts. Tristar Locksmith. Call (865) 381-3931.",
       "answerCapsule": "Tristar Locksmith provides commercial locksmith services in {cityName}, TN, including business lockouts, commercial rekeying, master key systems, and access control. We work with all commercial-grade hardware and serve businesses of every size. Call (865) 381-3931.",
       "whatWeDo": "Tristar Locksmith serves businesses throughout {cityName} with the full range of commercial locksmith services. Whether you manage a retail location near {landmark1}, an office park in {neighborhood1}, or a warehouse complex, we provide business lockouts, commercial rekeying, lock installation and upgrades, master key and keyway systems, and basic access control integration. Our technicians are experienced with commercial-grade hardware from Schlage, Corbin Russwin, Sargent, Kaba, and other major manufacturers. We understand that commercial calls often need to happen quickly and discreetly, employee turnover, after-hours lockouts, post-break-in security upgrades, and new tenant move-ins are all common reasons businesses across {cityName} call Tristar Locksmith.",
@@ -447,7 +447,7 @@
     "lock-change": {
       "label": "Lock Change",
       "h1Template": "Lock Change in {cityName}, TN, Tristar Locksmith",
-      "metaTitle": "Lock Change {cityName} TN | Residential & Commercial | Tristar",
+      "metaTitle": "Lock Change & Rekey {cityName}, TN",
       "metaDescription": "Lock change service in {cityName}, TN for homes and businesses. Tristar Locksmith installs deadbolts, knob locks, and commercial hardware. Call (865) 381-3931.",
       "answerCapsule": "Tristar Locksmith provides lock change service in {cityName}, TN for residential and commercial properties. We install deadbolts, knob locks, levers, and commercial-grade cylinders, and advise on the right hardware for your door and security level. Call (865) 381-3931.",
       "whatWeDo": "A lock change in {cityName} makes sense in several situations, moving into a new home, after a break-in, when a key has been lost or stolen, or when aging hardware is no longer reliable. Tristar Locksmith installs and replaces residential and commercial locks across {cityName} and the surrounding area. We carry a stock of deadbolts, knob locks, and lever hardware in common finishes, and we work with most commercial-grade cylinders and lever trim. Our technicians evaluate your existing door prep and hardware before recommending a replacement, some doors require a back plate modification or bore adjustment for a proper fit. If you're upgrading security after a break-in or moving into a new property in {neighborhood1}, we can assess your full entry and advise on the most cost-effective combination of hardware.",

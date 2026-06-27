@@ -28,7 +28,7 @@ export function Header({ logo }: HeaderProps) {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             {logo ? (
-              <Image src={logo} alt="Tristar Locksmith" width={400} height={100} className="h-24 w-auto" />
+              <Image src={logo} alt="Tristar Locksmith — Knoxville, TN locksmith" width={400} height={100} className="h-24 w-auto" />
             ) : (
               <>
                 <span className="text-gold text-2xl">⭐</span>

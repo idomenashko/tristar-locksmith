@@ -21,7 +21,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: {
     default: "Tristar Locksmith | 24/7 Locksmith Knoxville, TN",
-    template: "%s | Tristar Locksmith, Knoxville, TN",
+    template: "%s | Tristar Locksmith",
   },
   description:
     "Tristar Locksmith: trusted 24/7 locksmith serving Knoxville, TN and surrounding areas. Car lockout, house lockout, rekey, lock change, and more. Call (865) 381-3931.",

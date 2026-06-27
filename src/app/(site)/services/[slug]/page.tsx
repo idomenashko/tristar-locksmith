@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = await getService(slug);
   if (!service) return {};
   return buildMetadata({
-    title: service.title,
+    title: `${service.title} in Knoxville, TN`,
     description: `${service.shortDescription} Tristar Locksmith serves Knoxville, TN and surrounding areas. Call (865) 381-3931.`,
     path: `/services/${slug}`,
   });
