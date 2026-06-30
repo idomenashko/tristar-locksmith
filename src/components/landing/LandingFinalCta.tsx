@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { firePhoneConversion } from "@/lib/conversion";
+import { TopRatedStars } from "./TopRatedStars";
 
 interface LandingFinalCtaProps {
   heading: string;
@@ -48,23 +49,40 @@ export function LandingFinalCta({ heading, sub }: LandingFinalCtaProps) {
             {sub}
           </p>
 
-          {/* Primary CTA */}
-          <a
-            href="tel:8653813931"
-            onClick={firePhoneConversion}
-            className="pulse-emergency inline-flex items-center justify-center gap-2.5 bg-emergency text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-emergency-dark transition-colors shadow-lg shadow-emergency/30 mb-4"
-            aria-label="Call Tristar Locksmith"
-          >
-            <PhoneIcon />
-            Call (865) 381-3931
-          </a>
+          {/* Top Rated badge */}
+          <div className="flex justify-center mb-8">
+            <TopRatedStars
+              className="!bg-white/10 !border-white/20"
+            />
+          </div>
 
-          <p className="text-white/50 text-sm mb-10">
-            Or{" "}
-            <a href="#quote" className="text-gold underline underline-offset-2 hover:text-gold-light transition-colors">
-              fill out the quote form above
+          {/* CTAs — stacked, both prominent */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
+            {/* Primary: call */}
+            <a
+              href="tel:8653813931"
+              onClick={firePhoneConversion}
+              className="pulse-emergency w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emergency text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-emergency-dark transition-colors shadow-lg shadow-emergency/30"
+              aria-label="Call Tristar Locksmith"
+            >
+              <PhoneIcon />
+              Call (865) 381-3931
             </a>
-          </p>
+
+            {/* Secondary: form — gold-outline button, not a plain link */}
+            <motion.a
+              href="#quote"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-gold text-gold font-semibold text-base px-7 py-[15px] rounded-xl hover:bg-gold/10 transition-colors"
+            >
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4 shrink-0">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h12M4 10h8M4 14h10" />
+              </svg>
+              Fill out the form
+            </motion.a>
+          </div>
 
           {/* Trust points */}
           <ul className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-y-2 gap-x-6 text-left sm:text-center">

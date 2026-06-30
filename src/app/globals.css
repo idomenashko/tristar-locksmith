@@ -63,6 +63,11 @@
   60%       { box-shadow: 0 0 0 12px rgba(220, 38, 38, 0); }
 }
 
+@keyframes starTwinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.65; transform: scale(1.25) rotate(10deg); }
+}
+
 /* Default state: visible (no animation for reduced-motion users) */
 .reveal {
   opacity: 1;
@@ -86,5 +91,10 @@
 
   .pulse-emergency {
     animation: pulseRing 2.8s ease-in-out infinite;
+  }
+
+  .star-twinkle {
+    animation: starTwinkle 2.2s ease-in-out infinite;
+    animation-delay: 1s;
   }
 }
