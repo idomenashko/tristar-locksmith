@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
 import type { Metadata } from "next";
 import { LANDING_PAGES, LANDING_SLUGS } from "@/lib/landing-pages";
+import { interpolateCity, DEFAULT_CITY } from "@/lib/geo-city";
 import { LandingHero } from "@/components/landing/LandingHero";
 import { LandingTrustBar } from "@/components/landing/LandingTrustBar";
 import { LandingSteps } from "@/components/landing/LandingSteps";
@@ -10,27 +12,42 @@ import { LandingReviews } from "@/components/landing/LandingReviews";
 import { LandingCoverage } from "@/components/landing/LandingCoverage";
 import { LandingFaq } from "@/components/landing/LandingFaq";
 import { LandingFinalCta } from "@/components/landing/LandingFinalCta";
+import { LandingLeadForm } from "@/components/landing/LandingLeadForm";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+/**
+ * Resolve the visitor's city.
+ * Reads from the `x-tl-city` header injected by middleware on EVERY request,
+ * so the correct city appears on the first visit (not just after a cookie is set).
+ */
+async function getCity(): Promise<string> {
+  const hdrs = await headers();
+  return hdrs.get("x-tl-city") ?? DEFAULT_CITY;
 }
 
 export function generateStaticParams() {
   return LANDING_SLUGS.map((slug) => ({ slug }));
 }
 
+export const dynamic = "force-dynamic"; // reads cookies → must be dynamic
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const page = LANDING_PAGES[slug];
   if (!page) return {};
 
+  const city = await getCity();
+
   return {
-    title: page.metaTitle,
-    description: page.metaDescription,
+    title: interpolateCity(page.metaTitle, city),
+    description: interpolateCity(page.metaDescription, city),
     robots: { index: false, follow: false },
     openGraph: {
-      title: page.metaTitle,
-      description: page.metaDescription,
+      title: interpolateCity(page.metaTitle, city),
+      description: interpolateCity(page.metaDescription, city),
       type: "website",
       siteName: "Tristar Locksmith",
     },
@@ -45,20 +62,41 @@ export default async function LandingPage({ params }: PageProps) {
     notFound();
   }
 
+  const city = await getCity();
   const formSource = `ppc:${slug}`;
+
+  // Interpolate {city} tokens in all city-aware fields
+  const cityPage = {
+    ...page,
+    metaTitle: interpolateCity(page.metaTitle, city),
+    metaDescription: interpolateCity(page.metaDescription, city),
+    heroSub: interpolateCity(page.heroSub, city),
+    heroVariants: {
+      A: {
+        ...page.heroVariants.A,
+        h1: interpolateCity(page.heroVariants.A.h1, city),
+      },
+      B: {
+        ...page.heroVariants.B,
+        h1: interpolateCity(page.heroVariants.B.h1, city),
+      },
+    },
+  };
 
   return (
     <>
       <LandingHero
-        heroVariants={page.heroVariants}
-        sub={page.heroSub}
+        heroVariants={cityPage.heroVariants}
+        sub={cityPage.heroSub}
         heroImage={page.heroImage}
         heroImageAlt={page.heroImageAlt}
         badges={page.badges}
-        formSource={formSource}
       />
 
       <LandingTrustBar />
+
+      {/* Lead form — low friction, name+phone first */}
+      <LandingLeadForm formSource={formSource} />
 
       <LandingSteps steps={page.steps} />
 

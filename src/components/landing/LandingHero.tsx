@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import { LeadForm } from "@/components/forms/LeadForm";
+import { motion } from "motion/react";
 import { firePhoneConversion } from "@/lib/conversion";
 import { useExperiment } from "@/hooks/useExperiment";
 import type { LandingHeroVariant } from "@/lib/landing-pages";
@@ -13,12 +12,21 @@ interface LandingHeroProps {
   heroImage: string;
   heroImageAlt: string;
   badges: string[];
-  formSource: string;
+  /** City name — already interpolated into h1/sub by page.tsx; kept for future use */
+  city?: string;
 }
 
-function PhoneIcon({ className = "h-5 w-5" }: { className?: string }) {
+const ease = [0.16, 1, 0.3, 1] as const; // expo out
+
+const STAR_FILLED = (
+  <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-gold">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L2.049 10.1c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+  </svg>
+);
+
+function PhoneIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="currentColor" viewBox="0 0 24 24">
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0">
       <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
     </svg>
   );
@@ -30,112 +38,119 @@ export function LandingHero({
   heroImage,
   heroImageAlt,
   badges,
-  formSource,
 }: LandingHeroProps) {
   const variant = useExperiment("lp_hero");
-  const { h1, ctaLabel, formHeading } = heroVariants[variant];
-  const bgRef = useRef<HTMLDivElement>(null);
-
-  // Subtle parallax — moves bg image at 15% of scroll speed, clipped by overflow-hidden parent
-  useEffect(() => {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) return;
-
-    const handleScroll = () => {
-      if (!bgRef.current) return;
-      bgRef.current.style.transform = `translateY(${window.scrollY * 0.15}px)`;
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { h1, ctaLabel } = heroVariants[variant];
 
   return (
-    <section
-      className="relative bg-navy text-white overflow-hidden"
-      style={{ minHeight: "660px" }}
-    >
-      {/* Background photo — parallax wrapper clips overflow */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div ref={bgRef} className="absolute inset-0 scale-110">
-          <Image
-            src={heroImage}
-            alt={heroImageAlt}
-            fill
-            priority
-            className="object-cover object-top"
-            sizes="100vw"
-          />
-        </div>
+    <section className="relative bg-navy-dark text-white overflow-hidden min-h-[580px] md:min-h-[640px] flex items-center">
+      {/* Background photo with dark overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src={heroImage}
+          alt={heroImageAlt}
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        {/* Gradient: heavy dark on left/bottom, shows photo on right */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(18,38,64,0.97) 0%, rgba(18,38,64,0.90) 50%, rgba(18,38,64,0.65) 100%)",
+          }}
+        />
       </div>
 
-      {/* Left-to-right gradient overlay — fully navy on left, photo visible on right */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(27,58,92,0.93) 0%, rgba(27,58,92,0.88) 50%, rgba(18,38,64,0.62) 100%)",
-        }}
-      />
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-5 md:px-8 py-14 md:py-20">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Proof pill — above the H1 */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease }}
+          className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm"
+        >
+          <span className="flex">{STAR_FILLED}{STAR_FILLED}{STAR_FILLED}{STAR_FILLED}{STAR_FILLED}</span>
+          <span className="text-white font-semibold text-sm">5.0</span>
+          <span className="text-white/60 text-sm">·</span>
+          <span className="text-white/80 text-sm">127 verified reviews</span>
+          <span className="text-white/60 text-sm">·</span>
+          <span className="text-white/80 text-sm">Knoxville, TN</span>
+        </motion.div>
 
-          {/* LEFT — copy (CSS entrance animation) */}
-          <div className="hero-entrance">
-            <h1
-              className="text-white font-black leading-tight mb-5"
-              style={{ fontSize: "clamp(28px, 3.6vw, 44px)" }}
+        {/* H1 */}
+        <motion.h1
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease, delay: 0.08 }}
+          className="font-black text-white leading-tight mb-4"
+          style={{
+            fontSize: "clamp(26px, 4.5vw, 52px)",
+            letterSpacing: "-0.025em",
+            textWrap: "balance",
+            fontFamily: "var(--font-display)",
+          }}
+        >
+          {h1}
+        </motion.h1>
+
+        {/* Sub */}
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease, delay: 0.16 }}
+          className="text-white/75 text-base md:text-lg leading-relaxed mb-8 max-w-xl"
+        >
+          {sub}
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease, delay: 0.24 }}
+          className="flex flex-col sm:flex-row gap-3 mb-10"
+        >
+          {/* Primary: phone call */}
+          <a
+            href="tel:8653813931"
+            onClick={firePhoneConversion}
+            className="pulse-emergency flex items-center justify-center gap-2.5 bg-emergency text-white font-bold text-lg px-7 py-4 rounded-xl hover:bg-emergency-dark transition-colors shadow-lg shadow-emergency/30 w-full sm:w-auto"
+            aria-label="Call Tristar Locksmith at (865) 381-3931"
+          >
+            <PhoneIcon />
+            (865) 381-3931 — Call Now
+          </a>
+
+          {/* Secondary: scroll to form */}
+          <a
+            href="#quote"
+            className="flex items-center justify-center gap-2 border-2 border-gold/70 text-gold font-semibold text-base px-6 py-4 rounded-xl hover:bg-gold/10 transition-colors w-full sm:w-auto"
+          >
+            {ctaLabel}
+          </a>
+        </motion.div>
+
+        {/* Trust badges */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, ease, delay: 0.34 }}
+          className="flex flex-wrap gap-2"
+        >
+          {badges.map((badge) => (
+            <span
+              key={badge}
+              className="inline-flex items-center gap-1.5 text-white/70 text-sm bg-white/8 border border-white/15 px-3 py-1.5 rounded-full"
             >
-              {h1}
-            </h1>
-
-            <p className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed">{sub}</p>
-
-            {/* Dual CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <a
-                href="tel:8653813931"
-                onClick={firePhoneConversion}
-                className="pulse-emergency flex items-center justify-center gap-2 bg-emergency text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-red-700 transition-colors shadow-lg"
-              >
-                <PhoneIcon />
-                Call (865) 381-3931
-              </a>
-              <a
-                href="#quote"
-                className="flex items-center justify-center gap-2 border-2 border-gold text-gold font-bold text-lg px-8 py-4 rounded-xl hover:bg-gold hover:text-navy transition-colors"
-              >
-                {ctaLabel}
-              </a>
-            </div>
-
-            {/* Trust pills */}
-            <div className="flex flex-wrap gap-3">
-              {badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full border border-white/20"
-                >
-                  {badge}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* RIGHT — Lead form card */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8">
-            <h2 className="text-navy font-bold text-2xl mb-1">{formHeading}</h2>
-            <p className="text-muted text-sm mb-6">
-              Tell us where you are. We&apos;ll call you right back.
-            </p>
-            <LeadForm source={formSource} />
-            <p className="text-muted text-xs mt-4 text-center">
-              Upfront price confirmed before we start. No hidden fees.
-            </p>
-          </div>
-
-        </div>
+              {badge}
+            </span>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
