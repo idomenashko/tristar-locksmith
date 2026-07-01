@@ -173,7 +173,7 @@ export function LandingLeadForm({ formSource }: Props) {
             Get a Free Quote
           </h2>
           <p className="text-muted text-sm">
-            Takes&nbsp;~20&nbsp;seconds&nbsp;·&nbsp;We call you right back with an upfront&nbsp;price.
+            Takes&nbsp;~20&nbsp;seconds&nbsp;·&nbsp;We&apos;ll reach out to confirm your request.
           </p>
         </div>
 

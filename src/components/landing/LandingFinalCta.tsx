@@ -27,7 +27,7 @@ const TRUST_POINTS_STATIC = [
   "Emergency service available around the clock",
   "Non-destructive entry, no damage to your lock",
   "Insured & background-checked technicians",
-  "Upfront price confirmed before we start",
+  "Fast local response — no call centers",
 ];
 
 export function LandingFinalCta({ heading, sub, city = "Knoxville" }: LandingFinalCtaProps) {
