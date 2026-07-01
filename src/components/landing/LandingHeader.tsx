@@ -96,12 +96,12 @@ export function LandingHeader() {
 
         {/* Click-to-call — the only CTA in the header, no nav links */}
         <a
-          href="tel:8653813931"
+          href="tel:8653463573"
           onClick={firePhoneConversion}
           className="flex items-center gap-2 bg-emergency text-white font-bold px-4 py-2 rounded-lg text-sm md:text-base hover:bg-red-700 transition-colors"
         >
           <PhoneIcon className="h-4 w-4" />
-          (865) 381-3931
+          (865) 346-3573
         </a>
       </div>
     </header>

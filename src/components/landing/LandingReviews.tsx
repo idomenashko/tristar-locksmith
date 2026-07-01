@@ -39,7 +39,7 @@ export function LandingReviews({ reviews }: LandingReviewsProps) {
             What Our Customers Say
           </h2>
           <p className="text-muted text-sm font-medium whitespace-nowrap">
-            5.0 ★ · 127 verified reviews
+            5.0 ★ · 428 verified reviews
           </p>
         </motion.div>
 

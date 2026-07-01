@@ -13,7 +13,7 @@
  */
 
 import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { fireLeadConversion, firePhoneConversion } from "@/lib/conversion";
 import { getAttribution } from "@/lib/attribution";
 import { TopRatedStars } from "./TopRatedStars";
@@ -80,7 +80,6 @@ const TRUST_ITEMS = [
 ];
 
 export function LandingLeadForm({ formSource }: Props) {
-  const [expanded, setExpanded] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
@@ -148,12 +147,12 @@ export function LandingLeadForm({ formSource }: Props) {
               We&apos;ll call you right back. For the fastest response, tap Call below.
             </p>
             <a
-              href="tel:8653813931"
+              href="tel:8653463573"
               onClick={firePhoneConversion}
               className="pulse-emergency inline-flex items-center gap-2 bg-emergency text-white font-bold px-6 py-3.5 rounded-xl hover:bg-emergency-dark transition-colors shadow-md"
             >
               <PhoneIcon />
-              (865) 381-3931
+              (865) 346-3573
             </a>
           </motion.div>
         </div>
@@ -188,8 +187,9 @@ export function LandingLeadForm({ formSource }: Props) {
             <div className="bg-navy px-6 py-4 flex items-center justify-center">
               <TopRatedStars
                 label="Top Rated Locksmith"
-                reviewSummary="5.0 · 127 reviews"
+                reviewSummary="5.0 · 428 reviews"
                 className="!bg-white/10 !border-white/20"
+                variant="dark"
               />
             </div>
 
@@ -227,83 +227,47 @@ export function LandingLeadForm({ formSource }: Props) {
                 />
               </div>
 
-              {/* Progressive expand toggle */}
-              <button
-                type="button"
-                onClick={() => setExpanded((v) => !v)}
-                className="flex items-center gap-1.5 text-sm text-navy/60 hover:text-navy font-medium transition-colors"
-              >
-                <motion.span
-                  animate={{ rotate: expanded ? 180 : 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="inline-block"
-                >
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6l4 4 4-4" />
-                  </svg>
-                </motion.span>
-                {expanded ? "Hide details" : "Add details (optional)"}
-              </button>
+              {/* Service */}
+              <div>
+                <label htmlFor="lf-service" className="block text-sm font-semibold text-navy mb-1.5">
+                  Service needed
+                </label>
+                <select id="lf-service" name="serviceNeeded" className={INPUT_CLASS}>
+                  <option value="">Select a service…</option>
+                  {SERVICES.map((s) => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+              </div>
 
-              {/* Optional fields */}
-              <AnimatePresence initial={false}>
-                {expanded && (
-                  <motion.div
-                    key="expanded"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease }}
-                    className="overflow-hidden space-y-4"
-                  >
-                    {/* Service */}
-                    <div>
-                      <label htmlFor="lf-service" className="block text-sm font-semibold text-navy mb-1.5">
-                        Service needed
-                      </label>
-                      <select
-                        id="lf-service"
-                        name="serviceNeeded"
-                        className={INPUT_CLASS}
-                      >
-                        <option value="">Select a service…</option>
-                        {SERVICES.map((s) => (
-                          <option key={s} value={s}>{s}</option>
-                        ))}
-                      </select>
-                    </div>
+              {/* Address */}
+              <div>
+                <label htmlFor="lf-address" className="block text-sm font-semibold text-navy mb-1.5">
+                  Your location
+                </label>
+                <input
+                  id="lf-address"
+                  name="address"
+                  type="text"
+                  autoComplete="street-address"
+                  placeholder="Street address or neighborhood"
+                  className={INPUT_CLASS}
+                />
+              </div>
 
-                    {/* Address */}
-                    <div>
-                      <label htmlFor="lf-address" className="block text-sm font-semibold text-navy mb-1.5">
-                        Your location
-                      </label>
-                      <input
-                        id="lf-address"
-                        name="address"
-                        type="text"
-                        autoComplete="street-address"
-                        placeholder="Street address or neighborhood"
-                        className={INPUT_CLASS}
-                      />
-                    </div>
-
-                    {/* Note */}
-                    <div>
-                      <label htmlFor="lf-note" className="block text-sm font-semibold text-navy mb-1.5">
-                        Additional details
-                      </label>
-                      <textarea
-                        id="lf-note"
-                        name="note"
-                        rows={2}
-                        placeholder="Vehicle type, lock brand, anything helpful…"
-                        className={INPUT_CLASS + " resize-none"}
-                      />
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {/* Note */}
+              <div>
+                <label htmlFor="lf-note" className="block text-sm font-semibold text-navy mb-1.5">
+                  Additional details
+                </label>
+                <textarea
+                  id="lf-note"
+                  name="note"
+                  rows={2}
+                  placeholder="Vehicle type, lock brand, anything helpful…"
+                  className={INPUT_CLASS + " resize-none"}
+                />
+              </div>
 
               {/* Error */}
               {status === "error" && (
@@ -350,12 +314,12 @@ export function LandingLeadForm({ formSource }: Props) {
         <div className="text-center mt-5">
           <p className="text-muted text-sm mb-2">Prefer to talk? Call us now:</p>
           <a
-            href="tel:8653813931"
+            href="tel:8653463573"
             onClick={firePhoneConversion}
             className="inline-flex items-center gap-2 text-emergency font-bold text-base hover:text-emergency-dark transition-colors"
           >
             <PhoneIcon />
-            (865) 381-3931
+            (865) 346-3573
           </a>
         </div>
       </div>

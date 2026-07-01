@@ -9,6 +9,8 @@ interface LandingFinalCtaProps {
   sub: string;
   /** Kept for API compatibility — no longer used since bottom form was removed */
   formSource?: string;
+  /** Resolved city name — used to personalise the trust-point text */
+  city?: string;
 }
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -21,15 +23,18 @@ function PhoneIcon() {
   );
 }
 
-const TRUST_POINTS = [
+const TRUST_POINTS_STATIC = [
   "Emergency service available around the clock",
   "Non-destructive entry, no damage to your lock",
   "Insured & background-checked technicians",
   "Upfront price confirmed before we start",
-  "Serving Knoxville + 27 East TN communities",
 ];
 
-export function LandingFinalCta({ heading, sub }: LandingFinalCtaProps) {
+export function LandingFinalCta({ heading, sub, city = "Knoxville" }: LandingFinalCtaProps) {
+  const TRUST_POINTS = [
+    ...TRUST_POINTS_STATIC,
+    `Serving ${city}, TN + 27 East TN communities`,
+  ];
   return (
     <section className="bg-navy-dark py-16 md:py-20 px-5 md:px-8">
       <div className="max-w-3xl mx-auto text-center">
@@ -53,6 +58,7 @@ export function LandingFinalCta({ heading, sub }: LandingFinalCtaProps) {
           <div className="flex justify-center mb-8">
             <TopRatedStars
               className="!bg-white/10 !border-white/20"
+              variant="dark"
             />
           </div>
 
@@ -60,13 +66,13 @@ export function LandingFinalCta({ heading, sub }: LandingFinalCtaProps) {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
             {/* Primary: call */}
             <a
-              href="tel:8653813931"
+              href="tel:8653463573"
               onClick={firePhoneConversion}
               className="pulse-emergency w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emergency text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-emergency-dark transition-colors shadow-lg shadow-emergency/30"
               aria-label="Call Tristar Locksmith"
             >
               <PhoneIcon />
-              Call (865) 381-3931
+              Call (865) 346-3573
             </a>
 
             {/* Secondary: form — gold-outline button, not a plain link */}
@@ -75,12 +81,15 @@ export function LandingFinalCta({ heading, sub }: LandingFinalCtaProps) {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-gold text-gold font-semibold text-base px-7 py-[15px] rounded-xl hover:bg-gold/10 transition-colors"
+              className="w-full sm:w-auto inline-flex flex-col items-center justify-center gap-0.5 border-2 border-gold text-gold font-semibold px-7 py-3.5 rounded-xl hover:bg-gold/10 transition-colors"
             >
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4 shrink-0">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h12M4 10h8M4 14h10" />
-              </svg>
-              Fill out the form
+              <span className="flex items-center gap-2 text-base">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4 shrink-0">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h12M4 10h8M4 14h10" />
+                </svg>
+                Fill Out the Form
+              </span>
+              <span className="text-xs text-gold/70 font-normal">We&apos;ll call you back in minutes</span>
             </motion.a>
           </div>
 

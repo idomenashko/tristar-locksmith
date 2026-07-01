@@ -5,11 +5,13 @@ import type { LandingBenefit } from "@/lib/landing-pages";
 
 interface LandingBenefitsProps {
   benefits: LandingBenefit[];
+  /** Resolved city name — used to personalise the section heading */
+  city?: string;
 }
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-export function LandingBenefits({ benefits }: LandingBenefitsProps) {
+export function LandingBenefits({ benefits, city = "Knoxville" }: LandingBenefitsProps) {
   return (
     <section className="bg-navy py-16 md:py-20 px-5 md:px-8">
       <div className="max-w-4xl mx-auto">
@@ -24,7 +26,7 @@ export function LandingBenefits({ benefits }: LandingBenefitsProps) {
             className="text-white font-black text-2xl md:text-4xl mb-3"
             style={{ fontFamily: "var(--font-display)", letterSpacing: "-0.02em", textWrap: "balance" }}
           >
-            Why Knoxville Calls Tristar
+            Why {city} Calls Tristar
           </h2>
           <p className="text-white/60 text-lg">No surprise fees. Real local service.</p>
         </motion.div>

@@ -35,7 +35,6 @@ ${homepage.heroHeadline}
 
 📞 Call Now: ${business.phone}
 🕒 Hours: ${business.hours}
-📍 Location: ${business.address}
 
 ---
 
@@ -63,7 +62,6 @@ ${faqLines}
 
 📞 **Phone:** [${business.phone}](tel:${phoneDigits})
 🌐 **Website:** [tristarlocksmith.com](https://tristarlocksmith.com)
-📍 **Address:** ${business.address}
 `;
 
   return new NextResponse(content, {

@@ -22,7 +22,7 @@ start. They do not want to read. They do not want to scroll. They want to tap Ca
 - Phone: (865) 381-3931
 - Address: 5825 Pine Needle Ln, Knoxville, TN 37921
 - Hours: 7 AM – 11:30 PM daily · emergency line around the clock
-- Social proof: 5.0 ★ · 127 verified reviews
+- Social proof: 5.0 ★ · 428 verified reviews
 - Service area: Knoxville + 27 East TN cities
 - Services: Car lockout, House lockout, Car key replacement, Emergency locksmith,
   Safe lockout, Commercial locksmith, Lock change / rekey
@@ -58,7 +58,7 @@ Paid (noindex) landing pages:
 
 1. One dominant tap-to-call CTA above the fold — red, pulsing, full-width on mobile
 2. Short lead form (name + phone first, progressively expand)
-3. Trust proof above the fold (5.0★ · 127 reviews inline)
+3. Trust proof above the fold (5.0★ · 428 reviews inline)
 4. City personalization: IP-geo → show visitor's city in H1 if it's a service area
 
 ## Competitive insight
@@ -67,7 +67,7 @@ Paid (noindex) landing pages:
   load, minimal friction. Appears prominently because of message relevance match.
 - **locksmith-dispatch.com:** pure phone-first, no form, zero friction — high call
   intent, but no lead capture.
-- **Our edge:** 5.0★/127 reviews (better proof than competitors), local (not
+- **Our edge:** 5.0★/428 reviews (better proof than competitors), local (not
   national dispatch), upfront pricing, no-damage entry guarantee.
 
 ## What does NOT convert

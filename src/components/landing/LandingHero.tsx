@@ -12,8 +12,10 @@ interface LandingHeroProps {
   heroImage: string;
   heroImageAlt: string;
   badges: string[];
-  /** City name — already interpolated into h1/sub by page.tsx; kept for future use */
+  /** Resolved city name, e.g. "Farragut" — from page.tsx */
   city?: string;
+  /** City + state, e.g. "Farragut, TN" — from page.tsx */
+  cityState?: string;
 }
 
 const ease = [0.16, 1, 0.3, 1] as const; // expo out
@@ -38,6 +40,8 @@ export function LandingHero({
   heroImage,
   heroImageAlt,
   badges,
+  city: _city = "Knoxville",
+  cityState = "Knoxville, TN",
 }: LandingHeroProps) {
   const variant = useExperiment("lp_hero");
   const { h1, ctaLabel } = heroVariants[variant];
@@ -67,31 +71,49 @@ export function LandingHero({
       {/* Content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-5 md:px-8 py-14 md:py-20">
 
-        {/* Proof pill — above the H1 */}
+        {/* Trust strip — editorial row, no pill container to overflow */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease }}
-          className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm"
+          transition={{ duration: 0.4, ease }}
+          className="flex items-center gap-2.5 mb-4 flex-wrap"
         >
-          <span className="flex">{STAR_FILLED}{STAR_FILLED}{STAR_FILLED}{STAR_FILLED}{STAR_FILLED}</span>
-          <span className="text-white font-semibold text-sm">5.0</span>
-          <span className="text-white/60 text-sm">·</span>
-          <span className="text-white/80 text-sm">127 verified reviews</span>
-          <span className="text-white/60 text-sm">·</span>
-          <span className="text-white/80 text-sm">Knoxville, TN</span>
+          <span className="flex gap-0.5 shrink-0" aria-label="5 stars">
+            {STAR_FILLED}{STAR_FILLED}{STAR_FILLED}{STAR_FILLED}{STAR_FILLED}
+          </span>
+          <span className="text-white font-bold text-sm leading-none shrink-0">5.0</span>
+          <span className="text-white/40 text-xs leading-none shrink-0" aria-hidden="true">·</span>
+          <span className="text-white/65 text-sm leading-none shrink-0">428 reviews</span>
+          <span className="w-px h-3.5 bg-white/20 shrink-0 self-center" aria-hidden="true" />
+          <span className="text-gold text-sm font-semibold leading-none">{cityState}</span>
         </motion.div>
 
-        {/* H1 */}
+        {/* Immediate Dispatch — inline status dot (bug fix: no motion-safe:block) */}
+        <motion.div
+          initial={{ opacity: 0, x: -6 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4, ease, delay: 0.06 }}
+          className="flex items-center gap-2 mb-6"
+        >
+          <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+            <span className="motion-safe:animate-ping absolute inset-0 rounded-full bg-green-400 opacity-75" />
+            <span className="relative rounded-full h-2 w-2 bg-green-500" />
+          </span>
+          <span className="text-green-400 text-sm font-medium leading-none">
+            Immediate Dispatch Available
+          </span>
+        </motion.div>
+
+        {/* H1 — punchy size, natural left-align flow (no textWrap:balance) */}
         <motion.h1
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease, delay: 0.08 }}
-          className="font-black text-white leading-tight mb-4"
+          transition={{ duration: 0.55, ease, delay: 0.08 }}
+          className="font-black text-white mb-4 max-w-xl"
           style={{
-            fontSize: "clamp(26px, 4.5vw, 52px)",
-            letterSpacing: "-0.025em",
-            textWrap: "balance",
+            fontSize: "clamp(28px, 5vw + 0.25rem, 54px)",
+            lineHeight: 1.1,
+            letterSpacing: "-0.03em",
             fontFamily: "var(--font-display)",
           }}
         >
@@ -113,17 +135,17 @@ export function LandingHero({
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease, delay: 0.24 }}
-          className="flex flex-col sm:flex-row gap-3 mb-10"
+          className="flex flex-col sm:flex-row gap-3 mb-8"
         >
           {/* Primary: phone call */}
           <a
-            href="tel:8653813931"
+            href="tel:8653463573"
             onClick={firePhoneConversion}
             className="pulse-emergency flex items-center justify-center gap-2.5 bg-emergency text-white font-bold text-lg px-7 py-4 rounded-xl hover:bg-emergency-dark transition-colors shadow-lg shadow-emergency/30 w-full sm:w-auto"
-            aria-label="Call Tristar Locksmith at (865) 381-3931"
+            aria-label="Call Tristar Locksmith at (865) 346-3573"
           >
             <PhoneIcon />
-            (865) 381-3931 — Call Now
+            (865) 346-3573 — Call Now
           </a>
 
           {/* Secondary: scroll to form */}
@@ -135,20 +157,34 @@ export function LandingHero({
           </a>
         </motion.div>
 
-        {/* Trust badges */}
+        {/* 4-up hero benefits grid — replaces flat pill badges */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease, delay: 0.34 }}
-          className="flex flex-wrap gap-2"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-2"
         >
-          {badges.map((badge) => (
-            <span
+          {badges.slice(0, 4).map((badge) => (
+            <div
               key={badge}
-              className="inline-flex items-center gap-1.5 text-white/70 text-sm bg-white/8 border border-white/15 px-3 py-1.5 rounded-full"
+              className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-lg px-3 py-2.5"
             >
-              {badge}
-            </span>
+              <span
+                className="flex-shrink-0 w-4 h-4 rounded-full bg-gold/25 flex items-center justify-center"
+                aria-hidden="true"
+              >
+                <svg
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  className="w-2.5 h-2.5 text-gold"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2 5l2 2 4-4" />
+                </svg>
+              </span>
+              <span className="text-white/80 text-xs font-medium leading-tight">{badge}</span>
+            </div>
           ))}
         </motion.div>
       </div>

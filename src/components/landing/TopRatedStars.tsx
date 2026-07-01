@@ -16,10 +16,12 @@ import { motion } from "motion/react";
 interface Props {
   /** Label text — defaults to "Top Rated Locksmith" */
   label?: string;
-  /** Review summary — defaults to "5.0 · 127 reviews" */
+  /** Review summary — defaults to "5.0 · 428 reviews" */
   reviewSummary?: string;
   /** Extra className for the outer pill element */
   className?: string;
+  /** "light" = dark text (default, for light bg). "dark" = white text (for navy bg). */
+  variant?: "light" | "dark";
 }
 
 const ease = [0.16, 1, 0.3, 1] as const; // expo-out
@@ -42,9 +44,11 @@ function Star({ delay, twinkle = false }: { delay: number; twinkle?: boolean }) 
 
 export function TopRatedStars({
   label = "Top Rated Locksmith",
-  reviewSummary = "5.0 · 127 reviews",
+  reviewSummary = "5.0 · 428 reviews",
   className = "",
+  variant = "light",
 }: Props) {
+  const onDark = variant === "dark";
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
@@ -63,11 +67,11 @@ export function TopRatedStars({
       </span>
 
       {/* Label */}
-      <span className="text-sm font-bold text-navy leading-none">{label}</span>
+      <span className={`text-sm font-bold leading-none ${onDark ? "text-white" : "text-navy"}`}>{label}</span>
 
       {/* Divider + review count */}
       <span className="text-gold/50 text-xs leading-none">·</span>
-      <span className="text-xs text-navy/60 leading-none font-medium">{reviewSummary}</span>
+      <span className={`text-xs leading-none font-medium ${onDark ? "text-white/70" : "text-navy/60"}`}>{reviewSummary}</span>
     </motion.div>
   );
 }

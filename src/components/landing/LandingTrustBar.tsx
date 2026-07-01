@@ -19,7 +19,7 @@ export function LandingTrustBar() {
         <span className="flex items-center gap-1.5 text-sm font-semibold shrink-0 pr-5">
           <span>⭐</span>
           <CountUp target={5.0} decimals={1} />{" "}
-          Stars ({<CountUp target={127} />} Reviews)
+          Stars ({<CountUp target={428} />} Reviews)
         </span>
 
         <Divider />

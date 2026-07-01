@@ -28,9 +28,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Resolve city from Vercel IP-geo header.
-  // In local dev this header is absent → resolveCity(null) → "Knoxville".
-  const rawCity = request.headers.get("x-vercel-ip-city");
+  // Resolve city. Priority: ?city= URL param → Vercel IP-geo header → default.
+  // ?city= is used for: (a) ad-copy geo-insertion, (b) local dev testing.
+  const paramCity = request.nextUrl.searchParams.get("city");
+  const rawCity = paramCity ?? request.headers.get("x-vercel-ip-city");
   const city = resolveCity(rawCity);
 
   // Clone + mutate the request headers to inject the resolved city.

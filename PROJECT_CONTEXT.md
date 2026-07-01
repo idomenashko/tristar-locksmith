@@ -7,7 +7,7 @@ A local locksmith business website for **Tristar Locksmith**, serving Knoxville,
 - Phone: (865) 381-3931
 - Address: 5825 Pine Needle Ln, Knoxville, TN 37921
 - Hours: 7 AM – 11:30 PM daily · 24/7 emergency line
-- Rating: 5.0★ | 127 verified reviews
+- Rating: 5.0★ | 428 verified reviews
 - Live at: https://tristarlocksmith.com
 
 ## Target Customers

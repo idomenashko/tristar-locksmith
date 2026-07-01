@@ -26,6 +26,12 @@ export const metadata: Metadata = {
   description:
     "Tristar Locksmith: trusted 24/7 locksmith serving Knoxville, TN and surrounding areas. Car lockout, house lockout, rekey, lock change, and more. Call (865) 381-3931.",
   metadataBase: new URL("https://tristarlocksmith.com"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+  },
   keywords: [
     "locksmith Knoxville TN",
     "24/7 locksmith",

@@ -48,7 +48,7 @@ for the primary phone CTA — it must always win the eye.
 [nav bar — logo + call number]
 [hero: navy/image bg]
   H1: "{City} Locksmith Service" (city-dynamic)
-  Proof: ⭐ 5.0  127 reviews
+  Proof: ⭐ 5.0  428 reviews
   Badges: Insured · Upfront Pricing · No Damage
   [red CALL button — full-width, pulsing]
   [gold outline "Get a Quote →"]

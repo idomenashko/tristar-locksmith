@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { headers } from "next/headers";
 import type { Metadata } from "next";
 import { LANDING_PAGES, LANDING_SLUGS } from "@/lib/landing-pages";
-import { interpolateCity, DEFAULT_CITY } from "@/lib/geo-city";
+import { interpolateCity, cityWithState, DEFAULT_CITY } from "@/lib/geo-city";
 import { LandingHero } from "@/components/landing/LandingHero";
 import { LandingTrustBar } from "@/components/landing/LandingTrustBar";
 import { LandingSteps } from "@/components/landing/LandingSteps";
@@ -63,14 +63,16 @@ export default async function LandingPage({ params }: PageProps) {
   }
 
   const city = await getCity();
+  const cs = cityWithState(city); // e.g. "Farragut, TN"
   const formSource = `ppc:${slug}`;
 
-  // Interpolate {city} tokens in all city-aware fields
+  // Interpolate {city} and {cityState} tokens in all city-aware fields
   const cityPage = {
     ...page,
     metaTitle: interpolateCity(page.metaTitle, city),
     metaDescription: interpolateCity(page.metaDescription, city),
     heroSub: interpolateCity(page.heroSub, city),
+    heroImageAlt: interpolateCity(page.heroImageAlt, city),
     heroVariants: {
       A: {
         ...page.heroVariants.A,
@@ -89,8 +91,10 @@ export default async function LandingPage({ params }: PageProps) {
         heroVariants={cityPage.heroVariants}
         sub={cityPage.heroSub}
         heroImage={page.heroImage}
-        heroImageAlt={page.heroImageAlt}
+        heroImageAlt={cityPage.heroImageAlt}
         badges={page.badges}
+        city={city}
+        cityState={cs}
       />
 
       <LandingTrustBar />
@@ -100,13 +104,13 @@ export default async function LandingPage({ params }: PageProps) {
 
       <LandingSteps steps={page.steps} />
 
-      <LandingBenefits benefits={page.benefits} />
+      <LandingBenefits benefits={page.benefits} city={city} />
 
       <LandingCovered heading={page.coveredHeading} items={page.covered} />
 
       <LandingReviews reviews={page.reviews} />
 
-      <LandingCoverage />
+      <LandingCoverage city={city} />
 
       <LandingFaq faqs={page.faqs} />
 
@@ -114,6 +118,7 @@ export default async function LandingPage({ params }: PageProps) {
         heading={page.finalCtaHeading}
         sub={page.finalCtaSub}
         formSource={formSource}
+        city={city}
       />
     </>
   );

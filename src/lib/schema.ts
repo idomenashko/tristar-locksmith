@@ -50,7 +50,7 @@ export async function buildLocalBusinessSchema() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "127",
+      reviewCount: "428",
       bestRating: "5",
       worstRating: "1",
     },
@@ -70,7 +70,7 @@ export function buildReviewsPageSchema(testimonials: { name: string; rating: num
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "127",
+      reviewCount: "428",
       bestRating: "5",
       worstRating: "1",
     },

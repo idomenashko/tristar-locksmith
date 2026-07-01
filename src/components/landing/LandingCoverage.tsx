@@ -9,7 +9,15 @@ const SERVICE_AREAS = [
   "Pigeon Forge", "Dandridge", "Jefferson City",
 ];
 
-export function LandingCoverage() {
+interface LandingCoverageProps {
+  /** Resolved city name — highlighted pill so visitors see their own city */
+  city?: string;
+}
+
+export function LandingCoverage({ city = "Knoxville" }: LandingCoverageProps) {
+  // Highlight the visitor's city; fall back to Knoxville (index 0) if not in our list.
+  const activeCity = SERVICE_AREAS.includes(city) ? city : "Knoxville";
+
   return (
     <section className="bg-white py-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
@@ -23,11 +31,11 @@ export function LandingCoverage() {
         </Reveal>
         <Reveal delay={150}>
           <div className="flex flex-wrap gap-3 justify-center">
-            {SERVICE_AREAS.map((area, index) => (
+            {SERVICE_AREAS.map((area) => (
               <span
                 key={area}
                 className={
-                  index === 0
+                  area === activeCity
                     ? "bg-navy text-white font-semibold px-5 py-2.5 rounded-full text-sm"
                     : "border-2 border-navy text-navy font-medium px-5 py-2.5 rounded-full text-sm hover:bg-navy hover:text-white transition-colors cursor-default"
                 }

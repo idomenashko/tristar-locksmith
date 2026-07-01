@@ -19,7 +19,7 @@ Build a local SEO website for a locksmith business serving Knoxville, TN and sur
 - Phone: (865) 381-3931
 - Address: 5825 Pine Needle Ln, Knoxville, TN 37921
 - Hours: 7 AM – 11:30 PM daily · 24/7 emergency line
-- Rating: 5.0 ★ | 127 verified reviews
+- Rating: 5.0 ★ | 428 verified reviews
 - Primary Market: Knoxville, TN
 - Service Areas: Knoxville, Farragut, Powell, Maryville, Oak Ridge, Alcoa, Clinton, Sevierville, Hardin Valley, Karns, Lenoir City, Tellico Village, Corryton, Maynardville, Heiskell, Mascot, Strawberry Plains, Seymour, Rockford, Louisville, Friendsville, Greenback, Walland, Kodak, Pigeon Forge, Dandridge, Jefferson City
 

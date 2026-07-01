@@ -8,7 +8,7 @@ interface ServiceCityBodyProps {
 }
 
 const WHY_TRISTAR = [
-  "5.0 stars from 127 verified reviews",
+  "5.0 stars from 428 verified reviews",
   "Licensed, insured, and background-checked technicians",
   "Non-destructive techniques. No damage to your property.",
   "Upfront pricing quoted before we begin. No surprises.",

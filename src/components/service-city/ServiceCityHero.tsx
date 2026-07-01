@@ -37,7 +37,7 @@ export function ServiceCityHero({ h1, answerCapsule, serviceName, image, imageAl
               </a>
             </div>
             <p className="text-white/55 text-xs mt-5">
-              5.0 ★ from 127 verified reviews · {serviceName} · Serving East Tennessee
+              5.0 ★ from 428 verified reviews · {serviceName} · Serving East Tennessee
             </p>
           </div>
 
