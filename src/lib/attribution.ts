@@ -36,7 +36,7 @@ const PARAM_KEYS: (keyof Attribution)[] = [
   "utm_content",
 ];
 
-function readCookie(name: string): string | null {
+export function readCookie(name: string): string | null {
   if (typeof document === "undefined") return null;
   const match = document.cookie.split("; ").find((r) => r.startsWith(`${name}=`));
   return match ? decodeURIComponent(match.split("=").slice(1).join("=")) : null;

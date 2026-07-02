@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { LandingHeader, TristarLogo } from "@/components/landing/LandingHeader";
 import { LandingStickyCallBar } from "@/components/landing/LandingStickyCallBar";
 import { AttributionCapture } from "@/components/landing/AttributionCapture";
+import { ClarityTagger } from "@/components/landing/ClarityTagger";
 
 export const metadata: Metadata = {
   robots: {
@@ -63,6 +64,7 @@ export default function LandingLayout({
   return (
     <div className="flex flex-col min-h-screen">
       <AttributionCapture />
+      <ClarityTagger />
       <TopBar />
       <LandingHeader />
       <main className="flex-1 pb-24 md:pb-0">{children}</main>

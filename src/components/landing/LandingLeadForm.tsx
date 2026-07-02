@@ -103,8 +103,8 @@ export function LandingLeadForm({ formSource }: Props) {
       serviceNeeded: (data.get("serviceNeeded") as string) || "",
       address: (data.get("address") as string) || "",
       note: (data.get("note") as string) || "",
-      source: formSource,
-      ...(attribution ?? {}),
+      _source: formSource,
+      _attr: attribution ?? undefined,
     };
 
     try {
