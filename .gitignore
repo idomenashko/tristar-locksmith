@@ -37,3 +37,8 @@ next-env.d.ts
 
 # Worktrees
 .worktrees/
+
+# Geo-target generation: transient Google geotargets CSV download (23MB+,
+# not committed). scripts/data/tn-zip-city.json (the small ZIP->city seed)
+# IS committed — see scripts/build-geo-targets.mjs.
+scripts/data/geotargets-*.csv
