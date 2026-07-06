@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getServices, getServiceAreas, getBusiness } from "@/lib/queries";
+import { TristarLogo } from "@/components/brand/TristarLogo";
 
 export async function Footer() {
   const [services, serviceAreas, business] = await Promise.all([
@@ -17,14 +17,7 @@ export async function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-3">
-              {business.logo ? (
-                <Image src={business.logo} alt="Tristar Locksmith — Knoxville, TN locksmith" width={200} height={60} className="h-16 w-auto" />
-              ) : (
-                <span className="flex items-center gap-2 text-white font-bold text-lg font-display">
-                  <span className="text-gold text-xl">⭐</span>
-                  <span>Tristar Locksmith</span>
-                </span>
-              )}
+              <TristarLogo height={48} />
             </Link>
             {business.address && (
               <p className="text-sm mb-2">{business.address}</p>

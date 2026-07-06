@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { LandingHeader, TristarLogo } from "@/components/landing/LandingHeader";
+import { LandingHeader } from "@/components/landing/LandingHeader";
+import { TristarLogo } from "@/components/brand/TristarLogo";
 import { LandingStickyCallBar } from "@/components/landing/LandingStickyCallBar";
 import { AttributionCapture } from "@/components/landing/AttributionCapture";
 import { ClarityTagger } from "@/components/landing/ClarityTagger";

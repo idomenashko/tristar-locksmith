@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { TristarLogo } from "@/components/brand/TristarLogo";
 
 const navLinks = [
   { href: "/services", label: "Services" },
@@ -14,11 +14,7 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-interface HeaderProps {
-  logo?: string;
-}
-
-export function Header({ logo }: HeaderProps) {
+export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -27,14 +23,7 @@ export function Header({ logo }: HeaderProps) {
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            {logo ? (
-              <Image src={logo} alt="Tristar Locksmith — Knoxville, TN locksmith" width={400} height={100} className="h-24 w-auto" />
-            ) : (
-              <>
-                <span className="text-gold text-2xl">⭐</span>
-                <span className="text-white font-bold text-xl font-display">Tristar Locksmith</span>
-              </>
-            )}
+            <TristarLogo height={56} />
           </Link>
 
           {/* Desktop Nav */}
