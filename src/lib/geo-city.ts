@@ -9,7 +9,7 @@
  * to personalize the H1 ("Car Key Replacement in Farragut").
  */
 
-import { GEO_TARGETS_TN } from "./geo-targets-tn.generated";
+import { GEO_TARGETS_TN, GEO_TARGET_STATE } from "./geo-targets-tn.generated";
 
 /** Display names for all 27 service cities + neighborhood/suburb aliases */
 export const SERVICE_CITIES: Record<string, string> = {
@@ -125,7 +125,8 @@ export const STATE = "TN";
 /**
  * Google Ads geo criteria IDs → real place name, for EVERY Tennessee geo ID
  * (City, County, Neighborhood, Postal Code) — not just the 27 marketed
- * service cities.
+ * service cities. Also covers a Chattanooga-area border band that spills into
+ * Georgia/Alabama (for ads run in that radius) — see GEO_TARGET_STATE below.
  *
  * Why: {loc_physical_ms} (searcher's physical location) / {loc_interest_ms}
  * most often resolve to POSTAL-CODE granularity, not city-level. A hand-picked
@@ -133,27 +134,45 @@ export const STATE = "TN";
  * production bugs — paid landing pages defaulting to "Knoxville" for real
  * visitors (Sevierville/Kodak, then Farragut/Karns/Hardin Valley incidents).
  *
- * Fix: stop hand-picking. Echo Google's own canonical name for every TN geo ID
- * — the same approach a top competitor (locksmith-dispatch.com) uses, and the
- * same database that drives the ad's {LOCATION(City)} headline, so the landing
- * page always matches the ad. The campaign only targets East TN, so only TN
- * IDs ever arrive; out-of-state IDs correctly fall through to DEFAULT_CITY.
+ * Fix: stop hand-picking. Echo Google's own canonical name for every geo ID we
+ * support — the same approach a top competitor (locksmith-dispatch.com) uses,
+ * and the same database that drives the ad's {LOCATION(City)} headline, so the
+ * landing page always matches the ad. IDs outside our coverage (TN + the
+ * Chattanooga GA/AL border band) correctly fall through to DEFAULT_CITY.
  *
  * This map is GENERATED — see scripts/build-geo-targets.mjs and
- * src/lib/geo-targets-tn.generated.ts (GEO_TARGETS_TN). Do not hand-edit
- * entries there; if an ID is wrong, fix the generator (e.g. COUNTY_OVERRIDE)
- * and regenerate.
+ * src/lib/geo-targets-tn.generated.ts (GEO_TARGETS_TN, GEO_TARGET_STATE). Do
+ * not hand-edit entries there; if an ID is wrong, fix the generator (e.g.
+ * COUNTY_OVERRIDE) and regenerate.
  */
 
 /**
  * Resolve a Google Ads geo criteria ID (from {loc_physical_ms} or
- * {loc_interest_ms}) to a real place name. Returns `null` if the ID is
- * missing or not in GEO_TARGETS_TN, so callers can fall through to the next
- * source instead of forcing DEFAULT_CITY.
+ * {loc_interest_ms}) to its city + state. Returns `null` if the ID is missing
+ * or not in GEO_TARGETS_TN, so callers can fall through to the next source
+ * instead of forcing DEFAULT_CITY. Keeping city+state paired (rather than
+ * resolving state separately by city name) matters: a couple of border town
+ * names ("Rossville", "Trenton") collide with unrelated west-TN towns of the
+ * same name — resolving state from the SAME id that resolved the city avoids
+ * mislabeling those genuine TN visitors as GA/AL.
+ */
+export function resolveGeoIdCity(
+  rawId: string | null | undefined
+): { city: string; state: string } | null {
+  if (!rawId) return null;
+  const id = rawId.trim();
+  const city = GEO_TARGETS_TN[id];
+  if (!city) return null;
+  return { city, state: GEO_TARGET_STATE[id] ?? STATE };
+}
+
+/**
+ * Resolve a Google Ads geo criteria ID to just its place name. Returns `null`
+ * if the ID is missing or not in GEO_TARGETS_TN, so callers can fall through
+ * to the next source instead of forcing DEFAULT_CITY.
  */
 export function cityFromGeoId(rawId: string | null | undefined): string | null {
-  if (!rawId) return null;
-  return GEO_TARGETS_TN[rawId.trim()] ?? null;
+  return resolveGeoIdCity(rawId)?.city ?? null;
 }
 
 /**
@@ -189,20 +208,25 @@ export function resolveCity(rawCity: string | null | undefined): string {
   return matchCity(rawCity) ?? DEFAULT_CITY;
 }
 
-/** Returns "City, TN" — e.g. "Farragut, TN" */
-export function cityWithState(city: string): string {
-  return `${city}, ${STATE}`;
+/**
+ * Returns "City, ST" — e.g. "Farragut, TN", or "Ringgold, GA" for a
+ * Chattanooga-border visitor. `state` defaults to "TN" for the ?city=/IP-geo
+ * fallback paths (always TN service cities); the geo-ID path passes the
+ * state resolved alongside the city (see resolveGeoIdCity) explicitly.
+ */
+export function cityWithState(city: string, state: string = STATE): string {
+  return `${city}, ${state}`;
 }
 
 /**
  * Interpolate {city} and {cityState} tokens in a string template.
  *   {city}      → "Farragut"
- *   {cityState} → "Farragut, TN"
+ *   {cityState} → "Farragut, TN" (or "Ringgold, GA" — see cityWithState)
  *
  * Note: {cityState} is replaced first so {city} inside it isn't partially matched.
  */
-export function interpolateCity(template: string, city: string): string {
-  const cs = cityWithState(city);
+export function interpolateCity(template: string, city: string, state: string = STATE): string {
+  const cs = cityWithState(city, state);
   return template
     .replace(/\{cityState\}/gi, cs)
     .replace(/\{city\}/gi, city);

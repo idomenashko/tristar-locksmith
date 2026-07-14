@@ -11,6 +11,8 @@ interface LandingFinalCtaProps {
   formSource?: string;
   /** Resolved city name — used to personalise the trust-point text */
   city?: string;
+  /** Resolved "City, ST" — e.g. "Farragut, TN" or "Ringgold, GA" */
+  cityState?: string;
 }
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -30,10 +32,15 @@ const TRUST_POINTS_STATIC = [
   "Fast local response — no call centers",
 ];
 
-export function LandingFinalCta({ heading, sub, city = "Knoxville" }: LandingFinalCtaProps) {
+export function LandingFinalCta({
+  heading,
+  sub,
+  city = "Knoxville",
+  cityState = `${city}, TN`,
+}: LandingFinalCtaProps) {
   const TRUST_POINTS = [
     ...TRUST_POINTS_STATIC,
-    `Serving ${city}, TN + 27 East TN communities`,
+    `Serving ${cityState} + 27 East TN communities`,
   ];
   return (
     <section className="bg-navy-dark py-16 md:py-20 px-5 md:px-8">

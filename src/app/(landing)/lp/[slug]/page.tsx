@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { headers } from "next/headers";
 import type { Metadata } from "next";
 import { LANDING_PAGES, LANDING_SLUGS } from "@/lib/landing-pages";
-import { interpolateCity, cityWithState, DEFAULT_CITY } from "@/lib/geo-city";
+import { interpolateCity, cityWithState, DEFAULT_CITY, STATE } from "@/lib/geo-city";
 import { LandingHero } from "@/components/landing/LandingHero";
 import { LandingTrustBar } from "@/components/landing/LandingTrustBar";
 import { LandingSteps } from "@/components/landing/LandingSteps";
@@ -28,6 +28,16 @@ async function getCity(): Promise<string> {
   return hdrs.get("x-tl-city") ?? DEFAULT_CITY;
 }
 
+/**
+ * Resolve the visitor's state (companion to getCity — see `x-tl-state` in
+ * middleware.ts). Defaults to "TN"; only the Chattanooga GA/AL border band
+ * ever produces a different value.
+ */
+async function getState(): Promise<string> {
+  const hdrs = await headers();
+  return hdrs.get("x-tl-state") ?? STATE;
+}
+
 export function generateStaticParams() {
   return LANDING_SLUGS.map((slug) => ({ slug }));
 }
@@ -40,14 +50,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!page) return {};
 
   const city = await getCity();
+  const state = await getState();
 
   return {
-    title: interpolateCity(page.metaTitle, city),
-    description: interpolateCity(page.metaDescription, city),
+    title: interpolateCity(page.metaTitle, city, state),
+    description: interpolateCity(page.metaDescription, city, state),
     robots: { index: false, follow: false },
     openGraph: {
-      title: interpolateCity(page.metaTitle, city),
-      description: interpolateCity(page.metaDescription, city),
+      title: interpolateCity(page.metaTitle, city, state),
+      description: interpolateCity(page.metaDescription, city, state),
       type: "website",
       siteName: "Tristar Locksmith",
     },
@@ -63,24 +74,25 @@ export default async function LandingPage({ params }: PageProps) {
   }
 
   const city = await getCity();
-  const cs = cityWithState(city); // e.g. "Farragut, TN"
+  const state = await getState();
+  const cs = cityWithState(city, state); // e.g. "Farragut, TN" or "Ringgold, GA"
   const formSource = `ppc:${slug}`;
 
   // Interpolate {city} and {cityState} tokens in all city-aware fields
   const cityPage = {
     ...page,
-    metaTitle: interpolateCity(page.metaTitle, city),
-    metaDescription: interpolateCity(page.metaDescription, city),
-    heroSub: interpolateCity(page.heroSub, city),
-    heroImageAlt: interpolateCity(page.heroImageAlt, city),
+    metaTitle: interpolateCity(page.metaTitle, city, state),
+    metaDescription: interpolateCity(page.metaDescription, city, state),
+    heroSub: interpolateCity(page.heroSub, city, state),
+    heroImageAlt: interpolateCity(page.heroImageAlt, city, state),
     heroVariants: {
       A: {
         ...page.heroVariants.A,
-        h1: interpolateCity(page.heroVariants.A.h1, city),
+        h1: interpolateCity(page.heroVariants.A.h1, city, state),
       },
       B: {
         ...page.heroVariants.B,
-        h1: interpolateCity(page.heroVariants.B.h1, city),
+        h1: interpolateCity(page.heroVariants.B.h1, city, state),
       },
     },
   };
@@ -119,6 +131,7 @@ export default async function LandingPage({ params }: PageProps) {
         sub={page.finalCtaSub}
         formSource={formSource}
         city={city}
+        cityState={cs}
       />
     </>
   );

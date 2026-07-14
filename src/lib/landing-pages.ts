@@ -79,7 +79,7 @@ const PAGES: LandingPageData[] = [
   {
     slug: "car-key-replacement",
     serviceName: "Car Key Replacement",
-    metaTitle: "Car Key Replacement {city} TN | Tristar Locksmith",
+    metaTitle: "Car Key Replacement {cityState} | Tristar Locksmith",
     metaDescription:
       "Need a new car key in {city}? Tristar Locksmith cuts and programs keys, fobs, and smart keys on-site for most makes and models. Upfront pricing, no surprises.",
     heroVariants: {
@@ -341,7 +341,7 @@ const PAGES: LandingPageData[] = [
   {
     slug: "car-lockout",
     serviceName: "Car Lockout",
-    metaTitle: "Car Lockout in {city} TN | Tristar Locksmith",
+    metaTitle: "Car Lockout in {cityState} | Tristar Locksmith",
     metaDescription:
       "Keys locked in your car in {city}? Tristar Locksmith opens your vehicle without damage. All makes and models. Insured, background-checked, upfront pricing.",
     heroVariants: {
@@ -472,7 +472,7 @@ const PAGES: LandingPageData[] = [
   {
     slug: "emergency-locksmith",
     serviceName: "Emergency Locksmith",
-    metaTitle: "Emergency Locksmith {city} TN | Tristar Locksmith",
+    metaTitle: "Emergency Locksmith {cityState} | Tristar Locksmith",
     metaDescription:
       "Need an emergency locksmith in {city}? Tristar Locksmith comes to you for car, home, and business lockouts. Insured local technicians, upfront pricing, no damage.",
     heroVariants: {
