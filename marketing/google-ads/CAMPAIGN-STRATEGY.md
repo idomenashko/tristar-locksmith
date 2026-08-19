@@ -1,7 +1,7 @@
 # Tristar Locksmith — Google Ads PPC Campaign Plan
 
 **Account:** AW-18165468053 · **Market:** Knoxville, TN + East Tennessee
-**Phone:** (865) 381-3931 · **Daily budget:** $100–300/day (start $150)
+**Phone:** (865) 381-3667 · **Daily budget:** $100–300/day (start $150)
 **Last updated:** 2026-06-27
 
 ---
@@ -162,7 +162,7 @@ Each gives you a **Conversion Label** like `AbC-D_1234`. Paste them into the sit
 **Structured snippets:**
 - Header **Services:** Car Lockout, House Lockout, Car Key Replacement, Lock Rekey, Emergency Locksmith
 
-**Call asset:** (865) 381-3931, hours 7 AM–11:30 PM, with call reporting on.
+**Call asset:** (865) 381-3667, hours 7 AM–11:30 PM, with call reporting on.
 
 **Location asset:** link Google Business Profile once connected.
 
@@ -181,7 +181,7 @@ Headlines:
 4. Car Door Unlock Service (23)
 5. We Come to Your Location (24)
 6. No-Damage Car Unlocking (23)
-7. Call (865) 381-3931 (19)
+7. Call (865) 381-3667 (19)
 8. Knoxville Car Locksmith (23)
 9. Upfront Pricing, No Surprise (28)
 10. All Makes and Models (20)
@@ -192,7 +192,7 @@ Headlines:
 15. On-Site in the Knox Area (24)
 Descriptions:
 1. Locked out of your car in Knoxville? We unlock all makes on-site, no damage. (76)
-2. Upfront pricing before we start. Insured local techs. Call (865) 381-3931. (74)
+2. Upfront pricing before we start. Insured local techs. Call (865) 381-3667. (74)
 3. Mobile locksmith serving Knoxville and 27 East TN communities. We come to you. (78)
 4. No hidden fees. Fast response to get you back on the road. Call us now. (70)
 Pinning: none (let Google optimize).
@@ -206,7 +206,7 @@ Headlines:
 4. Home Lockout Service (20)
 5. We Come to Your Door (20)
 6. No-Damage Door Opening (22)
-7. Call (865) 381-3931 (19)
+7. Call (865) 381-3667 (19)
 8. Knoxville House Locksmith (25)
 9. Upfront Pricing, No Surprise (28)
 10. Insured Local Technicians (25)
@@ -217,7 +217,7 @@ Headlines:
 15. Locked Yourself Out? (20)
 Descriptions:
 1. Locked out of your home in Knoxville? We open residential doors without damage. (79)
-2. Upfront pricing before we start. Insured local techs. Call (865) 381-3931. (74)
+2. Upfront pricing before we start. Insured local techs. Call (865) 381-3667. (74)
 3. Mobile locksmith serving Knoxville and 27 East TN communities. We come to you. (78)
 4. No hidden fees, no surprises. Fast, friendly, local service. Call us now. (73)
 Pinning: none.
@@ -231,7 +231,7 @@ Headlines:
 4. Keys Cut and Programmed (23)
 5. Transponder Key Service (23)
 6. Key Fob Replacement (19)
-7. Call (865) 381-3931 (19)
+7. Call (865) 381-3667 (19)
 8. Knoxville Car Key Maker (23)
 9. Most Makes and Models (21)
 10. Upfront Pricing, No Surprise (28)
@@ -242,7 +242,7 @@ Headlines:
 15. Often Less Than the Dealer (26)
 Descriptions:
 1. Lost your car key in Knoxville? We cut and program new keys on-site, most makes. (79)
-2. Smart keys, fobs, transponders. Upfront pricing. Call (865) 381-3931. (68)
+2. Smart keys, fobs, transponders. Upfront pricing. Call (865) 381-3667. (68)
 3. Mobile locksmith serving Knoxville and 27 East TN communities. We come to you. (78)
 4. No tow needed. Fair, upfront pricing before we start. Call us today. (68)
 Pinning: none.
@@ -255,7 +255,7 @@ Headlines:
 3. Local Knoxville Locksmith (25)
 4. Mobile Locksmith Near You (25)
 5. We Come to Your Location (24)
-6. Call (865) 381-3931 (19)
+6. Call (865) 381-3667 (19)
 7. Car, Home and Business (22)
 8. No-Damage Lock Service (22)
 9. Upfront Pricing, No Surprise (28)
@@ -267,7 +267,7 @@ Headlines:
 15. Break-In Repair Service (23)
 Descriptions:
 1. Locked out in Knoxville? Local insured locksmith comes to you. No-damage entry. (78)
-2. Cars, homes, businesses. Upfront pricing. Call (865) 381-3931. (61)
+2. Cars, homes, businesses. Upfront pricing. Call (865) 381-3667. (61)
 3. Mobile locksmith serving Knoxville and 27 East TN communities. We come to you. (78)
 4. Emergency service available around the clock. Fair, upfront pricing. Call now. (78)
 Pinning: H1 → may pin a service headline if you want consistency; default none.

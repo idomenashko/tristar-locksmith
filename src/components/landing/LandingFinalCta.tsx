@@ -73,13 +73,13 @@ export function LandingFinalCta({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
             {/* Primary: call */}
             <a
-              href="tel:8653463573"
+              href="tel:8653813667"
               onClick={firePhoneConversion}
               className="pulse-emergency w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emergency text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-emergency-dark transition-colors shadow-lg shadow-emergency/30"
               aria-label="Call Tristar Locksmith"
             >
               <PhoneIcon />
-              Call (865) 346-3573
+              Call (865) 381-3667
             </a>
 
             {/* Secondary: form — gold-outline button, not a plain link */}

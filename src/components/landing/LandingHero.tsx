@@ -139,13 +139,13 @@ export function LandingHero({
         >
           {/* Primary: phone call */}
           <a
-            href="tel:8653463573"
+            href="tel:8653813667"
             onClick={firePhoneConversion}
             className="pulse-emergency flex items-center justify-center gap-2.5 bg-emergency text-white font-bold text-lg px-7 py-4 rounded-xl hover:bg-emergency-dark transition-colors shadow-lg shadow-emergency/30 w-full sm:w-auto"
-            aria-label="Call Tristar Locksmith at (865) 346-3573"
+            aria-label="Call Tristar Locksmith at (865) 381-3667"
           >
             <PhoneIcon />
-            (865) 346-3573 — Call Now
+            (865) 381-3667 — Call Now
           </a>
 
           {/* Secondary: scroll to form */}

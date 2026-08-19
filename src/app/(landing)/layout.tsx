@@ -21,7 +21,7 @@ function LandingFooter() {
           <TristarLogo height={52} />
         </div>
         <p className="text-gold font-bold text-xl">
-          <a href="tel:8653463573">(865) 346-3573</a>
+          <a href="tel:8653813667">(865) 381-3667</a>
         </p>
         <p className="text-white/60 text-sm">
           Insured &amp; Background-Checked · Every day 7 AM–11:30 PM · Emergency service available around the clock
@@ -43,7 +43,7 @@ function TopBar() {
   return (
     <div className="bg-navy border-b border-gold/20 py-1.5 px-4 text-center">
       <a
-        href="tel:8653463573"
+        href="tel:8653813667"
         className="inline-flex items-center gap-2 text-white/85 hover:text-gold transition-colors text-sm font-medium"
       >
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-gold shrink-0" aria-hidden="true">
@@ -51,7 +51,7 @@ function TopBar() {
         </svg>
         <span>Call Now For Fast Service, Questions or Pricing</span>
         <span className="hidden sm:inline text-white/40">—</span>
-        <span className="hidden sm:inline text-gold font-bold">(865) 346-3573</span>
+        <span className="hidden sm:inline text-gold font-bold">(865) 381-3667</span>
       </a>
     </div>
   );

@@ -147,12 +147,12 @@ export function LandingLeadForm({ formSource }: Props) {
               We&apos;ll call you right back. For the fastest response, tap Call below.
             </p>
             <a
-              href="tel:8653463573"
+              href="tel:8653813667"
               onClick={firePhoneConversion}
               className="pulse-emergency inline-flex items-center gap-2 bg-emergency text-white font-bold px-6 py-3.5 rounded-xl hover:bg-emergency-dark transition-colors shadow-md"
             >
               <PhoneIcon />
-              (865) 346-3573
+              (865) 381-3667
             </a>
           </motion.div>
         </div>
@@ -314,12 +314,12 @@ export function LandingLeadForm({ formSource }: Props) {
         <div className="text-center mt-5">
           <p className="text-muted text-sm mb-2">Prefer to talk? Call us now:</p>
           <a
-            href="tel:8653463573"
+            href="tel:8653813667"
             onClick={firePhoneConversion}
             className="inline-flex items-center gap-2 text-emergency font-bold text-base hover:text-emergency-dark transition-colors"
           >
             <PhoneIcon />
-            (865) 346-3573
+            (865) 381-3667
           </a>
         </div>
       </div>

@@ -274,7 +274,7 @@ Flat Rate Quoted Over the Phone
 | Contact Us | /contact | Free phone quotes | Call or fill out form |
 
 ### Call extension
-- Phone: (865) 381-3931
+- Phone: (865) 381-3667
 - Use: "Only your call extension" to maximize call volume
 - Schedule: Match campaign hours (7 AM – 11:30 PM)
 
@@ -310,4 +310,4 @@ Flat Rate Quoted Over the Phone
 
 ---
 
-*Built for Tristar Locksmith — tristarlocksmith.com — (865) 381-3931*
+*Built for Tristar Locksmith — tristarlocksmith.com — (865) 381-3667*

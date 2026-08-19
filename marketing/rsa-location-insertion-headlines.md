@@ -28,7 +28,7 @@ Key Fob Replacement {LOCATION(City):Knoxville} ← 30 chars ✅ (פחות מ-"Je
 Lost Your Car Keys?               ← 19 chars
 No Dealership Needed              ← 20 chars
 Key Cut & Programmed On-Site      ← 28 chars
-Call (865) 381-3931               ← 18 chars
+Call (865) 381-3667               ← 18 chars
 Upfront Pricing                   ← 15 chars
 All Makes & Models                ← 17 chars
 Save vs. Dealer Prices            ← 22 chars
@@ -54,7 +54,7 @@ We Come to {LOCATION(City):Knoxville}           ← 27 chars ✅
 Keys Locked in Your Car?          ← 23 chars
 No-Damage Car Opening             ← 21 chars
 Locked Out of Your Car?           ← 22 chars
-Call (865) 381-3931               ← 18 chars
+Call (865) 381-3667               ← 18 chars
 Available 7 AM–11:30 PM           ← 24 chars
 Upfront Pricing                   ← 15 chars
 All Cars, Trucks & SUVs           ← 22 chars
@@ -83,7 +83,7 @@ We Come to Your Door              ← 20 chars
 Identity Verified                 ← 17 chars
 Rekey or Replace On-Site          ← 24 chars
 Insured Local Technicians         ← 25 chars
-Call (865) 381-3931               ← 18 chars
+Call (865) 381-3667               ← 18 chars
 Residential Locksmith             ← 22 chars
 Upfront Pricing                   ← 15 chars
 Back Inside Fast                  ← 16 chars
@@ -114,7 +114,7 @@ Fast Locksmith Response           ← 24 chars
 Car, Home & Commercial            ← 22 chars
 Available 7 AM–11:30 PM           ← 24 chars
 Emergency Line Available          ← 24 chars
-Call (865) 381-3931               ← 18 chars
+Call (865) 381-3667               ← 18 chars
 No Hidden Fees                    ← 14 chars
 Insured Technicians               ← 20 chars
 Local Not a Call Center           ← 23 chars

@@ -44,7 +44,7 @@ Emergency Locksmith Knoxville
 Locked Out? Call Us Now
 Knoxville Mobile Locksmith
 Fast Locksmith Response
-Call (865) 381-3931
+Call (865) 381-3667
 Licensed & Insured Team
 Available 7 AM–11:30 PM
 Emergency Line Available
@@ -62,7 +62,7 @@ We Come to You Fast
 Locked out in Knoxville? Car, home, or commercial lockout — we come to you fast.
 Upfront pricing before we start. Insured, background-checked techs.
 Emergency service available around the clock. Mobile unit — we come to you.
-Serving Knoxville and surrounding areas. No hidden fees. Call (865) 381-3931 now.
+Serving Knoxville and surrounding areas. No hidden fees. Call (865) 381-3667 now.
 ```
 
 ---
@@ -96,7 +96,7 @@ Background-Checked Techs
 ## Call Asset
 
 ```
-(865) 381-3931
+(865) 381-3667
 ```
 
 ---
@@ -135,6 +135,6 @@ Emergency Locksmith: no extra negatives (broad by intent).
 - [ ] Negative keywords added to all 4 campaigns
 - [ ] Sitelinks added to Emergency campaign
 - [ ] Callouts added
-- [ ] Call asset (865) 381-3931 added
+- [ ] Call asset (865) 381-3667 added
 - [ ] Keywords entered as Phrase/Exact — no Broad match
 - [ ] DO NOT click "Apply all" on Google's Broad match suggestions
